@@ -5,12 +5,15 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.URL;
 
 /**
  * MQTT Client 속성 값 <br>
  * {@code config.json} 참조
  */
 public final class MqttProperty {
+
+    private static final String PATH = "src/main/resources/config.json";
 
     private static final String BROKER;
 
@@ -21,7 +24,7 @@ public final class MqttProperty {
     static {
         try {
             JsonNode mqttNode = new ObjectMapper()
-                                    .readTree(new File("config.json"))
+                                    .readTree(new File(PATH))
                                     .path("mqtt");
             BROKER = mqttNode.get("broker").asText();
             CLIENT_ID = mqttNode.get("client_id").asText();

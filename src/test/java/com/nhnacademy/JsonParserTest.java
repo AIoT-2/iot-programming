@@ -16,6 +16,8 @@ class JsonParserTest {
 
     private static JsonNode mqttNode = null;
 
+    private static final String PATH = "src/main/resources/config.json";
+
     private final String EXPECT_BROKER = "tcp://192.168.71.219:1883";
 
     private final String EXPECT_CLIENT_ID = "";
@@ -26,7 +28,7 @@ class JsonParserTest {
     static void setUp() {
         ObjectMapper objectMapper = new ObjectMapper();
         try {
-            mqttNode = objectMapper.readTree(new File("config.json")).path("mqtt");
+            mqttNode = objectMapper.readTree(new File(PATH)).path("mqtt");
         } catch (IOException e) {
             // log 로그 만들기 실패!
             e.printStackTrace();
