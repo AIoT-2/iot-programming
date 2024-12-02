@@ -8,7 +8,7 @@ import org.eclipse.paho.client.mqttv3.MqttCallback;
 import org.eclipse.paho.client.mqttv3.MqttMessage;
 import org.json.JSONObject;
 
-public class Mqtt_Main {
+public class Mqtt {
     // MQTT 브로커 주소
     private static final String BROKER = "tcp://192.168.70.203:1883";
     // 클라이언트 ID
