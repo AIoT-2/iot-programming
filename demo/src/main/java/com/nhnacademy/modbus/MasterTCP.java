@@ -214,9 +214,12 @@ public class MasterTCP {
                         if (i == 12 || i == 13 || i == 16 || i == 17 || i == 20 || i == 21 || i == 24 || i == 25) {
                             value = (response.getHoldingRegisters().get(i) << 16)
                                     | response.getHoldingRegisters().get(i + 1);
-                            measurements.put(name, applyScale(i, value));
                         } else {
                             value = response.getHoldingRegisters().get(i);
+                        }
+
+                        // value가 0이면 값을 넣지 않는다.
+                        if (value != 0) {
                             measurements.put(name, applyScale(i, value));
                         }
                     }
