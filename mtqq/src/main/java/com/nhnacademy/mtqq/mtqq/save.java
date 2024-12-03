@@ -1,4 +1,4 @@
-package com.nhnacademy.mtqq;
+package com.nhnacademy.mtqq.mtqq;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.databind.JsonNode;
@@ -9,6 +9,7 @@ import com.influxdb.client.InfluxDBClientFactory;
 import com.influxdb.client.WriteApiBlocking;
 import com.influxdb.client.write.Point;
 
+import com.nhnacademy.mtqq.data.MessageData;
 import org.eclipse.paho.client.mqttv3.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,7 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class MqttToInfluxDB {
+public class save {
     private static final String BROKER  = "tcp://192.168.70.203:1883";
     private static final String CLIENT_ID = "JavaClientExample";
     private static final String TOPIC = "data/#";
@@ -44,7 +45,7 @@ public class MqttToInfluxDB {
         token = tokenEnv.toCharArray();
     }
 
-    public MqttToInfluxDB(String broker, String clientId, String topic){
+    public save(String broker, String clientId, String topic){
         if(broker != null || clientId != null || topic != null){
             this.broker = broker;
             this.clientId = clientId;
@@ -55,7 +56,7 @@ public class MqttToInfluxDB {
         }
     }
 
-    public MqttToInfluxDB(){
+    public save(){
         this.broker = BROKER;
         this.clientId = CLIENT_ID;
         this.topic = TOPIC;

@@ -1,4 +1,4 @@
-package com.nhnacademy.mtqq;
+package com.nhnacademy.mtqq.data;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
