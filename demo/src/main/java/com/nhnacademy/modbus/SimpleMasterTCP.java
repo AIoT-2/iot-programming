@@ -259,6 +259,8 @@ public class SimpleMasterTCP {
                     String topic = getTopicForOffset(offset);
                     client.publish(topic, message);
                     System.out.println("Published message to MQTT: " + payload);
+
+                    Thread.sleep(1000);
                 }
 
             } catch (ModbusProtocolException | ModbusNumberException | ModbusIOException e) {
