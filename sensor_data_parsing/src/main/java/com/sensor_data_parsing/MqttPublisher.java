@@ -86,18 +86,18 @@ public class MqttPublisher {
                             Map<String, Object> dataMap = objectMapper
                                     .readValue(objectNode.toString(), Map.class);
 
-                            // 데이터 출력
-                            System.out.println("----------data----------");
-                            for (Map.Entry<String, Object> entry : dataMap.entrySet()) {
-                                System.out.println(entry.getKey() + ": "
-                                        + entry.getValue());
-                            }
+                            // 메시지를 보낼 새로운 JSON 구조
+                            Map<String, Object> finalMessage = Map.of(
+                                    "deviceName", deviceName,
+                                    "spotName", spotName,
+                                    "data", dataMap // 나머지 데이터를 "data" 안에 넣음
+                            );
 
-                            // 메시지를 보낼 새 MQTT 브로커로 메시지 전송
-                            String newTopic = "application/" + deviceName + "/" + spotName;
-                            String newMessage = objectMapper.writeValueAsString(dataMap);
+                            // JSON 문자열로 변환
+                            String newMessage = objectMapper.writeValueAsString(finalMessage);
 
                             // 메시지를 보낼 새 MQTT 브로커로 메시지 발행
+                            String newTopic = "application/" + deviceName + "/" + spotName;
                             newMqttClient.toAsync().publishWith()
                                     .topic(newTopic)
                                     .payload(newMessage.getBytes(StandardCharsets.UTF_8))

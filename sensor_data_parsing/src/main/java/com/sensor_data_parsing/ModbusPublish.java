@@ -8,6 +8,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.logging.Handler;
 import java.util.logging.LogRecord;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.hivemq.client.mqtt.datatypes.MqttQos;
 import com.hivemq.client.mqtt.mqtt5.Mqtt5Client;
 import com.intelligt.modbus.jlibmodbus.Modbus;
@@ -129,8 +130,7 @@ public class ModbusPublish {
                 // 메시지를 보낼 새 MQTT 브로커로 메시지 전송
                 String newTopic = "application/modbus";
 
-                StringBuilder sb = new StringBuilder();
-                sb.append("{");
+                Map<String, Object> dataMap = new HashMap<>();
 
                 int addressIncrement = 0;
                 // 레지스터 값을 읽고 처리
@@ -141,39 +141,37 @@ public class ModbusPublish {
                     }
                     int address = offset + addressIncrement; // 주소는 i에 맞게 증가
 
-                    if (address - offset == 12 ||
+                    if ((address - offset == 12 ||
                             address - offset == 13 ||
                             address - offset == 16 ||
                             address - offset == 17 ||
                             address - offset == 20 ||
                             address - offset == 21 ||
                             address - offset == 24 ||
-                            address - offset == 25) {
-
-                        // 32비트 값 처리 (두 개의 16비트 레지스터 결합)
-                        if (i < response.getHoldingRegisters().getQuantity() - 1) {
-                            registerValue = (response.getHoldingRegisters().get(i) << 16)
-                                    | response.getHoldingRegisters().get(i + 1);
-                            i++; // 두 개의 레지스터를 처리했으므로 i를 1 증가시킴
-                        }
+                            address - offset == 25) &&
+                            i < response.getHoldingRegisters().getQuantity() - 1) {
+                        registerValue = (response.getHoldingRegisters().get(i) << 16)
+                                | response.getHoldingRegisters().get(i + 1);
+                        i++; // 두 개의 레지스터를 처리했으므로 i를 1 증가시킴
                     }
+
                     System.out.println("Address: " + address + ", Value: " + registerValue);
 
                     String addressDescription = addressMap.get(address - offset);
-                    sb.append("\"").append(addressDescription).append("\": ").append(registerValue);
-
-                    // 마지막 항목이 아니라면 쉼표 추가
-                    if (i < response.getHoldingRegisters().getQuantity() - 1) {
-                        sb.append(", ");
-                    }
-
+                    dataMap.put(addressDescription, registerValue);
                     addressIncrement++;
                 }
-                sb.append("}");
+
+                Map<String, Object> dataMessage = new HashMap<>();
+                dataMessage.put("deviceName", "캠퍼스");
+                dataMessage.put("data", dataMap);
+                ObjectMapper objectMapper = new ObjectMapper();
+                String message = objectMapper.writeValueAsString(dataMessage);
+
                 // 메시지를 보낼 새 MQTT 브로커로 메시지 발행
                 newMqttClient.toAsync().publishWith()
                         .topic(newTopic)
-                        .payload(sb.toString().getBytes(StandardCharsets.UTF_8))
+                        .payload(message.getBytes(StandardCharsets.UTF_8))
                         .qos(MqttQos.AT_LEAST_ONCE) // QoS 1 (최소 한 번 전송)
                         .send();
             } catch (ModbusProtocolException | ModbusNumberException | ModbusIOException e) {

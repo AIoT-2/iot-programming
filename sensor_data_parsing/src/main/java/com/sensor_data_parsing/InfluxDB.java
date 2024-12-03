@@ -19,7 +19,7 @@ public class InfluxDB {
         private static final String influxDBOrg = "nhnacademy_010"; // Organization 이름
         private static final String influxDBBucket = "test"; // 사용할 Bucket 이름
 
-        private static final String mqttHost = "192.168.70.203"; // MQTT 브로커 주소
+        private static final String mqttHost = "localhost"; // MQTT 브로커 주소
         private static final String mqttUsername = ""; // MQTT 사용자 이름
         private static final String mqttPassword = ""; // MQTT 비밀번호
 
@@ -33,7 +33,7 @@ public class InfluxDB {
                                 .identifier("controlcenter-1234") // 클라이언트 식별자
                                 .serverHost(mqttHost)
                                 .automaticReconnectWithDefaultConfig() // 자동 재연결
-                                .serverPort(1883)
+                                .serverPort(8888)
                                 .build();
 
                 // MQTT 클라이언트 연결
@@ -57,60 +57,61 @@ public class InfluxDB {
                                         ObjectMapper objectMapper = new ObjectMapper();
                                         try {
                                                 JsonNode rootNode = objectMapper.readTree(message);
-                                                JsonNode objectNode = rootNode.path("object");
 
-                                                if (!objectNode.isMissingNode()) {
-                                                        // deviceName과 spotName 추출
-                                                        String deviceName = rootNode.path("deviceInfo")
-                                                                        .path("deviceName").asText();
-                                                        String spotName = rootNode.path("deviceInfo").path("tags")
-                                                                        .path("name").asText();
+                                                // deviceName과 spotName 추출
+                                                String deviceName = rootNode.path("deviceName").asText();
+                                                String spotName = rootNode.path("spotName").asText();
+                                                JsonNode spotNode = rootNode.path("spotName");
 
-                                                        System.out.println("deviceName: " + deviceName);
-                                                        System.out.println("spotName: " + spotName);
+                                                System.out.println("deviceName: " + deviceName);
+                                                System.out.println("spotName: " + spotName);
 
-                                                        // 데이터를 Map으로 변환
-                                                        Map<String, Object> dataMap = objectMapper
-                                                                        .readValue(objectNode.toString(), Map.class);
+                                                JsonNode dataNode = rootNode.path("data");
 
-                                                        // 데이터 출력
-                                                        System.out.println("----------data----------");
-                                                        for (Map.Entry<String, Object> entry : dataMap.entrySet()) {
-                                                                System.out.println(entry.getKey() + ": "
-                                                                                + entry.getValue());
-                                                        }
+                                                // 데이터를 Map으로 변환
+                                                Map<String, Object> dataMap = objectMapper
+                                                                .readValue(dataNode.toString(), Map.class);
 
-                                                        // InfluxDB에 데이터를 저장
-                                                        for (Map.Entry<String, Object> entry : dataMap.entrySet()) {
-                                                                String dataKey = entry.getKey();
-                                                                Object dataValue = entry.getValue();
-
-                                                                // Point 객체 생성
-                                                                Point point = Point.measurement(dataKey)
-                                                                                .addTag("deviceName", deviceName)
-                                                                                .addTag("spotName", spotName);
-
-                                                                // Field 추가 (타입에 맞춰서 저장)
-                                                                if (dataValue instanceof Double) {
-                                                                        point.addField("value", (Double) dataValue);
-                                                                } else if (dataValue instanceof Integer) {
-                                                                        point.addField("value", (Integer) dataValue);
-                                                                } else if (dataValue instanceof String) {
-                                                                        point.addField("value", (String) dataValue);
-                                                                } else if (dataValue instanceof Boolean) {
-                                                                        point.addField("value", (Boolean) dataValue);
-                                                                } else if (dataValue instanceof Long) {
-                                                                        point.addField("value", (Long) dataValue);
-                                                                }
-
-                                                                point.time(System.currentTimeMillis(),
-                                                                                WritePrecision.MS); // 타임스탬프 설정
-                                                                influxDBClient.getWriteApiBlocking().writePoint(point); // 데이터
-                                                                                                                        // 삽입
-                                                        }
-
-                                                        System.out.println("데이터가 InfluxDB에 성공적으로 저장되었습니다!\n");
+                                                // 데이터 출력
+                                                System.out.println("----------data----------");
+                                                for (Map.Entry<String, Object> entry : dataMap.entrySet()) {
+                                                        System.out.println(entry.getKey() + ": "
+                                                                        + entry.getValue());
                                                 }
+
+                                                // InfluxDB에 데이터를 저장
+                                                for (Map.Entry<String, Object> entry : dataMap.entrySet()) {
+                                                        String dataKey = entry.getKey();
+                                                        Object dataValue = entry.getValue();
+
+                                                        // Point 객체 생성
+                                                        Point point = Point.measurement(dataKey)
+                                                                        .addTag("deviceName", deviceName);
+
+                                                        if (!spotNode.isMissingNode()) {
+                                                                point.addTag("spotName", spotName);
+                                                        }
+
+                                                        // Field 추가 (타입에 맞춰서 저장)
+                                                        if (dataValue instanceof Double) {
+                                                                point.addField("value", (Double) dataValue);
+                                                        } else if (dataValue instanceof Integer) {
+                                                                point.addField("value", (Integer) dataValue);
+                                                        } else if (dataValue instanceof String) {
+                                                                point.addField("value", (String) dataValue);
+                                                        } else if (dataValue instanceof Boolean) {
+                                                                point.addField("value", (Boolean) dataValue);
+                                                        } else if (dataValue instanceof Long) {
+                                                                point.addField("value", (Long) dataValue);
+                                                        }
+
+                                                        point.time(System.currentTimeMillis(),
+                                                                        WritePrecision.MS); // 타임스탬프 설정
+                                                        influxDBClient.getWriteApiBlocking().writePoint(point); // 데이터
+                                                                                                                // 삽입
+                                                }
+
+                                                System.out.println("데이터가 InfluxDB에 성공적으로 저장되었습니다!\n");
 
                                         } catch (IOException e) {
                                                 System.err.println("JSON 파싱 중 오류가 발생: " + e.getMessage());
