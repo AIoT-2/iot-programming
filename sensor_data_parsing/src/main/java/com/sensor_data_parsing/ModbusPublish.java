@@ -28,7 +28,6 @@ public class ModbusPublish {
     private static final String newMqttPassword = ""; // MQTT 비밀번호
 
     private static final Map<Integer, String[]> addressMap = new HashMap<>();
-
     static {
         addressMap.put(0, new String[] { "type", "1" });
         addressMap.put(1, new String[] { "a leakage current", "1" });
@@ -154,11 +153,9 @@ public class ModbusPublish {
 
                     ReadInputRegistersResponse response = (ReadInputRegistersResponse) m.processRequest(request);
 
-                    // 메시지를 보낼 새 MQTT 브로커로 메시지 전송
                     String newTopic = "application/modbus";
 
                     Map<String, Object> dataMap = new HashMap<>();
-
                     // 레지스터 값을 읽고 처리
                     for (int i = 0; i < response.getHoldingRegisters().getQuantity(); i++) {
                         int registerValue = response.getHoldingRegisters().get(i);
@@ -210,7 +207,7 @@ public class ModbusPublish {
 
                     offset += 100;
                     System.out.println();
-                    Thread.sleep(1000);
+                    Thread.sleep(3000);
                 }
 
             } catch (ModbusProtocolException | ModbusNumberException | ModbusIOException e) {
