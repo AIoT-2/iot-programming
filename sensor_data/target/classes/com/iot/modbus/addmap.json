@@ -1,0 +1,205 @@
+[
+    {
+        "Addr": 0,
+        "Name": "operation Heartbit",
+        "Type": "UINT16",
+        "Size": 2,
+        "Scale": 1
+    },
+    {
+        "Addr": 1,
+        "Name": "temperature",
+        "Type": "INT16",
+        "Size": 2,
+        "Scale": 10
+    },
+    {
+        "Addr": 2,
+        "Name": "frequency",
+        "Type": "UINT16",
+        "Size": 2,
+        "Scale": 100
+    },
+    {
+        "Addr": 3,
+        "Name": "program version",
+        "Type": "UINT16",
+        "Size": 2,
+        "Scale": 1
+    },
+    {
+        "Addr": 4,
+        "Name": "present CO2 use (month)",
+        "Type": "UINT16",
+        "Size": 2,
+        "Scale": 10
+    },
+    {
+        "Addr": 6,
+        "Name": "operation Heartbit",
+        "Type": "UINT16",
+        "Size": 2,
+        "Scale": 1
+    },
+    {
+        "Addr": 7,
+        "Name": "temperature 1",
+        "Type": "INT16",
+        "Size": 2,
+        "Scale": 10
+    },
+    {
+        "Addr": 8,
+        "Name": "frequency",
+        "Type": "UINT16",
+        "Size": 2,
+        "Scale": 100
+    },
+    {
+        "Addr": 9,
+        "Name": "program version",
+        "Type": "UINT16",
+        "Size": 2,
+        "Scale": 1
+    },
+    {
+        "Addr": 10,
+        "Name": "present CO2 use (month)",
+        "Type": "UINT16",
+        "Size": 2,
+        "Scale": 10
+    },
+    {
+        "Addr": 12,
+        "Name": "V123(LN) average",
+        "Type": "UINT32",
+        "Size": 4,
+        "Scale": 100
+    },
+    {
+        "Addr": 13,
+        "Name": "V123(LL) average",
+        "Type": "UINT32",
+        "Size": 4,
+        "Scale": 100
+    },
+    {
+        "Addr": 14,
+        "Name": "V123(LN) unbalance",
+        "Type": "UINT16",
+        "Size": 2,
+        "Scale": 100
+    },
+    {
+        "Addr": 15,
+        "Name": "V123(LL) unbalance",
+        "Type": "UINT16",
+        "Size": 2,
+        "Scale": 100
+    },
+    {
+        "Addr": 16,
+        "Name": "V1",
+        "Type": "UINT32",
+        "Size": 4,
+        "Scale": 100
+    },
+    {
+        "Addr": 17,
+        "Name": "V12",
+        "Type": "UINT32",
+        "Size": 4,
+        "Scale": 100
+    },
+    {
+        "Addr": 18,
+        "Name": "V1 unbalance",
+        "Type": "UINT16",
+        "Size": 2,
+        "Scale": 100
+    },
+    {
+        "Addr": 19,
+        "Name": "V12 unbalance",
+        "Type": "UINT16",
+        "Size": 2,
+        "Scale": 100
+    },
+    {
+        "Addr": 20,
+        "Name": "V2",
+        "Type": "UINT32",
+        "Size": 4,
+        "Scale": 100
+    },
+    {
+        "Addr": 21,
+        "Name": "V23",
+        "Type": "UINT32",
+        "Size": 4,
+        "Scale": 100
+    },
+    {
+        "Addr": 22,
+        "Name": "V2 unbalance",
+        "Type": "UINT16",
+        "Size": 2,
+        "Scale": 100
+    },
+    {
+        "Addr": 23,
+        "Name": "V23 unbalance",
+        "Type": "UINT16",
+        "Size": 2,
+        "Scale": 100
+    },
+    {
+        "Addr": 24,
+        "Name": "V3",
+        "Type": "UINT32",
+        "Size": 4,
+        "Scale": 100
+    },
+    {
+        "Addr": 25,
+        "Name": "V31",
+        "Type": "UINT32",
+        "Size": 4,
+        "Scale": 100
+    },
+    {
+        "Addr": 26,
+        "Name": "V3 unbalance",
+        "Type": "UINT16",
+        "Size": 2,
+        "Scale": 100
+    },
+    {
+        "Addr": 27,
+        "Name": "V31 unbalance",
+        "Type": "UINT16",
+        "Size": 2,
+        "Scale": 100
+    },
+    {
+        "Addr": 28,
+        "Name": "V1 THD",
+        "Type": "UINT16",
+        "Size": 2,
+        "Scale": 100
+    },
+    {
+        "Addr": 29,
+        "Name": "V2 THD",
+        "Type": "UINT16",
+        "Size": 2,
+        "Scale": 100
+    },
+    {
+        "Addr": 30,
+        "Name": "V3 THD",
+        "Type": "UINT16",
+        "Size": 2,
+        "Scale": 100
+    }
+]
