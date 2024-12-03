@@ -108,9 +108,15 @@ public class TotalMqtt {
             Map<String, Object> data = objectMapper.readValue(jsonData, Map.class);
 
             // Point 객체 생성
-            Point point = Point.measurement(data.get("name").toString())
-                    .addField("temperature", 22.5) // 예시 필드 값 추가
+            Point point = null;
+            if(data.get("deviceName") == null){
+                point = Point.measurement(data.get("name").toString())
                     .time(System.currentTimeMillis(), WritePrecision.MS);
+            }
+            else{
+                point = Point.measurement(data.get("deviceName").toString())
+                    .time(System.currentTimeMillis(), WritePrecision.MS);
+            }
 
             // Map을 순회하여 필드를 추가
             for (Map.Entry<String, Object> entry : data.entrySet()) {
