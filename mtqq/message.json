@@ -1,7 +1,7 @@
 [ {
-  "topic" : "data/s/nhnacademy/b/gyeongnam_campus/p/pair_room/d/24e124617d159573/n/2/e/occupancy",
-  "message" : "{\"time\":1733206901370,\"value\":0}",
-  "deviceName" : "2",
+  "topic" : "data/s/nhnacademy/b/gyeongnam_campus/p/storage/d/24e124136d151547/n/입구/e/humidity",
+  "message" : "{\"time\":1733215418055,\"value\":33.5}",
+  "deviceName" : "입구",
   "voltage" : 0.0,
   "current" : 0.0,
   "activePower" : 0.0,
@@ -10,9 +10,9 @@
   "phase" : 0.0,
   "powerFactor" : 0.0
 }, {
-  "topic" : "data/s/nhnacademy/b/gyeongnam_campus/p/pair_room/d/24e124617d159573/n/2/e/battery",
-  "message" : "{\"time\":1733206901370,\"value\":75}",
-  "deviceName" : "2",
+  "topic" : "data/s/nhnacademy/b/gyeongnam_campus/p/storage/d/24e124136d151547/n/입구/e/temperature",
+  "message" : "{\"time\":1733215418055,\"value\":18.9}",
+  "deviceName" : "입구",
   "voltage" : 0.0,
   "current" : 0.0,
   "activePower" : 0.0,
@@ -21,9 +21,9 @@
   "phase" : 0.0,
   "powerFactor" : 0.0
 }, {
-  "topic" : "data/s/nhnacademy/b/gyeongnam_campus/p/pair_room/d/24e124617d159573/n/2/e/distance",
-  "message" : "{\"time\":1733206901370,\"value\":2238}",
-  "deviceName" : "2",
+  "topic" : "data/s/nhnacademy/b/gyeongnam_campus/p/storage/d/24e124136d151547/n/입구/g/24e124fffef5dccc/e/lora",
+  "message" : "{\"time\":1733215418055,\"value\":{\"dr\":0,\"rssi\":-44,\"snr\":8.2,\"channel\":6,\"frequency\":923300000,\"sf\":12}}",
+  "deviceName" : "입구",
   "voltage" : 0.0,
   "current" : 0.0,
   "activePower" : 0.0,
@@ -32,9 +32,9 @@
   "phase" : 0.0,
   "powerFactor" : 0.0
 }, {
-  "topic" : "data/s/nhnacademy/b/gyeongnam_campus/p/pair_room/d/24e124617d159573/n/2/g/24e124fffef79304/e/lora",
-  "message" : "{\"time\":1733206901370,\"value\":{\"dr\":0,\"rssi\":-44,\"snr\":9.2,\"channel\":4,\"frequency\":922900000,\"sf\":12}}",
-  "deviceName" : "2",
+  "topic" : "data/s/nhnacademy/b/gyeongnam_campus/p/storage/d/24e124136d151547/n/입구/g/24e124fffef79304/e/lora",
+  "message" : "{\"time\":1733215418055,\"value\":{\"dr\":0,\"rssi\":-54,\"snr\":8.5,\"channel\":6,\"frequency\":923300000,\"sf\":12}}",
+  "deviceName" : "입구",
   "voltage" : 0.0,
   "current" : 0.0,
   "activePower" : 0.0,
@@ -43,9 +43,31 @@
   "phase" : 0.0,
   "powerFactor" : 0.0
 }, {
-  "topic" : "data/s/nhnacademy/b/gyeongnam_campus/p/pair_room/d/24e124617d159573/n/2/g/24e124fffef5dccc/e/lora",
-  "message" : "{\"time\":1733206901370,\"value\":{\"dr\":0,\"rssi\":-57,\"snr\":9.5,\"channel\":4,\"frequency\":922900000,\"sf\":12}}",
-  "deviceName" : "2",
+  "topic" : "data/s/nhnacademy/b/gyeongnam_campus/p/storage/d/24e124136d151547/n/입구/e/temperature",
+  "message" : "{\"time\":1733215418040,\"value\":18.9}",
+  "deviceName" : "입구",
+  "voltage" : 0.0,
+  "current" : 0.0,
+  "activePower" : 0.0,
+  "reactivePower" : 0.0,
+  "tapparentPower" : 0.0,
+  "phase" : 0.0,
+  "powerFactor" : 0.0
+}, {
+  "topic" : "data/s/nhnacademy/b/gyeongnam_campus/p/storage/d/24e124136d151547/n/입구/e/humidity",
+  "message" : "{\"time\":1733215418040,\"value\":33.5}",
+  "deviceName" : "입구",
+  "voltage" : 0.0,
+  "current" : 0.0,
+  "activePower" : 0.0,
+  "reactivePower" : 0.0,
+  "tapparentPower" : 0.0,
+  "phase" : 0.0,
+  "powerFactor" : 0.0
+}, {
+  "topic" : "data/s/nhnacademy/b/gyeongnam_campus/p/storage/d/24e124136d151547/n/입구/g/24e124fffef79304/e/lora",
+  "message" : "{\"time\":1733215418040,\"value\":{\"dr\":0,\"rssi\":-111,\"snr\":-14.2,\"channel\":1,\"frequency\":922300000,\"sf\":12}}",
+  "deviceName" : "입구",
   "voltage" : 0.0,
   "current" : 0.0,
   "activePower" : 0.0,
@@ -55,7 +77,7 @@
   "powerFactor" : 0.0
 }, {
   "topic" : "data/s/nhnacademy/b/gyeongnam_campus/p/campus/d/gem3500_1/n/캠퍼스_LL/e/voltage",
-  "message" : "{\"time\":1733206902405,\"value\":376.97}",
+  "message" : "{\"time\":1733215422533,\"value\":383.57}",
   "deviceName" : "캠퍼스_LL",
   "voltage" : 0.0,
   "current" : 0.0,
@@ -66,7 +88,7 @@
   "powerFactor" : 0.0
 }, {
   "topic" : "data/s/nhnacademy/b/gyeongnam_campus/p/campus/d/gem3500_1/n/캠퍼스_LN/e/voltage",
-  "message" : "{\"time\":1733206902405,\"value\":217.64}",
+  "message" : "{\"time\":1733215422533,\"value\":221.45}",
   "deviceName" : "캠퍼스_LN",
   "voltage" : 0.0,
   "current" : 0.0,
@@ -77,40 +99,73 @@
   "powerFactor" : 0.0
 }, {
   "topic" : "data/s/nhnacademy/b/gyeongnam_campus/p/campus/d/gem3500_1/n/캠퍼스1/e/power_meter",
-  "message" : "{\"time\":1733206902505,\"type\":5,\"leakageCurrent\":0,\"current\":2635,\"activePower\":4787,\"reactivePower\":-1694,\"tapparentPower\":5735,\"powerFactor\":83.47,\"currentUnbalance\":70.2,\"lines\":[]}",
+  "message" : "{\"time\":1733215422634,\"type\":5,\"leakageCurrent\":0,\"current\":2735,\"activePower\":5216,\"reactivePower\":-1894,\"tapparentPower\":6090,\"powerFactor\":85.64,\"currentUnbalance\":49.83,\"lines\":[]}",
   "deviceName" : "캠퍼스1",
   "voltage" : 0.0,
-  "current" : 2635.0,
-  "activePower" : 4787.0,
-  "reactivePower" : -1694.0,
-  "tapparentPower" : 5735.0,
+  "current" : 2735.0,
+  "activePower" : 5216.0,
+  "reactivePower" : -1894.0,
+  "tapparentPower" : 6090.0,
   "phase" : 0.0,
-  "powerFactor" : 83.47
+  "powerFactor" : 85.64
+}, {
+  "topic" : "data/s/nhnacademy/b/gyeongnam_campus/p/campus/d/gem3500_1/n/캠퍼스_LL/e/voltage",
+  "message" : "{\"time\":1733215542535,\"value\":383.77}",
+  "deviceName" : "캠퍼스_LL",
+  "voltage" : 0.0,
+  "current" : 0.0,
+  "activePower" : 0.0,
+  "reactivePower" : 0.0,
+  "tapparentPower" : 0.0,
+  "phase" : 0.0,
+  "powerFactor" : 0.0
+}, {
+  "topic" : "data/s/nhnacademy/b/gyeongnam_campus/p/campus/d/gem3500_1/n/캠퍼스_LN/e/voltage",
+  "message" : "{\"time\":1733215542535,\"value\":221.57}",
+  "deviceName" : "캠퍼스_LN",
+  "voltage" : 0.0,
+  "current" : 0.0,
+  "activePower" : 0.0,
+  "reactivePower" : 0.0,
+  "tapparentPower" : 0.0,
+  "phase" : 0.0,
+  "powerFactor" : 0.0
+}, {
+  "topic" : "data/s/nhnacademy/b/gyeongnam_campus/p/campus/d/gem3500_1/n/캠퍼스1/e/power_meter",
+  "message" : "{\"time\":1733215542637,\"type\":5,\"leakageCurrent\":0,\"current\":2743,\"activePower\":5205,\"reactivePower\":-1891,\"tapparentPower\":6076,\"powerFactor\":85.65,\"currentUnbalance\":49.76,\"lines\":[]}",
+  "deviceName" : "캠퍼스1",
+  "voltage" : 0.0,
+  "current" : 2743.0,
+  "activePower" : 5205.0,
+  "reactivePower" : -1891.0,
+  "tapparentPower" : 6076.0,
+  "phase" : 0.0,
+  "powerFactor" : 85.65
 }, {
   "topic" : "data/s/nhnacademy/b/gyeongnam_campus/p/campus/d/gem3500_1/n/전등1/e/power_meter",
-  "message" : "{\"time\":1733206902606,\"type\":3,\"leakageCurrent\":0,\"current\":889,\"activePower\":1674,\"reactivePower\":-424,\"tapparentPower\":1931,\"powerFactor\":86.7,\"currentUnbalance\":0,\"lines\":[{\"voltage\":216.84,\"current\":8.89,\"activePower\":1674,\"reactivePower\":-424,\"tapparentPower\":1931,\"voltageUnbalance\":0,\"currentUnbalance\":0,\"phase\":350.88,\"powerFactor\":86.7}]}",
+  "message" : "{\"time\":1733215542738,\"type\":3,\"leakageCurrent\":0,\"current\":880,\"activePower\":1680,\"reactivePower\":-420,\"tapparentPower\":1944,\"powerFactor\":86.41,\"currentUnbalance\":0,\"lines\":[{\"voltage\":220.77,\"current\":8.8,\"activePower\":1680,\"reactivePower\":-420,\"tapparentPower\":1944,\"voltageUnbalance\":0,\"currentUnbalance\":0,\"phase\":350.12,\"powerFactor\":86.41}]}",
   "deviceName" : "전등1",
   "voltage" : 0.0,
-  "current" : 889.0,
-  "activePower" : 1674.0,
-  "reactivePower" : -424.0,
-  "tapparentPower" : 1931.0,
+  "current" : 880.0,
+  "activePower" : 1680.0,
+  "reactivePower" : -420.0,
+  "tapparentPower" : 1944.0,
   "phase" : 0.0,
-  "powerFactor" : 86.7
+  "powerFactor" : 86.41
 }, {
   "topic" : "data/s/nhnacademy/b/gyeongnam_campus/p/campus/d/gem3500_1/n/전등2/e/power_meter",
-  "message" : "{\"time\":1733206902708,\"type\":1,\"leakageCurrent\":0,\"current\":539,\"activePower\":1060,\"reactivePower\":-266,\"tapparentPower\":1178,\"powerFactor\":90.02,\"currentUnbalance\":0,\"lines\":[]}",
+  "message" : "{\"time\":1733215542840,\"type\":1,\"leakageCurrent\":0,\"current\":626,\"activePower\":1272,\"reactivePower\":-316,\"tapparentPower\":1392,\"powerFactor\":91.37,\"currentUnbalance\":0,\"lines\":[]}",
   "deviceName" : "전등2",
   "voltage" : 0.0,
-  "current" : 539.0,
-  "activePower" : 1060.0,
-  "reactivePower" : -266.0,
-  "tapparentPower" : 1178.0,
+  "current" : 626.0,
+  "activePower" : 1272.0,
+  "reactivePower" : -316.0,
+  "tapparentPower" : 1392.0,
   "phase" : 0.0,
-  "powerFactor" : 90.02
+  "powerFactor" : 91.37
 }, {
   "topic" : "data/s/nhnacademy/b/gyeongnam_campus/p/campus/d/gem3500_1/n/전등3/e/power_meter",
-  "message" : "{\"time\":1733206902810,\"type\":2,\"leakageCurrent\":0,\"current\":0,\"activePower\":0,\"reactivePower\":0,\"tapparentPower\":0,\"powerFactor\":0,\"currentUnbalance\":0,\"lines\":[]}",
+  "message" : "{\"time\":1733215542939,\"type\":2,\"leakageCurrent\":0,\"current\":0,\"activePower\":0,\"reactivePower\":0,\"tapparentPower\":0,\"powerFactor\":0,\"currentUnbalance\":0,\"lines\":[]}",
   "deviceName" : "전등3",
   "voltage" : 0.0,
   "current" : 0.0,
@@ -121,85 +176,85 @@
   "powerFactor" : 0.0
 }, {
   "topic" : "data/s/nhnacademy/b/gyeongnam_campus/p/campus/d/gem3500_1/n/강의실b_바닥/e/power_meter",
-  "message" : "{\"time\":1733206902909,\"type\":3,\"leakageCurrent\":0,\"current\":230,\"activePower\":319,\"reactivePower\":-83,\"tapparentPower\":508,\"powerFactor\":62.73,\"currentUnbalance\":0,\"lines\":[{\"voltage\":216.85,\"current\":2.3,\"activePower\":319,\"reactivePower\":-83,\"tapparentPower\":508,\"voltageUnbalance\":0,\"currentUnbalance\":0,\"phase\":343.55,\"powerFactor\":62.73}]}",
+  "message" : "{\"time\":1733215543040,\"type\":3,\"leakageCurrent\":0,\"current\":8,\"activePower\":4,\"reactivePower\":-16,\"tapparentPower\":19,\"powerFactor\":25,\"currentUnbalance\":0,\"lines\":[{\"voltage\":220.77,\"current\":0.08,\"activePower\":4,\"reactivePower\":-16,\"tapparentPower\":19,\"voltageUnbalance\":0,\"currentUnbalance\":0,\"phase\":285.53,\"powerFactor\":25}]}",
   "deviceName" : "강의실b_바닥",
   "voltage" : 0.0,
-  "current" : 230.0,
-  "activePower" : 319.0,
-  "reactivePower" : -83.0,
-  "tapparentPower" : 508.0,
+  "current" : 8.0,
+  "activePower" : 4.0,
+  "reactivePower" : -16.0,
+  "tapparentPower" : 19.0,
   "phase" : 0.0,
-  "powerFactor" : 62.73
+  "powerFactor" : 25.0
 }, {
   "topic" : "data/s/nhnacademy/b/gyeongnam_campus/p/campus/d/gem3500_1/n/강의실a_바닥1/e/power_meter",
-  "message" : "{\"time\":1733206903010,\"type\":1,\"leakageCurrent\":0,\"current\":260,\"activePower\":441,\"reactivePower\":-273,\"tapparentPower\":556,\"powerFactor\":79.31,\"currentUnbalance\":0,\"lines\":[]}",
+  "message" : "{\"time\":1733215543145,\"type\":1,\"leakageCurrent\":0,\"current\":213,\"activePower\":360,\"reactivePower\":-256,\"tapparentPower\":473,\"powerFactor\":76.14,\"currentUnbalance\":0,\"lines\":[]}",
   "deviceName" : "강의실a_바닥1",
   "voltage" : 0.0,
-  "current" : 260.0,
-  "activePower" : 441.0,
-  "reactivePower" : -273.0,
-  "tapparentPower" : 556.0,
+  "current" : 213.0,
+  "activePower" : 360.0,
+  "reactivePower" : -256.0,
+  "tapparentPower" : 473.0,
   "phase" : 0.0,
-  "powerFactor" : 79.31
+  "powerFactor" : 76.14
 }, {
   "topic" : "data/s/nhnacademy/b/gyeongnam_campus/p/campus/d/gem3500_1/n/강의실a_바닥2/e/power_meter",
-  "message" : "{\"time\":1733206903111,\"type\":2,\"leakageCurrent\":0,\"current\":112,\"activePower\":124,\"reactivePower\":-187,\"tapparentPower\":249,\"powerFactor\":49.99,\"currentUnbalance\":0,\"lines\":[]}",
+  "message" : "{\"time\":1733215543245,\"type\":2,\"leakageCurrent\":0,\"current\":314,\"activePower\":552,\"reactivePower\":-324,\"tapparentPower\":689,\"powerFactor\":80.13,\"currentUnbalance\":0,\"lines\":[]}",
   "deviceName" : "강의실a_바닥2",
   "voltage" : 0.0,
-  "current" : 112.0,
-  "activePower" : 124.0,
-  "reactivePower" : -187.0,
-  "tapparentPower" : 249.0,
+  "current" : 314.0,
+  "activePower" : 552.0,
+  "reactivePower" : -324.0,
+  "tapparentPower" : 689.0,
   "phase" : 0.0,
-  "powerFactor" : 49.99
+  "powerFactor" : 80.13
 }, {
   "topic" : "data/s/nhnacademy/b/gyeongnam_campus/p/campus/d/gem3500_1/n/프로젝터1/e/power_meter",
-  "message" : "{\"time\":1733206903212,\"type\":3,\"leakageCurrent\":0,\"current\":44,\"activePower\":21,\"reactivePower\":-83,\"tapparentPower\":95,\"powerFactor\":22.5,\"currentUnbalance\":0,\"lines\":[{\"voltage\":216.87,\"current\":0.44,\"activePower\":21,\"reactivePower\":-83,\"tapparentPower\":95,\"voltageUnbalance\":0,\"currentUnbalance\":0,\"phase\":284.33,\"powerFactor\":22.5}]}",
+  "message" : "{\"time\":1733215543345,\"type\":3,\"leakageCurrent\":0,\"current\":46,\"activePower\":24,\"reactivePower\":-86,\"tapparentPower\":103,\"powerFactor\":23.25,\"currentUnbalance\":0,\"lines\":[{\"voltage\":220.79,\"current\":0.46,\"activePower\":24,\"reactivePower\":-86,\"tapparentPower\":103,\"voltageUnbalance\":0,\"currentUnbalance\":0,\"phase\":284.03,\"powerFactor\":23.25}]}",
   "deviceName" : "프로젝터1",
   "voltage" : 0.0,
-  "current" : 44.0,
-  "activePower" : 21.0,
-  "reactivePower" : -83.0,
-  "tapparentPower" : 95.0,
+  "current" : 46.0,
+  "activePower" : 24.0,
+  "reactivePower" : -86.0,
+  "tapparentPower" : 103.0,
   "phase" : 0.0,
-  "powerFactor" : 22.5
+  "powerFactor" : 23.25
 }, {
   "topic" : "data/s/nhnacademy/b/gyeongnam_campus/p/campus/d/gem3500_1/n/프로젝터2/e/power_meter",
-  "message" : "{\"time\":1733206903312,\"type\":1,\"leakageCurrent\":0,\"current\":161,\"activePower\":323,\"reactivePower\":-124,\"tapparentPower\":355,\"powerFactor\":91.21,\"currentUnbalance\":0,\"lines\":[]}",
+  "message" : "{\"time\":1733215543445,\"type\":1,\"leakageCurrent\":0,\"current\":27,\"activePower\":7,\"reactivePower\":-57,\"tapparentPower\":60,\"powerFactor\":12,\"currentUnbalance\":0,\"lines\":[]}",
   "deviceName" : "프로젝터2",
   "voltage" : 0.0,
-  "current" : 161.0,
-  "activePower" : 323.0,
-  "reactivePower" : -124.0,
-  "tapparentPower" : 355.0,
+  "current" : 27.0,
+  "activePower" : 7.0,
+  "reactivePower" : -57.0,
+  "tapparentPower" : 60.0,
   "phase" : 0.0,
-  "powerFactor" : 91.21
+  "powerFactor" : 12.0
 }, {
   "topic" : "data/s/nhnacademy/b/gyeongnam_campus/p/campus/d/gem3500_1/n/회의실/e/power_meter",
-  "message" : "{\"time\":1733206903414,\"type\":2,\"leakageCurrent\":0,\"current\":14,\"activePower\":7,\"reactivePower\":-28,\"tapparentPower\":31,\"powerFactor\":23.07,\"currentUnbalance\":0,\"lines\":[]}",
+  "message" : "{\"time\":1733215543549,\"type\":2,\"leakageCurrent\":0,\"current\":14,\"activePower\":4,\"reactivePower\":-28,\"tapparentPower\":33,\"powerFactor\":14.28,\"currentUnbalance\":0,\"lines\":[]}",
   "deviceName" : "회의실",
   "voltage" : 0.0,
   "current" : 14.0,
-  "activePower" : 7.0,
+  "activePower" : 4.0,
   "reactivePower" : -28.0,
-  "tapparentPower" : 31.0,
+  "tapparentPower" : 33.0,
   "phase" : 0.0,
-  "powerFactor" : 23.07
+  "powerFactor" : 14.28
 }, {
   "topic" : "data/s/nhnacademy/b/gyeongnam_campus/p/campus/d/gem3500_1/n/서버실/e/power_meter",
-  "message" : "{\"time\":1733206903513,\"type\":3,\"leakageCurrent\":0,\"current\":215,\"activePower\":405,\"reactivePower\":-110,\"tapparentPower\":463,\"powerFactor\":87.56,\"currentUnbalance\":0,\"lines\":[{\"voltage\":216.89,\"current\":2.15,\"activePower\":405,\"reactivePower\":-110,\"tapparentPower\":463,\"voltageUnbalance\":0,\"currentUnbalance\":0,\"phase\":344.73,\"powerFactor\":87.56}]}",
+  "message" : "{\"time\":1733215543648,\"type\":3,\"leakageCurrent\":0,\"current\":211,\"activePower\":405,\"reactivePower\":-112,\"tapparentPower\":470,\"powerFactor\":86.22,\"currentUnbalance\":0,\"lines\":[{\"voltage\":220.76,\"current\":2.11,\"activePower\":405,\"reactivePower\":-112,\"tapparentPower\":470,\"voltageUnbalance\":0,\"currentUnbalance\":0,\"phase\":345.05,\"powerFactor\":86.22}]}",
   "deviceName" : "서버실",
   "voltage" : 0.0,
-  "current" : 215.0,
+  "current" : 211.0,
   "activePower" : 405.0,
-  "reactivePower" : -110.0,
-  "tapparentPower" : 463.0,
+  "reactivePower" : -112.0,
+  "tapparentPower" : 470.0,
   "phase" : 0.0,
-  "powerFactor" : 87.56
+  "powerFactor" : 86.22
 }, {
-  "topic" : "data/s/nhnacademy/b/gyeongnam_campus/p/campus/d/gem3500_1/n/간판/e/power_meter",
-  "message" : "{\"time\":1733206903612,\"type\":1,\"leakageCurrent\":0,\"current\":0,\"activePower\":0,\"reactivePower\":0,\"tapparentPower\":0,\"powerFactor\":0,\"currentUnbalance\":0,\"lines\":[]}",
-  "deviceName" : "간판",
+  "topic" : "data/s/nhnacademy/b/gyeongnam_campus/p/pair_room/d/24e124617d159573/n/2/e/distance",
+  "message" : "{\"time\":1733215676325,\"value\":2235}",
+  "deviceName" : "2",
   "voltage" : 0.0,
   "current" : 0.0,
   "activePower" : 0.0,
@@ -208,9 +263,9 @@
   "phase" : 0.0,
   "powerFactor" : 0.0
 }, {
-  "topic" : "data/s/nhnacademy/b/gyeongnam_campus/p/campus/d/gem3500_1/n/페어룸/e/power_meter",
-  "message" : "{\"time\":1733206903714,\"type\":2,\"leakageCurrent\":0,\"current\":0,\"activePower\":0,\"reactivePower\":0,\"tapparentPower\":0,\"powerFactor\":0,\"currentUnbalance\":0,\"lines\":[]}",
-  "deviceName" : "페어룸",
+  "topic" : "data/s/nhnacademy/b/gyeongnam_campus/p/pair_room/d/24e124617d159573/n/2/e/battery",
+  "message" : "{\"time\":1733215676325,\"value\":75}",
+  "deviceName" : "2",
   "voltage" : 0.0,
   "current" : 0.0,
   "activePower" : 0.0,
@@ -219,53 +274,9 @@
   "phase" : 0.0,
   "powerFactor" : 0.0
 }, {
-  "topic" : "data/s/nhnacademy/b/gyeongnam_campus/p/campus/d/gem3500_1/n/사무실_전열1/e/power_meter",
-  "message" : "{\"time\":1733206903813,\"type\":3,\"leakageCurrent\":0,\"current\":69,\"activePower\":67,\"reactivePower\":-55,\"tapparentPower\":153,\"powerFactor\":43.74,\"currentUnbalance\":0,\"lines\":[{\"voltage\":216.86,\"current\":0.69,\"activePower\":67,\"reactivePower\":-55,\"tapparentPower\":153,\"voltageUnbalance\":0,\"currentUnbalance\":0,\"phase\":305.84,\"powerFactor\":43.74}]}",
-  "deviceName" : "사무실_전열1",
-  "voltage" : 0.0,
-  "current" : 69.0,
-  "activePower" : 67.0,
-  "reactivePower" : -55.0,
-  "tapparentPower" : 153.0,
-  "phase" : 0.0,
-  "powerFactor" : 43.74
-}, {
-  "topic" : "data/s/nhnacademy/b/gyeongnam_campus/p/campus/d/gem3500_1/n/사무실_전열2/e/power_meter",
-  "message" : "{\"time\":1733206903914,\"type\":3,\"leakageCurrent\":0,\"current\":29,\"activePower\":7,\"reactivePower\":-59,\"tapparentPower\":62,\"powerFactor\":11.53,\"currentUnbalance\":0,\"lines\":[{\"voltage\":216.92,\"current\":0.29,\"activePower\":7,\"reactivePower\":-59,\"tapparentPower\":62,\"voltageUnbalance\":0,\"currentUnbalance\":0,\"phase\":279.02,\"powerFactor\":11.53}]}",
-  "deviceName" : "사무실_전열2",
-  "voltage" : 0.0,
-  "current" : 29.0,
-  "activePower" : 7.0,
-  "reactivePower" : -59.0,
-  "tapparentPower" : 62.0,
-  "phase" : 0.0,
-  "powerFactor" : 11.53
-}, {
-  "topic" : "data/s/nhnacademy/b/gyeongnam_campus/p/campus/d/gem3500_1/n/사무실_복사기/e/power_meter",
-  "message" : "{\"time\":1733206904015,\"type\":1,\"leakageCurrent\":0,\"current\":6,\"activePower\":7,\"reactivePower\":0,\"tapparentPower\":14,\"powerFactor\":50,\"currentUnbalance\":0,\"lines\":[]}",
-  "deviceName" : "사무실_복사기",
-  "voltage" : 0.0,
-  "current" : 6.0,
-  "activePower" : 7.0,
-  "reactivePower" : 0.0,
-  "tapparentPower" : 14.0,
-  "phase" : 0.0,
-  "powerFactor" : 50.0
-}, {
-  "topic" : "data/s/nhnacademy/b/gyeongnam_campus/p/campus/d/gem3500_1/n/빌트인_전열/e/power_meter",
-  "message" : "{\"time\":1733206904116,\"type\":2,\"leakageCurrent\":0,\"current\":5,\"activePower\":4,\"reactivePower\":-4,\"tapparentPower\":14,\"powerFactor\":33.33,\"currentUnbalance\":0,\"lines\":[]}",
-  "deviceName" : "빌트인_전열",
-  "voltage" : 0.0,
-  "current" : 5.0,
-  "activePower" : 4.0,
-  "reactivePower" : -4.0,
-  "tapparentPower" : 14.0,
-  "phase" : 0.0,
-  "powerFactor" : 33.33
-}, {
-  "topic" : "data/s/nhnacademy/b/gyeongnam_campus/p/campus/d/gem3500_1/n/사무실_전열3/e/power_meter",
-  "message" : "{\"time\":1733206904217,\"type\":3,\"leakageCurrent\":0,\"current\":0,\"activePower\":0,\"reactivePower\":0,\"tapparentPower\":0,\"powerFactor\":0,\"currentUnbalance\":0,\"lines\":[{\"voltage\":217.02,\"current\":0,\"activePower\":0,\"reactivePower\":0,\"tapparentPower\":0,\"voltageUnbalance\":0,\"currentUnbalance\":0,\"phase\":0,\"powerFactor\":0}]}",
-  "deviceName" : "사무실_전열3",
+  "topic" : "data/s/nhnacademy/b/gyeongnam_campus/p/pair_room/d/24e124617d159573/n/2/e/occupancy",
+  "message" : "{\"time\":1733215676325,\"value\":0}",
+  "deviceName" : "2",
   "voltage" : 0.0,
   "current" : 0.0,
   "activePower" : 0.0,
@@ -274,31 +285,9 @@
   "phase" : 0.0,
   "powerFactor" : 0.0
 }, {
-  "topic" : "data/s/nhnacademy/b/gyeongnam_campus/p/campus/d/gem3500_1/n/정수기/e/power_meter",
-  "message" : "{\"time\":1733206904317,\"type\":1,\"leakageCurrent\":0,\"current\":69,\"activePower\":93,\"reactivePower\":119,\"tapparentPower\":151,\"powerFactor\":61.9,\"currentUnbalance\":0,\"lines\":[]}",
-  "deviceName" : "정수기",
-  "voltage" : 0.0,
-  "current" : 69.0,
-  "activePower" : 93.0,
-  "reactivePower" : 119.0,
-  "tapparentPower" : 151.0,
-  "phase" : 0.0,
-  "powerFactor" : 61.9
-}, {
-  "topic" : "data/s/nhnacademy/b/gyeongnam_campus/p/campus/d/gem3500_1/n/하이브_전열/e/power_meter",
-  "message" : "{\"time\":1733206904418,\"type\":2,\"leakageCurrent\":0,\"current\":68,\"activePower\":86,\"reactivePower\":-43,\"tapparentPower\":148,\"powerFactor\":58.06,\"currentUnbalance\":0,\"lines\":[]}",
-  "deviceName" : "하이브_전열",
-  "voltage" : 0.0,
-  "current" : 68.0,
-  "activePower" : 86.0,
-  "reactivePower" : -43.0,
-  "tapparentPower" : 148.0,
-  "phase" : 0.0,
-  "powerFactor" : 58.06
-}, {
-  "topic" : "data/s/nhnacademy/b/gyeongnam_campus/p/campus/d/gem3500_1/n/바텐_전열/e/power_meter",
-  "message" : "{\"time\":1733206904520,\"type\":3,\"leakageCurrent\":0,\"current\":0,\"activePower\":0,\"reactivePower\":0,\"tapparentPower\":0,\"powerFactor\":0,\"currentUnbalance\":0,\"lines\":[{\"voltage\":217.08,\"current\":0,\"activePower\":0,\"reactivePower\":0,\"tapparentPower\":0,\"voltageUnbalance\":0,\"currentUnbalance\":0,\"phase\":0,\"powerFactor\":0}]}",
-  "deviceName" : "바텐_전열",
+  "topic" : "data/s/nhnacademy/b/gyeongnam_campus/p/pair_room/d/24e124617d159573/n/2/g/24e124fffef79304/e/lora",
+  "message" : "{\"time\":1733215676325,\"value\":{\"dr\":0,\"rssi\":-43,\"snr\":8.5,\"channel\":3,\"frequency\":922700000,\"sf\":12}}",
+  "deviceName" : "2",
   "voltage" : 0.0,
   "current" : 0.0,
   "activePower" : 0.0,
@@ -307,9 +296,9 @@
   "phase" : 0.0,
   "powerFactor" : 0.0
 }, {
-  "topic" : "data/s/nhnacademy/b/gyeongnam_campus/p/campus/d/gem3500_1/n/S_P/e/power_meter",
-  "message" : "{\"time\":1733206904621,\"type\":1,\"leakageCurrent\":0,\"current\":0,\"activePower\":0,\"reactivePower\":0,\"tapparentPower\":0,\"powerFactor\":0,\"currentUnbalance\":0,\"lines\":[]}",
-  "deviceName" : "S_P",
+  "topic" : "data/s/nhnacademy/b/gyeongnam_campus/p/pair_room/d/24e124617d157233/n/3/e/battery",
+  "message" : "{\"time\":1733215779822,\"value\":49}",
+  "deviceName" : "3",
   "voltage" : 0.0,
   "current" : 0.0,
   "activePower" : 0.0,
@@ -318,9 +307,9 @@
   "phase" : 0.0,
   "powerFactor" : 0.0
 }, {
-  "topic" : "data/s/nhnacademy/b/gyeongnam_campus/p/server_room/d/24e124136d151368/n/입구/e/humidity",
-  "message" : "{\"time\":1733206904382,\"value\":28.5}",
-  "deviceName" : "입구",
+  "topic" : "data/s/nhnacademy/b/gyeongnam_campus/p/pair_room/d/24e124617d157233/n/3/e/occupancy",
+  "message" : "{\"time\":1733215779822,\"value\":0}",
+  "deviceName" : "3",
   "voltage" : 0.0,
   "current" : 0.0,
   "activePower" : 0.0,
@@ -329,9 +318,9 @@
   "phase" : 0.0,
   "powerFactor" : 0.0
 }, {
-  "topic" : "data/s/nhnacademy/b/gyeongnam_campus/p/server_room/d/24e124136d151368/n/입구/e/temperature",
-  "message" : "{\"time\":1733206904382,\"value\":24.3}",
-  "deviceName" : "입구",
+  "topic" : "data/s/nhnacademy/b/gyeongnam_campus/p/pair_room/d/24e124617d157233/n/3/e/distance",
+  "message" : "{\"time\":1733215779822,\"value\":2275}",
+  "deviceName" : "3",
   "voltage" : 0.0,
   "current" : 0.0,
   "activePower" : 0.0,
@@ -340,9 +329,9 @@
   "phase" : 0.0,
   "powerFactor" : 0.0
 }, {
-  "topic" : "data/s/nhnacademy/b/gyeongnam_campus/p/server_room/d/24e124136d151368/n/입구/g/24e124fffef5dccc/e/lora",
-  "message" : "{\"time\":1733206904382,\"value\":{\"dr\":0,\"rssi\":-43,\"snr\":9.5,\"channel\":6,\"frequency\":923300000,\"sf\":12}}",
-  "deviceName" : "입구",
+  "topic" : "data/s/nhnacademy/b/gyeongnam_campus/p/pair_room/d/24e124617d157233/n/3/g/24e124fffef5dccc/e/lora",
+  "message" : "{\"time\":1733215779822,\"value\":{\"dr\":0,\"rssi\":-53,\"snr\":8,\"channel\":5,\"frequency\":923100000,\"sf\":12}}",
+  "deviceName" : "3",
   "voltage" : 0.0,
   "current" : 0.0,
   "activePower" : 0.0,
@@ -351,9 +340,9 @@
   "phase" : 0.0,
   "powerFactor" : 0.0
 }, {
-  "topic" : "data/s/nhnacademy/b/gyeongnam_campus/p/server_room/d/24e124136d151368/n/입구/g/24e124fffef79304/e/lora",
-  "message" : "{\"time\":1733206904382,\"value\":{\"dr\":0,\"rssi\":-46,\"snr\":10.2,\"channel\":6,\"frequency\":923300000,\"sf\":12}}",
-  "deviceName" : "입구",
+  "topic" : "data/s/nhnacademy/b/gyeongnam_campus/p/pair_room/d/24e124617d157233/n/3/g/24e124fffef79304/e/lora",
+  "message" : "{\"time\":1733215779822,\"value\":{\"dr\":0,\"rssi\":-46,\"snr\":9,\"channel\":5,\"frequency\":923100000,\"sf\":12}}",
+  "deviceName" : "3",
   "voltage" : 0.0,
   "current" : 0.0,
   "activePower" : 0.0,
@@ -362,31 +351,9 @@
   "phase" : 0.0,
   "powerFactor" : 0.0
 }, {
-  "topic" : "data/s/nhnacademy/b/gyeongnam_campus/p/campus/d/gem3500_1/n/공조기/e/power_meter",
-  "message" : "{\"time\":1733206904723,\"type\":2,\"leakageCurrent\":0,\"current\":106,\"activePower\":115,\"reactivePower\":-31,\"tapparentPower\":232,\"powerFactor\":49.48,\"currentUnbalance\":0,\"lines\":[]}",
-  "deviceName" : "공조기",
-  "voltage" : 0.0,
-  "current" : 106.0,
-  "activePower" : 115.0,
-  "reactivePower" : -31.0,
-  "tapparentPower" : 232.0,
-  "phase" : 0.0,
-  "powerFactor" : 49.48
-}, {
-  "topic" : "data/s/nhnacademy/b/gyeongnam_campus/p/campus/d/gem3500_1/n/AC/e/power_meter",
-  "message" : "{\"time\":1733206904824,\"type\":3,\"leakageCurrent\":0,\"current\":16,\"activePower\":11,\"reactivePower\":-23,\"tapparentPower\":35,\"powerFactor\":33.33,\"currentUnbalance\":0,\"lines\":[{\"voltage\":217.08,\"current\":0.16,\"activePower\":11,\"reactivePower\":-23,\"tapparentPower\":35,\"voltageUnbalance\":0,\"currentUnbalance\":0,\"phase\":290.24,\"powerFactor\":33.33}]}",
-  "deviceName" : "AC",
-  "voltage" : 0.0,
-  "current" : 16.0,
-  "activePower" : 11.0,
-  "reactivePower" : -23.0,
-  "tapparentPower" : 35.0,
-  "phase" : 0.0,
-  "powerFactor" : 33.33
-}, {
-  "topic" : "data/s/nhnacademy/b/gyeongnam_campus/p/office/d/24e124785c384491/n/배전판 옆/e/battery",
-  "message" : "{\"time\":1733206905051,\"value\":14}",
-  "deviceName" : "배전판 옆",
+  "topic" : "data/s/nhnacademy/b/gyeongnam_campus/p/pair_room/d/24e124617d157233/n/3/e/occupancy",
+  "message" : "{\"time\":1733215779806,\"value\":0}",
+  "deviceName" : "3",
   "voltage" : 0.0,
   "current" : 0.0,
   "activePower" : 0.0,
@@ -395,9 +362,9 @@
   "phase" : 0.0,
   "powerFactor" : 0.0
 }, {
-  "topic" : "data/s/nhnacademy/b/gyeongnam_campus/p/office/d/24e124785c384491/n/배전판 옆/e/humidity",
-  "message" : "{\"time\":1733206905051,\"value\":34}",
-  "deviceName" : "배전판 옆",
+  "topic" : "data/s/nhnacademy/b/gyeongnam_campus/p/pair_room/d/24e124617d157233/n/3/e/battery",
+  "message" : "{\"time\":1733215779806,\"value\":49}",
+  "deviceName" : "3",
   "voltage" : 0.0,
   "current" : 0.0,
   "activePower" : 0.0,
@@ -406,9 +373,9 @@
   "phase" : 0.0,
   "powerFactor" : 0.0
 }, {
-  "topic" : "data/s/nhnacademy/b/gyeongnam_campus/p/office/d/24e124785c384491/n/배전판 옆/e/temperature",
-  "message" : "{\"time\":1733206905051,\"value\":19.8}",
-  "deviceName" : "배전판 옆",
+  "topic" : "data/s/nhnacademy/b/gyeongnam_campus/p/pair_room/d/24e124617d157233/n/3/e/distance",
+  "message" : "{\"time\":1733215779806,\"value\":2275}",
+  "deviceName" : "3",
   "voltage" : 0.0,
   "current" : 0.0,
   "activePower" : 0.0,
@@ -417,9 +384,9 @@
   "phase" : 0.0,
   "powerFactor" : 0.0
 }, {
-  "topic" : "data/s/nhnacademy/b/gyeongnam_campus/p/office/d/24e124785c384491/n/배전판 옆/g/24e124fffef79304/e/lora",
-  "message" : "{\"time\":1733206905051,\"value\":{\"dr\":0,\"rssi\":-90,\"snr\":6,\"frequency\":922100000,\"sf\":12}}",
-  "deviceName" : "배전판 옆",
+  "topic" : "data/s/nhnacademy/b/gyeongnam_campus/p/pair_room/d/24e124617d157233/n/3/g/24e124fffef79304/e/lora",
+  "message" : "{\"time\":1733215779806,\"value\":{\"dr\":0,\"rssi\":-104,\"snr\":-14.2,\"frequency\":922100000,\"sf\":12}}",
+  "deviceName" : "3",
   "voltage" : 0.0,
   "current" : 0.0,
   "activePower" : 0.0,
@@ -428,9 +395,9 @@
   "phase" : 0.0,
   "powerFactor" : 0.0
 }, {
-  "topic" : "data/s/nhnacademy/b/gyeongnam_campus/p/office/d/24e124785c384491/n/배전판 옆/g/24e124fffef5dccc/e/lora",
-  "message" : "{\"time\":1733206905051,\"value\":{\"dr\":0,\"rssi\":-48,\"snr\":9.5,\"frequency\":922100000,\"sf\":12}}",
-  "deviceName" : "배전판 옆",
+  "topic" : "data/s/nhnacademy/b/gyeongnam_campus/p/pair_room/d/24e124617d157233/n/3/g/24e124fffef5dccc/e/lora",
+  "message" : "{\"time\":1733215779806,\"value\":{\"dr\":0,\"rssi\":-106,\"snr\":-14.2,\"frequency\":922100000,\"sf\":12}}",
+  "deviceName" : "3",
   "voltage" : 0.0,
   "current" : 0.0,
   "activePower" : 0.0,
@@ -438,4 +405,37 @@
   "tapparentPower" : 0.0,
   "phase" : 0.0,
   "powerFactor" : 0.0
+}, {
+  "topic" : "data/s/nhnacademy/b/gyeongnam_campus/p/campus/d/gem3500_1/n/캠퍼스_LL/e/voltage",
+  "message" : "{\"time\":1733215782542,\"value\":384.01}",
+  "deviceName" : "캠퍼스_LL",
+  "voltage" : 0.0,
+  "current" : 0.0,
+  "activePower" : 0.0,
+  "reactivePower" : 0.0,
+  "tapparentPower" : 0.0,
+  "phase" : 0.0,
+  "powerFactor" : 0.0
+}, {
+  "topic" : "data/s/nhnacademy/b/gyeongnam_campus/p/campus/d/gem3500_1/n/캠퍼스_LN/e/voltage",
+  "message" : "{\"time\":1733215782542,\"value\":221.7}",
+  "deviceName" : "캠퍼스_LN",
+  "voltage" : 0.0,
+  "current" : 0.0,
+  "activePower" : 0.0,
+  "reactivePower" : 0.0,
+  "tapparentPower" : 0.0,
+  "phase" : 0.0,
+  "powerFactor" : 0.0
+}, {
+  "topic" : "data/s/nhnacademy/b/gyeongnam_campus/p/campus/d/gem3500_1/n/캠퍼스1/e/power_meter",
+  "message" : "{\"time\":1733215782642,\"type\":5,\"leakageCurrent\":0,\"current\":2490,\"activePower\":4602,\"reactivePower\":-1860,\"tapparentPower\":5522,\"powerFactor\":83.34,\"currentUnbalance\":49.17,\"lines\":[]}",
+  "deviceName" : "캠퍼스1",
+  "voltage" : 0.0,
+  "current" : 2490.0,
+  "activePower" : 4602.0,
+  "reactivePower" : -1860.0,
+  "tapparentPower" : 5522.0,
+  "phase" : 0.0,
+  "powerFactor" : 83.34
 } ]
