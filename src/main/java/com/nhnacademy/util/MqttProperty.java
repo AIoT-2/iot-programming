@@ -13,7 +13,7 @@ import java.util.Objects;
  * {@code /resources/config.json} 참조
  */
 @Slf4j
-public final class Property {
+public final class MqttProperty {
 
     private static final String PATH = "/config.json";
 
@@ -27,8 +27,7 @@ public final class Property {
 
     static {
         try {
-            // BROKER = mqttNode.get("broker").asText();
-            InputStream inputStream = Property.class.getResourceAsStream(PATH);
+            InputStream inputStream = MqttProperty.class.getResourceAsStream(PATH);
             if (Objects.isNull(inputStream)) {
                 log.error("'config.json'이 존재하지 않습니다.");
                 throw new RuntimeException();

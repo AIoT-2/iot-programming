@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 
 @Slf4j
-class PropertyTest {
+class MqttPropertyTest {
 
     private final String EXPECT_BROKER = "tcp://192.168.71.219:1883";
 
@@ -18,7 +18,7 @@ class PropertyTest {
     @Test
     void brokerCheck() {
         // BROKER
-        String broker = Property.getBroker();
+        String broker = MqttProperty.getBroker();
         log.debug("Broker: {}", broker);
         Assertions.assertEquals(EXPECT_BROKER, broker);
     }
@@ -27,7 +27,7 @@ class PropertyTest {
     @Test
     void clientIdCheck() {
         // CLIENT_ID
-        String clientId = Property.getClientId();
+        String clientId = MqttProperty.getClientId();
         log.debug("ClientId: {}", clientId);
         Assertions.assertEquals(EXPECT_CLIENT_ID, clientId);
     }
@@ -36,7 +36,7 @@ class PropertyTest {
     @Test
     void topicCheck() {
         // TOPIC
-        String topic = Property.getTopic();
+        String topic = MqttProperty.getTopic();
         log.debug("Topic: {}", topic);
         Assertions.assertEquals(EXPECT_TOPIC, topic);
     }
