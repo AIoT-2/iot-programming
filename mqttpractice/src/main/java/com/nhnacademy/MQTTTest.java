@@ -33,10 +33,10 @@ public class MQTTTest {
         this.writeApiBlocking = influxDBClient.getWriteApiBlocking();
     }
 
-    // public static void main(String[] args) {
-    // MQTTTest app = new MQTTTest();
-    // app.start();
-    // }
+    public static void main(String[] args) {
+        MQTTTest app = new MQTTTest();
+        app.start();
+    }
 
     public void start() {
         try (MqttClient client = new MqttClient(BROKER, CLIENT_ID)) {
@@ -67,7 +67,6 @@ public class MQTTTest {
             System.out.println("Subscribing to topic: " + TOPIC);
             client.subscribe(TOPIC);
 
-            // 계속 실행
             while (true) {
                 TimeUnit.SECONDS.sleep(1);
             }
@@ -76,22 +75,17 @@ public class MQTTTest {
         }
     }
 
-    /**
-     * 메시지를 처리하여 InfluxDB에 저장하는 메서드.
-     */
     private void handleMessage(String topic, MqttMessage message) {
         try {
             System.out.println("Received message from topic: " + topic);
             String payload = new String(message.getPayload());
             System.out.println("Payload: " + payload);
 
-            // 'lora' 데이터 제외
             if (topic.contains("lora")) {
                 System.out.println("Lora data received, skipping...");
-                return; // lora 관련 데이터는 제외
+                return;
             }
 
-            // JSON 파싱
             JsonObject jsonPayload = JsonParser.parseString(payload).getAsJsonObject();
             JsonElement valueElement = jsonPayload.get("value");
             if (valueElement == null) {
@@ -99,18 +93,15 @@ public class MQTTTest {
                 return;
             }
 
-            // 주제 분석
             String measurement = extractSegment(topic, "/e/", "/");
             String placeName = extractSegment(topic, "/p/", "/d/");
             String deviceName = extractSegment(topic, "/n/", "/e/");
 
-            // Point 객체 생성
             Point point = Point.measurement(measurement)
                     .addTag("deviceName", deviceName)
                     .addTag("placeName", placeName)
                     .time(Instant.now(), WritePrecision.MS);
 
-            // value 타입에 따른 처리
             if (valueElement.isJsonPrimitive()) {
                 if (valueElement.getAsJsonPrimitive().isNumber()) {
                     point.addField("value", valueElement.getAsDouble());
@@ -120,14 +111,12 @@ public class MQTTTest {
                     point.addField("value", valueElement.getAsString());
                 }
             } else if (valueElement.isJsonObject()) {
-                // JSON 객체를 문자열로 저장
                 point.addField("value", valueElement.toString());
             } else {
                 System.err.println("Unsupported value type: " + valueElement);
                 return;
             }
 
-            // 데이터 쓰기
             writeApiBlocking.writePoint(point);
             System.out.println("Data written to InfluxDB: " + point);
         } catch (Exception e) {
