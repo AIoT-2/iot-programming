@@ -1,11 +1,11 @@
 package com.nhnacademy.mqtt;
 
+import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
+@Slf4j
 class MqttPropertyTest {
 
     private final String EXPECT_BROKER = "tcp://192.168.71.219:1883";
@@ -18,20 +18,26 @@ class MqttPropertyTest {
     @Test
     void brokerCheck() {
         // BROKER
-        Assertions.assertEquals(EXPECT_BROKER, MqttProperty.getBroker());
+        String broker = MqttProperty.getBroker();
+        log.debug("Broker: {}", broker);
+        Assertions.assertEquals(EXPECT_BROKER, broker);
     }
 
     @Order(2)
     @Test
     void clientIdCheck() {
         // CLIENT_ID
-        Assertions.assertEquals(EXPECT_CLIENT_ID, MqttProperty.getClientId());
+        String clientId = MqttProperty.getClientId();
+        log.debug("ClientId: {}", clientId);
+        Assertions.assertEquals(EXPECT_CLIENT_ID, clientId);
     }
 
     @Order(3)
     @Test
     void topicCheck() {
         // TOPIC
-        Assertions.assertEquals(EXPECT_TOPIC, MqttProperty.getTopic());
+        String topic = MqttProperty.getTopic();
+        log.debug("Topic: {}", topic);
+        Assertions.assertEquals(EXPECT_TOPIC, topic);
     }
 }

@@ -31,7 +31,7 @@ class JsonParserTest {
             mqttNode = objectMapper.readTree(new File(PATH)).path("mqtt");
         } catch (IOException e) {
             // log 로그 만들기 실패!
-            e.printStackTrace();
+            log.error("{}", e.getMessage(), e);
         }
     }
 
@@ -40,6 +40,7 @@ class JsonParserTest {
     void brokerCheck() {
         // BROKER
         String broker = mqttNode.get("broker").asText();
+        log.debug("Broker: {}", broker);
         Assertions.assertEquals(EXPECT_BROKER, broker);
     }
 
@@ -48,6 +49,7 @@ class JsonParserTest {
     void clientIdCheck() {
         // CLIENT_ID
         String clientId = mqttNode.get("client_id").asText();
+        log.debug("ClientId: {}", clientId);
         Assertions.assertEquals(EXPECT_CLIENT_ID, clientId);
     }
 
@@ -56,6 +58,7 @@ class JsonParserTest {
     void topicCheck() {
         // TOPIC
         String topic = mqttNode.get("topic").asText();
+        log.debug("Topic: {}", topic);
         Assertions.assertEquals(EXPECT_TOPIC, topic);
     }
 }
