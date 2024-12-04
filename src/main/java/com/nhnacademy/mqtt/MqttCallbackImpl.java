@@ -14,6 +14,7 @@ public class MqttCallbackImpl implements MqttCallback {
                 cause.getMessage());
     }
 
+    // MQTT 응답을 받는 곳
     @Override
     public void messageArrived(String topic, MqttMessage message) throws Exception {
         log.debug("Received message from topic '{}': {}",
