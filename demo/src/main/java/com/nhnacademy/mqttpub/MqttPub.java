@@ -1,4 +1,4 @@
-package com.nhnacademy.mqttPub;
+package com.nhnacademy.mqttpub;
 
 import org.eclipse.paho.client.mqttv3.MqttClient;
 import org.eclipse.paho.client.mqttv3.MqttConnectOptions;
