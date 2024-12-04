@@ -41,6 +41,8 @@ public class TransferMqtt {
                         long timestamp = timestampMillis / 1000;    // 초 단위로 변환
                         String deviceName = rootNode.get("deviceInfo").get("deviceName").asText();
 
+                        System.out.println("asdf"+deviceName);
+
                         // 가공된 메시지 생성
                         String processedPayload = mapper.writeValueAsString(new ProcessedMessage(
                             temperature,
