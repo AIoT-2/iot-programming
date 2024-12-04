@@ -10,8 +10,8 @@ import org.slf4j.LoggerFactory;
 public class TCPHandler implements DataSourceHandler {
 
     private static final Logger log = LoggerFactory.getLogger(TCPHandler.class);
-    private static final String HOST = "192.168.70.203"; // TCP 서버 IP
-    private static final int PORT = 5000; // TCP 포트
+    private String HOST = "192.168.70.203"; // TCP 서버 IP
+    private int PORT = 5000; // TCP 포트
 
     @Override
     public String handle() {

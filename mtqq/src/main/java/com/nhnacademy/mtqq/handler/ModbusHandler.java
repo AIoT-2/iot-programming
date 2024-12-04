@@ -17,11 +17,11 @@ import java.net.UnknownHostException;
 public class ModbusHandler implements DataSourceHandler {
 
     private static final Logger log = LoggerFactory.getLogger(ModbusHandler.class);
-    private static final String HOST = "192.168.70.203"; // Modbus 서버 IP
-    private static final int PORT = Modbus.TCP_PORT; // Modbus TCP 포트
-    private static final int SLAVE_ID = 1; // Modbus Slave ID
-    private static final int OFFSET = 100; // 읽을 시작 주소
-    private static final int QUANTITY = 32; // 읽을 데이터 수
+    private String HOST = "192.168.70.203"; // Modbus 서버 IP
+    private int PORT = Modbus.TCP_PORT; // Modbus TCP 포트
+    private int SLAVE_ID = 1; // Modbus Slave ID
+    private int OFFSET = 100; // 읽을 시작 주소
+    private int QUANTITY = 32; // 읽을 데이터 수
 
     @Override
     public String handle() {

@@ -1,4 +1,4 @@
-package com.nhnacademy.mtqq.mtqq;
+package com.nhnacademy.mtqq.mqtt;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.databind.JsonNode;
@@ -26,9 +26,9 @@ public class save {
     private static final String TOPIC = "data/#";
     private static final Logger log = LoggerFactory.getLogger(MqttToInfluxDB.class);
 
-    private final String broker;
-    private final String clientId;
-    private final String topic;
+    String broker;
+    String clientId;
+    String topic;
 
     private static final List<MessageData> messageList = new ArrayList<>();
     private static final String url ="http://192.168.71.220:8086";
