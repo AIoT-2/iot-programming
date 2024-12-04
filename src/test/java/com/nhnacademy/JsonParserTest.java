@@ -2,6 +2,7 @@ package com.nhnacademy;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.nhnacademy.util.MqttProperty;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
@@ -10,6 +11,7 @@ import org.junit.jupiter.api.Test;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 
 @Slf4j
 class JsonParserTest {
@@ -26,9 +28,10 @@ class JsonParserTest {
 
     @BeforeAll
     static void setUp() {
-        ObjectMapper objectMapper = new ObjectMapper();
-        try {
-            mqttNode = objectMapper.readTree(new File(PATH)).path("mqtt");
+        try (InputStream inputStream = MqttProperty.class.getResourceAsStream(PATH)) {
+            mqttNode = new ObjectMapper()
+                            .readTree(inputStream)
+                            .path("mqtt");
         } catch (IOException e) {
             log.error("{}", e.getMessage(), e);
         }
