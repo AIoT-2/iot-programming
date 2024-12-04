@@ -22,13 +22,15 @@ import java.util.logging.LogRecord;
 import org.eclipse.paho.client.mqttv3.MqttClient;
 import org.eclipse.paho.client.mqttv3.MqttConnectOptions;
 import org.eclipse.paho.client.mqttv3.MqttMessage;
+import lombok.extern.slf4j.Slf4j;
 
+@Slf4j
 public class MasterTCP {
     public static void main(String[] args) {
         Modbus.log().addHandler(new Handler() {
             @Override
             public void publish(LogRecord records) {
-                System.out.println(records.getLevel().getName() + ": " + records.getMessage());
+                log.debug("{}: {}", records.getLevel().getName(), records.getMessage());
             }
 
             @Override
@@ -124,7 +126,7 @@ public class MasterTCP {
                         client.publish(DemoSetting.MODBUS_TOPIC, message);
                     }
 
-                    System.out.println("Published message to MQTT: " + payload);
+                    log.debug("Published message to MQTT: {}", payload);
 
                     Thread.sleep(1000);
                 }

@@ -14,9 +14,13 @@ import com.influxdb.client.InfluxDBClientFactory;
 import com.influxdb.client.domain.WritePrecision;
 import com.influxdb.client.write.Point;
 import com.nhnacademy.settings.DemoSetting;
+
+import lombok.extern.slf4j.Slf4j;
+
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+@Slf4j
 public class MqttBrokers {
     public static void main(String[] args) throws InterruptedException {
 
@@ -34,14 +38,14 @@ public class MqttBrokers {
             client.setCallback(new MqttCallback() {
                 @Override
                 public void connectionLost(Throwable cause) {
-                    System.out.println("Connection lost: " + cause.getMessage());
-                    cause.printStackTrace(); // 예외 스택 트레이스 출력
+                    log.debug("Connection lost: {}", cause.getMessage());
+                    // cause.printStackTrace(); // 예외 스택 트레이스 출력
                 }
 
                 @Override
                 public void messageArrived(String topic, MqttMessage message) throws Exception {
                     // mqtt 변환
-                    System.out.println("Received message from topic: " + topic);
+                    log.debug("Received message from topic: {}", topic);
                     /**
                      * String은 불변이지만 속도가 느림. 보통 짧은 문자를 더할 경우 사용
                      * 이 경우 StringBuilder를 이용하면 동기화 여부와 관계없이 빠르게 돼서 사용
@@ -84,9 +88,9 @@ public class MqttBrokers {
 
                         // InfluxDB에 데이터 기록
                         influxDBClient.getWriteApiBlocking().writePoint(point);
-                        System.out.println("Data written to InfluxDB: " + point);
+                        log.debug("Data written to InfluxDB: {}", point);
                     } else {
-                        System.out.println("deviceName is missing or object is null");
+                        log.debug("deviceName is missing or object is null");
                     }
                 }
 
@@ -96,10 +100,10 @@ public class MqttBrokers {
                         JsonNode fieldNode = object.get(fieldName);
                         if (valueType.equals("double") && fieldNode.isNumber()) {
                             point.addField(fieldKey, fieldNode.asDouble());
-                            System.out.println(fieldKey + ": " + fieldNode.asDouble());
+                            log.debug("{}: {}", fieldKey, fieldNode.asDouble());
                         } else if (valueType.equals("int") && fieldNode.isNumber()) {
                             point.addField(fieldKey, fieldNode.asInt());
-                            System.out.println(fieldKey + ": " + fieldNode.asInt());
+                            log.debug("{}: {}", fieldKey, fieldNode.asInt());
                         }
                     }
                 }
