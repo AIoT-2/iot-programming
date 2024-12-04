@@ -122,7 +122,6 @@ public class TotalMqtt {
             for (Map.Entry<String, Object> entry : data.entrySet()) {
                 Object value = entry.getValue();
 
-                // 각 값의 타입에 맞게 addField를 호출
                 if (value instanceof Boolean) {
                     point.addField(entry.getKey(), (Boolean) value);
                 } else if (value instanceof Integer) {
@@ -133,11 +132,8 @@ public class TotalMqtt {
                     point.addField(entry.getKey(), (Double) value);
                 } else if (value instanceof Float) {
                     point.addField(entry.getKey(), (Float) value);
-                } else if (value instanceof String) {
-                    point.addField(entry.getKey(), (String) value);
                 } else {
-                    // 타입이 지원되지 않는 경우
-                    System.out.println("Unsupported data type: " + value.getClass().getName());
+                    point.addField(entry.getKey(), (String) value);
                 }
             }
 
