@@ -1,0 +1,13 @@
+com/example/ModbusReader.class
+com/example/ModbusDataConverter.class
+com/example/MessageParser.class
+com/example/SimpleMasterTCP.class
+com/example/MQTTSubscriber.class
+com/example/MqttInfluxCollector$1.class
+com/example/MqttPublisher.class
+com/example/MQTTSubscriber$1.class
+com/example/ModbusReader$1.class
+com/example/SimpleMasterTCP$1.class
+com/example/MqttInfluxCollector.class
+com/example/ModbusToMqttBridge.class
+com/example/ModbusTcpClient.class
