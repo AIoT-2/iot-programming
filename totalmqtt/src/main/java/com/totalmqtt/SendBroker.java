@@ -63,14 +63,12 @@ public class SendBroker {
     public void send(Map<String, Object> data, String topic) throws InterruptedException {
         try{
 
-            // 메시지 발행
             // ObjectMapper 객체 생성
             ObjectMapper objectMapper = new ObjectMapper();
             // publish
             String message = objectMapper.writeValueAsString(data);
             System.out.println("Publishing message: " + message);
             client.publish(topic, new MqttMessage(message.getBytes()));
-
 
         } catch (Exception e) {
             e.printStackTrace();

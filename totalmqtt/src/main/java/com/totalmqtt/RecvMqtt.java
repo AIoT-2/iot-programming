@@ -54,11 +54,7 @@ public class RecvMqtt {
                 .callback(publish -> { // 메시지가 수신될 때 호출되는 콜백함수 정의
                     // 데이터가 수신되었는지 확인
                     try {
-                        // System.out.println("Received message on topic " + publish.getTopic() + ": " +
-                        // new String(publish.getPayloadAsBytes(),
-                        // StandardCharsets.UTF_8));
                         String msgData = new String(publish.getPayloadAsBytes(), StandardCharsets.UTF_8);
-
                         // Jackson ObjectMapper 생성
                         ObjectMapper mapper = new ObjectMapper();
 
@@ -74,30 +70,11 @@ public class RecvMqtt {
                             String topic = publish.getTopic().toString();
 
                             Map<String, Object> totalData = new HashMap<>();
-                            for (Iterator<Map.Entry<String, JsonNode>> it = deviceInfo.fields(); it.hasNext();) {
-                                Map.Entry<String, JsonNode> field = it.next();
-                                String fieldName = field.getKey();
-                                JsonNode fieldValue = field.getValue();
-                                if (!fieldName.equals("tags")) {
-                                    totalData.put(fieldName, fieldValue);
-                                }
-                            }
-                            for (Iterator<Map.Entry<String, JsonNode>> it = tags.fields(); it.hasNext();) {
-                                Map.Entry<String, JsonNode> field = it.next();
-                                String fieldName = field.getKey();
-                                JsonNode fieldValue = field.getValue();
-                                if (!fieldName.equals("tags")) {
-                                    totalData.put(fieldName, fieldValue);
-                                }
-                            }
-                            for (Iterator<Map.Entry<String, JsonNode>> it = object.fields(); it.hasNext();) {
-                                Map.Entry<String, JsonNode> field = it.next();
-                                String fieldName = field.getKey();
-                                JsonNode fieldValue = field.getValue();
-                                if (!fieldName.equals("tags")) {
-                                    totalData.put(fieldName, fieldValue);
-                                }
-                            }
+                            
+                            totalData.putAll(getData(deviceInfo));
+                            totalData.putAll(getData(tags));
+                            totalData.putAll(getData(object));
+                            totalData.remove("tags");
 
                             System.out.println("-----------------------------");
                             System.out.println(totalData);
@@ -120,6 +97,17 @@ public class RecvMqtt {
                         System.out.println("Subscribed successfully!");
                     }
                 });
+    }
+
+    private Map<String, Object> getData(JsonNode data){
+        Map<String, Object> totalData = new HashMap<>();
+        for (Iterator<Map.Entry<String, JsonNode>> it = data.fields(); it.hasNext();) {
+            Map.Entry<String, JsonNode> field = it.next();
+            String fieldName = field.getKey();
+            JsonNode fieldValue = field.getValue();
+            totalData.put(fieldName, fieldValue);
+        }
+        return totalData;
     }
 
     private void handleDisconnect(MqttClientDisconnectedContext context) {

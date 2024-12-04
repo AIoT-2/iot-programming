@@ -138,7 +138,7 @@ public class Modbus2 implements Runnable{
         }
     }
 
-    public String Location(int channel) { // 위치 채널에 따른 위치 이름
+    private String Location(int channel) { // 위치 채널에 따른 위치 이름
         channel /= 100;
         channel--;
         String[] loca = { "캠퍼스", "캠퍼스1", "전등1", "전등2", "전등3", "강의실b_바닥", "강의실a_바닥1", "강의실a_바닥2", "프로젝터1",
@@ -147,14 +147,14 @@ public class Modbus2 implements Runnable{
         return loca[channel];
     }
 
-    public String JsonName(int channel){
+    private String JsonName(int channel){
         String[] jsonName = { "type", "a_leakage_current", "current", "W", "VAR", "VA", "PF_average", "reserved",
             "current_unbalance", "l_THD_average", "IGR", "IGC", "V1", "l1", "W1", "VAR1", "VA1", "volt_unbalance",
             "current_unbalace1", "phase", "power_factor", "l1_THD", "reserved1" };
         return jsonName[channel];
     }
 
-    public void getData() { // 각 데이터를 가져옴
+    private void getData() { // 각 데이터를 가져옴
         try {
             // 저장할 변수 선언
             Map<String, Object> toJson = new HashMap<>();
@@ -185,14 +185,12 @@ public class Modbus2 implements Runnable{
             LocalDateTime now = LocalDateTime.now();
             DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
             String formattedDate = now.format(formatter);
-            toJson.put("date", formattedDate);
-            toJson.put("name", Location(offset));
 
             String topic = "application/" + Location(offset);
             System.out.println("TOPIC : " + topic);
             System.out.println(toJson);
 
-            SendBroker sendBroker = new SendBroker();
+            SendBroker sendBroker = new SendBroker(); //broker에게 전송
             sendBroker.send(toJson, topic);
         } catch (Exception e) {
             System.err.println(e.getMessage());

@@ -98,7 +98,7 @@ public class TotalMqtt {
                 .delay(5, TimeUnit.SECONDS); // 재연결 전에 5초 지연
     }
 
-    public void write(String jsonData) {
+    private void write(String jsonData) {
         try {
             InfluxDBClient influxDBClient = InfluxDBClientFactory.create("http://192.168.71.205:8086", token, org, bucket);
 
