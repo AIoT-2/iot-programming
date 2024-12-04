@@ -23,10 +23,7 @@ public class MqttPublish {
 
     public static void main(String[] args) throws InterruptedException{
         ObjectMapper mapper = new ObjectMapper();
-        try (
-            MqttClient client = new MqttClient(BROKER, CLIENT_ID); 
-            MqttClient myClient = new MqttClient(OTHER_BROKER, OTHER_CLIENT_ID);
-        ) {
+        try (MqttClient client = new MqttClient(BROKER, CLIENT_ID); MqttClient myClient = new MqttClient(OTHER_BROKER, OTHER_CLIENT_ID)) {
             MqttConnectOptions options = new MqttConnectOptions();
             options.setCleanSession(true);
 
@@ -45,9 +42,9 @@ public class MqttPublish {
 
                 @Override
                 public void messageArrived(String topic, MqttMessage message) throws Exception {
+                    // System.out.println("Received message from topic '" + topic + "': " + new String(message.getPayload()));
                     JsonNode rootNode = mapper.readTree(message.getPayload());
                     JsonNode objectNode = rootNode.path("object");
-                    
                     if(!objectNode.isMissingNode()){
                         String devEui = rootNode.path("deviceInfo").get("devEui").asText();
                         Map<String, Object> objectMap = mapper.readValue(objectNode.toString(), Map.class);
@@ -57,10 +54,10 @@ public class MqttPublish {
                                                         .append("/p/").append(tagMap.get("place"))
                                                         .append("/d/").append(devEui);
 
-                        if (tagMap.containsKey("spot")) {
-                            myTopic.append("/sp/").append(tagMap.get("spot"));
+                                                        
+                        if(tagMap.containsKey("spot")){
+                            myTopic.append("/sp/").append(tagMap.get("spot").toString());
                         }
-
                         if (tagMap.containsKey("name")) {
                             myTopic.append("/n/").append(tagMap.get("name").toString().replace(" ", ""));
                         }
@@ -70,7 +67,7 @@ public class MqttPublish {
                             String key = entry.getKey();
                             Object value = entry.getValue();
  
-                            String topicWithKey = myTopic.append("/e/").append(key).toString();
+                            String topicWithKey = myTopic.toString() + "/e/" + key;
                 
                             Map<String, Object> tagMessage = Map.of(
                                 "time", new Timestamp(System.currentTimeMillis()),
@@ -89,27 +86,24 @@ public class MqttPublish {
                     }
 
                 }
-
                 @Override
                 public void deliveryComplete(IMqttDeliveryToken token) {
                     System.out.println("Message deliver complete: "+ token.getMessageId());
                 }
-
             });
-            
-            connectToBroker(client, options, BROKER);
-            connectToBroker(myClient, options, OTHER_BROKER);
- 
- 
-            System.out.println("Subscribing to topic: " + TOPIC);
-            client.subscribe(TOPIC);
- 
-            Thread.sleep(100000);
- 
-            System.out.println("Disconnecting...");
-            client.disconnect();
-            myClient.disconnect();
-            System.out.println("Disconnected!");
+
+           connectToBroker(client, options, BROKER);
+           connectToBroker(myClient, options, OTHER_BROKER);
+
+           System.out.println("Subscribing to topic: " + TOPIC);
+           client.subscribe(TOPIC);
+
+           Thread.sleep(100000);
+
+           System.out.println("Disconnecting...");
+           client.disconnect();
+           myClient.disconnect();
+           System.out.println("Disconnected!");
        } catch (MqttException e) {
            e.printStackTrace();
        }

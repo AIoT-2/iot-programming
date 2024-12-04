@@ -51,35 +51,37 @@ public class InfluxDBTest {
                 public void messageArrived(String topic, MqttMessage message) throws Exception {
                     JsonNode rootNode = mapper.readTree(message.getPayload());
                     JsonNode objectNode = rootNode.path("object");
-                    JsonNode deviceInfo = rootNode.path("deviceInfo");
-                    String[] deviceSplit = deviceInfo.get("deviceName").asText().split("\\(");
-                    String place = deviceSplit[1].replace(")", "");
-                    InfluxDBClient influxDBClient = InfluxDBClientFactory.create(INFLUX_URL, INFLUX_TOKEN.toCharArray(), INFLUX_ORG, INFLUX_BUCKET);
-
-                    Map<String, Object> dataMap = mapper.readValue(objectNode.toString(), Map.class);
-                    for(Map.Entry<String, Object> entry : dataMap.entrySet()){
-                        System.out.println(entry.getKey() + ": " + entry.getValue());
-                    }
-                    for(Map.Entry<String, Object> entry : dataMap.entrySet()){
-                        String key = entry.getKey();
-                        Object value = entry.getValue();
-
-                        Point point = Point.measurement(key)
-                                            .addTag("deviceName", deviceSplit[0])
-                                            .addTag("location", place)
-                                            .time(Instant.now().toEpochMilli(), WritePrecision.MS);
-
-                        if(value instanceof Double){
-                            point.addField("value", (Double) value);
-                        } else if ( value instanceof Integer){
-                            point.addField("value", (Integer) value);
-                        } else if ( value instanceof Boolean){
-                            point.addField("value", (Boolean) value);
-                        } else if ( value instanceof String){
-                            point.addField("value", (String) value);
+                    if(!objectNode.isMissingNode()){
+                        JsonNode deviceInfo = rootNode.path("deviceInfo");
+                        String[] deviceSplit = deviceInfo.get("deviceName").asText().split("\\(");
+                        String place = deviceSplit[1].replace(")", "");
+                        InfluxDBClient influxDBClient = InfluxDBClientFactory.create(INFLUX_URL, INFLUX_TOKEN.toCharArray(), INFLUX_ORG, INFLUX_BUCKET);
+    
+                        Map<String, Object> dataMap = mapper.readValue(objectNode.toString(), Map.class);
+                        for(Map.Entry<String, Object> entry : dataMap.entrySet()){
+                            System.out.println(entry.getKey() + ": " + entry.getValue());
                         }
-
-                        influxDBClient.getWriteApiBlocking().writePoint(point);
+                        for(Map.Entry<String, Object> entry : dataMap.entrySet()){
+                            String key = entry.getKey();
+                            Object value = entry.getValue();
+    
+                            Point point = Point.measurement(key)
+                                                .addTag("deviceName", deviceSplit[0])
+                                                .addTag("location", place)
+                                                .time(Instant.now().toEpochMilli(), WritePrecision.MS);
+    
+                            if(value instanceof Double){
+                                point.addField("value", (Double) value);
+                            } else if ( value instanceof Integer){
+                                point.addField("value", (Integer) value);
+                            } else if ( value instanceof Boolean){
+                                point.addField("value", (Boolean) value);
+                            } else if ( value instanceof String){
+                                point.addField("value", (String) value);
+                            }
+    
+                            influxDBClient.getWriteApiBlocking().writePoint(point);
+                        }
                     }
                     
                 }
