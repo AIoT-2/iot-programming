@@ -1,18 +1,21 @@
-package com.nhnacademy.mqtt;
+package com.nhnacademy.util;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import lombok.extern.slf4j.Slf4j;
 
-import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
+import java.util.Objects;
 
 /**
  * MQTT Client 속성 값 <br>
  * {@code /resources/config.json} 참조
  */
-public final class MqttProperty {
+@Slf4j
+public final class Property {
 
-    private static final String PATH = "src/main/resources/config.json";
+    private static final String PATH = "/config.json";
 
     private static final String BROKER;
 
@@ -24,10 +27,15 @@ public final class MqttProperty {
 
     static {
         try {
-            JsonNode mqttNode = new ObjectMapper()
-                                    .readTree(new File(PATH))
-                                    .path("mqtt");
             // BROKER = mqttNode.get("broker").asText();
+            InputStream inputStream = Property.class.getResourceAsStream(PATH);
+            if (Objects.isNull(inputStream)) {
+                log.error("'config.json'이 존재하지 않습니다.");
+                throw new RuntimeException();
+            }
+            JsonNode mqttNode = new ObjectMapper()
+                                    .readTree(inputStream)
+                                    .path("mqtt");
             BROKER = mqttNode.get("ip").asText() + ":" + mqttNode.get("port").asText();
             CLIENT_ID = mqttNode.get("client_id").asText();
             TOPIC = mqttNode.get("topic").asText();
@@ -35,6 +43,8 @@ public final class MqttProperty {
             throw new RuntimeException(e);
         }
     }
+
+    /* static record */
 
     /**
      * @return MQTT 브로커 주소
