@@ -17,7 +17,7 @@ public class ValueMapper {
      * @param is32bit 32비트 여부
      */
     public ValueMapper(String name, double scale, boolean is32bit) {
-        validateString(name, "이름은 null이거나 비어 있을 수 없습니다.");
+        validateNonEmptyString(name, "이름은 null이거나 비어 있을 수 없습니다.");
         this.name = name;
         this.scale = scale;
         this.is32bit = is32bit;
@@ -88,7 +88,7 @@ public class ValueMapper {
      * @param name 새 값의 이름
      */
     public void setName(String name) {
-        validateString(name, "이름은 null이거나 비어 있을 수 없습니다.");
+        validateNonEmptyString(name, "이름은 null이거나 비어 있을 수 없습니다.");
         this.name = name;
     }
 
@@ -116,7 +116,7 @@ public class ValueMapper {
      * @param value        검사할 문자열
      * @param errorMessage 예외 발생 시 사용할 오류 메시지
      */
-    private void validateString(String value, String errorMessage) {
+    private void validateNonEmptyString(String value, String errorMessage) {
         if (value == null || value.isEmpty()) {
             throw new IllegalArgumentException(errorMessage);
         }
