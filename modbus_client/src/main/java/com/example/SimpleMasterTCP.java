@@ -1,5 +1,14 @@
 package com.example;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.io.IOException;
+
 import com.intelligt.modbus.jlibmodbus.Modbus;
 import com.intelligt.modbus.jlibmodbus.exception.ModbusIOException;
 import com.intelligt.modbus.jlibmodbus.exception.ModbusNumberException;
@@ -45,8 +54,31 @@ import java.util.logging.LogRecord;
  * email: vladislav.kochedykov@gmail.com
  */
 public class SimpleMasterTCP {
+    private final Logger log = LoggerFactory.getLogger(getClass());
+
 
     static public void main(String[] args) {
+
+        JSONObject addressObject;
+
+        for (int i=0;i<=30;i++){
+
+            try {
+                //센서로 들어오는 통합 정보
+                String addressContent = new String(Files.readAllBytes(Paths.get("modbus_client/src/main/java/com/example/AddressMap.json")));
+
+                JSONArray addressArray = new JSONArray(addressContent);
+
+                JSONObject addressItem = addressArray.getJSONObject(i);
+
+                // 주소의 정보들을 하나씩 addressObject에 삽입
+                addressObject = addressItem;
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+         
 
         Modbus.log().addHandler(new Handler() {
             @Override

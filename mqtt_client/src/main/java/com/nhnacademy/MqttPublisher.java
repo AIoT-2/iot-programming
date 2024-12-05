@@ -6,7 +6,6 @@ import org.slf4j.LoggerFactory;
 import org.eclipse.paho.client.mqttv3.*;
 
 // mqtt out (발신)
-
 public class MqttPublisher {
     private final Logger log = LoggerFactory.getLogger(getClass());
 

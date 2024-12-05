@@ -9,10 +9,9 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 // Mqtt in
-
 public class MqttReceiver {
     private final Logger log = LoggerFactory.getLogger(getClass());
-    
+
     private static final String RECEIVER_BROKER = "tcp://192.168.70.203:1883";  // 수신용 브로커 주소
     private static final String CLIENT_ID = "MyJavaClientReceiver";
     private static final String TOPIC = "application/#";  // 구독할 주제

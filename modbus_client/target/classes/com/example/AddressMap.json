@@ -1,0 +1,235 @@
+[
+    {
+      "addr": 0,
+      "name": "operation Heartbit",
+      "type": "UINT16",
+      "unit": "",
+      "size": 2,
+      "scale": 1
+    },
+    {
+      "addr": 1,
+      "name": "temperature",
+      "type": "INT16",
+      "unit": "°C",
+      "size": 2,
+      "scale": 10
+    },
+    {
+      "addr": 2,
+      "name": "frequency",
+      "type": "UINT16",
+      "unit": "Hz",
+      "size": 2,
+      "scale": 100
+    },
+    {
+      "addr": 3,
+      "name": "program version",
+      "type": "UINT16",
+      "unit": "",
+      "size": 2,
+      "scale": 1
+    },
+    {
+      "addr": 4,
+      "name": "present CO2 use (month)",
+      "type": "UINT16",
+      "unit": "Kg",
+      "size": 2,
+      "scale": 10
+    },
+    {
+      "addr": 6,
+      "name": "operation Heartbit",
+      "type": "UINT16",
+      "unit": "",
+      "size": 2,
+      "scale": 1
+    },
+    {
+      "addr": 7,
+      "name": "temperature 1",
+      "type": "INT16",
+      "unit": "°C",
+      "size": 2,
+      "scale": 10
+    },
+    {
+      "addr": 8,
+      "name": "frequency",
+      "type": "UINT16",
+      "unit": "Hz",
+      "size": 2,
+      "scale": 100
+    },
+    {
+      "addr": 9,
+      "name": "program version",
+      "type": "UINT16",
+      "unit": "",
+      "size": 2,
+      "scale": 1
+    },
+    {
+      "addr": 10,
+      "name": "present CO2 use (month)",
+      "type": "UINT16",
+      "unit": "Kg",
+      "size": 2,
+      "scale": 10
+    },
+    {
+      "addr": 12,
+      "name": "V123(LN) average",
+      "type": "UINT32",
+      "unit": "V",
+      "size": 4,
+      "scale": 100
+    },
+    {
+      "addr": 13,
+      "name": "V123(LL) average",
+      "type": "UINT32",
+      "unit": "V",
+      "size": 4,
+      "scale": 100
+    },
+    {
+      "addr": 14,
+      "name": "V123(LN) unbalance",
+      "type": "UINT16",
+      "unit": "%",
+      "size": 2,
+      "scale": 100
+    },
+    {
+      "addr": 15,
+      "name": "V123(LL) unbalance",
+      "type": "UINT16",
+      "unit": "%",
+      "size": 2,
+      "scale": 100
+    },
+    {
+      "addr": 16,
+      "name": "V1",
+      "type": "UINT32",
+      "unit": "V",
+      "size": 4,
+      "scale": 100
+    },
+    {
+      "addr": 17,
+      "name": "V12",
+      "type": "UINT32",
+      "unit": "V",
+      "size": 4,
+      "scale": 100
+    },
+    {
+      "addr": 18,
+      "name": "V1 unbalance",
+      "type": "UINT16",
+      "unit": "%",
+      "size": 2,
+      "scale": 100
+    },
+    {
+      "addr": 19,
+      "name": "V12 unbalance",
+      "type": "UINT16",
+      "unit": "%",
+      "size": 2,
+      "scale": 100
+    },
+    {
+      "addr": 20,
+      "name": "V2",
+      "type": "UINT32",
+      "unit": "V",
+      "size": 4,
+      "scale": 100
+    },
+    {
+      "addr": 21,
+      "name": "V23",
+      "type": "UINT32",
+      "unit": "V",
+      "size": 4,
+      "scale": 100
+    },
+    {
+      "addr": 22,
+      "name": "V2 unbalance",
+      "type": "UINT16",
+      "unit": "%",
+      "size": 2,
+      "scale": 100
+    },
+    {
+      "addr": 23,
+      "name": "V23 unbalance",
+      "type": "UINT16",
+      "unit": "%",
+      "size": 2,
+      "scale": 100
+    },
+    {
+      "addr": 24,
+      "name": "V3",
+      "type": "UINT32",
+      "unit": "V",
+      "size": 4,
+      "scale": 100
+    },
+    {
+      "addr": 25,
+      "name": "V31",
+      "type": "UINT32",
+      "unit": "V",
+      "size": 4,
+      "scale": 100
+    },
+    {
+      "addr": 26,
+      "name": "V3 unbalance",
+      "type": "UINT16",
+      "unit": "%",
+      "size": 2,
+      "scale": 100
+    },
+    {
+      "addr": 27,
+      "name": "V31 unbalance",
+      "type": "UINT16",
+      "unit": "%",
+      "size": 2,
+      "scale": 100
+    },
+    {
+      "addr": 28,
+      "name": "V1 THD",
+      "type": "UINT16",
+      "unit": "",
+      "size": 2,
+      "scale": 100
+    },
+    {
+      "addr": 29,
+      "name": "V2 THD",
+      "type": "UINT16",
+      "unit": "",
+      "size": 2,
+      "scale": 100
+    },
+    {
+      "addr": 30,
+      "name": "V3 THD",
+      "type": "UINT16",
+      "unit": "",
+      "size": 2,
+      "scale": 100
+    }
+  ]
+  
