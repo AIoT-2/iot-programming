@@ -7,37 +7,46 @@ import java.util.Map;
 import org.eclipse.paho.client.mqttv3.MqttClient;
 import org.eclipse.paho.client.mqttv3.MqttConnectOptions;
 import org.eclipse.paho.client.mqttv3.MqttException;
-import org.eclipse.paho.client.mqttv3.persist.MemoryPersistence;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.File;
+import java.nio.file.FileSystems;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.serotonin.modbus4j.ModbusFactory;
 import com.serotonin.modbus4j.ModbusMaster;
 import com.serotonin.modbus4j.exception.ModbusInitException;
+import com.serotonin.modbus4j.exception.ModbusTransportException;
 import com.serotonin.modbus4j.ip.IpParameters;
 import com.serotonin.modbus4j.msg.ReadHoldingRegistersRequest;
 import com.serotonin.modbus4j.msg.ReadHoldingRegistersResponse;
+import com.fasterxml.jackson.core.exc.StreamReadException;
 import com.fasterxml.jackson.core.type.TypeReference;
 
 public class ModbusTcpClient {
+    static final Logger logger = LoggerFactory.getLogger(ModbusTcpClient.class);
+
     public static void main(String[] args) throws IOException {
 
         String setHost = "192.168.70.203";
         int setPort = 502;
         int slaveId = 1;
 
-        String locationFilePath = "/home/nhnacademy/문서/iot/sensor_data/src/main/java/com/iot/modbus/location.json";
-        String channelFilePath = "/home/nhnacademy/문서/iot/sensor_data/src/main/java/com/iot/modbus/channel.json";
-        String addmapFilePath = "/home/nhnacademy/문서/iot/sensor_data/src/main/java/com/iot/modbus/addmap.json";
+        String locationFilePath = FileSystems.getDefault().getPath("src/main/java/com/iot/modbus/location.json")
+                .toAbsolutePath().toString();
+        String channelFilePath = FileSystems.getDefault().getPath("src/main/java/com/iot/modbus/channel.json")
+                .toAbsolutePath().toString();
+        String addmapFilePath = FileSystems.getDefault().getPath("src/main/java/com/iot/modbus/addmap.json")
+                .toAbsolutePath().toString();
 
         // MQTT Configuration
         String broker = "tcp://192.168.70.203:1883"; // MQTT 브로커 주소
         String clientId = "ModbusMqttClient_song";
-        String topic = "songsong"; // 전송할 MQTT 주제
+        String topic = "ATGN02-007"; // 전송할 MQTT 주제
         int qos = 2; // QoS level
 
-        try (MqttClient mqttClient = new MqttClient(broker, clientId, new MemoryPersistence())) {
+        try (MqttClient mqttClient = new MqttClient(broker, clientId)) {
             MqttConnectOptions connOpts = new MqttConnectOptions();
             connOpts.setCleanSession(true);
             mqttClient.connect(connOpts);
@@ -92,11 +101,14 @@ public class ModbusTcpClient {
                                 if (scaledValue < 0) {
                                     scaledValue *= -1;
                                 }
+                                System.out.println(location);
+                                System.out.println(channelData);
                                 System.out.print(locationName);
 
                                 if (type.contains("32")) {
                                     registerAddress += 1;
                                 }
+
                                 System.out.print("/ " + registerAddress);
                                 System.out.print("/ " + name);
                                 System.out.println("/ " + scaledValue);
@@ -147,8 +159,10 @@ public class ModbusTcpClient {
                 }
             } catch (ModbusInitException e) {
                 System.err.println("Failed to initialize Modbus Master: " + e.getMessage());
-            } catch (Exception e) {
-                System.err.println("Error in Modbus communication: " + e.getMessage());
+            } catch (NullPointerException e) {
+                System.err.println("Not found File path: " + e.getMessage());
+            } catch (ModbusTransportException e) {
+                System.err.println("ModbusTransportExceptio Error" + e.getMessage());
             } finally {
                 master.destroy();
                 System.out.println("Disconnected from Modbus server.");
@@ -156,15 +170,16 @@ public class ModbusTcpClient {
 
         } catch (MqttException e) {
             System.err.println("Error in MQTT communication: " + e.getMessage());
+            System.exit(0);
         }
     }
 
-    private static List<Map<String, Object>> loadJsonData(String jsonFilePath) {
+    private static List<Map<String, Object>> loadJsonData(String jsonFilePath) throws StreamReadException {
         ObjectMapper objectMapper = new ObjectMapper();
         try {
             return objectMapper.readValue(new File(jsonFilePath), new TypeReference<List<Map<String, Object>>>() {
             });
-        } catch (IOException e) {
+        } catch (Exception e) {
             System.out.println("Failed to load JSON file: " + e.getMessage());
             return null;
         }

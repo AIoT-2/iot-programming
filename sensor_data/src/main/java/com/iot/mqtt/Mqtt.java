@@ -9,31 +9,23 @@ import org.eclipse.paho.client.mqttv3.MqttException;
 import org.eclipse.paho.client.mqttv3.MqttCallback;
 import org.eclipse.paho.client.mqttv3.MqttMessage;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.influxdb.client.InfluxDBClient;
-import com.influxdb.client.InfluxDBClientFactory;
 import com.influxdb.client.write.Point;
 import com.influxdb.client.domain.WritePrecision;
 
-public class Mqtt extends Mqtt_transform {
-    // MQTT 브로커 주소
+public class Mqtt extends MqttTransform {
+    static final Logger logger = LoggerFactory.getLogger(Mqtt.class);
+
     private static final String BROKER = "tcp://192.168.70.203:1883";
-    // 클라이언트 ID
     private static final String CLIENT_ID = "song";
-    // 구독 및 발행 주제
     private static final String TOPIC = "data/#";
-
-    // InfluxDB 설정
-    private static final String INFLUXDB_URL = "http://192.168.71.207:8086"; // URL
-    private static final String INFLUXDB_TOKEN = "aCden7eIjcqbw504Yp7gzHJsdozMJS9E-HqOlm6dKPCoQyp60OWVohL-ctZgFlkgMDiGWAaRLma5oQahCkIPiA=="; // token
-
-    private static final String INFLUXDB_ORG = "123123"; // 조직
-    private static final String INFLUXDB_BUCKET = "mqtt_data"; // 버킷
+    private static MqttToDB mqttToDB = new MqttToDB();
 
     public static void main(String[] args) throws InterruptedException {
-        InfluxDBClient influxDBClient = InfluxDBClientFactory.create(INFLUXDB_URL, INFLUXDB_TOKEN.toCharArray(),
-                INFLUXDB_ORG, INFLUXDB_BUCKET);
 
         try (MqttClient client = new MqttClient(BROKER, CLIENT_ID)) {
 
@@ -52,35 +44,35 @@ public class Mqtt extends Mqtt_transform {
 
                     String payload = new String(message.getPayload());
                     ObjectMapper objectMapper = new ObjectMapper();
-                    String measurement = extractMeasurement(topic);
+                    String measurement = extractPlace(topic);
 
                     try {
                         JsonNode jsonNode = objectMapper.readTree(payload);
 
-                        Point pointBuilder = Point.measurement(measurement)
-                                .addTag("spot", extractField(topic))
-                                .addTag("value", extractValue(topic))
-                                .addField("payload", jsonNode.toString())
-                                .time(Instant.now(), WritePrecision.NS);
-
                         JsonNode valueNode = jsonNode.get("value");
 
-                        if (valueNode != null && valueNode.isNumber()) {
-                            pointBuilder.addField("value", valueNode.asDouble());
-                        } else {
-                            System.out.println("Skipping non-numeric value: " + valueNode);
+                        if (extractElement(topic).equals("lora") || extractElement(topic).equals("power-meter")
+                                || extractElement(topic).equals("di")) {
+                            return;
                         }
 
-                        influxDBClient.getWriteApiBlocking().writePoint(pointBuilder);
+                        Point pointBuilder = Point.measurement(measurement)
+                                .addTag("spot", extractName(topic))
+                                .addTag("value", extractElement(topic))
+                                .addField("payload", valueNode.asDouble())
+                                .time(Instant.now(), WritePrecision.NS);
 
-                        System.out.println("Field : " + extractField(topic));
-                        System.out.println("Measurement : " + extractMeasurement(topic));
-                        System.out.println("Value : " + extractValue(topic));
-                        System.out.println("Topic: " + topic);
-                        System.out.println("msg: " + jsonNode.toString());
+                        mqttToDB.writeToDB(pointBuilder);
+
+                        logger.debug("Field: {}", extractName(topic));
+                        logger.debug("Measurement: {}", extractPlace(topic));
+                        logger.debug("Value: {}", extractElement(topic));
+                        logger.debug("Topic: {}", topic);
+                        logger.debug("msg: {}", valueNode.asDouble());
                         System.out.println();
+
                     } catch (Exception e) {
-                        System.out.println("Invalid JSON payload: " + payload);
+                        System.out.println("Invalid JSON payload: ");
                     }
                 }
 
@@ -91,23 +83,30 @@ public class Mqtt extends Mqtt_transform {
                 }
             });
 
-            System.out.println("Connecting to broker...");
-            client.connect(options);
-            System.out.println("Connected!");
+            try {
+                logger.info("Connecting to broker...");
+                client.connect(options);
+                logger.info("Connected!");
 
-            System.out.println("Subscribing to topic: " + TOPIC);
-            client.subscribe(TOPIC);
+                logger.info("Subscribing to topic: {}", TOPIC);
+                client.subscribe(TOPIC);
 
-            Thread.sleep(100000);
+                while (client.isConnected()) {
+                    Thread.sleep(1000);
+                }
 
-            System.out.println("Disconnecting...");
-            client.disconnect();
-            System.out.println("Disconnected!");
+            } catch (MqttException | InterruptedException e) {
+                logger.error("Error in MQTT client: {}", e.getMessage());
+                Thread.sleep(5000); // 연결 실패 시 재시도 간격
+            } finally {
+                if (client.isConnected()) {
+                    client.disconnect();
+                }
+                logger.info("Disconnected from broker.");
+            }
 
         } catch (MqttException e) {
             e.printStackTrace();
-        } finally {
-            influxDBClient.close();
         }
     }
 }
