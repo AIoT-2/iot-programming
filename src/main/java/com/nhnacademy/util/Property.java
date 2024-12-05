@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.NoSuchElementException;
 import java.util.Objects;
 
 /**
@@ -41,37 +42,47 @@ public final class Property {
     // Initial Settings
 
     static {
-        try (InputStream inputStream = Property.class.getResourceAsStream(PropertyKey.CONFIG_PATH.getKey())) {
+        try (InputStream inputStream = Property.class.getResourceAsStream(PropertyKey.CONFIG_PATH.getKey())
+        ) {
             if (Objects.isNull(inputStream)) {
-                log.warn("resources file 'config' is not exist");
+                log.warn("resources file 'config.json' is not exist");
                 throw new RuntimeException();
             }
-            JsonNode config = new ObjectMapper()
-                                    .readTree(inputStream)
-                                    .path(PropertyKey.NETWORK_CONFIG.getKey());
-            propertyCheck(config);
-            JsonNode mqtt = config.path(PropertyKey.MQTT_CONFIG.getKey());
+            JsonNode main = new ObjectMapper().readTree(inputStream);
+            nodeCheck(main);
 
-            IP_ADDRESS = config.path(PropertyKey.IP_ADDRESS.getKey()).asText();
+            JsonNode networkConfigNode = main.path(PropertyKey.NETWORK_CONFIG.getKey());
+            JsonNode mqttConfigNode = main.path(PropertyKey.MQTT_CONFIG.getKey());
 
-            /*PORT_MAP = StreamSupport.stream(config.path(PropertyKey.PORT.getKey()).spliterator(), false)
-                                    .collect(Collectors.toMap(
-                                        node -> node.path(PropertyKey.SERVICE.getKey()).asText(),
-                                        node -> node.path(PropertyKey.NUMBER.getKey()).asText())
-                                    );*/
-            config.path("PORT").elements().forEachRemaining(
-                    node -> {
-                        String service = node.path("SERVICE").asText();
-                        String number = node.path("NUMBER").asText();
-                        PORT_MAP.put(service, number);
-                    }
-            );
+            createPortMap(networkConfigNode.path(PropertyKey.PORT_LIST.getKey()));
 
-            CLIENT_ID = mqtt.get(PropertyKey.CLIENT_ID.getKey()).asText();
-            TOPIC = mqtt.get(PropertyKey.TOPIC.getKey()).asText();
+            IP_ADDRESS = networkConfigNode
+                            .get(PropertyKey.IP_ADDRESS.getKey())
+                            .asText();
+            CLIENT_ID = mqttConfigNode
+                            .get(PropertyKey.CLIENT_ID.getKey())
+                            .asText();
+            TOPIC = mqttConfigNode
+                            .get(PropertyKey.TOPIC.getKey())
+                            .asText();
+
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public static void createPortMap(JsonNode portNodeList) {
+        portNodeList.elements()
+                .forEachRemaining(portNode -> {
+                        String serviceName = portNode
+                                                .get(PropertyKey.SERVICE_NAME.getKey())
+                                                .asText();
+                        String portNumber = portNode
+                                                .get(PropertyKey.PORT_NUMBER.getKey())
+                                                .asText();
+                        PORT_MAP.put(serviceName, portNumber);
+                    }
+                );
     }
 
     // =================================================================================================================
@@ -106,8 +117,7 @@ public final class Property {
     private static String getServicePort(String serviceName) {
         if (!PORT_MAP.containsKey(serviceName)) {
             log.warn("Check your port data");
-            propertyIsNotExist(serviceName);
-            throw new RuntimeException();
+            nodeIsNotExist(serviceName);
         }
         return PORT_MAP.get(serviceName);
     }
@@ -129,22 +139,19 @@ public final class Property {
     // =================================================================================================================
     // Check Logic || Exception
 
-    private static void propertyCheck(JsonNode config) {
-        if (config.path(PropertyKey.IP_ADDRESS.getKey()).isMissingNode()) {
-            propertyIsNotExist(PropertyKey.IP_ADDRESS.getKey());
-            throw new RuntimeException();
-        }
-        if (config.path(PropertyKey.PORT_LIST.getKey()).isMissingNode()) {
-            propertyIsNotExist(PropertyKey.PORT_LIST.getKey());
-            throw new RuntimeException();
-        }
-        if (config.path(PropertyKey.MQTT_CONFIG.getKey()).isMissingNode()) {
-            propertyIsNotExist(PropertyKey.MQTT_CONFIG.getKey());
-            throw new RuntimeException();
-        }
+    private static void nodeCheck(JsonNode main) {
+        if (main.isMissingNode())
+            nodeIsNotExist("All");
+
+        if (main.path(PropertyKey.NETWORK_CONFIG.getKey()).isMissingNode())
+            nodeIsNotExist(PropertyKey.NETWORK_CONFIG.getKey());
+
+        if (main.path(PropertyKey.MQTT_CONFIG.getKey()).isMissingNode())
+            nodeIsNotExist(PropertyKey.MQTT_CONFIG.getKey());
     }
 
-    private static void propertyIsNotExist(String keyName) {
+    private static void nodeIsNotExist(String keyName) {
         log.warn("{} property value does not exist.", keyName);
+        throw new NoSuchElementException();
     }
 }

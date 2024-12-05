@@ -18,7 +18,7 @@ class PropertyTest {
     @Test
     void brokerCheck() {
         // BROKER
-        String broker = Property.getEndpoint(PropertyKey.MQTT_CONFIG.getKey());
+        String broker = Property.getEndpoint("mqtt");
         log.debug("Broker: {}", broker);
         Assertions.assertEquals(EXPECT_BROKER, broker);
     }

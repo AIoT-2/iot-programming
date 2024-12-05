@@ -1,5 +1,8 @@
 package com.nhnacademy.util;
 
+/**
+ * {@code /resources/config.json} 내부에 Key 값을 매핑할 목적
+ */
 public enum PropertyKey {
 
     /**

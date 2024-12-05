@@ -1,11 +1,6 @@
 package com.nhnacademy.mqtt.impl;
 
-import com.nhnacademy.util.Property;
 import lombok.extern.slf4j.Slf4j;
-import org.eclipse.paho.client.mqttv3.MqttClient;
-import org.eclipse.paho.client.mqttv3.MqttConnectOptions;
-
-import java.util.Objects;
 
 @Slf4j
 public class MqttClientImpl { // implements Runnable
