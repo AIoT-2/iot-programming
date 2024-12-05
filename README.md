@@ -13,7 +13,8 @@ main에서 분기하여 브랜치를 생성하고 자신의 학번으로 네이�
 
 ### *2024-12-05*
 
-- `Jackson` 라이브러리의 테스트 케이스 작성으로, 다양한 예제 수행 완료 및 `Property.java` 구현 완료
+- `Jackson` 라이브러리의 다양한 테스트 케이스 예제를 작성한 덕분에, <br>
+  `Property.java`의 구조를 이전보다 유연하게 구현 완료하였습니다.
 
 - `logback` 로그 파일을 동적 경로를 통해서 저장되도록 설계 및 구현 완료
 
@@ -112,8 +113,8 @@ main에서 분기하여 브랜치를 생성하고 자신의 학번으로 네이�
 ### *2024-12-04*
 
 - `MqttProperty.java` 가 `config.json` 파일을 <br>
-절대 경로(`/src/main/java/resources/config.json`)로 읽어오는 방식에서, <br>
-**클래스패스 리소스 로딩(Classpath Resource Loading)** 으로 파일을 읽어 오도록 개선
+  절대 경로(`/src/main/java/resources/config.json`)로 읽어오는 방식에서, <br>
+  **클래스패스 리소스 로딩(Classpath Resource Loading)** 으로 파일을 읽어 오도록 개선
 
 ```java
 import com.nhnacademy.util.Property;
