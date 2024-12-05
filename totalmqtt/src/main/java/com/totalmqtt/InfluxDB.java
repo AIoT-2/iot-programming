@@ -81,8 +81,7 @@ public class InfluxDB implements Runnable{
                     // 데이터가 수신되었는지 확인
                     try {
                         String sendAnwser = new String(publish.getPayloadAsBytes(), StandardCharsets.UTF_8);
-                        System.out.println("test : " + sendAnwser);
-                            write(sendAnwser);
+                        write(sendAnwser);
 
                     } catch (Exception e) {
                         System.err.println(e.getMessage());
@@ -124,11 +123,11 @@ public class InfluxDB implements Runnable{
             Point point = null;
             if(data.get("deviceName") == null){
                 point = Point.measurement(data.get("name").toString())
-                    .time(System.currentTimeMillis(), WritePrecision.MS);
+                .time(System.currentTimeMillis(), WritePrecision.MS);
             }
             else{
                 point = Point.measurement(data.get("deviceName").toString())
-                    .time(System.currentTimeMillis(), WritePrecision.MS);
+                .time(System.currentTimeMillis(), WritePrecision.MS);
             }
 
             // Map을 순회하여 필드를 추가

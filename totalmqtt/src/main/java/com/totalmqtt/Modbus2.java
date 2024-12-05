@@ -12,7 +12,7 @@ import com.intelligt.modbus.jlibmodbus.tcp.TcpParameters;
 
 import lombok.extern.slf4j.Slf4j;
 
-import java.io.FileReader;
+import java.io.*;
 import java.net.InetAddress;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -21,18 +21,26 @@ import java.util.Map;
 import java.util.logging.Handler;
 import java.util.logging.LogRecord;
 
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+
 // TOPIC, 주소를 바꿀 수 있게 수정해야함
 // try를 여러번 쌓는 것은 최대한 자제
 // system.out 대신 log로 변환
 // Testing해보기
 
 @Slf4j
-public class Modbus2 implements Runnable{
+public class Modbus2 implements Runnable {
     // private int[] transBit =
     // {2,4,6,8,16,18,20,22,24,32,34,36,38,40,48,70,52,54,56};
 
-    private int[] transBit = { 2, 4, 6, 8, 16, 18, 20, 22, 24 }; // 16bit를 32bit로 변환해야할 번호
-    private Map<Integer, Integer> scale; // 각 quantity에 따른 데이터의 스케일
+    private JSONParser parser = new JSONParser();
+    private Map<Integer, String> channelNames = new HashMap<>();
+    private Map<Integer, String> modbusDataName = new HashMap<>();
+    private Map<Integer, Integer> modbusDataType = new HashMap<>();
+    private Map<Integer, Integer> modbusDataScale = new HashMap<>();
+
     private String ip;
     private int port;
     private TcpParameters tcpParameters;
@@ -43,28 +51,14 @@ public class Modbus2 implements Runnable{
     private ReadHoldingRegistersRequest request;
     private ReadHoldingRegistersResponse response;
     private int start, end, step;
-    
+
     public Modbus2() {
         start = end = step = 1;
         ip = "192.168.70.203";
         port = Modbus.TCP_PORT;
-        scale = new HashMap<Integer, Integer>() {
-            {
-                put(2, 100);
-                put(10, 100);
-                put(12, 100);
-                put(13, 100);
-                put(14, 10);
-                put(15, 10);
-                put(16, 100);
-                put(18, 100);
-                put(26, 100);
-                put(27, 100);
-                put(28, 100);
-                put(29, 100);
-                put(30, 100);
-            }
-        };
+
+        settingChannelName();
+        settingModbusData();
 
         Modbus.log().addHandler(new Handler() {
             @Override
@@ -103,12 +97,13 @@ public class Modbus2 implements Runnable{
             e.printStackTrace();
         }
     }
-    public void settingInformation(String ip, int port){
+
+    public void settingInformation(String ip, int port) {
         this.ip = ip;
         this.port = port;
     }
 
-    public void settingIterator(int start, int end, int step){
+    public void settingIterator(int start, int end, int step) {
         this.start = start;
         this.end = end;
         this.step = step;
@@ -117,8 +112,6 @@ public class Modbus2 implements Runnable{
     public void load(int offset) {
         try {
             this.offset = offset; // 위치 설정
-            String locationName = Location(offset);
-            // since 1.2.8
             if (!m.isConnected()) {
                 m.connect();
             }
@@ -149,74 +142,99 @@ public class Modbus2 implements Runnable{
         }
     }
 
-    private String Location(int channel) { // 위치 채널에 따른 위치 이름
-        channel /= 100;
-        channel--;
-        String[] loca = { "캠퍼스", "캠퍼스1", "전등1", "전등2", "전등3", "강의실b_바닥", "강의실a_바닥1", "강의실a_바닥2", "프로젝터1",
-                "프로젝터2", "회의실", "서버실", "간판", "페어룸", "사무실_전열1", "사무실_전열2", "사무실_복사기", "빌트인_전열", "정수기", "하이브_전열", "바텐_전열",
-                "S_P", "공조기", "AC" };
-        return loca[channel];
+    private void settingChannelName() {
+        Reader reader;
+        try {
+            reader = new FileReader("./totalmqtt/src/main/java/com/totalmqtt/modbusName.json");
+            JSONArray jsonArray = (JSONArray) parser.parse(reader);
+            for (Object object : jsonArray) {
+                JSONObject jsonObject = (JSONObject) object;
+                channelNames.put(((Long) jsonObject.get("channel")).intValue(), (String) jsonObject.get("name"));
+            }
+        } catch (Exception e) {
+            System.err.println(e.getMessage());
+        }
     }
 
-    private String JsonName(int channel){
-        String[] jsonName = { "type", "a_leakage_current", "current", "W", "VAR", "VA", "PF_average", "reserved",
-            "current_unbalance", "l_THD_average", "IGR", "IGC", "V1", "l1", "W1", "VAR1", "VA1", "volt_unbalance",
-            "current_unbalace1", "phase", "power_factor", "l1_THD", "reserved1" };
-        return jsonName[channel];
+    private void settingModbusData() {
+        Reader reader;
+        try {
+            reader = new FileReader("./totalmqtt/src/main/java/com/totalmqtt/modbusData.json");
+            JSONArray jsonArray = (JSONArray) parser.parse(reader);
+            for (Object object : jsonArray) {
+                JSONObject jsonObject = (JSONObject) object;
+                modbusDataName.put(((Long) jsonObject.get("offset")).intValue(), (String) jsonObject.get("name"));
+                modbusDataType.put(((Long) jsonObject.get("offset")).intValue(), ((Long) jsonObject.get("type")).intValue());
+                modbusDataScale.put(((Long) jsonObject.get("offset")).intValue(), ((Long) jsonObject.get("scale")).intValue());
+            }
+        } catch (Exception e) {
+            System.err.println(e.getMessage());
+        }
+    }
+
+    private String Location(int channel) { // 위치 채널에 따른 위치 이름
+        channel /= 100;
+        return channelNames.get(channel);
+    }
+
+    private String JsonName(int channel) {
+        return modbusDataName.get(channel);
     }
 
     private void getData() { // 각 데이터를 가져옴
         try {
             // 저장할 변수 선언
             Map<String, Object> toJson = new HashMap<>();
-            int cnt = 0;
             double value = 0;
             for (int i = 0; i < quantity; i++) {
                 value = response.getHoldingRegisters().get(i);
                 boolean check = false;
-                for (int h = 0; h < transBit.length; h++) { // 32bit 변환 검사
-                    if (transBit[h] == i) {// i위치가 transBit에 해당하는지 확인
-                        int intValue = response.getHoldingRegisters().get(i) << 16
-                                | response.getHoldingRegisters().get(++i);
-                        value = intValue;
-                        check = true;
-                        break;
-                    }
+                if (modbusDataType.containsKey(i) && modbusDataType.get(i) == 32) {
+                    int intValue = response.getHoldingRegisters().get(i) << 16
+                            | response.getHoldingRegisters().get(++i);
+                    value = intValue;
+                    check = true;
+                }
+                Integer scaleValue = null;
+                String name = null;
+                if (!check){
+                    scaleValue = modbusDataScale.get(i);
+                    name = JsonName(i);
+                }
+                else{
+                    scaleValue = modbusDataScale.get(i - 1);
+                    name = JsonName(i-1);
                 }
 
-                Integer scaleValue = null;
-                if (!check) scaleValue = scale.get(i);
-                else scaleValue = scale.get(i-1);
-
-                if (scaleValue != null) value = value / scaleValue.intValue(); // 스케일을 해야하는 값이 있는지 확인
-                toJson.put(JsonName(cnt), value);
-                cnt++;
+                value = value / scaleValue.intValue(); // 스케일을 해야하는 값이 있는지 확인
+                toJson.put(name, value);
             }
+            toJson.put("name", Location(offset));
 
             String topic = "application/" + Location(offset);
             log.debug("TOPIC : " + topic);
+            log.debug("json : " + toJson);
 
-            ToBroker toBroker = new ToBroker(); //broker에게 전송
+            ToBroker toBroker = new ToBroker(); // broker에게 전송
             toBroker.connect();
             toBroker.send(toJson, topic);
         } catch (Exception e) {
             System.err.println(e.getMessage());
         }
     }
-    
+
     @Override
     public void run() {
         while (!Thread.currentThread().interrupted()) {
-            try{
+            try {
                 for (int i = start; i <= end; i += step) {
                     load(i);
                 }
                 Thread.sleep(5000);
-            }
-            catch(InterruptedException e){
+            } catch (InterruptedException e) {
                 System.err.println(e.getMessage());
             }
         }
-    
+
     }
 }
