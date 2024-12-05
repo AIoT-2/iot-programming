@@ -10,8 +10,6 @@ public class Main {
         MqttClient sub = new MqttClient("sub", "192.168.70.203", 1883);
         MqttClient subAndPub = new MqttClient("subAndPub", "localhost", 8888);
         TcpConnect tcpParameters = new TcpConnect();
-        MqttToMqtt mqttToMqtt = new MqttToMqtt(sub, subAndPub);
-        ModbusToMqtt modbusToMqtt = new ModbusToMqtt(subAndPub, tcpParameters.getTcpParameters(), 1, 100, 32, 1);
 
         // Mqtt로 받은 데이터를 InfluxDB에 저장
         new Thread(new MqttToInfluxDB(subAndPub)).start();
