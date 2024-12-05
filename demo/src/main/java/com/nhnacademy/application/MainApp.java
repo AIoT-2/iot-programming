@@ -21,7 +21,7 @@ public class MainApp {
                 DemoSetting.INFLUXDB_TOKEN.toCharArray(), DemoSetting.INFLUXDB_ORG, DemoSetting.INFLUXDB_BUCKET)) {
 
             // MqttPub 인스턴스 생성
-            MqttPub mqttPub = new MqttPub(influxDBClient);
+            MqttPub mqttPub = new MqttPub(influxDBClient, DemoSetting.BROKER);
 
             // MQTT 브로커 사용 여부 설정
             boolean useMqttBrokers = true; // true -> MQTT 메시지 수신, false -> Modbus TCP 처리
@@ -35,24 +35,28 @@ public class MainApp {
                 int slaveId = 1;
                 int offset = 100;
                 int quantity = 32;
-                Map<String, Object> modbusData = masterTCP.readModbusData(slaveId, offset, quantity);
+                while (offset <= 2400) {
+                    Map<String, Object> modbusData = masterTCP.readModbusData(slaveId, offset, quantity);
 
-                // JSON으로 변환 후 MQTT로 발행
-                String jsonPayload = new ObjectMapper().writeValueAsString(modbusData);
-                mqttPub.publishJsonMessage("modbus/topic", jsonPayload);
+                    // JSON으로 변환 후 MQTT로 발행
+                    String jsonPayload = new ObjectMapper().writeValueAsString(modbusData);
+                    mqttPub.publishJsonMessage("application/modbus", jsonPayload);
 
-                // InfluxDB에 기록
-                JsonNode object = new ObjectMapper().readTree(jsonPayload);
-                JsonNode deviceInfo = object.get("deviceInfo"); // 예시로 deviceInfo 정보 추출
-                mqttPub.writeToInfluxDB(object, deviceInfo);
+                    // InfluxDB에 기록
+                    JsonNode object = new ObjectMapper().readTree(jsonPayload);
+                    JsonNode deviceInfo = object.get("deviceInfo"); // 예시로 deviceInfo 정보 추출
+                    mqttPub.writeToInfluxDB(object, deviceInfo);
+
+                    offset += 100;
+                }
             }
 
-            // 10초 대기 후 종료
-            Thread.sleep(10000);
+            // 1000초 대기 후 종료
+            Thread.sleep(1000000);
 
             // 연결 종료
             mqttPub.disconnect();
-
+            MqttBrokers.stopListening();
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
         } catch (Exception e) {

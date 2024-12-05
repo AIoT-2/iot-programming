@@ -1,0 +1,1281 @@
+2024-12-05 17:10:46 [main] INFO  com.nhnacademy.application.MainApp - main start
+2024-12-05 17:10:47 [main] INFO  com.nhnacademy.mqttpub.MqttPub - Connected to MQTT broker at: tcp://192.168.71.202:1883
+2024-12-05 17:10:48 [MQTT Call: paho29179791836724] DEBUG com.nhnacademy.mqttpub.MqttPub - humidity: 32.5
+2024-12-05 17:10:48 [MQTT Call: paho29179791836724] DEBUG com.nhnacademy.mqttpub.MqttPub - battery: 1
+2024-12-05 17:10:48 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:10:48 [MQTT Call: paho29179791836724] DEBUG com.nhnacademy.mqttpub.MqttPub - co2: 869
+2024-12-05 17:10:48 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'distance' is missing in the data
+2024-12-05 17:10:48 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'illumination' is missing in the data
+2024-12-05 17:10:48 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:10:48 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'pressure' is missing in the data
+2024-12-05 17:10:48 [MQTT Call: paho29179791836724] DEBUG com.nhnacademy.mqttpub.MqttPub - temperature: 20.6
+2024-12-05 17:10:48 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:10:48 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:10:48 [MQTT Call: paho29179791836724] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@33cba03c
+2024-12-05 17:10:54 [MQTT Call: paho29179791836724] DEBUG com.nhnacademy.mqttpub.MqttPub - humidity: 42.0
+2024-12-05 17:10:54 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery' is missing in the data
+2024-12-05 17:10:54 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:10:54 [MQTT Call: paho29179791836724] DEBUG com.nhnacademy.mqttpub.MqttPub - co2: 1538
+2024-12-05 17:10:54 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'distance' is missing in the data
+2024-12-05 17:10:54 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'illumination' is missing in the data
+2024-12-05 17:10:54 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:10:54 [MQTT Call: paho29179791836724] DEBUG com.nhnacademy.mqttpub.MqttPub - pressure: 1015.1
+2024-12-05 17:10:54 [MQTT Call: paho29179791836724] DEBUG com.nhnacademy.mqttpub.MqttPub - temperature: 20.6
+2024-12-05 17:10:54 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:10:54 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:10:54 [MQTT Call: paho29179791836724] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@75c8f78f
+2024-12-05 17:10:59 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'humidity' is missing in the data
+2024-12-05 17:10:59 [MQTT Call: paho29179791836724] DEBUG com.nhnacademy.mqttpub.MqttPub - battery: 48
+2024-12-05 17:10:59 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:10:59 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'co2' is missing in the data
+2024-12-05 17:10:59 [MQTT Call: paho29179791836724] DEBUG com.nhnacademy.mqttpub.MqttPub - distance: 2279.0
+2024-12-05 17:10:59 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'illumination' is missing in the data
+2024-12-05 17:10:59 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:10:59 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'pressure' is missing in the data
+2024-12-05 17:10:59 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'temperature' is missing in the data
+2024-12-05 17:10:59 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:10:59 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:10:59 [MQTT Call: paho29179791836724] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@693b29ac
+2024-12-05 17:10:59 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'humidity' is missing in the data
+2024-12-05 17:10:59 [MQTT Call: paho29179791836724] DEBUG com.nhnacademy.mqttpub.MqttPub - battery: 48
+2024-12-05 17:10:59 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:10:59 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'co2' is missing in the data
+2024-12-05 17:10:59 [MQTT Call: paho29179791836724] DEBUG com.nhnacademy.mqttpub.MqttPub - distance: 2279.0
+2024-12-05 17:10:59 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'illumination' is missing in the data
+2024-12-05 17:10:59 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:10:59 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'pressure' is missing in the data
+2024-12-05 17:10:59 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'temperature' is missing in the data
+2024-12-05 17:10:59 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:10:59 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:10:59 [MQTT Call: paho29179791836724] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@79faef7
+2024-12-05 17:11:05 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'humidity' is missing in the data
+2024-12-05 17:11:05 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery' is missing in the data
+2024-12-05 17:11:05 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:11:05 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'co2' is missing in the data
+2024-12-05 17:11:05 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'distance' is missing in the data
+2024-12-05 17:11:05 [MQTT Call: paho29179791836724] DEBUG com.nhnacademy.mqttpub.MqttPub - illumination: 5380.0
+2024-12-05 17:11:05 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:11:05 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'pressure' is missing in the data
+2024-12-05 17:11:05 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'temperature' is missing in the data
+2024-12-05 17:11:05 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:11:05 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:11:05 [MQTT Call: paho29179791836724] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@2adf7cbb
+2024-12-05 17:11:16 [MQTT Call: paho29179791836724] DEBUG com.nhnacademy.mqttpub.MqttPub - humidity: 33.5
+2024-12-05 17:11:16 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery' is missing in the data
+2024-12-05 17:11:16 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:11:16 [MQTT Call: paho29179791836724] DEBUG com.nhnacademy.mqttpub.MqttPub - co2: 1353
+2024-12-05 17:11:16 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'distance' is missing in the data
+2024-12-05 17:11:16 [MQTT Call: paho29179791836724] DEBUG com.nhnacademy.mqttpub.MqttPub - illumination: 69.0
+2024-12-05 17:11:16 [MQTT Call: paho29179791836724] DEBUG com.nhnacademy.mqttpub.MqttPub - infrared: 7.0
+2024-12-05 17:11:16 [MQTT Call: paho29179791836724] DEBUG com.nhnacademy.mqttpub.MqttPub - pressure: 1007.4
+2024-12-05 17:11:16 [MQTT Call: paho29179791836724] DEBUG com.nhnacademy.mqttpub.MqttPub - temperature: 22.1
+2024-12-05 17:11:16 [MQTT Call: paho29179791836724] DEBUG com.nhnacademy.mqttpub.MqttPub - tvoc: 183.0
+2024-12-05 17:11:16 [MQTT Call: paho29179791836724] DEBUG com.nhnacademy.mqttpub.MqttPub - activity: 10.0
+2024-12-05 17:11:16 [MQTT Call: paho29179791836724] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@189992e0
+2024-12-05 17:11:20 [MQTT Call: paho29179791836724] DEBUG com.nhnacademy.mqttpub.MqttPub - humidity: 33.0
+2024-12-05 17:11:20 [MQTT Call: paho29179791836724] DEBUG com.nhnacademy.mqttpub.MqttPub - battery: 1
+2024-12-05 17:11:20 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:11:20 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'co2' is missing in the data
+2024-12-05 17:11:20 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'distance' is missing in the data
+2024-12-05 17:11:20 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'illumination' is missing in the data
+2024-12-05 17:11:20 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:11:20 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'pressure' is missing in the data
+2024-12-05 17:11:20 [MQTT Call: paho29179791836724] DEBUG com.nhnacademy.mqttpub.MqttPub - temperature: 20.5
+2024-12-05 17:11:20 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:11:20 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:11:20 [MQTT Call: paho29179791836724] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@285fbe16
+2024-12-05 17:11:25 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'humidity' is missing in the data
+2024-12-05 17:11:25 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery' is missing in the data
+2024-12-05 17:11:25 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:11:25 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'co2' is missing in the data
+2024-12-05 17:11:25 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'distance' is missing in the data
+2024-12-05 17:11:25 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'illumination' is missing in the data
+2024-12-05 17:11:25 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:11:25 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'pressure' is missing in the data
+2024-12-05 17:11:25 [MQTT Call: paho29179791836724] DEBUG com.nhnacademy.mqttpub.MqttPub - temperature: 21.2
+2024-12-05 17:11:25 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:11:25 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:11:25 [MQTT Call: paho29179791836724] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@524d45fc
+2024-12-05 17:11:34 [MQTT Call: paho29179791836724] DEBUG com.nhnacademy.mqttpub.MqttPub - humidity: 31.5
+2024-12-05 17:11:34 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery' is missing in the data
+2024-12-05 17:11:34 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:11:34 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'co2' is missing in the data
+2024-12-05 17:11:34 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'distance' is missing in the data
+2024-12-05 17:11:34 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'illumination' is missing in the data
+2024-12-05 17:11:34 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:11:34 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'pressure' is missing in the data
+2024-12-05 17:11:34 [MQTT Call: paho29179791836724] DEBUG com.nhnacademy.mqttpub.MqttPub - temperature: 19.2
+2024-12-05 17:11:34 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:11:34 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:11:34 [MQTT Call: paho29179791836724] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@326c1aa
+2024-12-05 17:11:41 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'humidity' is missing in the data
+2024-12-05 17:11:41 [MQTT Call: paho29179791836724] DEBUG com.nhnacademy.mqttpub.MqttPub - battery: 74
+2024-12-05 17:11:41 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:11:41 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'co2' is missing in the data
+2024-12-05 17:11:41 [MQTT Call: paho29179791836724] DEBUG com.nhnacademy.mqttpub.MqttPub - distance: 2230.0
+2024-12-05 17:11:41 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'illumination' is missing in the data
+2024-12-05 17:11:41 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:11:41 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'pressure' is missing in the data
+2024-12-05 17:11:41 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'temperature' is missing in the data
+2024-12-05 17:11:41 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:11:41 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:11:41 [MQTT Call: paho29179791836724] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@577c4dbc
+2024-12-05 17:11:41 [MQTT Call: paho29179791836724] DEBUG com.nhnacademy.mqttpub.MqttPub - humidity: 28.5
+2024-12-05 17:11:41 [MQTT Call: paho29179791836724] DEBUG com.nhnacademy.mqttpub.MqttPub - battery: 12
+2024-12-05 17:11:41 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:11:41 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'co2' is missing in the data
+2024-12-05 17:11:41 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'distance' is missing in the data
+2024-12-05 17:11:41 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'illumination' is missing in the data
+2024-12-05 17:11:41 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:11:41 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'pressure' is missing in the data
+2024-12-05 17:11:41 [MQTT Call: paho29179791836724] DEBUG com.nhnacademy.mqttpub.MqttPub - temperature: 24.2
+2024-12-05 17:11:41 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:11:41 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:11:41 [MQTT Call: paho29179791836724] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@206f64b
+2024-12-05 17:11:42 [MQTT Call: paho29179791836724] DEBUG com.nhnacademy.mqttpub.MqttPub - humidity: 26.0
+2024-12-05 17:11:42 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery' is missing in the data
+2024-12-05 17:11:42 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:11:42 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'co2' is missing in the data
+2024-12-05 17:11:42 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'distance' is missing in the data
+2024-12-05 17:11:42 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'illumination' is missing in the data
+2024-12-05 17:11:42 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:11:42 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'pressure' is missing in the data
+2024-12-05 17:11:42 [MQTT Call: paho29179791836724] DEBUG com.nhnacademy.mqttpub.MqttPub - temperature: 23.5
+2024-12-05 17:11:42 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:11:42 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:11:42 [MQTT Call: paho29179791836724] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@3adc3152
+2024-12-05 17:11:47 [MQTT Call: paho29179791836724] DEBUG com.nhnacademy.mqttpub.MqttPub - humidity: 33.0
+2024-12-05 17:11:47 [MQTT Call: paho29179791836724] DEBUG com.nhnacademy.mqttpub.MqttPub - battery: 1
+2024-12-05 17:11:47 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:11:47 [MQTT Call: paho29179791836724] DEBUG com.nhnacademy.mqttpub.MqttPub - co2: 857
+2024-12-05 17:11:47 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'distance' is missing in the data
+2024-12-05 17:11:47 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'illumination' is missing in the data
+2024-12-05 17:11:47 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:11:47 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'pressure' is missing in the data
+2024-12-05 17:11:47 [MQTT Call: paho29179791836724] DEBUG com.nhnacademy.mqttpub.MqttPub - temperature: 20.6
+2024-12-05 17:11:47 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:11:47 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:11:47 [MQTT Call: paho29179791836724] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@f429c32
+2024-12-05 17:12:02 [MQTT Call: paho29179791836724] DEBUG com.nhnacademy.mqttpub.MqttPub - humidity: 30.5
+2024-12-05 17:12:02 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery' is missing in the data
+2024-12-05 17:12:02 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:12:02 [MQTT Call: paho29179791836724] DEBUG com.nhnacademy.mqttpub.MqttPub - co2: 676
+2024-12-05 17:12:02 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'distance' is missing in the data
+2024-12-05 17:12:02 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'illumination' is missing in the data
+2024-12-05 17:12:02 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:12:02 [MQTT Call: paho29179791836724] DEBUG com.nhnacademy.mqttpub.MqttPub - pressure: 1014.9
+2024-12-05 17:12:02 [MQTT Call: paho29179791836724] DEBUG com.nhnacademy.mqttpub.MqttPub - temperature: 24.7
+2024-12-05 17:12:02 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:12:02 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:12:02 [MQTT Call: paho29179791836724] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@3a6621cb
+2024-12-05 17:12:04 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'humidity' is missing in the data
+2024-12-05 17:12:04 [MQTT Call: paho29179791836724] DEBUG com.nhnacademy.mqttpub.MqttPub - battery: 48
+2024-12-05 17:12:04 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:12:04 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'co2' is missing in the data
+2024-12-05 17:12:04 [MQTT Call: paho29179791836724] DEBUG com.nhnacademy.mqttpub.MqttPub - distance: 2281.0
+2024-12-05 17:12:04 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'illumination' is missing in the data
+2024-12-05 17:12:04 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:12:04 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'pressure' is missing in the data
+2024-12-05 17:12:04 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'temperature' is missing in the data
+2024-12-05 17:12:04 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:12:04 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:12:04 [MQTT Call: paho29179791836724] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@fe73c62
+2024-12-05 17:12:04 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'humidity' is missing in the data
+2024-12-05 17:12:04 [MQTT Call: paho29179791836724] DEBUG com.nhnacademy.mqttpub.MqttPub - battery: 48
+2024-12-05 17:12:04 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:12:04 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'co2' is missing in the data
+2024-12-05 17:12:04 [MQTT Call: paho29179791836724] DEBUG com.nhnacademy.mqttpub.MqttPub - distance: 2281.0
+2024-12-05 17:12:04 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'illumination' is missing in the data
+2024-12-05 17:12:04 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:12:04 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'pressure' is missing in the data
+2024-12-05 17:12:04 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'temperature' is missing in the data
+2024-12-05 17:12:04 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:12:04 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:12:04 [MQTT Call: paho29179791836724] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@44317796
+2024-12-05 17:12:06 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'humidity' is missing in the data
+2024-12-05 17:12:06 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery' is missing in the data
+2024-12-05 17:12:06 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:12:06 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'co2' is missing in the data
+2024-12-05 17:12:06 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'distance' is missing in the data
+2024-12-05 17:12:06 [MQTT Call: paho29179791836724] DEBUG com.nhnacademy.mqttpub.MqttPub - illumination: 5370.0
+2024-12-05 17:12:06 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:12:06 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'pressure' is missing in the data
+2024-12-05 17:12:06 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'temperature' is missing in the data
+2024-12-05 17:12:06 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:12:06 [MQTT Call: paho29179791836724] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:12:06 [MQTT Call: paho29179791836724] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@7203575e
+2024-12-05 17:12:12 [main] INFO  com.nhnacademy.application.MainApp - main start
+2024-12-05 17:12:13 [main] INFO  com.nhnacademy.mqttpub.MqttPub - Connected to MQTT broker at: tcp://192.168.71.202:1883
+2024-12-05 17:12:17 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - humidity: 33.5
+2024-12-05 17:12:17 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery' is missing in the data
+2024-12-05 17:12:17 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:12:17 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - co2: 1353
+2024-12-05 17:12:17 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'distance' is missing in the data
+2024-12-05 17:12:17 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - illumination: 69.0
+2024-12-05 17:12:17 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - infrared: 7.0
+2024-12-05 17:12:17 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - pressure: 1007.4
+2024-12-05 17:12:17 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - temperature: 22.1
+2024-12-05 17:12:17 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - tvoc: 183.0
+2024-12-05 17:12:17 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - activity: 7.0
+2024-12-05 17:12:17 [MQTT Call: paho29265852399482] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@185ca188
+2024-12-05 17:12:20 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - humidity: 33.0
+2024-12-05 17:12:20 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - battery: 1
+2024-12-05 17:12:20 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:12:20 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'co2' is missing in the data
+2024-12-05 17:12:20 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'distance' is missing in the data
+2024-12-05 17:12:20 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'illumination' is missing in the data
+2024-12-05 17:12:20 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:12:20 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'pressure' is missing in the data
+2024-12-05 17:12:20 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - temperature: 20.4
+2024-12-05 17:12:20 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:12:20 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:12:20 [MQTT Call: paho29265852399482] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@61415db8
+2024-12-05 17:12:25 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'humidity' is missing in the data
+2024-12-05 17:12:25 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery' is missing in the data
+2024-12-05 17:12:25 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:12:25 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'co2' is missing in the data
+2024-12-05 17:12:25 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'distance' is missing in the data
+2024-12-05 17:12:25 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'illumination' is missing in the data
+2024-12-05 17:12:25 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:12:25 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'pressure' is missing in the data
+2024-12-05 17:12:25 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - temperature: 21.2
+2024-12-05 17:12:25 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:12:25 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:12:25 [MQTT Call: paho29265852399482] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@56087f38
+2024-12-05 17:12:25 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'humidity' is missing in the data
+2024-12-05 17:12:25 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery' is missing in the data
+2024-12-05 17:12:25 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:12:25 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'co2' is missing in the data
+2024-12-05 17:12:25 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'distance' is missing in the data
+2024-12-05 17:12:25 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'illumination' is missing in the data
+2024-12-05 17:12:25 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:12:25 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'pressure' is missing in the data
+2024-12-05 17:12:25 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - temperature: 21.2
+2024-12-05 17:12:25 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:12:25 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:12:25 [MQTT Call: paho29265852399482] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@2ba5c490
+2024-12-05 17:12:34 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - humidity: 31.5
+2024-12-05 17:12:34 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery' is missing in the data
+2024-12-05 17:12:34 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:12:34 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'co2' is missing in the data
+2024-12-05 17:12:34 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'distance' is missing in the data
+2024-12-05 17:12:34 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'illumination' is missing in the data
+2024-12-05 17:12:34 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:12:34 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'pressure' is missing in the data
+2024-12-05 17:12:34 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - temperature: 19.3
+2024-12-05 17:12:34 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:12:34 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:12:34 [MQTT Call: paho29265852399482] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@34f6cf2
+2024-12-05 17:12:41 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - humidity: 28.5
+2024-12-05 17:12:41 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - battery: 12
+2024-12-05 17:12:41 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:12:41 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'co2' is missing in the data
+2024-12-05 17:12:41 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'distance' is missing in the data
+2024-12-05 17:12:41 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'illumination' is missing in the data
+2024-12-05 17:12:41 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:12:41 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'pressure' is missing in the data
+2024-12-05 17:12:41 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - temperature: 24.3
+2024-12-05 17:12:41 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:12:41 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:12:41 [MQTT Call: paho29265852399482] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@68084dbe
+2024-12-05 17:12:42 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - humidity: 26.0
+2024-12-05 17:12:42 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery' is missing in the data
+2024-12-05 17:12:42 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:12:42 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'co2' is missing in the data
+2024-12-05 17:12:42 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'distance' is missing in the data
+2024-12-05 17:12:42 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'illumination' is missing in the data
+2024-12-05 17:12:42 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:12:42 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'pressure' is missing in the data
+2024-12-05 17:12:42 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - temperature: 23.6
+2024-12-05 17:12:42 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:12:42 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:12:42 [MQTT Call: paho29265852399482] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@7dec0e38
+2024-12-05 17:12:43 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - humidity: 32.5
+2024-12-05 17:12:43 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - battery: 1
+2024-12-05 17:12:43 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:12:43 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - co2: 857
+2024-12-05 17:12:43 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'distance' is missing in the data
+2024-12-05 17:12:43 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'illumination' is missing in the data
+2024-12-05 17:12:43 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:12:43 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'pressure' is missing in the data
+2024-12-05 17:12:43 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - temperature: 20.6
+2024-12-05 17:12:43 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:12:43 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:12:43 [MQTT Call: paho29265852399482] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@78e8c451
+2024-12-05 17:12:46 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'humidity' is missing in the data
+2024-12-05 17:12:46 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - battery: 74
+2024-12-05 17:12:46 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:12:46 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'co2' is missing in the data
+2024-12-05 17:12:46 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - distance: 2236.0
+2024-12-05 17:12:46 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'illumination' is missing in the data
+2024-12-05 17:12:46 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:12:46 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'pressure' is missing in the data
+2024-12-05 17:12:46 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'temperature' is missing in the data
+2024-12-05 17:12:46 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:12:46 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:12:46 [MQTT Call: paho29265852399482] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@380f42
+2024-12-05 17:12:56 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - humidity: 42.0
+2024-12-05 17:12:56 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery' is missing in the data
+2024-12-05 17:12:56 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:12:56 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - co2: 1565
+2024-12-05 17:12:56 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'distance' is missing in the data
+2024-12-05 17:12:56 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'illumination' is missing in the data
+2024-12-05 17:12:56 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:12:56 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - pressure: 1015.1
+2024-12-05 17:12:56 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - temperature: 20.6
+2024-12-05 17:12:56 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:12:56 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:12:56 [MQTT Call: paho29265852399482] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@2a77d746
+2024-12-05 17:13:08 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'humidity' is missing in the data
+2024-12-05 17:13:08 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery' is missing in the data
+2024-12-05 17:13:08 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:13:08 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'co2' is missing in the data
+2024-12-05 17:13:08 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'distance' is missing in the data
+2024-12-05 17:13:08 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - illumination: 5370.0
+2024-12-05 17:13:08 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:13:08 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'pressure' is missing in the data
+2024-12-05 17:13:08 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'temperature' is missing in the data
+2024-12-05 17:13:08 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:13:08 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:13:08 [MQTT Call: paho29265852399482] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@37f781fe
+2024-12-05 17:13:09 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'humidity' is missing in the data
+2024-12-05 17:13:09 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - battery: 48
+2024-12-05 17:13:09 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:13:09 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'co2' is missing in the data
+2024-12-05 17:13:09 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - distance: 2276.0
+2024-12-05 17:13:09 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'illumination' is missing in the data
+2024-12-05 17:13:09 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:13:09 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'pressure' is missing in the data
+2024-12-05 17:13:09 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'temperature' is missing in the data
+2024-12-05 17:13:09 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:13:09 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:13:09 [MQTT Call: paho29265852399482] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@983011d
+2024-12-05 17:13:09 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'humidity' is missing in the data
+2024-12-05 17:13:09 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - battery: 48
+2024-12-05 17:13:09 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:13:09 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'co2' is missing in the data
+2024-12-05 17:13:09 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - distance: 2276.0
+2024-12-05 17:13:09 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'illumination' is missing in the data
+2024-12-05 17:13:09 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:13:09 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'pressure' is missing in the data
+2024-12-05 17:13:09 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'temperature' is missing in the data
+2024-12-05 17:13:09 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:13:09 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:13:09 [MQTT Call: paho29265852399482] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@49014d70
+2024-12-05 17:13:16 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - humidity: 33.5
+2024-12-05 17:13:16 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery' is missing in the data
+2024-12-05 17:13:16 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:13:16 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - co2: 1385
+2024-12-05 17:13:16 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'distance' is missing in the data
+2024-12-05 17:13:16 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - illumination: 67.0
+2024-12-05 17:13:16 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - infrared: 7.0
+2024-12-05 17:13:16 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - pressure: 1007.4
+2024-12-05 17:13:16 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - temperature: 22.1
+2024-12-05 17:13:16 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - tvoc: 180.0
+2024-12-05 17:13:16 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - activity: 6.0
+2024-12-05 17:13:16 [MQTT Call: paho29265852399482] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@5d586ef1
+2024-12-05 17:13:20 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - humidity: 33.0
+2024-12-05 17:13:20 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - battery: 1
+2024-12-05 17:13:20 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:13:20 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'co2' is missing in the data
+2024-12-05 17:13:20 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'distance' is missing in the data
+2024-12-05 17:13:20 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'illumination' is missing in the data
+2024-12-05 17:13:20 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:13:20 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'pressure' is missing in the data
+2024-12-05 17:13:20 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - temperature: 20.4
+2024-12-05 17:13:20 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:13:20 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:13:20 [MQTT Call: paho29265852399482] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@562bfcd5
+2024-12-05 17:13:26 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'humidity' is missing in the data
+2024-12-05 17:13:26 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery' is missing in the data
+2024-12-05 17:13:26 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:13:26 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'co2' is missing in the data
+2024-12-05 17:13:26 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'distance' is missing in the data
+2024-12-05 17:13:26 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'illumination' is missing in the data
+2024-12-05 17:13:26 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:13:26 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'pressure' is missing in the data
+2024-12-05 17:13:26 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - temperature: 21.2
+2024-12-05 17:13:26 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:13:26 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:13:26 [MQTT Call: paho29265852399482] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@1a29f22b
+2024-12-05 17:13:34 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - humidity: 31.5
+2024-12-05 17:13:34 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery' is missing in the data
+2024-12-05 17:13:34 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:13:34 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'co2' is missing in the data
+2024-12-05 17:13:34 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'distance' is missing in the data
+2024-12-05 17:13:34 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'illumination' is missing in the data
+2024-12-05 17:13:34 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:13:34 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'pressure' is missing in the data
+2024-12-05 17:13:34 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - temperature: 19.2
+2024-12-05 17:13:34 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:13:34 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:13:34 [MQTT Call: paho29265852399482] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@13ed78ef
+2024-12-05 17:13:34 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - humidity: 31.5
+2024-12-05 17:13:34 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery' is missing in the data
+2024-12-05 17:13:34 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:13:34 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'co2' is missing in the data
+2024-12-05 17:13:34 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'distance' is missing in the data
+2024-12-05 17:13:34 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'illumination' is missing in the data
+2024-12-05 17:13:34 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:13:34 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'pressure' is missing in the data
+2024-12-05 17:13:34 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - temperature: 19.2
+2024-12-05 17:13:34 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:13:34 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:13:34 [MQTT Call: paho29265852399482] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@583048c2
+2024-12-05 17:13:41 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - humidity: 28.5
+2024-12-05 17:13:41 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - battery: 12
+2024-12-05 17:13:41 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:13:41 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'co2' is missing in the data
+2024-12-05 17:13:41 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'distance' is missing in the data
+2024-12-05 17:13:41 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'illumination' is missing in the data
+2024-12-05 17:13:41 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:13:41 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'pressure' is missing in the data
+2024-12-05 17:13:41 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - temperature: 24.3
+2024-12-05 17:13:41 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:13:41 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:13:41 [MQTT Call: paho29265852399482] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@577a819e
+2024-12-05 17:13:42 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - humidity: 26.0
+2024-12-05 17:13:42 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery' is missing in the data
+2024-12-05 17:13:42 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:13:42 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'co2' is missing in the data
+2024-12-05 17:13:42 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'distance' is missing in the data
+2024-12-05 17:13:42 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'illumination' is missing in the data
+2024-12-05 17:13:42 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:13:42 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'pressure' is missing in the data
+2024-12-05 17:13:42 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - temperature: 23.7
+2024-12-05 17:13:42 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:13:42 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:13:42 [MQTT Call: paho29265852399482] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@180180a5
+2024-12-05 17:13:46 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - humidity: 32.5
+2024-12-05 17:13:46 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - battery: 1
+2024-12-05 17:13:46 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:13:46 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - co2: 853
+2024-12-05 17:13:46 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'distance' is missing in the data
+2024-12-05 17:13:46 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'illumination' is missing in the data
+2024-12-05 17:13:46 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:13:46 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'pressure' is missing in the data
+2024-12-05 17:13:46 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - temperature: 20.6
+2024-12-05 17:13:46 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:13:46 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:13:46 [MQTT Call: paho29265852399482] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@6ca9109a
+2024-12-05 17:13:51 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'humidity' is missing in the data
+2024-12-05 17:13:51 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - battery: 74
+2024-12-05 17:13:51 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:13:51 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'co2' is missing in the data
+2024-12-05 17:13:51 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - distance: 2229.0
+2024-12-05 17:13:51 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'illumination' is missing in the data
+2024-12-05 17:13:51 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:13:51 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'pressure' is missing in the data
+2024-12-05 17:13:51 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'temperature' is missing in the data
+2024-12-05 17:13:51 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:13:51 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:13:51 [MQTT Call: paho29265852399482] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@3703fe04
+2024-12-05 17:14:03 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - humidity: 30.5
+2024-12-05 17:14:03 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery' is missing in the data
+2024-12-05 17:14:03 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:14:03 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - co2: 680
+2024-12-05 17:14:03 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'distance' is missing in the data
+2024-12-05 17:14:03 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'illumination' is missing in the data
+2024-12-05 17:14:03 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:14:03 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - pressure: 1014.8
+2024-12-05 17:14:03 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - temperature: 24.6
+2024-12-05 17:14:03 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:14:03 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:14:03 [MQTT Call: paho29265852399482] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@34f6ef0b
+2024-12-05 17:14:04 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - humidity: 30.5
+2024-12-05 17:14:04 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery' is missing in the data
+2024-12-05 17:14:04 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:14:04 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - co2: 680
+2024-12-05 17:14:04 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'distance' is missing in the data
+2024-12-05 17:14:04 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'illumination' is missing in the data
+2024-12-05 17:14:04 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:14:04 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - pressure: 1014.8
+2024-12-05 17:14:04 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - temperature: 24.6
+2024-12-05 17:14:04 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:14:04 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:14:04 [MQTT Call: paho29265852399482] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@20664598
+2024-12-05 17:14:09 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'humidity' is missing in the data
+2024-12-05 17:14:09 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery' is missing in the data
+2024-12-05 17:14:09 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:14:09 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'co2' is missing in the data
+2024-12-05 17:14:09 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'distance' is missing in the data
+2024-12-05 17:14:09 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - illumination: 5370.0
+2024-12-05 17:14:09 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:14:09 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'pressure' is missing in the data
+2024-12-05 17:14:09 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'temperature' is missing in the data
+2024-12-05 17:14:09 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:14:09 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:14:09 [MQTT Call: paho29265852399482] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@46fbcce
+2024-12-05 17:14:14 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'humidity' is missing in the data
+2024-12-05 17:14:14 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - battery: 48
+2024-12-05 17:14:14 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:14:14 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'co2' is missing in the data
+2024-12-05 17:14:14 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - distance: 2280.0
+2024-12-05 17:14:14 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'illumination' is missing in the data
+2024-12-05 17:14:14 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:14:14 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'pressure' is missing in the data
+2024-12-05 17:14:14 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'temperature' is missing in the data
+2024-12-05 17:14:14 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:14:14 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:14:14 [MQTT Call: paho29265852399482] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@2c348199
+2024-12-05 17:14:14 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'humidity' is missing in the data
+2024-12-05 17:14:14 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - battery: 48
+2024-12-05 17:14:14 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:14:14 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'co2' is missing in the data
+2024-12-05 17:14:14 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - distance: 2280.0
+2024-12-05 17:14:14 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'illumination' is missing in the data
+2024-12-05 17:14:14 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:14:14 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'pressure' is missing in the data
+2024-12-05 17:14:14 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'temperature' is missing in the data
+2024-12-05 17:14:14 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:14:14 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:14:14 [MQTT Call: paho29265852399482] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@2f39bda3
+2024-12-05 17:14:16 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - humidity: 33.5
+2024-12-05 17:14:16 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery' is missing in the data
+2024-12-05 17:14:16 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:14:16 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - co2: 1385
+2024-12-05 17:14:16 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'distance' is missing in the data
+2024-12-05 17:14:16 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - illumination: 69.0
+2024-12-05 17:14:16 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - infrared: 7.0
+2024-12-05 17:14:16 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - pressure: 1007.4
+2024-12-05 17:14:16 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - temperature: 22.0
+2024-12-05 17:14:16 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - tvoc: 182.0
+2024-12-05 17:14:16 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - activity: 16.0
+2024-12-05 17:14:16 [MQTT Call: paho29265852399482] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@3de16759
+2024-12-05 17:14:20 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - humidity: 33.0
+2024-12-05 17:14:20 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - battery: 1
+2024-12-05 17:14:20 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:14:20 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'co2' is missing in the data
+2024-12-05 17:14:20 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'distance' is missing in the data
+2024-12-05 17:14:20 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'illumination' is missing in the data
+2024-12-05 17:14:20 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:14:20 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'pressure' is missing in the data
+2024-12-05 17:14:20 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - temperature: 20.4
+2024-12-05 17:14:20 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:14:20 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:14:20 [MQTT Call: paho29265852399482] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@449125e7
+2024-12-05 17:14:27 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'humidity' is missing in the data
+2024-12-05 17:14:27 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery' is missing in the data
+2024-12-05 17:14:27 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:14:27 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'co2' is missing in the data
+2024-12-05 17:14:27 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'distance' is missing in the data
+2024-12-05 17:14:27 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'illumination' is missing in the data
+2024-12-05 17:14:27 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:14:27 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'pressure' is missing in the data
+2024-12-05 17:14:27 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - temperature: 21.2
+2024-12-05 17:14:27 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:14:27 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:14:27 [MQTT Call: paho29265852399482] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@4c214ca5
+2024-12-05 17:14:34 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - humidity: 32.0
+2024-12-05 17:14:34 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery' is missing in the data
+2024-12-05 17:14:34 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:14:34 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'co2' is missing in the data
+2024-12-05 17:14:34 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'distance' is missing in the data
+2024-12-05 17:14:34 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'illumination' is missing in the data
+2024-12-05 17:14:34 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:14:34 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'pressure' is missing in the data
+2024-12-05 17:14:34 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - temperature: 19.2
+2024-12-05 17:14:34 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:14:34 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:14:34 [MQTT Call: paho29265852399482] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@2e973427
+2024-12-05 17:14:41 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - humidity: 28.5
+2024-12-05 17:14:41 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - battery: 12
+2024-12-05 17:14:41 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:14:41 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'co2' is missing in the data
+2024-12-05 17:14:41 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'distance' is missing in the data
+2024-12-05 17:14:41 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'illumination' is missing in the data
+2024-12-05 17:14:41 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:14:41 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'pressure' is missing in the data
+2024-12-05 17:14:41 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - temperature: 24.3
+2024-12-05 17:14:41 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:14:41 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:14:41 [MQTT Call: paho29265852399482] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@187a4503
+2024-12-05 17:14:42 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - humidity: 25.5
+2024-12-05 17:14:42 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery' is missing in the data
+2024-12-05 17:14:42 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:14:42 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'co2' is missing in the data
+2024-12-05 17:14:42 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'distance' is missing in the data
+2024-12-05 17:14:42 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'illumination' is missing in the data
+2024-12-05 17:14:42 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:14:42 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'pressure' is missing in the data
+2024-12-05 17:14:42 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - temperature: 23.8
+2024-12-05 17:14:42 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:14:42 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:14:42 [MQTT Call: paho29265852399482] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@5589e5f6
+2024-12-05 17:14:46 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - humidity: 32.5
+2024-12-05 17:14:46 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - battery: 1
+2024-12-05 17:14:46 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:14:46 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - co2: 853
+2024-12-05 17:14:46 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'distance' is missing in the data
+2024-12-05 17:14:46 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'illumination' is missing in the data
+2024-12-05 17:14:46 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:14:46 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'pressure' is missing in the data
+2024-12-05 17:14:46 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - temperature: 20.6
+2024-12-05 17:14:46 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:14:46 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:14:46 [MQTT Call: paho29265852399482] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@138bcf86
+2024-12-05 17:14:50 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - humidity: 31.5
+2024-12-05 17:14:50 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery' is missing in the data
+2024-12-05 17:14:50 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:14:50 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'co2' is missing in the data
+2024-12-05 17:14:50 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'distance' is missing in the data
+2024-12-05 17:14:50 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'illumination' is missing in the data
+2024-12-05 17:14:50 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:14:50 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'pressure' is missing in the data
+2024-12-05 17:14:50 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - temperature: 21.2
+2024-12-05 17:14:50 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:14:50 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:14:50 [MQTT Call: paho29265852399482] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@42af7dc
+2024-12-05 17:14:56 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'humidity' is missing in the data
+2024-12-05 17:14:56 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - battery: 74
+2024-12-05 17:14:56 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:14:56 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'co2' is missing in the data
+2024-12-05 17:14:56 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - distance: 2231.0
+2024-12-05 17:14:56 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'illumination' is missing in the data
+2024-12-05 17:14:56 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:14:56 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'pressure' is missing in the data
+2024-12-05 17:14:56 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'temperature' is missing in the data
+2024-12-05 17:14:56 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:14:56 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:14:56 [MQTT Call: paho29265852399482] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@4eb2e807
+2024-12-05 17:14:58 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - humidity: 42.0
+2024-12-05 17:14:58 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery' is missing in the data
+2024-12-05 17:14:58 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:14:58 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - co2: 1577
+2024-12-05 17:14:58 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'distance' is missing in the data
+2024-12-05 17:14:58 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'illumination' is missing in the data
+2024-12-05 17:14:58 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:14:58 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - pressure: 1015.1
+2024-12-05 17:14:58 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - temperature: 20.6
+2024-12-05 17:14:58 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:14:58 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:14:58 [MQTT Call: paho29265852399482] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@540e1272
+2024-12-05 17:15:11 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'humidity' is missing in the data
+2024-12-05 17:15:11 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery' is missing in the data
+2024-12-05 17:15:11 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:15:11 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'co2' is missing in the data
+2024-12-05 17:15:11 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'distance' is missing in the data
+2024-12-05 17:15:11 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - illumination: 5370.0
+2024-12-05 17:15:11 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:15:11 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'pressure' is missing in the data
+2024-12-05 17:15:11 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'temperature' is missing in the data
+2024-12-05 17:15:11 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:15:11 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:15:11 [MQTT Call: paho29265852399482] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@19b4108a
+2024-12-05 17:15:17 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - humidity: 33.5
+2024-12-05 17:15:17 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery' is missing in the data
+2024-12-05 17:15:17 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:15:17 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - co2: 1385
+2024-12-05 17:15:17 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'distance' is missing in the data
+2024-12-05 17:15:17 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - illumination: 67.0
+2024-12-05 17:15:17 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - infrared: 7.0
+2024-12-05 17:15:17 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - pressure: 1007.4
+2024-12-05 17:15:17 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - temperature: 22.1
+2024-12-05 17:15:17 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - tvoc: 180.0
+2024-12-05 17:15:17 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - activity: 8.0
+2024-12-05 17:15:17 [MQTT Call: paho29265852399482] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@4af39077
+2024-12-05 17:15:19 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'humidity' is missing in the data
+2024-12-05 17:15:19 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - battery: 48
+2024-12-05 17:15:19 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:15:19 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'co2' is missing in the data
+2024-12-05 17:15:19 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - distance: 2279.0
+2024-12-05 17:15:19 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'illumination' is missing in the data
+2024-12-05 17:15:19 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:15:19 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'pressure' is missing in the data
+2024-12-05 17:15:19 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'temperature' is missing in the data
+2024-12-05 17:15:19 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:15:19 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:15:19 [MQTT Call: paho29265852399482] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@13d8abfe
+2024-12-05 17:15:19 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'humidity' is missing in the data
+2024-12-05 17:15:19 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - battery: 48
+2024-12-05 17:15:19 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:15:19 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'co2' is missing in the data
+2024-12-05 17:15:19 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - distance: 2279.0
+2024-12-05 17:15:19 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'illumination' is missing in the data
+2024-12-05 17:15:19 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:15:19 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'pressure' is missing in the data
+2024-12-05 17:15:19 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'temperature' is missing in the data
+2024-12-05 17:15:19 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:15:19 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:15:19 [MQTT Call: paho29265852399482] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@3761b675
+2024-12-05 17:15:21 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - humidity: 33.0
+2024-12-05 17:15:21 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - battery: 1
+2024-12-05 17:15:21 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:15:21 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'co2' is missing in the data
+2024-12-05 17:15:21 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'distance' is missing in the data
+2024-12-05 17:15:21 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'illumination' is missing in the data
+2024-12-05 17:15:21 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:15:21 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'pressure' is missing in the data
+2024-12-05 17:15:21 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - temperature: 20.4
+2024-12-05 17:15:21 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:15:21 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:15:21 [MQTT Call: paho29265852399482] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@ee8c053
+2024-12-05 17:15:27 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'humidity' is missing in the data
+2024-12-05 17:15:27 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery' is missing in the data
+2024-12-05 17:15:27 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:15:27 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'co2' is missing in the data
+2024-12-05 17:15:27 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'distance' is missing in the data
+2024-12-05 17:15:27 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'illumination' is missing in the data
+2024-12-05 17:15:27 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:15:27 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'pressure' is missing in the data
+2024-12-05 17:15:27 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - temperature: 21.2
+2024-12-05 17:15:27 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:15:27 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:15:27 [MQTT Call: paho29265852399482] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@58ce89d1
+2024-12-05 17:15:34 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - humidity: 31.5
+2024-12-05 17:15:34 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery' is missing in the data
+2024-12-05 17:15:34 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:15:34 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'co2' is missing in the data
+2024-12-05 17:15:34 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'distance' is missing in the data
+2024-12-05 17:15:34 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'illumination' is missing in the data
+2024-12-05 17:15:34 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:15:34 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'pressure' is missing in the data
+2024-12-05 17:15:34 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - temperature: 19.1
+2024-12-05 17:15:34 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:15:34 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:15:34 [MQTT Call: paho29265852399482] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@e9f4e6d
+2024-12-05 17:15:34 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - humidity: 31.5
+2024-12-05 17:15:34 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery' is missing in the data
+2024-12-05 17:15:34 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:15:34 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'co2' is missing in the data
+2024-12-05 17:15:34 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'distance' is missing in the data
+2024-12-05 17:15:34 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'illumination' is missing in the data
+2024-12-05 17:15:34 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:15:34 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'pressure' is missing in the data
+2024-12-05 17:15:34 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - temperature: 19.1
+2024-12-05 17:15:34 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:15:34 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:15:34 [MQTT Call: paho29265852399482] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@347783d5
+2024-12-05 17:15:41 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - humidity: 28.5
+2024-12-05 17:15:41 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - battery: 12
+2024-12-05 17:15:41 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:15:41 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'co2' is missing in the data
+2024-12-05 17:15:41 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'distance' is missing in the data
+2024-12-05 17:15:41 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'illumination' is missing in the data
+2024-12-05 17:15:41 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:15:41 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'pressure' is missing in the data
+2024-12-05 17:15:41 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - temperature: 24.3
+2024-12-05 17:15:41 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:15:41 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:15:41 [MQTT Call: paho29265852399482] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@7c553750
+2024-12-05 17:15:42 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - humidity: 26.0
+2024-12-05 17:15:42 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery' is missing in the data
+2024-12-05 17:15:42 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:15:42 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'co2' is missing in the data
+2024-12-05 17:15:42 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'distance' is missing in the data
+2024-12-05 17:15:42 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'illumination' is missing in the data
+2024-12-05 17:15:42 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:15:42 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'pressure' is missing in the data
+2024-12-05 17:15:42 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - temperature: 23.9
+2024-12-05 17:15:42 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:15:42 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:15:42 [MQTT Call: paho29265852399482] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@5079a90a
+2024-12-05 17:15:46 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - humidity: 32.5
+2024-12-05 17:15:46 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - battery: 1
+2024-12-05 17:15:46 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:15:46 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - co2: 852
+2024-12-05 17:15:46 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'distance' is missing in the data
+2024-12-05 17:15:46 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'illumination' is missing in the data
+2024-12-05 17:15:46 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:15:46 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'pressure' is missing in the data
+2024-12-05 17:15:46 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - temperature: 20.6
+2024-12-05 17:15:46 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:15:46 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:15:46 [MQTT Call: paho29265852399482] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@2461694e
+2024-12-05 17:16:01 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'humidity' is missing in the data
+2024-12-05 17:16:01 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - battery: 74
+2024-12-05 17:16:01 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:16:01 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'co2' is missing in the data
+2024-12-05 17:16:01 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - distance: 2231.0
+2024-12-05 17:16:01 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'illumination' is missing in the data
+2024-12-05 17:16:01 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:16:01 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'pressure' is missing in the data
+2024-12-05 17:16:01 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'temperature' is missing in the data
+2024-12-05 17:16:01 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:16:01 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:16:01 [MQTT Call: paho29265852399482] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@2c803f3c
+2024-12-05 17:16:05 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - humidity: 30.5
+2024-12-05 17:16:05 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery' is missing in the data
+2024-12-05 17:16:05 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:16:05 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - co2: 671
+2024-12-05 17:16:05 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'distance' is missing in the data
+2024-12-05 17:16:05 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'illumination' is missing in the data
+2024-12-05 17:16:05 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:16:05 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - pressure: 1014.9
+2024-12-05 17:16:05 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - temperature: 24.6
+2024-12-05 17:16:05 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:16:05 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:16:05 [MQTT Call: paho29265852399482] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@793a624b
+2024-12-05 17:16:12 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'humidity' is missing in the data
+2024-12-05 17:16:12 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery' is missing in the data
+2024-12-05 17:16:12 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:16:12 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'co2' is missing in the data
+2024-12-05 17:16:12 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'distance' is missing in the data
+2024-12-05 17:16:12 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - illumination: 5370.0
+2024-12-05 17:16:12 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:16:12 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'pressure' is missing in the data
+2024-12-05 17:16:12 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'temperature' is missing in the data
+2024-12-05 17:16:12 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:16:12 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:16:12 [MQTT Call: paho29265852399482] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@6496a59f
+2024-12-05 17:16:17 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - humidity: 33.5
+2024-12-05 17:16:17 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery' is missing in the data
+2024-12-05 17:16:17 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:16:17 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - co2: 1385
+2024-12-05 17:16:17 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'distance' is missing in the data
+2024-12-05 17:16:17 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - illumination: 69.0
+2024-12-05 17:16:17 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - infrared: 7.0
+2024-12-05 17:16:17 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - pressure: 1007.4
+2024-12-05 17:16:17 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - temperature: 22.0
+2024-12-05 17:16:17 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - tvoc: 180.0
+2024-12-05 17:16:17 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - activity: 0.0
+2024-12-05 17:16:17 [MQTT Call: paho29265852399482] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@4b128b5a
+2024-12-05 17:16:20 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - humidity: 33.0
+2024-12-05 17:16:20 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - battery: 1
+2024-12-05 17:16:20 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:16:20 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'co2' is missing in the data
+2024-12-05 17:16:20 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'distance' is missing in the data
+2024-12-05 17:16:20 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'illumination' is missing in the data
+2024-12-05 17:16:20 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:16:20 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'pressure' is missing in the data
+2024-12-05 17:16:20 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - temperature: 20.4
+2024-12-05 17:16:20 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:16:20 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:16:20 [MQTT Call: paho29265852399482] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@664624db
+2024-12-05 17:16:28 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'humidity' is missing in the data
+2024-12-05 17:16:28 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery' is missing in the data
+2024-12-05 17:16:28 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:16:28 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'co2' is missing in the data
+2024-12-05 17:16:28 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'distance' is missing in the data
+2024-12-05 17:16:28 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'illumination' is missing in the data
+2024-12-05 17:16:28 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:16:28 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'pressure' is missing in the data
+2024-12-05 17:16:28 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - temperature: 21.2
+2024-12-05 17:16:28 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:16:28 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:16:28 [MQTT Call: paho29265852399482] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@4cc43a62
+2024-12-05 17:16:28 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'humidity' is missing in the data
+2024-12-05 17:16:28 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery' is missing in the data
+2024-12-05 17:16:28 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:16:28 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'co2' is missing in the data
+2024-12-05 17:16:28 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'distance' is missing in the data
+2024-12-05 17:16:28 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'illumination' is missing in the data
+2024-12-05 17:16:28 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:16:28 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'pressure' is missing in the data
+2024-12-05 17:16:28 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - temperature: 21.2
+2024-12-05 17:16:28 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:16:28 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:16:28 [MQTT Call: paho29265852399482] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@1d2fc438
+2024-12-05 17:16:34 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - humidity: 31.5
+2024-12-05 17:16:34 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery' is missing in the data
+2024-12-05 17:16:34 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:16:34 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'co2' is missing in the data
+2024-12-05 17:16:34 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'distance' is missing in the data
+2024-12-05 17:16:34 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'illumination' is missing in the data
+2024-12-05 17:16:34 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:16:34 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'pressure' is missing in the data
+2024-12-05 17:16:34 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - temperature: 19.3
+2024-12-05 17:16:34 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:16:34 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:16:34 [MQTT Call: paho29265852399482] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@42b8c49c
+2024-12-05 17:16:41 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - humidity: 28.5
+2024-12-05 17:16:41 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - battery: 12
+2024-12-05 17:16:41 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:16:41 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'co2' is missing in the data
+2024-12-05 17:16:41 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'distance' is missing in the data
+2024-12-05 17:16:41 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'illumination' is missing in the data
+2024-12-05 17:16:41 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:16:41 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'pressure' is missing in the data
+2024-12-05 17:16:41 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - temperature: 24.2
+2024-12-05 17:16:41 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:16:41 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:16:41 [MQTT Call: paho29265852399482] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@158f50ec
+2024-12-05 17:16:42 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - humidity: 25.5
+2024-12-05 17:16:42 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery' is missing in the data
+2024-12-05 17:16:42 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:16:42 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'co2' is missing in the data
+2024-12-05 17:16:42 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'distance' is missing in the data
+2024-12-05 17:16:42 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'illumination' is missing in the data
+2024-12-05 17:16:42 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:16:42 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'pressure' is missing in the data
+2024-12-05 17:16:42 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - temperature: 23.8
+2024-12-05 17:16:42 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:16:42 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:16:42 [MQTT Call: paho29265852399482] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@78756f15
+2024-12-05 17:16:46 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - humidity: 33.0
+2024-12-05 17:16:46 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - battery: 1
+2024-12-05 17:16:46 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:16:46 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - co2: 852
+2024-12-05 17:16:46 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'distance' is missing in the data
+2024-12-05 17:16:46 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'illumination' is missing in the data
+2024-12-05 17:16:46 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:16:46 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'pressure' is missing in the data
+2024-12-05 17:16:46 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - temperature: 20.6
+2024-12-05 17:16:46 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:16:46 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:16:46 [MQTT Call: paho29265852399482] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@1b987a27
+2024-12-05 17:17:00 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - humidity: 41.5
+2024-12-05 17:17:00 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery' is missing in the data
+2024-12-05 17:17:00 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:17:00 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - co2: 1584
+2024-12-05 17:17:00 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'distance' is missing in the data
+2024-12-05 17:17:00 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'illumination' is missing in the data
+2024-12-05 17:17:00 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:17:00 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - pressure: 1015.1
+2024-12-05 17:17:00 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - temperature: 20.6
+2024-12-05 17:17:00 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:17:00 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:17:00 [MQTT Call: paho29265852399482] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@1f80c1ec
+2024-12-05 17:17:00 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - humidity: 41.5
+2024-12-05 17:17:00 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery' is missing in the data
+2024-12-05 17:17:00 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:17:00 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - co2: 1584
+2024-12-05 17:17:00 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'distance' is missing in the data
+2024-12-05 17:17:00 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'illumination' is missing in the data
+2024-12-05 17:17:00 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:17:00 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - pressure: 1015.1
+2024-12-05 17:17:00 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - temperature: 20.6
+2024-12-05 17:17:00 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:17:00 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:17:00 [MQTT Call: paho29265852399482] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@70e7eac0
+2024-12-05 17:17:06 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'humidity' is missing in the data
+2024-12-05 17:17:06 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - battery: 74
+2024-12-05 17:17:06 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:17:06 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'co2' is missing in the data
+2024-12-05 17:17:06 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - distance: 2239.0
+2024-12-05 17:17:06 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'illumination' is missing in the data
+2024-12-05 17:17:06 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:17:06 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'pressure' is missing in the data
+2024-12-05 17:17:06 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'temperature' is missing in the data
+2024-12-05 17:17:06 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:17:06 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:17:06 [MQTT Call: paho29265852399482] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@23b93e0e
+2024-12-05 17:17:14 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'humidity' is missing in the data
+2024-12-05 17:17:14 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery' is missing in the data
+2024-12-05 17:17:14 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:17:14 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'co2' is missing in the data
+2024-12-05 17:17:14 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'distance' is missing in the data
+2024-12-05 17:17:14 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - illumination: 5370.0
+2024-12-05 17:17:14 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:17:14 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'pressure' is missing in the data
+2024-12-05 17:17:14 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'temperature' is missing in the data
+2024-12-05 17:17:14 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:17:14 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:17:14 [MQTT Call: paho29265852399482] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@7b28211c
+2024-12-05 17:17:17 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - humidity: 33.5
+2024-12-05 17:17:17 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery' is missing in the data
+2024-12-05 17:17:17 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:17:17 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - co2: 1409
+2024-12-05 17:17:17 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'distance' is missing in the data
+2024-12-05 17:17:17 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - illumination: 67.0
+2024-12-05 17:17:17 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - infrared: 7.0
+2024-12-05 17:17:17 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - pressure: 1007.5
+2024-12-05 17:17:17 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - temperature: 22.0
+2024-12-05 17:17:17 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - tvoc: 182.0
+2024-12-05 17:17:17 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - activity: 3.0
+2024-12-05 17:17:17 [MQTT Call: paho29265852399482] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@623e0034
+2024-12-05 17:17:21 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - humidity: 33.0
+2024-12-05 17:17:21 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - battery: 1
+2024-12-05 17:17:21 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:17:21 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'co2' is missing in the data
+2024-12-05 17:17:21 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'distance' is missing in the data
+2024-12-05 17:17:21 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'illumination' is missing in the data
+2024-12-05 17:17:21 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:17:21 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'pressure' is missing in the data
+2024-12-05 17:17:21 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - temperature: 20.4
+2024-12-05 17:17:21 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:17:21 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:17:21 [MQTT Call: paho29265852399482] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@2d404759
+2024-12-05 17:17:28 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'humidity' is missing in the data
+2024-12-05 17:17:28 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery' is missing in the data
+2024-12-05 17:17:28 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:17:28 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'co2' is missing in the data
+2024-12-05 17:17:28 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'distance' is missing in the data
+2024-12-05 17:17:28 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'illumination' is missing in the data
+2024-12-05 17:17:28 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:17:28 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'pressure' is missing in the data
+2024-12-05 17:17:28 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - temperature: 21.2
+2024-12-05 17:17:28 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:17:28 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:17:29 [MQTT Call: paho29265852399482] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@476345b1
+2024-12-05 17:17:29 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'humidity' is missing in the data
+2024-12-05 17:17:29 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - battery: 48
+2024-12-05 17:17:29 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:17:29 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'co2' is missing in the data
+2024-12-05 17:17:29 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - distance: 2274.0
+2024-12-05 17:17:29 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'illumination' is missing in the data
+2024-12-05 17:17:29 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:17:29 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'pressure' is missing in the data
+2024-12-05 17:17:29 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'temperature' is missing in the data
+2024-12-05 17:17:29 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:17:29 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:17:29 [MQTT Call: paho29265852399482] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@7d79ac80
+2024-12-05 17:17:29 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'humidity' is missing in the data
+2024-12-05 17:17:29 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - battery: 48
+2024-12-05 17:17:29 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:17:29 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'co2' is missing in the data
+2024-12-05 17:17:29 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - distance: 2274.0
+2024-12-05 17:17:29 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'illumination' is missing in the data
+2024-12-05 17:17:29 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:17:29 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'pressure' is missing in the data
+2024-12-05 17:17:29 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'temperature' is missing in the data
+2024-12-05 17:17:29 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:17:29 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:17:29 [MQTT Call: paho29265852399482] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@6f543cbb
+2024-12-05 17:17:29 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'humidity' is missing in the data
+2024-12-05 17:17:29 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery' is missing in the data
+2024-12-05 17:17:29 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:17:29 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'co2' is missing in the data
+2024-12-05 17:17:29 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'distance' is missing in the data
+2024-12-05 17:17:29 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'illumination' is missing in the data
+2024-12-05 17:17:29 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:17:29 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'pressure' is missing in the data
+2024-12-05 17:17:29 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'temperature' is missing in the data
+2024-12-05 17:17:29 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:17:29 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:17:29 [MQTT Call: paho29265852399482] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@4001c487
+2024-12-05 17:17:33 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'humidity' is missing in the data
+2024-12-05 17:17:33 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery' is missing in the data
+2024-12-05 17:17:33 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:17:33 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'co2' is missing in the data
+2024-12-05 17:17:33 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'distance' is missing in the data
+2024-12-05 17:17:33 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'illumination' is missing in the data
+2024-12-05 17:17:33 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:17:33 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'pressure' is missing in the data
+2024-12-05 17:17:33 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'temperature' is missing in the data
+2024-12-05 17:17:33 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:17:33 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:17:33 [MQTT Call: paho29265852399482] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@3f5e6cda
+2024-12-05 17:17:34 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - humidity: 31.5
+2024-12-05 17:17:34 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery' is missing in the data
+2024-12-05 17:17:34 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:17:34 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'co2' is missing in the data
+2024-12-05 17:17:34 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'distance' is missing in the data
+2024-12-05 17:17:34 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'illumination' is missing in the data
+2024-12-05 17:17:34 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:17:34 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'pressure' is missing in the data
+2024-12-05 17:17:34 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - temperature: 19.1
+2024-12-05 17:17:34 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:17:34 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:17:34 [MQTT Call: paho29265852399482] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@4eb8f0be
+2024-12-05 17:17:34 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - humidity: 31.5
+2024-12-05 17:17:34 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery' is missing in the data
+2024-12-05 17:17:34 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:17:34 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'co2' is missing in the data
+2024-12-05 17:17:34 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'distance' is missing in the data
+2024-12-05 17:17:34 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'illumination' is missing in the data
+2024-12-05 17:17:34 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:17:34 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'pressure' is missing in the data
+2024-12-05 17:17:34 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - temperature: 19.1
+2024-12-05 17:17:34 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:17:34 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:17:34 [MQTT Call: paho29265852399482] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@21e025a1
+2024-12-05 17:17:38 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'humidity' is missing in the data
+2024-12-05 17:17:38 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery' is missing in the data
+2024-12-05 17:17:38 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:17:38 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'co2' is missing in the data
+2024-12-05 17:17:38 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'distance' is missing in the data
+2024-12-05 17:17:38 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'illumination' is missing in the data
+2024-12-05 17:17:38 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:17:38 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'pressure' is missing in the data
+2024-12-05 17:17:38 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'temperature' is missing in the data
+2024-12-05 17:17:38 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:17:38 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:17:38 [MQTT Call: paho29265852399482] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@6d14b5fb
+2024-12-05 17:17:41 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - humidity: 28.5
+2024-12-05 17:17:41 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - battery: 12
+2024-12-05 17:17:41 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:17:41 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'co2' is missing in the data
+2024-12-05 17:17:41 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'distance' is missing in the data
+2024-12-05 17:17:41 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'illumination' is missing in the data
+2024-12-05 17:17:41 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:17:41 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'pressure' is missing in the data
+2024-12-05 17:17:41 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - temperature: 24.2
+2024-12-05 17:17:41 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:17:41 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:17:41 [MQTT Call: paho29265852399482] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@25ce3d4b
+2024-12-05 17:17:42 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - humidity: 25.5
+2024-12-05 17:17:42 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery' is missing in the data
+2024-12-05 17:17:42 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:17:42 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'co2' is missing in the data
+2024-12-05 17:17:42 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'distance' is missing in the data
+2024-12-05 17:17:42 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'illumination' is missing in the data
+2024-12-05 17:17:42 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:17:42 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'pressure' is missing in the data
+2024-12-05 17:17:42 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - temperature: 24.0
+2024-12-05 17:17:42 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:17:42 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:17:42 [MQTT Call: paho29265852399482] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@5a3d97e
+2024-12-05 17:17:48 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - humidity: 33.0
+2024-12-05 17:17:48 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - battery: 1
+2024-12-05 17:17:48 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:17:48 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - co2: 880
+2024-12-05 17:17:48 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'distance' is missing in the data
+2024-12-05 17:17:48 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'illumination' is missing in the data
+2024-12-05 17:17:48 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:17:48 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'pressure' is missing in the data
+2024-12-05 17:17:48 [MQTT Call: paho29265852399482] DEBUG com.nhnacademy.mqttpub.MqttPub - temperature: 20.6
+2024-12-05 17:17:48 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:17:48 [MQTT Call: paho29265852399482] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:17:48 [MQTT Call: paho29265852399482] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@4dd01f5c
+2024-12-05 17:22:07 [main] INFO  com.nhnacademy.application.MainApp - main start
+2024-12-05 17:22:08 [main] INFO  com.nhnacademy.mqttpub.MqttPub - Connected to MQTT broker at: tcp://192.168.71.202:1883
+2024-12-05 17:22:08 [main] DEBUG com.nhnacademy.mqtt.MqttBrokers - Connected to MQTT Broker: tcp://192.168.71.202:1883
+2024-12-05 17:22:08 [main] DEBUG com.nhnacademy.mqtt.MqttBrokers - Subscribed to topic: application/#
+2024-12-05 17:22:11 [MQTT Call: paho29860671622898] DEBUG com.nhnacademy.mqttpub.MqttPub - humidity: 30.5
+2024-12-05 17:22:11 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery' is missing in the data
+2024-12-05 17:22:11 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:22:11 [MQTT Call: paho29860671622898] DEBUG com.nhnacademy.mqttpub.MqttPub - co2: 652
+2024-12-05 17:22:11 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'distance' is missing in the data
+2024-12-05 17:22:11 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'illumination' is missing in the data
+2024-12-05 17:22:11 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:22:11 [MQTT Call: paho29860671622898] DEBUG com.nhnacademy.mqttpub.MqttPub - pressure: 1014.9
+2024-12-05 17:22:11 [MQTT Call: paho29860671622898] DEBUG com.nhnacademy.mqttpub.MqttPub - temperature: 24.7
+2024-12-05 17:22:11 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:22:11 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:22:11 [MQTT Call: paho29860671622898] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@87b5f29
+2024-12-05 17:22:11 [MQTT Call: paho29860671622898] DEBUG com.nhnacademy.mqttpub.MqttPub - humidity: 30.5
+2024-12-05 17:22:11 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery' is missing in the data
+2024-12-05 17:22:11 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:22:11 [MQTT Call: paho29860671622898] DEBUG com.nhnacademy.mqttpub.MqttPub - co2: 652
+2024-12-05 17:22:11 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'distance' is missing in the data
+2024-12-05 17:22:11 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'illumination' is missing in the data
+2024-12-05 17:22:11 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:22:11 [MQTT Call: paho29860671622898] DEBUG com.nhnacademy.mqttpub.MqttPub - pressure: 1014.9
+2024-12-05 17:22:11 [MQTT Call: paho29860671622898] DEBUG com.nhnacademy.mqttpub.MqttPub - temperature: 24.7
+2024-12-05 17:22:11 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:22:11 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:22:11 [MQTT Call: paho29860671622898] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@39074066
+2024-12-05 17:22:17 [MQTT Call: paho29860671622898] DEBUG com.nhnacademy.mqttpub.MqttPub - humidity: 33.5
+2024-12-05 17:22:17 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery' is missing in the data
+2024-12-05 17:22:17 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:22:17 [MQTT Call: paho29860671622898] DEBUG com.nhnacademy.mqttpub.MqttPub - co2: 1434
+2024-12-05 17:22:17 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'distance' is missing in the data
+2024-12-05 17:22:17 [MQTT Call: paho29860671622898] DEBUG com.nhnacademy.mqttpub.MqttPub - illumination: 69.0
+2024-12-05 17:22:17 [MQTT Call: paho29860671622898] DEBUG com.nhnacademy.mqttpub.MqttPub - infrared: 7.0
+2024-12-05 17:22:17 [MQTT Call: paho29860671622898] DEBUG com.nhnacademy.mqttpub.MqttPub - pressure: 1007.4
+2024-12-05 17:22:17 [MQTT Call: paho29860671622898] DEBUG com.nhnacademy.mqttpub.MqttPub - temperature: 22.1
+2024-12-05 17:22:17 [MQTT Call: paho29860671622898] DEBUG com.nhnacademy.mqttpub.MqttPub - tvoc: 180.0
+2024-12-05 17:22:17 [MQTT Call: paho29860671622898] DEBUG com.nhnacademy.mqttpub.MqttPub - activity: 0.0
+2024-12-05 17:22:17 [MQTT Call: paho29860671622898] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@290c9d30
+2024-12-05 17:22:20 [MQTT Call: paho29860671622898] DEBUG com.nhnacademy.mqttpub.MqttPub - humidity: 33.0
+2024-12-05 17:22:20 [MQTT Call: paho29860671622898] DEBUG com.nhnacademy.mqttpub.MqttPub - battery: 1
+2024-12-05 17:22:20 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:22:20 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'co2' is missing in the data
+2024-12-05 17:22:20 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'distance' is missing in the data
+2024-12-05 17:22:20 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'illumination' is missing in the data
+2024-12-05 17:22:20 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:22:20 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'pressure' is missing in the data
+2024-12-05 17:22:20 [MQTT Call: paho29860671622898] DEBUG com.nhnacademy.mqttpub.MqttPub - temperature: 20.4
+2024-12-05 17:22:20 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:22:20 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:22:20 [MQTT Call: paho29860671622898] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@7b5c0d2f
+2024-12-05 17:22:22 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'humidity' is missing in the data
+2024-12-05 17:22:22 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery' is missing in the data
+2024-12-05 17:22:22 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:22:22 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'co2' is missing in the data
+2024-12-05 17:22:22 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'distance' is missing in the data
+2024-12-05 17:22:22 [MQTT Call: paho29860671622898] DEBUG com.nhnacademy.mqttpub.MqttPub - illumination: 5370.0
+2024-12-05 17:22:22 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:22:22 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'pressure' is missing in the data
+2024-12-05 17:22:22 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'temperature' is missing in the data
+2024-12-05 17:22:22 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:22:22 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:22:22 [MQTT Call: paho29860671622898] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@308629dd
+2024-12-05 17:22:31 [MQTT Call: paho29860671622898] DEBUG com.nhnacademy.mqtt.MqttBrokers - Missing data in message.
+2024-12-05 17:22:31 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'humidity' is missing in the data
+2024-12-05 17:22:31 [MQTT Call: paho29860671622898] DEBUG com.nhnacademy.mqttpub.MqttPub - battery: 74
+2024-12-05 17:22:31 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:22:31 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'co2' is missing in the data
+2024-12-05 17:22:31 [MQTT Call: paho29860671622898] DEBUG com.nhnacademy.mqttpub.MqttPub - distance: 2233.0
+2024-12-05 17:22:31 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'illumination' is missing in the data
+2024-12-05 17:22:31 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:22:31 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'pressure' is missing in the data
+2024-12-05 17:22:31 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'temperature' is missing in the data
+2024-12-05 17:22:31 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:22:31 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:22:31 [MQTT Call: paho29860671622898] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@33814bdb
+2024-12-05 17:22:32 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'humidity' is missing in the data
+2024-12-05 17:22:32 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery' is missing in the data
+2024-12-05 17:22:32 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:22:32 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'co2' is missing in the data
+2024-12-05 17:22:32 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'distance' is missing in the data
+2024-12-05 17:22:32 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'illumination' is missing in the data
+2024-12-05 17:22:32 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:22:32 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'pressure' is missing in the data
+2024-12-05 17:22:32 [MQTT Call: paho29860671622898] DEBUG com.nhnacademy.mqttpub.MqttPub - temperature: 21.2
+2024-12-05 17:22:32 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:22:32 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:22:32 [MQTT Call: paho29860671622898] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@7e29a586
+2024-12-05 17:22:34 [MQTT Call: paho29860671622898] DEBUG com.nhnacademy.mqttpub.MqttPub - humidity: 31.5
+2024-12-05 17:22:34 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery' is missing in the data
+2024-12-05 17:22:34 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:22:34 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'co2' is missing in the data
+2024-12-05 17:22:34 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'distance' is missing in the data
+2024-12-05 17:22:34 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'illumination' is missing in the data
+2024-12-05 17:22:34 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:22:34 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'pressure' is missing in the data
+2024-12-05 17:22:34 [MQTT Call: paho29860671622898] DEBUG com.nhnacademy.mqttpub.MqttPub - temperature: 19.2
+2024-12-05 17:22:34 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:22:34 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:22:34 [MQTT Call: paho29860671622898] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@6507fa19
+2024-12-05 17:22:41 [MQTT Call: paho29860671622898] DEBUG com.nhnacademy.mqttpub.MqttPub - humidity: 28.5
+2024-12-05 17:22:41 [MQTT Call: paho29860671622898] DEBUG com.nhnacademy.mqttpub.MqttPub - battery: 12
+2024-12-05 17:22:41 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:22:41 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'co2' is missing in the data
+2024-12-05 17:22:41 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'distance' is missing in the data
+2024-12-05 17:22:41 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'illumination' is missing in the data
+2024-12-05 17:22:41 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:22:41 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'pressure' is missing in the data
+2024-12-05 17:22:41 [MQTT Call: paho29860671622898] DEBUG com.nhnacademy.mqttpub.MqttPub - temperature: 24.3
+2024-12-05 17:22:41 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:22:41 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:22:41 [MQTT Call: paho29860671622898] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@644eefa5
+2024-12-05 17:22:41 [MQTT Call: paho29860671622898] DEBUG com.nhnacademy.mqttpub.MqttPub - humidity: 25.5
+2024-12-05 17:22:41 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery' is missing in the data
+2024-12-05 17:22:41 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:22:41 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'co2' is missing in the data
+2024-12-05 17:22:41 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'distance' is missing in the data
+2024-12-05 17:22:41 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'illumination' is missing in the data
+2024-12-05 17:22:41 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:22:41 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'pressure' is missing in the data
+2024-12-05 17:22:41 [MQTT Call: paho29860671622898] DEBUG com.nhnacademy.mqttpub.MqttPub - temperature: 24.2
+2024-12-05 17:22:41 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:22:41 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:22:42 [MQTT Call: paho29860671622898] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@5d28af64
+2024-12-05 17:22:42 [MQTT Call: paho29860671622898] DEBUG com.nhnacademy.mqttpub.MqttPub - humidity: 33.0
+2024-12-05 17:22:42 [MQTT Call: paho29860671622898] DEBUG com.nhnacademy.mqttpub.MqttPub - battery: 1
+2024-12-05 17:22:42 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:22:42 [MQTT Call: paho29860671622898] DEBUG com.nhnacademy.mqttpub.MqttPub - co2: 890
+2024-12-05 17:22:42 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'distance' is missing in the data
+2024-12-05 17:22:42 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'illumination' is missing in the data
+2024-12-05 17:22:42 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:22:42 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'pressure' is missing in the data
+2024-12-05 17:22:42 [MQTT Call: paho29860671622898] DEBUG com.nhnacademy.mqttpub.MqttPub - temperature: 20.6
+2024-12-05 17:22:42 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:22:42 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:22:42 [MQTT Call: paho29860671622898] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@6e9e24d2
+2024-12-05 17:22:54 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'humidity' is missing in the data
+2024-12-05 17:22:54 [MQTT Call: paho29860671622898] DEBUG com.nhnacademy.mqttpub.MqttPub - battery: 48
+2024-12-05 17:22:54 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:22:54 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'co2' is missing in the data
+2024-12-05 17:22:54 [MQTT Call: paho29860671622898] DEBUG com.nhnacademy.mqttpub.MqttPub - distance: 2278.0
+2024-12-05 17:22:54 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'illumination' is missing in the data
+2024-12-05 17:22:54 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:22:54 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'pressure' is missing in the data
+2024-12-05 17:22:54 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'temperature' is missing in the data
+2024-12-05 17:22:54 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:22:54 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:22:54 [MQTT Call: paho29860671622898] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@3493cc2a
+2024-12-05 17:23:05 [MQTT Call: paho29860671622898] DEBUG com.nhnacademy.mqttpub.MqttPub - humidity: 41.5
+2024-12-05 17:23:05 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery' is missing in the data
+2024-12-05 17:23:05 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'battery_level' is missing in the data
+2024-12-05 17:23:05 [MQTT Call: paho29860671622898] DEBUG com.nhnacademy.mqttpub.MqttPub - co2: 1568
+2024-12-05 17:23:05 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'distance' is missing in the data
+2024-12-05 17:23:05 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'illumination' is missing in the data
+2024-12-05 17:23:05 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'infrared' is missing in the data
+2024-12-05 17:23:05 [MQTT Call: paho29860671622898] DEBUG com.nhnacademy.mqttpub.MqttPub - pressure: 1015.1
+2024-12-05 17:23:05 [MQTT Call: paho29860671622898] DEBUG com.nhnacademy.mqttpub.MqttPub - temperature: 20.6
+2024-12-05 17:23:05 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'tvoc' is missing in the data
+2024-12-05 17:23:05 [MQTT Call: paho29860671622898] WARN  com.nhnacademy.mqttpub.MqttPub - Field 'activity' is missing in the data
+2024-12-05 17:23:05 [MQTT Call: paho29860671622898] INFO  com.nhnacademy.mqttpub.MqttPub - Data written to InfluxDB: com.influxdb.client.write.Point@27b32eda

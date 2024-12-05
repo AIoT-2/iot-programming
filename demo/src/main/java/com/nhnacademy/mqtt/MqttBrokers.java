@@ -16,24 +16,27 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 @Slf4j
 public class MqttBrokers {
+    private static MqttClient client = null; // MqttClient를 클래스 변수로 관리
+
     private MqttBrokers() {
         // ignore
     }
 
     public static void startListening(String brokerUrl, String topic, MqttPub mqttPub) {
         try {
-            // MainApp에서 닫아서 여기서는 client를 닫는 것을 만들지 않았다.
-            MqttClient client = new MqttClient(brokerUrl, MqttClient.generateClientId());
-            MqttConnectOptions options = new MqttConnectOptions();
-            options.setCleanSession(true);
-            client.connect(options);
-            System.out.println("Connected to MQTT Broker: " + brokerUrl);
+            if (client == null) {
+                client = new MqttClient(brokerUrl, MqttClient.generateClientId());
+                MqttConnectOptions options = new MqttConnectOptions();
+                options.setCleanSession(true);
+                client.connect(options);
+                log.debug("Connected to MQTT Broker: " + brokerUrl);
+            }
 
             // MQTT 메시지 수신 콜백 설정
             client.setCallback(new MqttCallback() {
                 @Override
                 public void connectionLost(Throwable cause) {
-                    System.out.println("Connection lost: " + cause.getMessage());
+                    log.error("Connection lost: " + cause.getMessage());
                 }
 
                 @Override
@@ -49,21 +52,35 @@ public class MqttBrokers {
                         // MqttPub을 사용하여 InfluxDB에 기록
                         mqttPub.writeToInfluxDB(object, deviceInfo);
                     } else {
-                        System.out.println("Missing data in message.");
+                        log.debug("Missing data in message.");
                     }
                 }
 
                 @Override
                 public void deliveryComplete(IMqttDeliveryToken token) {
-                    System.out.println("Message delivery complete: " + token.getMessageId());
+                    log.error("Message delivery complete: " + token.getMessageId());
                 }
             });
 
             client.subscribe(topic);
-            System.out.println("Subscribed to topic: " + topic);
+            log.debug("Subscribed to topic: " + topic);
 
         } catch (MqttException e) {
             e.printStackTrace();
+        }
+    }
+
+    // 클라이언트를 종료하는 메서드
+    public static void stopListening() {
+        if (client != null && client.isConnected()) {
+            try {
+                client.disconnect();
+                log.info("Disconnected from MQTT Broker.");
+            } catch (MqttException e) {
+                e.printStackTrace();
+            }
+        } else {
+            log.info("Client is not connected.");
         }
     }
 }

@@ -2,6 +2,9 @@ package com.nhnacademy.settings;
 
 // 클래스들의 디폴트 고정 값들 입니다.
 public final class DemoSetting {
+    public static final String MODBUS_HOST = "192.168.70.203";
+    public static final String MODBUS_PORT = "";
+
     public static final String BROKER = "tcp://192.168.71.202:1883";
     public static final String CLIENT_ID = "atgn002"; // 클라이언트 ID
 

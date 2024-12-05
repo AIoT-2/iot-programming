@@ -11,7 +11,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.influxdb.client.InfluxDBClient;
 import com.influxdb.client.domain.WritePrecision;
 import com.influxdb.client.write.Point;
-import com.influxdb.exceptions.UnauthorizedException;
+import com.nhnacademy.settings.DemoSetting;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -21,8 +21,23 @@ public class MqttPub {
     private InfluxDBClient influxDBClient;
 
     // 생성자
-    public MqttPub(InfluxDBClient influxDBClient) {
+    public MqttPub(InfluxDBClient influxDBClient, String brokerUrl) {
         this.influxDBClient = influxDBClient;
+        try {
+            // MqttClient 객체 초기화
+            mqttClient = new MqttClient(brokerUrl, DemoSetting.CLIENT_ID);
+
+            // MqttClient 연결 옵션 설정
+            MqttConnectOptions options = new MqttConnectOptions();
+            options.setCleanSession(true);
+
+            // MQTT 브로커에 연결
+            mqttClient.connect(options);
+            log.info("Connected to MQTT broker at: " + brokerUrl);
+        } catch (MqttException e) {
+            log.error("Failed to connect to MQTT broker: " + e.getMessage());
+            e.printStackTrace();
+        }
     }
 
     // MQTT 브로커에 연결하는 메서드
@@ -72,11 +87,7 @@ public class MqttPub {
             addFieldPresent(object, "activity", point, "activity", valueDouble);
 
             influxDBClient.getWriteApiBlocking().writePoint(point);
-            System.out.println("Data written to InfluxDB: " + point);
-        } catch (UnauthorizedException e) {
-            log.error("Authorization failed: {}", e.getMessage());
-            // 여기서 인증 실패 시의 대처 방법을 추가
-            log.error("Authorization failed with InfluxDB. Please check the token.");
+            log.info("Data written to InfluxDB: " + point);
         } catch (Exception e) {
             e.printStackTrace();
         }
