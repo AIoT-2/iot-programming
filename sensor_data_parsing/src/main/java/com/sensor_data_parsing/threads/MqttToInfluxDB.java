@@ -12,7 +12,6 @@ import com.influxdb.client.write.Point;
 import com.sensor_data_parsing.MqttClient;
 
 // MQTT로부터 데이터를 받아 InfluxDB에 저장하는 작업을 수행하는 클래스.
-
 public class MqttToInfluxDB implements Runnable {
     private static final ObjectMapper objectMapper = new ObjectMapper(); // JSON 처리에 사용할 ObjectMapper 객체
 

@@ -5,6 +5,7 @@ import com.sensor_data_parsing.threads.ModbusToMqtt;
 import com.sensor_data_parsing.threads.MqttToInfluxDB;
 import com.sensor_data_parsing.threads.MqttToMqtt;
 
+// 로그 추가 필요
 public class Main {
     public static void main(String[] args) {
         MqttClient sub = new MqttClient("sub", "192.168.70.203", 1883);
