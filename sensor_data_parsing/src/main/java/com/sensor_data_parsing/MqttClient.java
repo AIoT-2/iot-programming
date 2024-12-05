@@ -7,8 +7,8 @@ import com.hivemq.client.mqtt.datatypes.MqttQos;
 import com.hivemq.client.mqtt.mqtt5.Mqtt5Client;
 
 /**
- * MQTT 클라이언트를 생성하고 관리하는 클래스.
- * 메시지를 전송하고, 서버에 연결하는 기능을 제공합니다.
+ * MQTT 클라이언트를 생성, 메시지를 송수신, 서버에 연결하는 기능을 제공하는 클래스.
+ * 합니다.
  */
 public class MqttClient {
     private static final String DEFAULT_MQTT_HOST = "localhost"; // 기본 MQTT 호스트
