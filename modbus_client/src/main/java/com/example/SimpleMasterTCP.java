@@ -69,7 +69,7 @@ public class SimpleMasterTCP {
         try {
             TcpParameters tcpParameters = new TcpParameters();
             // tcp parameters have already set by default as in example
-            tcpParameters.setHost(InetAddress.getByName("192.168.70.204"));
+            tcpParameters.setHost(InetAddress.getByName("192.168.70.203"));
             tcpParameters.setKeepAlive(true);
             tcpParameters.setPort(Modbus.TCP_PORT);
 

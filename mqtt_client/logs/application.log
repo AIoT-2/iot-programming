@@ -1,0 +1,20 @@
+2024-12-05 14:05:07 DEBUG com.nhnacademy.MqttReceiver - MQTT 수신 브로커에 연결되고 구독을 시작했습니다.
+2024-12-05 14:05:15 DEBUG com.nhnacademy.MqttPublisher - 발행: sensor/temperature -> {"temperature":23.8,"timestamp":1733375115,"tag":"EM500-CO2-152919(사무실)"}
+2024-12-05 14:05:15 DEBUG com.nhnacademy.MqttReceiver - 발행된 메시지: sensor/temperature : {"temperature":23.8,"timestamp":1733375115,"tag":"EM500-CO2-152919(사무실)"}
+2024-12-05 14:05:15 DEBUG com.nhnacademy.MqttPublisher - 발행: sensor/temperature -> {"temperature":23.8,"timestamp":1733375115,"tag":"EM500-CO2-152919(사무실)"}
+2024-12-05 14:05:15 DEBUG com.nhnacademy.MqttReceiver - 발행된 메시지: sensor/temperature : {"temperature":23.8,"timestamp":1733375115,"tag":"EM500-CO2-152919(사무실)"}
+2024-12-05 14:05:18 DEBUG com.nhnacademy.MqttPublisher - 발행: sensor/temperature -> {"temperature":21.3,"timestamp":1733375118,"tag":"AM107-067999(강의실A)"}
+2024-12-05 14:05:18 DEBUG com.nhnacademy.MqttReceiver - 발행된 메시지: sensor/temperature : {"temperature":21.3,"timestamp":1733375118,"tag":"AM107-067999(강의실A)"}
+2024-12-05 14:05:21 DEBUG com.nhnacademy.MqttPublisher - 발행: sensor/temperature -> {"temperature":20.4,"timestamp":1733375120,"tag":"EM320-TH-389010(하이브)"}
+2024-12-05 14:05:21 DEBUG com.nhnacademy.MqttReceiver - 발행된 메시지: sensor/temperature : {"temperature":20.4,"timestamp":1733375120,"tag":"EM320-TH-389010(하이브)"}
+2024-12-05 14:05:21 DEBUG com.nhnacademy.MqttReceiver - 수신된 메시지에 'temperature' 데이터가 없습니다.
+2024-12-05 14:05:25 DEBUG com.nhnacademy.MqttPublisher - 발행: sensor/temperature -> {"temperature":21.2,"timestamp":1733375125,"tag":"EM500-PT100(스마트팜)"}
+2024-12-05 14:05:25 DEBUG com.nhnacademy.MqttReceiver - 발행된 메시지: sensor/temperature : {"temperature":21.2,"timestamp":1733375125,"tag":"EM500-PT100(스마트팜)"}
+2024-12-05 14:05:27 DEBUG com.nhnacademy.MqttReceiver - 수신된 메시지에 'temperature' 데이터가 없습니다.
+2024-12-05 14:05:35 DEBUG com.nhnacademy.MqttPublisher - 발행: sensor/temperature -> {"temperature":18.8,"timestamp":1733375134,"tag":"EM300-151547(창고)"}
+2024-12-05 14:05:35 DEBUG com.nhnacademy.MqttReceiver - 발행된 메시지: sensor/temperature : {"temperature":18.8,"timestamp":1733375134,"tag":"EM300-151547(창고)"}
+2024-12-05 14:05:42 DEBUG com.nhnacademy.MqttPublisher - 발행: sensor/temperature -> {"temperature":23.6,"timestamp":1733375141,"tag":"EM320-TH-384491(사무실)"}
+2024-12-05 14:05:42 DEBUG com.nhnacademy.MqttReceiver - 발행된 메시지: sensor/temperature : {"temperature":23.6,"timestamp":1733375141,"tag":"EM320-TH-384491(사무실)"}
+2024-12-05 14:05:42 DEBUG com.nhnacademy.MqttPublisher - 발행: sensor/temperature -> {"temperature":23.9,"timestamp":1733375142,"tag":"EM300-TH-151368(서버실)"}
+2024-12-05 14:05:42 DEBUG com.nhnacademy.MqttReceiver - 발행된 메시지: sensor/temperature : {"temperature":23.9,"timestamp":1733375142,"tag":"EM300-TH-151368(서버실)"}
+2024-12-05 14:05:42 DEBUG com.nhnacademy.MqttReceiver - MQTT 연결이 끊어졌습니다. MqttException

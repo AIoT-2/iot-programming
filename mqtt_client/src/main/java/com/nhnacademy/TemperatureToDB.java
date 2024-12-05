@@ -43,7 +43,6 @@ public class TemperatureToDB {
                         double temperature = rootNode.get("object").get("temperature").asDouble();
                         long timestamp = System.currentTimeMillis();
                         String deviceName = rootNode.get("deviceInfo").get("deviceName").asText();
-
                         // 토픽 설정
                         final String temperatureTopic = "sensor/temperature";
 
@@ -107,28 +106,4 @@ public class TemperatureToDB {
         }
     }
 
-    // 가공된 메시지 구조를 위한 클래스
-    static class ProcessedMessage {
-        private final double temperature;
-        private final long timestamp;
-        private final String tag;
-
-        public ProcessedMessage(double temperature, long timestamp, String tag) {
-            this.temperature = temperature;
-            this.timestamp = timestamp;
-            this.tag = tag;
-        }
-
-        public double getTemperature() {
-            return temperature;
-        }
-
-        public long getTimestamp() {
-            return timestamp;
-        }
-
-        public String getTag() {
-            return tag;
-        }
-    }
 }
