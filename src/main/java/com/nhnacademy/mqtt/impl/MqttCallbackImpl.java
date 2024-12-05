@@ -1,4 +1,4 @@
-package com.nhnacademy.mqtt;
+package com.nhnacademy.mqtt.impl;
 
 import lombok.extern.slf4j.Slf4j;
 import org.eclipse.paho.client.mqttv3.IMqttDeliveryToken;

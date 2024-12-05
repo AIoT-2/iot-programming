@@ -1,4 +1,4 @@
-package com.nhnacademy.mqtt;
+package com.nhnacademy.mqtt.impl;
 
 import com.nhnacademy.util.MqttProperty;
 import lombok.extern.slf4j.Slf4j;
