@@ -3,18 +3,35 @@ package com.nhnacademy.mtqq.handler;
 import java.io.*;
 import java.net.Socket;
 
-import com.nhnacademy.mtqq.Interface.DataSourceHandler;
+import com.nhnacademy.mtqq.Interface.TransForMqtt;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class TCPHandler implements DataSourceHandler {
+public class TCPHandler implements TransForMqtt {
 
     private static final Logger log = LoggerFactory.getLogger(TCPHandler.class);
-    private String HOST = "192.168.70.203"; // TCP 서버 IP
-    private int PORT = 5000; // TCP 포트
+    private final String HOST = "192.168.70.203"; // TCP 서버 IP
+    private final int PORT = 5000; // TCP 포트
+
+    String host;
+    int port;
+
+    public TCPHandler(String host, int port){
+        if(host != null && port <= 0 ){
+            this.host = host;
+            this.port = port;
+        } else {
+            throw new IllegalArgumentException("host와 port값을 제대로 입력하세요.");
+        }
+    }
+
+    public TCPHandler(){
+        this.host = HOST;
+        this.port = PORT;
+    }
 
     @Override
-    public String handle() {
+    public String transformMqttMessage() {
         Socket socket = null;
         BufferedReader reader = null;
         PrintWriter writer = null;
@@ -22,7 +39,7 @@ public class TCPHandler implements DataSourceHandler {
 
         try {
             // TCP 소켓 연결
-            socket = new Socket(HOST, PORT);
+            socket = new Socket(host, port);
             reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             writer = new PrintWriter(socket.getOutputStream(), true);
 

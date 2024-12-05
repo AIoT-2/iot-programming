@@ -8,7 +8,6 @@ import com.intelligt.modbus.jlibmodbus.exception.ModbusProtocolException;
 import com.intelligt.modbus.jlibmodbus.master.ModbusMaster;
 import com.intelligt.modbus.jlibmodbus.master.ModbusMasterFactory;
 import com.intelligt.modbus.jlibmodbus.tcp.TcpParameters;
-import com.nhnacademy.mtqq.Interface.TransForMqtt;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -18,60 +17,28 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class ModbusHandler implements TransForMqtt {
+public class Re {
     private static final Logger log = LoggerFactory.getLogger(Re.class);
 
     private String host;
     private int port;
-    private int slaveId;
-    private int offset;
-    private int quantity;
     private String addressFilePath;
     private String channelFilePath;
     private String offsetFilePath;
 
-    private static final String ADDRESS_PATH = "addresses.json";
-    private static final String CHANNEL_PATH = "channels.json";
-    private static final String OFFSET_PATH = "offsets.json";
-    private static final String HOST = "192.168.70.203"; // Modbus 서버 IP
-    private static final int PORT = Modbus.TCP_PORT; // Modbus TCP 포트
-    private static final int SLAVE_ID = 1; // Modbus Slave ID
-    private static final int OFFSET = 100; // 읽을 시작 주소
-    private static final int QUANTITY = 32; // 읽을 데이터 수
+    private String HOST = "192.168.70.203"; // Modbus 서버 IP
+    private int PORT = Modbus.TCP_PORT; // Modbus TCP 포트
+    private int SLAVE_ID = 1; // Modbus Slave ID
+    private int OFFSET = 100; // 읽을 시작 주소
+    private int QUANTITY = 32;
 
     // 생성자: host, port, JSON 파일 경로들
-    public ModbusHandler(String host, int port, int slaveId, int offset, int quantity, String addressFilePath, String channelFilePath, String offsetFilePath) {
-        if(host == null || host.isEmpty()){
-            throw new IllegalArgumentException("host값을 제대로 입력하세요.");
-        }
-        if(port <= 0){
-            throw new IllegalArgumentException("host값은 음수가 될 수 없습니다.");
-        }
-        if(slaveId <= 0){
-            throw new IllegalArgumentException("slaveId값이 올바르지 않습니다.");
-        }
-        if(offset < 0){
-            throw new IllegalArgumentException("offset값이 올바르지 않습니다.");
-        }
-        if(quantity < 0){
-            throw new IllegalArgumentException("quantity값은 음수가 될 수 없습니다.");
-        }
+    public Re(String host, int port, String addressFilePath, String channelFilePath, String offsetFilePath) {
         this.host = host;
         this.port = port;
-        this.slaveId = slaveId;
-        this.offset = offset;
-        this.quantity = quantity;
-    }
-
-    public ModbusHandler(){
-        this.host = HOST;
-        this.port = PORT;
-        this.slaveId = SLAVE_ID;
-        this.offset = OFFSET;
-        this.quantity = QUANTITY;
-        this.addressFilePath = ADDRESS_PATH;
-        this.channelFilePath = CHANNEL_PATH;
-        this.offsetFilePath = OFFSET_PATH;
+        this.addressFilePath = addressFilePath;
+        this.channelFilePath = channelFilePath;
+        this.offsetFilePath = offsetFilePath;
     }
 
     // JSON 파일을 로드하는 메서드
@@ -196,71 +163,5 @@ public class ModbusHandler implements TransForMqtt {
                 break;
             }
         }
-    }
-
-    @Override
-    public Map<String, Object> transFromMqttMessage(Map<String, Map<Integer, Double>> locationData) {
-        Map<String, Object> data = new HashMap<>();
-
-        for (Map.Entry<String, Map<Integer, Double>> entry : locationData.entrySet()) {
-            String location = entry.getKey();
-            Map<Integer, Double> dataMap = entry.getValue();
-
-            // 각 필드를 초기화
-            Map<String, Double> voltageMap = new HashMap<>();
-            Map<String, Double> currentMap = new HashMap<>();
-            Map<String, Double> powerMap = new HashMap<>();
-            Map<String, Double> phaseMap = new HashMap<>();
-            Map<String, Double> powerFactorMap = new HashMap<>();
-
-            // 데이터를 원하는 형식으로 변환
-            for (Map.Entry<Integer, Double> dataEntry : dataMap.entrySet()) {
-                int offset = dataEntry.getKey();
-                double value = dataEntry.getValue();
-
-                // offset에 따라 적절한 필드로 값을 할당
-                if (offset == 100) {  // 예시로 voltage, current 등으로 매핑
-                    voltageMap.put("V1", value);
-                } else if (offset == 101) {
-                    voltageMap.put("V2", value);
-                } else if (offset == 102) {
-                    voltageMap.put("V3", value);
-                } else if (offset == 200) {
-                    currentMap.put("I1", value);
-                } else if (offset == 201) {
-                    currentMap.put("I2", value);
-                } else if (offset == 202) {
-                    currentMap.put("I3", value);
-                } else if (offset == 300) {
-                    powerMap.put("activePower", value);
-                } else if (offset == 301) {
-                    powerMap.put("reactivePower", value);
-                } else if (offset == 302) {
-                    powerMap.put("apparentPower", value);
-                } else if (offset == 400) {
-                    phaseMap.put("phase1", value);
-                } else if (offset == 401) {
-                    phaseMap.put("phase2", value);
-                } else if (offset == 402) {
-                    phaseMap.put("phase3", value);
-                } else if (offset == 500) {
-                    powerFactorMap.put("pf1", value);
-                } else if (offset == 501) {
-                    powerFactorMap.put("pf2", value);
-                } else if (offset == 502) {
-                    powerFactorMap.put("pf3", value);
-                }
-            }
-
-            // 변환된 데이터를 data Map에 추가
-            data.put("voltage", voltageMap);
-            data.put("current", currentMap);
-            data.put("power", powerMap);
-            data.put("phase", phaseMap);
-            data.put("powerFactor", powerFactorMap);
-            data.put("deviceName", location);  // location은 deviceName으로 설정
-        }
-
-        return data;
     }
 }
