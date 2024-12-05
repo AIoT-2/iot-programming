@@ -6,10 +6,9 @@ import lombok.extern.slf4j.Slf4j;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import java.util.stream.Collectors;
-import java.util.stream.StreamSupport;
 
 /**
  * MQTT Client 속성 값 <br>
@@ -26,7 +25,7 @@ public final class Property {
     /**
      * PORT 번호 목록
      */
-    private static final Map<String, String> PORT_MAP;
+    private static final Map<String, String> PORT_MAP = new HashMap<>();
 
     /**
      * 클라이언트 ID
@@ -47,19 +46,29 @@ public final class Property {
                 log.warn("resources file 'config' is not exist");
                 throw new RuntimeException();
             }
-            JsonNode config = new ObjectMapper().readTree(inputStream);
+            JsonNode config = new ObjectMapper()
+                                    .readTree(inputStream)
+                                    .path(PropertyKey.NETWORK_CONFIG.getKey());
             propertyCheck(config);
+            JsonNode mqtt = config.path(PropertyKey.MQTT_CONFIG.getKey());
 
             IP_ADDRESS = config.path(PropertyKey.IP_ADDRESS.getKey()).asText();
 
-            PORT_MAP = StreamSupport.stream(config.path(PropertyKey.PORT.getKey()).spliterator(), false)
+            /*PORT_MAP = StreamSupport.stream(config.path(PropertyKey.PORT.getKey()).spliterator(), false)
                                     .collect(Collectors.toMap(
                                         node -> node.path(PropertyKey.SERVICE.getKey()).asText(),
                                         node -> node.path(PropertyKey.NUMBER.getKey()).asText())
-                                    );
+                                    );*/
+            config.path("PORT").elements().forEachRemaining(
+                    node -> {
+                        String service = node.path("SERVICE").asText();
+                        String number = node.path("NUMBER").asText();
+                        PORT_MAP.put(service, number);
+                    }
+            );
 
-            CLIENT_ID = config.path(PropertyKey.CLIENT_ID.getKey()).asText();
-            TOPIC = config.path(PropertyKey.TOPIC.getKey()).asText();
+            CLIENT_ID = mqtt.get(PropertyKey.CLIENT_ID.getKey()).asText();
+            TOPIC = mqtt.get(PropertyKey.TOPIC.getKey()).asText();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -125,12 +134,12 @@ public final class Property {
             propertyIsNotExist(PropertyKey.IP_ADDRESS.getKey());
             throw new RuntimeException();
         }
-        if (config.path(PropertyKey.PORT.getKey()).isMissingNode()) {
-            propertyIsNotExist(PropertyKey.PORT.getKey());
+        if (config.path(PropertyKey.PORT_LIST.getKey()).isMissingNode()) {
+            propertyIsNotExist(PropertyKey.PORT_LIST.getKey());
             throw new RuntimeException();
         }
-        if (config.path(PropertyKey.MQTT.getKey()).isMissingNode()) {
-            propertyIsNotExist(PropertyKey.MQTT.getKey());
+        if (config.path(PropertyKey.MQTT_CONFIG.getKey()).isMissingNode()) {
+            propertyIsNotExist(PropertyKey.MQTT_CONFIG.getKey());
             throw new RuntimeException();
         }
     }

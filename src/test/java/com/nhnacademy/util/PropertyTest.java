@@ -10,7 +10,7 @@ class PropertyTest {
 
     private final String EXPECT_BROKER = "tcp://192.168.71.219:1883";
 
-    private final String EXPECT_CLIENT_ID = "";
+    private final String EXPECT_CLIENT_ID = "ATGN02-019_";
 
     private final String EXPECT_TOPIC = "application/#";
 
@@ -18,9 +18,9 @@ class PropertyTest {
     @Test
     void brokerCheck() {
         // BROKER
-        /*String broker = Property.getBroker();
+        String broker = Property.getEndpoint(PropertyKey.MQTT_CONFIG.getKey());
         log.debug("Broker: {}", broker);
-        Assertions.assertEquals(EXPECT_BROKER, broker);*/
+        Assertions.assertEquals(EXPECT_BROKER, broker);
     }
 
     @Order(2)
