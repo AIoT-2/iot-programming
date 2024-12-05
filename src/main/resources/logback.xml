@@ -1,0 +1,45 @@
+<configuration>
+
+    <!-- log.dir 변수 설정 -->
+    <property name="log.dir" value="logs"/>
+
+    <!-- =========================================================================================================== -->
+
+    <!-- 파일에 로그를 기록하는 Appender 설정 -->
+    <appender name="ROLLING_LOG_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <!-- 로그 파일 경로 및 이름 지정 -->
+        <!--<file>${user.home}/logs/app-log.log</file>-->
+        <file>${log.dir}/app-log.log</file>
+
+        <!-- 로그 롤링 정책 설정 -->
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>${log.dir}/app-log-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            <maxFileSize>10MB</maxFileSize>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+
+        <!-- 로그 포맷 설정 -->
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- =========================================================================================================== -->
+
+    <!-- ConsoleAppender (콘솔에 로그 출력) -->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- =========================================================================================================== -->
+
+    <!-- 로그 레벨과 로그 출력을 지정하는 로거 설정 -->
+
+    <root level="DEBUG">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="ROLLING_LOG_FILE"/>
+    </root>
+
+</configuration>

@@ -14,7 +14,11 @@
     <maven.compiler.source>11</maven.compiler.source>
     <maven.compiler.target>11</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+    <log.dir>${project.basedir}/logs</log.dir>  <!-- 정확한 경로 설정 -->
   </properties>
+
+
 
   <dependencies>
     <!-- =========================================================================================================== -->
@@ -71,6 +75,13 @@
     <dependency>
       <groupId>ch.qos.logback</groupId>
       <artifactId>logback-classic</artifactId>
+      <version>1.5.12</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/ch.qos.logback/logback-core -->
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-core</artifactId>
       <version>1.5.12</version>
     </dependency>
 
@@ -138,4 +149,37 @@
       <version>2.18.2</version>
     </dependency>
   </dependencies>
+
+  <!-- ============================================================================================================= -->
+
+  <!-- 시스템 프로퍼티 참조용 -->
+  <build>
+    <plugins>
+      <!-- Maven Resources Plugin 설정 -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-resources-plugin</artifactId>
+        <version>3.3.0</version>
+        <executions>
+          <execution>
+            <phase>process-resources</phase>
+            <goals>
+              <goal>copy-resources</goal>
+            </goals>
+            <configuration>
+              <resources>
+                <resource>
+                  <directory>src/main/resources</directory>  <!-- 리소스 경로 -->
+                  <includes>
+                    <include>logback.xml</include>  <!-- 필터링할 리소스 지정 -->
+                  </includes>
+                  <filtering>true</filtering>  <!-- 필터링 활성화 -->
+                </resource>
+              </resources>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
 </project>
