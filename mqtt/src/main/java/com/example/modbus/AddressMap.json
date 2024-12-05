@@ -1,0 +1,151 @@
+{
+    "data": [
+      {
+        "addr": 0,
+        "name": "operation Heartbit",
+        "scale": 1
+      },
+      {
+        "addr": 1,
+        "name": "temperature",
+        "size": 2,
+        "scale": 10
+      },
+      {
+        "addr": 2,
+        "name": "frequency",
+        "scale": 100
+      },
+      {
+        "addr": 3,
+        "name": "program version",
+        "scale": 1
+      },
+      {
+        "addr": 4,
+        "name": "present CO2 use(month)",
+        "scale": 10
+      },
+      {
+        "addr": 6,
+        "name": "operation Heartbit",
+        "scale": 1
+      },
+      {
+        "addr": 7,
+        "name": "temperature 1",
+        "scale": 10
+      },
+      {
+        "addr": 8,
+        "name": "frequency",
+        "scale": 100
+      },
+      {
+        "addr": 9,
+        "name": "program version",
+        "scale": 1
+      },
+      {
+        "addr": 10,
+        "name": "present CO2 use(month)",
+        "size": 2,
+        "scale": 10
+      },
+      {
+        "addr": 12,
+        "name": "V123(LN) average",
+        "scale": 100
+      },
+      {
+        "addr": 13,
+        "name": "V123(LL) average",
+        "scale": 100
+      },
+      {
+        "addr": 14,
+        "name": "V123(LN) unbalance",
+        "scale": 100
+      },
+      {
+        "addr": 15,
+        "name": "V123(LL) unbalance",
+        "scale": 100
+      },
+      {
+        "addr": 16,
+        "name": "V1",
+        "scale": 100
+      },
+      {
+        "addr": 17,
+        "name": "V12",
+        "scale": 100
+      },
+      {
+        "addr": 18,
+        "name": "V1 unbalance",
+        "scale": 100
+      },
+      {
+        "addr": 19,
+        "name": "V12 unbalance",
+        "scale": 100
+      },
+      {
+        "addr": 20,
+        "name": "V2",
+        "scale": 100
+      },
+      {
+        "addr": 21,
+        "name": "V23",
+        "scale": 100
+      },
+      {
+        "addr": 22,
+        "name": "V2 unbalance",
+        "scale": 100
+      },
+      {
+        "addr": 23,
+        "name": "V23 unbalance",
+        "scale": 100
+      },
+      {
+        "addr": 24,
+        "name": "V3",
+        "scale": 100
+      },
+      {
+        "addr": 25,
+        "name": "V31",
+        "scale": 100
+      },
+      {
+        "addr": 26,
+        "name": "V3 unbalance",
+        "scale": 100
+      },
+      {
+        "addr": 27,
+        "name": "V31 unbalance",
+        "scale": 100
+      },
+      {
+        "addr": 28,
+        "name": "V1 THD",
+        "scale": 100
+      },
+      {
+        "addr": 29,
+        "name": "V2 THD",
+        "scale": 100
+      },
+      {
+        "addr": 30,
+        "name": "V3 THD",
+        "scale": 100
+      }
+    ]
+  }
