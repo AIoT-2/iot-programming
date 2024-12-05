@@ -49,7 +49,7 @@ public class MqttPub {
         System.out.println("Connected to " + brokerUrl);
     }
 
-    // MQTT 메시지 발행
+    // MQTT 메시지 발행, modbus 전용
     public void publishJsonMessage(String topic, String message) {
         try {
             MqttMessage mqttMessage = new MqttMessage(message.getBytes());
@@ -88,6 +88,18 @@ public class MqttPub {
 
             influxDBClient.getWriteApiBlocking().writePoint(point);
             log.info("Data written to InfluxDB: " + point);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void writeModbusToInfluxDB(JsonNode object, JsonNode deviceInfo) {
+        try {
+            Point point = Point.measurement("modbus_data")
+                    .addTag("placeName", null) // 추가 작업 필요
+                    .time(Instant.now(), WritePrecision.MS);
+
+            addFieldPresent(object, null, point, null, null); // 추가작업필요
         } catch (Exception e) {
             e.printStackTrace();
         }

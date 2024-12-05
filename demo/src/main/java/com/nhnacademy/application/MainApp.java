@@ -6,6 +6,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.influxdb.client.InfluxDBClient;
 import com.influxdb.client.InfluxDBClientFactory;
+import com.nhnacademy.modbus.ConfigurationData;
 import com.nhnacademy.modbus.MasterTCP;
 import com.nhnacademy.mqtt.MqttBrokers;
 import com.nhnacademy.mqttpub.MqttPub;
@@ -16,7 +17,6 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class MainApp {
     public static void main(String[] args) throws InterruptedException {
-        log.info("main start");
         try (InfluxDBClient influxDBClient = InfluxDBClientFactory.create(DemoSetting.INFLUXDB_URL,
                 DemoSetting.INFLUXDB_TOKEN.toCharArray(), DemoSetting.INFLUXDB_ORG, DemoSetting.INFLUXDB_BUCKET)) {
 
@@ -38,14 +38,17 @@ public class MainApp {
                 while (offset <= 2400) {
                     Map<String, Object> modbusData = masterTCP.readModbusData(slaveId, offset, quantity);
 
-                    // JSON으로 변환 후 MQTT로 발행
+                    Map<Integer, String> topicMap = ConfigurationData.topicMapName();
+                    String topic = topicMap.get(offset);
+
+                    // // JSON으로 변환 후 MQTT로 발행
                     String jsonPayload = new ObjectMapper().writeValueAsString(modbusData);
-                    mqttPub.publishJsonMessage("application/modbus", jsonPayload);
+                    mqttPub.publishJsonMessage(topic, jsonPayload);
 
                     // InfluxDB에 기록
-                    JsonNode object = new ObjectMapper().readTree(jsonPayload);
-                    JsonNode deviceInfo = object.get("deviceInfo"); // 예시로 deviceInfo 정보 추출
-                    mqttPub.writeToInfluxDB(object, deviceInfo);
+                    // JsonNode object = new ObjectMapper().readTree(jsonPayload);
+                    // JsonNode deviceInfo = object.get("deviceInfo"); // 예시로 deviceInfo 정보 추출
+                    // mqttPub.writeModbusToInfluxDB(object, deviceInfo);
 
                     offset += 100;
                 }

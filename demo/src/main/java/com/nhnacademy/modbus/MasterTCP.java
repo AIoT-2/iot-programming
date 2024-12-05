@@ -26,8 +26,8 @@ public class MasterTCP {
         try {
             // IP와 포트 번호를 제공하여 ModbusMasterTCP 객체 생성
             TcpParameters tcpParameters = new TcpParameters();
-            tcpParameters.setHost(InetAddress.getByName(DemoSetting.MODBUS_HOST)); // 예시 IP
-            tcpParameters.setPort(Modbus.TCP_PORT); // 예시 포트
+            tcpParameters.setHost(InetAddress.getByName(DemoSetting.MODBUS_HOST));
+            tcpParameters.setPort(Modbus.TCP_PORT);
 
             modbusMaster = ModbusMasterFactory.createModbusMasterTCP(tcpParameters); // 올바른 생성자 사용
             modbusMaster.connect(); // 연결 시도
@@ -75,10 +75,8 @@ public class MasterTCP {
         Map<Integer, String[]> registerMap = ConfigurationData.addressMapName();
 
         for (int i = 0; i < response.getHoldingRegisters().getQuantity(); i++) {
-            int address = offset + i; // 실제 레지스터 주소
-
             // 레지스터 주소에 대한 정보가 있는지 확인
-            String[] registerInfo = registerMap.get(address);
+            String[] registerInfo = registerMap.get(i);
             if (registerInfo != null) {
                 String fieldName = registerInfo[0]; // 필드의 이름
                 int combineRegister = (response.getHoldingRegisters().get(i) << 16)

@@ -39,6 +39,7 @@ public class ConfigurationData {
         map.put(28, new String[] { "V1 THD", "100", "16" });
         map.put(29, new String[] { "V2 THD", "100", "16" });
         map.put(30, new String[] { "V3 THD", "100", "16" });
+        map.put(50, new String[] { "" });
 
         return map;
     }
