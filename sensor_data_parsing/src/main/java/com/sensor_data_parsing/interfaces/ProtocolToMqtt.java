@@ -1,6 +1,6 @@
 package com.sensor_data_parsing.interfaces;
 
-public interface ProtocolToMqtt {
+public interface ProtocolToMqtt extends Runnable {
     /**
      * 프로토콜로부터 데이터를 읽어오는 메서드.
      * 프로토콜별로 데이터를 어떻게 가져오는지 구현할 수 있는 추상 메서드입니다.
@@ -26,4 +26,11 @@ public interface ProtocolToMqtt {
      * @param message 프로토콜에서 수신한 메시지
      */
     void sendMessageToMqtt(String[] message);
+
+    @Override
+    default void run() {
+        String data = fetchDataFromProtocol();
+        String[] convertData = convertToMqttFormat(data);
+        sendMessageToMqtt(convertData);
+    }
 }

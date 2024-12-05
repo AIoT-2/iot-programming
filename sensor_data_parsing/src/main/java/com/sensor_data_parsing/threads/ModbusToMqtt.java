@@ -132,6 +132,35 @@ public class ModbusToMqtt implements ProtocolToMqtt {
     }
 
     @Override
+    public void run() {
+        try {
+            if (!getModbusMaster().isConnected()) {
+                getModbusMaster().connect();
+            }
+
+            while (!Thread.currentThread().isInterrupted()) {
+                String data = fetchDataFromProtocol();
+                String[] convertData = convertToMqttFormat(data);
+                sendMessageToMqtt(convertData);
+
+                // 30초 대기
+                waitForNextCycle(30);
+            }
+        } catch (ModbusIOException e) {
+            System.err.println("Modbus 연결 오류: " + e.getMessage());
+        } finally {
+            // 스레드 종료 시 연결 해제
+            try {
+                if (getModbusMaster().isConnected()) {
+                    getModbusMaster().disconnect();
+                }
+            } catch (ModbusIOException e) {
+                System.err.println("Modbus 연결 해제 오류: " + e.getMessage());
+            }
+        }
+    }
+
+    @Override
     public String fetchDataFromProtocol() {
         ReadInputRegistersResponse response = fetchModbusData(m);
 
