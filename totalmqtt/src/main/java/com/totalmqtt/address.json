@@ -1,0 +1,30 @@
+[
+    {
+        "use": "brokerToJava",
+        "address": {
+            "ip": "192.168.70.203",
+            "port": 1883
+        }
+    },
+    {
+        "use": "modbusToJava",
+        "address": {
+            "ip": "192.168.70.203",
+            "port": 502
+        }
+    },
+    {
+        "use": "JavaTobroker",
+        "address": {
+            "ip": "192.168.71.205",
+            "port": 1883
+        }
+    },
+    {
+        "use": "JavaToInfluxDB",
+        "address": {
+            "ip": "192.168.71.205",
+            "port": 8086
+        }
+    }
+]

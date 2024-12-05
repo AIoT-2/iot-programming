@@ -10,7 +10,9 @@ import com.intelligt.modbus.jlibmodbus.msg.request.ReadHoldingRegistersRequest;
 import com.intelligt.modbus.jlibmodbus.msg.response.ReadHoldingRegistersResponse;
 import com.intelligt.modbus.jlibmodbus.tcp.TcpParameters;
 
-import java.io.IOException;
+import lombok.extern.slf4j.Slf4j;
+
+import java.io.FileReader;
 import java.net.InetAddress;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -19,9 +21,16 @@ import java.util.Map;
 import java.util.logging.Handler;
 import java.util.logging.LogRecord;
 
+// TOPIC, 주소를 바꿀 수 있게 수정해야함
+// try를 여러번 쌓는 것은 최대한 자제
+// system.out 대신 log로 변환
+// Testing해보기
+
+@Slf4j
 public class Modbus2 implements Runnable{
     // private int[] transBit =
     // {2,4,6,8,16,18,20,22,24,32,34,36,38,40,48,70,52,54,56};
+
     private int[] transBit = { 2, 4, 6, 8, 16, 18, 20, 22, 24 }; // 16bit를 32bit로 변환해야할 번호
     private Map<Integer, Integer> scale; // 각 quantity에 따른 데이터의 스케일
     private String ip;
@@ -35,7 +44,6 @@ public class Modbus2 implements Runnable{
     private ReadHoldingRegistersResponse response;
     private int start, end, step;
     
-
     public Modbus2() {
         start = end = step = 1;
         ip = "192.168.70.203";
@@ -95,8 +103,12 @@ public class Modbus2 implements Runnable{
             e.printStackTrace();
         }
     }
+    public void settingInformation(String ip, int port){
+        this.ip = ip;
+        this.port = port;
+    }
 
-    public void setting_iterator(int start, int end, int step){
+    public void settingIterator(int start, int end, int step){
         this.start = start;
         this.end = end;
         this.step = step;
@@ -106,7 +118,6 @@ public class Modbus2 implements Runnable{
         try {
             this.offset = offset; // 위치 설정
             String locationName = Location(offset);
-            System.out.println(String.format("--------- %s ----------", locationName));
             // since 1.2.8
             if (!m.isConnected()) {
                 m.connect();
@@ -177,21 +188,17 @@ public class Modbus2 implements Runnable{
                 if (!check) scaleValue = scale.get(i);
                 else scaleValue = scale.get(i-1);
 
-                if (scaleValue != null)
-                        value = value / scaleValue.intValue(); // 스케일을 해야하는 값이 있는지 확인
+                if (scaleValue != null) value = value / scaleValue.intValue(); // 스케일을 해야하는 값이 있는지 확인
                 toJson.put(JsonName(cnt), value);
                 cnt++;
             }
-            LocalDateTime now = LocalDateTime.now();
-            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
-            String formattedDate = now.format(formatter);
 
             String topic = "application/" + Location(offset);
-            System.out.println("TOPIC : " + topic);
-            System.out.println(toJson);
+            log.debug("TOPIC : " + topic);
 
-            SendBroker sendBroker = new SendBroker(); //broker에게 전송
-            sendBroker.send(toJson, topic);
+            ToBroker toBroker = new ToBroker(); //broker에게 전송
+            toBroker.connect();
+            toBroker.send(toJson, topic);
         } catch (Exception e) {
             System.err.println(e.getMessage());
         }

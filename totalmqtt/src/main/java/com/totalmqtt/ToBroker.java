@@ -9,20 +9,33 @@ import org.eclipse.paho.client.mqttv3.MqttException;
 import org.eclipse.paho.client.mqttv3.MqttCallback;
 import org.eclipse.paho.client.mqttv3.MqttMessage;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-public class SendBroker {
-    // MQTT 브로커 주소
-    private static final String BROKER = "tcp://192.168.71.205:1883";
+import lombok.extern.slf4j.Slf4j;
+
+// 이름 바꾸기
+@Slf4j
+public class ToBroker  {
     // 클라이언트 ID
     private static final String CLIENT_ID = "";
 
+    private String brokerIp;
+    private int brokerPort;
     private MqttClient client;
 
-    public SendBroker() {
+    public ToBroker() {
+        brokerIp = "192.168.71.205";
+        brokerPort = 1883;
+    }
+
+    public void settingInformation(String ip, int port){
+        brokerIp = ip;
+        brokerPort = port;
+    }
+
+    public void connect(){
         try {
-            client = new MqttClient(BROKER, CLIENT_ID);
+            client = new MqttClient("tcp://" + brokerIp + ":" + Integer.toString(brokerPort), CLIENT_ID);
             // 연결 설정
             MqttConnectOptions options = new MqttConnectOptions();
             options.setCleanSession(true); // 클린 세션 사용
@@ -48,30 +61,30 @@ public class SendBroker {
                     // publish가 데이터를 보낼시
                     System.out.println("Message delivery complete: "
                             + token.getMessageId());
+                    // 데이터 삭제
                 }
             });
 
             // 브로커 연결
-            System.out.println("Connecting to broker...");
+            log.debug("Connecting to broker...");
             client.connect(options);
-            System.out.println("Connected!");
+            log.debug("Connected!");
         } catch (MqttException e) {
-            e.printStackTrace();
+            System.err.println(e.getMessage());
         }
     }
 
     public void send(Map<String, Object> data, String topic) throws InterruptedException {
         try{
-
             // ObjectMapper 객체 생성
             ObjectMapper objectMapper = new ObjectMapper();
             // publish
             String message = objectMapper.writeValueAsString(data);
-            System.out.println("Publishing message: " + message);
+            log.debug("Publishing message: " + message);
             client.publish(topic, new MqttMessage(message.getBytes()));
 
         } catch (Exception e) {
-            e.printStackTrace();
+            System.err.println(e.getMessage());
         }
     }
 }

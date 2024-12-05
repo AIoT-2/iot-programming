@@ -9,11 +9,13 @@ import java.util.concurrent.TimeUnit;
 import com.hivemq.client.mqtt.lifecycle.MqttClientDisconnectedContext;
 import com.hivemq.client.mqtt.mqtt5.Mqtt5Client;
 
+import lombok.extern.slf4j.Slf4j;
+
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.node.ArrayNode;
 
-public class RecvMqtt {
+@Slf4j
+public class MqttToData {
     private String ip;
     private int port;
     private String username;
@@ -21,7 +23,7 @@ public class RecvMqtt {
     private String control;
     private final Mqtt5Client client;
 
-    public RecvMqtt() {
+    public MqttToData() {
         ip = "192.168.70.203";
         port = 1883;
         control = "controlcenter-1234";
@@ -34,7 +36,13 @@ public class RecvMqtt {
                 .automaticReconnectWithDefaultConfig()
                 .serverPort(port)
                 .addDisconnectedListener(context -> handleDisconnect(context))
+                // .addDisconnectedListener(this::handleDisconnect)
                 .build();
+    }
+
+    public void settingInformation(String ip, int port){
+        this.ip = ip;
+        this.port = port;
     }
 
     public void connect() {
@@ -48,43 +56,41 @@ public class RecvMqtt {
                 .send();
     }
 
-    public void MSGSend() {
+    public void messageSend() {
         client.toAsync().subscribeWith() // toAsync : 비동기설정 // subscribeWith : 데이터를 가공하여 가져오기 위한 설정
                 .topicFilter("application/#") // 모든 topic을 받아오겠다는 의미
                 .callback(publish -> { // 메시지가 수신될 때 호출되는 콜백함수 정의
                     // 데이터가 수신되었는지 확인
+                    String msgData = new String(publish.getPayloadAsBytes(), StandardCharsets.UTF_8);
+                    // Jackson ObjectMapper 생성
+                    ObjectMapper mapper = new ObjectMapper();
+
                     try {
-                        String msgData = new String(publish.getPayloadAsBytes(), StandardCharsets.UTF_8);
-                        // Jackson ObjectMapper 생성
-                        ObjectMapper mapper = new ObjectMapper();
+                        // MQTT 메시지를 JsonNode로 변환
+                        JsonNode payload = mapper.readTree(msgData);
 
-                        try {
-                            // MQTT 메시지를 JsonNode로 변환
-                            JsonNode payload = mapper.readTree(msgData);
+                        // JsonNode 데이터 출력
+                        JsonNode deviceInfo = payload.path("deviceInfo");
+                        JsonNode tags = deviceInfo.path("tags");
+                        JsonNode object = payload.path("object");
 
-                            // JsonNode 데이터 출력
-                            JsonNode deviceInfo = payload.path("deviceInfo");
-                            JsonNode tags = deviceInfo.path("tags");
-                            JsonNode object = payload.path("object");
+                        log.debug("Json Topic : ");
+                        String topic = publish.getTopic().toString();
 
-                            String topic = publish.getTopic().toString();
+                        Map<String, Object> totalData = new HashMap<>();
 
-                            Map<String, Object> totalData = new HashMap<>();
-                            
-                            totalData.putAll(getData(deviceInfo));
-                            totalData.putAll(getData(tags));
-                            totalData.putAll(getData(object));
-                            totalData.remove("tags");
+                        totalData.putAll(getData(deviceInfo));
+                        totalData.putAll(getData(tags));
+                        totalData.putAll(getData(object));
+                        totalData.remove("tags");
+                        
+                        log.debug("TotalData : ");
+                        log.debug(totalData.toString());
 
-                            System.out.println("-----------------------------");
-                            System.out.println(totalData);
-
-                            SendBroker sendBroker = new SendBroker();
-                            topic = "application/" + totalData.get("deviceName");
-                            sendBroker.send(totalData, topic);
-                        } catch (Exception e) {
-                            e.printStackTrace();
-                        }
+                        ToBroker toBroker = new ToBroker();
+                        topic = "application/" + totalData.get("deviceName");
+                        toBroker.connect();
+                        toBroker.send(totalData, topic);
                     } catch (Exception e) {
                         System.err.println(e.getMessage());
                     }
@@ -92,14 +98,14 @@ public class RecvMqtt {
                 .send()
                 .whenComplete((subAck, throwable) -> { // subscribe가 broker에 연결되었는지 확인
                     if (throwable != null)
-                        System.err.println("Failed to subscribe: " + throwable.getMessage());
+                        log.debug("Failed to subscribe: " + throwable.getMessage());
                     else {
-                        System.out.println("Subscribed successfully!");
+                        log.debug("Subscribed successfully!");
                     }
                 });
     }
 
-    private Map<String, Object> getData(JsonNode data){
+    private Map<String, Object> getData(JsonNode data) {
         Map<String, Object> totalData = new HashMap<>();
         for (Iterator<Map.Entry<String, JsonNode>> it = data.fields(); it.hasNext();) {
             Map.Entry<String, JsonNode> field = it.next();
@@ -113,14 +119,13 @@ public class RecvMqtt {
     private void handleDisconnect(MqttClientDisconnectedContext context) {
         Throwable cause = context.getCause();
         if (cause != null) {
-            System.err.println("Disconnected! Reason: " + cause.getMessage()); // 연결끊김의 원인을 파악함
+            log.debug("Disconnected! Reason: " + cause.getMessage()); // 연결끊김의 원인을 파악함
         } else {
-            System.out.println("Disconnected gracefully.");
+            log.debug("Disconnected gracefully.");
         }
 
         context.getReconnector() // 재연결 작업을 처리
                 .reconnect(true) // 자동 재연결 활성화
                 .delay(5, TimeUnit.SECONDS); // 재연결 전에 5초 지연
     }
-
 }

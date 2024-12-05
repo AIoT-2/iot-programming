@@ -1,9 +1,6 @@
 package com.totalmqtt;
 
 import java.nio.charset.StandardCharsets;
-import java.time.Instant;
-import java.util.HashMap;
-import java.util.Iterator;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
@@ -14,42 +11,56 @@ import com.influxdb.client.InfluxDBClientFactory;
 import com.influxdb.client.WriteApiBlocking;
 import com.influxdb.client.domain.WritePrecision;
 import com.influxdb.client.write.Point;
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.node.ArrayNode;
 
-public class TotalMqtt {
-    private String ip;
-    private int port;
+import lombok.extern.slf4j.Slf4j;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+@Slf4j
+public class InfluxDB implements Runnable{
+    private String mqttIp;
+    private int mqttPort;
     private String username;
     private String password;
     private String control;
     private final Mqtt5Client client;
-
-    private static String url = "http://192.168.71.205:8086";
+    private String influxDBIp;
+    private String influxDBPort;
     // org Name (초기 설정에서 지정한 Organization Name)
-    private static String org = "nhnacademy";
+    private static String ORG = "nhnacademy";
     // bucket name
-    private static String bucket = "mqtt_modbus";
+    private static String BUCKET = "mqtt_modbus";
     // bucket Token
-    private static char[] token = "Gksj8LnOLhrj4KJHPWza8OppXW1MO9TMpg8yElQZ1N4Lc3X3O4lbSyhSye58qkwPJ-K7bC2fXHDBJ2vKgaLS1g=="
-            .toCharArray();
+    private static char[] TOKEN = "Gksj8LnOLhrj4KJHPWza8OppXW1MO9TMpg8yElQZ1N4Lc3X3O4lbSyhSye58qkwPJ-K7bC2fXHDBJ2vKgaLS1g=="
+            .toCharArray(); // 고치기
 
-    public TotalMqtt() {
-        ip = "192.168.71.205";
-        port = 1883;
+    public InfluxDB() {
+        mqttIp = "192.168.71.205";
+        mqttPort = 1883;
+        influxDBIp = "192.168.71.205";
+        influxDBPort = "8086";
         control = "controlcenter-1234";
         username = "";
         password = "";
 
         client = Mqtt5Client.builder()
                 .identifier(control)
-                .serverHost(ip)
+                .serverHost(mqttIp)
                 .automaticReconnectWithDefaultConfig()
-                .serverPort(port)
+                .serverPort(mqttPort)
                 .addDisconnectedListener(context -> handleDisconnect(context))
                 .build();
 
+    }
+
+    public void mqttInformation(String ip, int port){
+        this.mqttIp = ip;
+        this.mqttPort = port;
+    }
+
+    public void influxDBInformation(String ip, String port){
+        this.influxDBIp = ip;
+        this.influxDBPort = port;
     }
 
     public void connect() {
@@ -63,13 +74,15 @@ public class TotalMqtt {
                 .send();
     }
 
-    public void MSGSend() {
+    public void messageSend() {
         client.toAsync().subscribeWith() // toAsync : 비동기설정 // subscribeWith : 데이터를 가공하여 가져오기 위한 설정
                 .topicFilter("application/#") // 모든 topic을 받아오겠다는 의미
                 .callback(publish -> { // 메시지가 수신될 때 호출되는 콜백함수 정의
                     // 데이터가 수신되었는지 확인
                     try {
-                        write(new String(publish.getPayloadAsBytes(), StandardCharsets.UTF_8));
+                        String sendAnwser = new String(publish.getPayloadAsBytes(), StandardCharsets.UTF_8);
+                        System.out.println("test : " + sendAnwser);
+                            write(sendAnwser);
 
                     } catch (Exception e) {
                         System.err.println(e.getMessage());
@@ -80,7 +93,7 @@ public class TotalMqtt {
                     if (throwable != null)
                         System.err.println("Failed to subscribe: " + throwable.getMessage());
                     else {
-                        System.out.println("Subscribed successfully!");
+                        log.debug("Subscribed successfully!");
                     }
                 });
     }
@@ -88,9 +101,9 @@ public class TotalMqtt {
     private void handleDisconnect(MqttClientDisconnectedContext context) {
         Throwable cause = context.getCause();
         if (cause != null) {
-            System.err.println("Disconnected! Reason: " + cause.getMessage()); // 연결끊김의 원인을 파악함
+            log.debug("Disconnected! Reason: " + cause.getMessage()); // 연결끊김의 원인을 파악함
         } else {
-            System.out.println("Disconnected gracefully.");
+            log.debug("Disconnected gracefully.");
         }
 
         context.getReconnector() // 재연결 작업을 처리
@@ -100,11 +113,11 @@ public class TotalMqtt {
 
     private void write(String jsonData) {
         try {
-            InfluxDBClient influxDBClient = InfluxDBClientFactory.create("http://192.168.71.205:8086", token, org, bucket);
+            InfluxDBClient influxDBClient = InfluxDBClientFactory.create("http://"+influxDBIp+":"+influxDBPort, TOKEN, ORG, BUCKET);
 
             WriteApiBlocking writeApi = influxDBClient.getWriteApiBlocking();
-
             ObjectMapper objectMapper = new ObjectMapper();
+            @SuppressWarnings("unchecked")
             Map<String, Object> data = objectMapper.readValue(jsonData, Map.class);
 
             // Point 객체 생성
@@ -119,27 +132,20 @@ public class TotalMqtt {
             }
 
             // Map을 순회하여 필드를 추가
-            for (Map.Entry<String, Object> entry : data.entrySet()) {
-                Object value = entry.getValue();
-
-                if (value instanceof Boolean) {
-                    point.addField(entry.getKey(), (Boolean) value);
-                } else if (value instanceof Integer) {
-                    point.addField(entry.getKey(), (Integer) value);
-                } else if (value instanceof Long) {
-                    point.addField(entry.getKey(), (Long) value);
-                } else if (value instanceof Double) {
-                    point.addField(entry.getKey(), (Double) value);
-                } else if (value instanceof Float) {
-                    point.addField(entry.getKey(), (Float) value);
-                } else {
-                    point.addField(entry.getKey(), (String) value);
-                }
-            }
+            point.addFields(data);
 
             writeApi.writePoint(point);
         } catch (Exception e) {
             System.err.println(e.getMessage());
         }
+    }
+
+    @Override
+    public void run() {
+        connect();
+        messageSend();
+        // while (!Thread.currentThread().isInterrupted()) {
+            
+        // }
     }
 }

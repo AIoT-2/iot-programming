@@ -1,0 +1,140 @@
+[
+    {
+        "offset" : 0,
+        "name" : "type",
+        "type" : 16,
+        "scale" : 1
+    },
+    {
+        "offset" : 1,
+        "name" : "A_LEAKAGE_CURRENT",
+        "type" : 16,
+        "scale" : 1
+    },
+    {
+        "offset" : 2,
+        "name" : "current",
+        "type" : 32,
+        "scale" : 100
+    },
+    {
+        "offset" : 4,
+        "name" : "W",
+        "type" : 32,
+        "scale" : 1
+    },
+    {
+        "offset" : 6,
+        "name" : "VAR",
+        "type" : 32,
+        "scale" : 1
+    },
+    {
+        "offset" : 8,
+        "name" : "VA",
+        "type" : 32,
+        "scale" : 1
+    },
+    {
+        "offset" : 10,
+        "name" : "PF_average",
+        "type" : 16,
+        "scale" : 1
+    },
+    {
+        "offset" : 11,
+        "name" : "reserved",
+        "type" : 16,
+        "scale" : 1
+    },
+    {
+        "offset" : 12,
+        "name" : "current_unbalance",
+        "type" : 16,
+        "scale" : 100
+    },
+    {
+        "offset" : 13,
+        "name" : "I_THD_average",
+        "type" : 16,
+        "scale" : 100
+    },
+    {
+        "offset" : 14,
+        "name" : "IGR",
+        "type" : 16,
+        "scale" : 10
+    },
+    {
+        "offset" : 15,
+        "name" : "IGC",
+        "type" : 16,
+        "scale" : 10
+    },
+    {
+        "offset" : 16,
+        "name" : "V1",
+        "type" : 32,
+        "scale" : 100
+    },
+    {
+        "offset" : 18,
+        "name" : "I1",
+        "type" : 32,
+        "scale" : 100
+    },
+    {
+        "offset" : 20,
+        "name" : "W1",
+        "type" : 32,
+        "scale" : 1
+    },
+    {
+        "offset" : 22,
+        "name" : "VAR1",
+        "type" : 32,
+        "scale" : 1
+    },
+    {
+        "offset" : 24,
+        "name" : "VA1",
+        "type" : 32,
+        "scale" : 1
+    },
+    {
+        "offset" : 26,
+        "name" : "volt_unbalanse",
+        "type" : 16,
+        "scale" : 100
+    },
+    {
+        "offset" : 27,
+        "name" : "current_unbalance1",
+        "type" : 16,
+        "scale" : 100
+    },
+    {
+        "offset" : 28,
+        "name" : "phase",
+        "type" : 16,
+        "scale" : 100
+    },
+    {
+        "offset" : 29,
+        "name" : "power_factor",
+        "type" : 16,
+        "scale" : 100
+    },
+    {
+        "offset" : 30,
+        "name" : "I1_THD",
+        "type" : 16,
+        "scale" : 100
+    },
+    {
+        "offset" : 31,
+        "name" : "reserved",
+        "type" : 16,
+        "scale" : 1
+    }
+]

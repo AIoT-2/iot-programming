@@ -1,0 +1,98 @@
+[
+    {
+        "channel": 1,
+        "name": "캠퍼스"
+    },
+    {
+        "channel": 2,
+        "name": "캠퍼스1"
+    },
+    {
+        "channel": 3,
+        "name": "전등1"
+    },
+    {
+        "channel": 4,
+        "name": "전등2"
+    },
+    {
+        "channel": 5,
+        "name": "전등3"
+    },
+    {
+        "channel": 6,
+        "name": "강의실b_바닥"
+    },
+    {
+        "channel": 7,
+        "name": "강의실a_바닥1"
+    },
+    {
+        "channel": 8,
+        "name": "강의실a_바닥2"
+    },
+    {
+        "channel": 9,
+        "name": "프로젝터1"
+    },
+    {
+        "channel": 10,
+        "name": "프로젝터2"
+    },
+    {
+        "channel": 11,
+        "name": "회의실"
+    },
+    {
+        "channel": 12,
+        "name": "서버실"
+    },
+    {
+        "channel": 13,
+        "name": "간판"
+    },
+    {
+        "channel": 14,
+        "name": "페어룸"
+    },
+    {
+        "channel": 15,
+        "name": "사무실_전열1"
+    },
+    {
+        "channel": 16,
+        "name": "사무실_전열2"
+    },
+    {
+        "channel": 17,
+        "name": "사무실_복사기"
+    },
+    {
+        "channel": 18,
+        "name": "빌트인_전열"
+    },
+    {
+        "channel": 19,
+        "name": "정수기"
+    },
+    {
+        "channel": 20,
+        "name": "하이브_전열"
+    },
+    {
+        "channel": 21,
+        "name": "바텐_전열"
+    },
+    {
+        "channel": 22,
+        "name": "S_P"
+    },
+    {
+        "channel": 23,
+        "name": "공조기"
+    },
+    {
+        "channel": 24,
+        "name": "AC"
+    }
+]
