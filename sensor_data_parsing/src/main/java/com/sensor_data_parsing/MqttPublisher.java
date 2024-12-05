@@ -12,21 +12,23 @@ import com.hivemq.client.mqtt.mqtt5.Mqtt5Client;
 
 public class MqttPublisher {
     // 메시지를 받을 브로커
-    private static final String mqttHost = "192.168.70.203"; // MQTT 브로커 주소
-    private static final String mqttUsername = ""; // MQTT 사용자 이름
-    private static final String mqttPassword = ""; // MQTT 비밀번호
+    private static final String MQTT_HOST = "192.168.70.203"; // MQTT 브로커 주소
+    private static final String MQTT_USER_NAME = ""; // MQTT 사용자 이름
+    private static final String MQTT_PASSWORD = ""; // MQTT 비밀번호
 
     // 메시지를 보낼 브로커
-    private static final String newMqttHost = "localhost"; // MQTT 브로커 주소
-    private static final String newMqttUsername = ""; // MQTT 사용자 이름
-    private static final String newMqttPassword = ""; // MQTT 비밀번호
+    private static final String NEW_MQTT_HOST = "localhost"; // MQTT 브로커 주소
+    private static final String NEW_MQTT_USER_NAME = ""; // MQTT 사용자 이름
+    private static final String NEW_MQTT_PASSWORD = ""; // MQTT 비밀번호
+
+    private static final ObjectMapper objectMapper = new ObjectMapper();
 
     public static void main(String[] args) {
 
         // MQTT 클라이언트 설정
         final Mqtt5Client mqttClient = Mqtt5Client.builder()
                 .identifier("controlcenter-1234") // 클라이언트 식별자
-                .serverHost(mqttHost)
+                .serverHost(MQTT_HOST)
                 .automaticReconnectWithDefaultConfig() // 자동 재연결
                 .serverPort(1883)
                 .build();
@@ -34,7 +36,7 @@ public class MqttPublisher {
         // 메시지를 보낼 새로운 MQTT 클라이언트 설정 (메시지를 보낼 브로커)
         final Mqtt5Client newMqttClient = Mqtt5Client.builder()
                 .identifier("controlcenter-5678") // 클라이언트 식별자
-                .serverHost(newMqttHost)
+                .serverHost(NEW_MQTT_HOST)
                 .automaticReconnectWithDefaultConfig() // 자동 재연결
                 .serverPort(8888)
                 .build();
@@ -42,8 +44,8 @@ public class MqttPublisher {
         // MQTT 클라이언트 연결
         mqttClient.toBlocking().connectWith()
                 .simpleAuth()
-                .username(mqttUsername)
-                .password(mqttPassword.getBytes(StandardCharsets.UTF_8))
+                .username(MQTT_USER_NAME)
+                .password(MQTT_PASSWORD.getBytes(StandardCharsets.UTF_8))
                 .applySimpleAuth()
                 .cleanStart(false)
                 .sessionExpiryInterval(TimeUnit.HOURS.toSeconds(1))
@@ -52,8 +54,8 @@ public class MqttPublisher {
         // 메시지를 보낼 새로운 MQTT 클라이언트 연결
         newMqttClient.toBlocking().connectWith()
                 .simpleAuth()
-                .username(newMqttUsername)
-                .password(newMqttPassword.getBytes(StandardCharsets.UTF_8))
+                .username(NEW_MQTT_USER_NAME)
+                .password(NEW_MQTT_PASSWORD.getBytes(StandardCharsets.UTF_8))
                 .applySimpleAuth()
                 .cleanStart(false)
                 .sessionExpiryInterval(TimeUnit.HOURS.toSeconds(1))
@@ -66,8 +68,6 @@ public class MqttPublisher {
                     String message = new String(publish.getPayloadAsBytes(),
                             StandardCharsets.UTF_8);
 
-                    // JSON 파싱
-                    ObjectMapper objectMapper = new ObjectMapper();
                     try {
                         JsonNode rootNode = objectMapper.readTree(message);
                         JsonNode objectNode = rootNode.path("object");
@@ -94,13 +94,15 @@ public class MqttPublisher {
                             );
 
                             // JSON 문자열로 변환
-                            String newMessage = objectMapper.writeValueAsString(finalMessage);
+                            String newMessage = objectMapper
+                                    .writeValueAsString(finalMessage);
 
                             // 메시지를 보낼 새 MQTT 브로커로 메시지 발행
                             String newTopic = "application/" + deviceName + "/" + spotName;
                             newMqttClient.toAsync().publishWith()
                                     .topic(newTopic)
-                                    .payload(newMessage.getBytes(StandardCharsets.UTF_8))
+                                    .payload(newMessage.getBytes(
+                                            StandardCharsets.UTF_8))
                                     .qos(MqttQos.AT_LEAST_ONCE) // QoS 1 (최소 한 번 전송)
                                     .send();
                         }
