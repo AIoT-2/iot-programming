@@ -10,7 +10,7 @@ class PropertyTest {
 
     private final String EXPECT_BROKER = "tcp://192.168.71.219:1883";
 
-    private final String EXPECT_CLIENT_ID = "ATGN02-019_";
+    private final String EXPECT_CLIENT_ID = "ATGN02-019";
 
     private final String EXPECT_TOPIC = "application/#";
 

@@ -18,6 +18,8 @@ import java.util.Objects;
 @Slf4j
 public final class Property {
 
+    private static final String TIME_FORMAT;
+
     /**
      * IP 주소
      */
@@ -56,6 +58,9 @@ public final class Property {
 
             createPortMap(networkConfigNode.path(PropertyKey.PORT_LIST.getKey()));
 
+            TIME_FORMAT = main
+                            .get(PropertyKey.TIME_FORMAT.getKey())
+                            .asText();
             IP_ADDRESS = networkConfigNode
                             .get(PropertyKey.IP_ADDRESS.getKey())
                             .asText();
@@ -87,6 +92,10 @@ public final class Property {
 
     // =================================================================================================================
     // Getter
+
+    public static String getTimeFormat() {
+        return TIME_FORMAT;
+    }
 
     /**
      * <h5>Endpoint란?</h5>

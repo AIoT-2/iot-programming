@@ -5,6 +5,8 @@ package com.nhnacademy.util;
  */
 public enum PropertyKey {
 
+    TIME_FORMAT("TIME_FORMAT"),
+
     /**
      * {@code config.json} 파일 경로
      */

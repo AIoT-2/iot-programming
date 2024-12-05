@@ -1,4 +1,6 @@
 {
+  "TIME_FORMAT": "yyyyMMdd_HHmmss",
+
   "NETWORK_CONFIG": {
     "IP_ADDRESS": "tcp://192.168.71.219",
     "PORT_LIST": [
@@ -18,7 +20,7 @@
   },
 
   "MQTT_CONFIG": {
-    "CLIENT_ID": "ATGN02-019_",
+    "CLIENT_ID": "ATGN02-019",
     "TOPIC": "application/#"
   }
 }
