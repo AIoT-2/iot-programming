@@ -18,13 +18,13 @@ main에서 분기하여 브랜치를 생성하고 자신의 학번으로 네이�
 **클래스패스 리소스 로딩(Classpath Resource Loading)** 으로 파일을 읽어 오도록 개선
 
 ```java
-import com.nhnacademy.util.MqttProperty;
+import com.nhnacademy.util.Property;
 
 // Before
 InputStream inputStream = new FileInputStream("/src/main/java/resources/config.json");
 
-// After
-InputStream inputStream = MqttProperty.class.getResourceAsStream("/config.json");
+        // After
+        InputStream inputStream = Property.class.getResourceAsStream("/config.json");
 ```
 
 - Mqtt 로직 구조를 클래스화 시작

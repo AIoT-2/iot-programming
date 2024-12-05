@@ -1,6 +1,6 @@
 package com.nhnacademy.mqtt.impl;
 
-import com.nhnacademy.util.MqttProperty;
+import com.nhnacademy.util.Property;
 import lombok.extern.slf4j.Slf4j;
 import org.eclipse.paho.client.mqttv3.MqttClient;
 import org.eclipse.paho.client.mqttv3.MqttConnectOptions;
@@ -8,18 +8,18 @@ import org.eclipse.paho.client.mqttv3.MqttConnectOptions;
 import java.util.Objects;
 
 @Slf4j
-public class MqttClientImpl implements Runnable {
+public class MqttClientImpl { // implements Runnable
 
-    private String broker;
+    /*private String broker;
 
     private String clientId;
 
     private String topic;
 
     public MqttClientImpl() {
-        this(MqttProperty.getBroker(),
-                MqttProperty.getClientId(),
-                MqttProperty.getTopic());
+        this(Property.getBroker(),
+                Property.getClientId(),
+                Property.getTopic());
     }
 
     public MqttClientImpl(String broker, String clientId, String topic) {
@@ -63,5 +63,5 @@ public class MqttClientImpl implements Runnable {
         } catch (Exception e) {
             log.error("{}", e.getMessage(), e);
         }
-    }
+    }*/
 }

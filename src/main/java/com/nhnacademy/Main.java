@@ -1,6 +1,6 @@
 package com.nhnacademy;
 
-import com.nhnacademy.util.MqttProperty;
+import com.nhnacademy.util.Property;
 import org.eclipse.paho.client.mqttv3.IMqttDeliveryToken;
 import org.eclipse.paho.client.mqttv3.MqttClient;
 import org.eclipse.paho.client.mqttv3.MqttConnectOptions;
@@ -11,13 +11,13 @@ import org.eclipse.paho.client.mqttv3.MqttMessage;
 public class Main {
 
     // MQTT 브로커 주소
-    private static final String BROKER = MqttProperty.getBroker();
+    /*private static final String BROKER = Property.getBroker();
 
     // 클라이언트 ID
-    private static final String CLIENT_ID = MqttProperty.getClientId();
+    private static final String CLIENT_ID = Property.getClientId();
 
     // 구독 및 발행 주제
-    private static final String TOPIC = MqttProperty.getTopic();
+    private static final String TOPIC = Property.getTopic();
 
     public static void main(String[] args) throws InterruptedException {
         try (MqttClient client = new MqttClient(BROKER, CLIENT_ID)) {
@@ -73,5 +73,5 @@ public class Main {
         } catch (MqttException e) {
             e.printStackTrace();
         }
-    }
+    }*/
 }

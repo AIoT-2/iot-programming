@@ -1,5 +1,8 @@
 package com.nhnacademy.mqtt.impl;
 
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.ObjectNode;
 import lombok.extern.slf4j.Slf4j;
 import org.eclipse.paho.client.mqttv3.IMqttDeliveryToken;
 import org.eclipse.paho.client.mqttv3.MqttCallback;
@@ -19,6 +22,9 @@ public class MqttCallbackImpl implements MqttCallback {
     public void messageArrived(String topic, MqttMessage message) throws Exception {
         log.debug("Received message from topic '{}': {}",
                 topic, new String(message.getPayload()));
+        JsonNode jsonNode = new ObjectMapper()
+                                .readTree(message.getPayload());
+        log.debug("{}", jsonNode);
     }
 
     @Override

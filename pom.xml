@@ -38,6 +38,15 @@
       <scope>test</scope>
     </dependency>
 
+    <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-params -->
+    <!-- JUnit 5 Params 테스트를 실행하기 위한 플러그인입니다. -->
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-params</artifactId>
+      <version>5.11.3</version>
+      <scope>test</scope>
+    </dependency>
+
     <!-- https://mvnrepository.com/artifact/org.junit.platform/junit-platform-runner -->
     <!-- JUnit 5 테스트를 실행하기 위한 플러그인입니다. -->
     <dependency>
