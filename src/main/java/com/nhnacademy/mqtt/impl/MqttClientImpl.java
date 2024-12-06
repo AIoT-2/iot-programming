@@ -43,9 +43,9 @@ public class MqttClientImpl implements Runnable {
             throw new RuntimeException("topic is Null!");
         }
         if (Objects.isNull(timeFormat)) {
-
+            log.error("timeFormat is Null!");
+            throw new RuntimeException("timeFormat is Null!");
         }
-
         this.broker = broker;
         this.clientId = clientId;
         this.topic = topic;
