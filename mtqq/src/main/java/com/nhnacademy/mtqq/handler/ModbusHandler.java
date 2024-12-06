@@ -129,7 +129,6 @@ public class ModbusHandler implements TransForMqtt {
                         .findFirst().orElse(null);
 
                 if (channelInfo != null) {
-                    @SuppressWarnings("unchecked")
                     List<Integer> offsetIds = (List<Integer>) channelInfo.get("offsetIds");
 
                     // 각 offsetId에 대해 처리
@@ -159,7 +158,8 @@ public class ModbusHandler implements TransForMqtt {
 
                                 // Location별 Map에 저장
                                 locationData.get(location).put(offset, formattedValue);
-                                
+
+                                //System.out.printf("Location: %s, Offset: %d, Value: %.2f %s%n", location, offset, formattedValue, unit);
                             } catch (ModbusProtocolException | ModbusNumberException | ModbusIOException e) {
                                 log.error("Failed to read offset " + offset + " for address " + address, e);
                             }
@@ -183,7 +183,7 @@ public class ModbusHandler implements TransForMqtt {
         // 결과 Map 반환
         return locationData;
     }
-    
+
     @Override
     public Map<String, Object> transFromMqttMessage(Map<String, Map<Integer, Double>> locationData) {
         if(locationData.isEmpty()){

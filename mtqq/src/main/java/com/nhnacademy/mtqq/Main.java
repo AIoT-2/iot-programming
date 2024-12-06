@@ -1,8 +1,6 @@
 package com.nhnacademy.mtqq;
 
-import com.nhnacademy.mtqq.Interface.TransForMqtt;
 import com.nhnacademy.mtqq.handler.ModbusHandler;
-import com.nhnacademy.mtqq.handler.TCPHandler;
 import com.nhnacademy.mtqq.mqtt.MqttToInfluxDB;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,7 +17,6 @@ public class Main {
     private static final Logger log = LoggerFactory.getLogger(Main.class);
 
     public static void main(String[] args) {
-        // ModbusHandler 및 MqttToInfluxDB 인스턴스 생성
         ModbusHandler modbusHandler = new ModbusHandler();
         MqttToInfluxDB mqttToInfluxDB = new MqttToInfluxDB();
 

@@ -24,7 +24,7 @@ import java.util.*;
 public class MqttToInfluxDB {
     private static final String BROKER;
     private static final String CLIENT_ID;
-    private static final String TOPIC;
+    private static final String TOPIC = "data/";
     private static final Logger log = LoggerFactory.getLogger(MqttToInfluxDB.class);
 
     String broker;
@@ -50,14 +50,12 @@ public class MqttToInfluxDB {
             String brokerPath = properties.getProperty("broker.path");
             String brokerPort = properties.getProperty("broker.port");
             String c = properties.getProperty("client.id");
-            String t = properties.getProperty("topic");
 
-            if(brokerPath == null || brokerPort == null || c == null || t == null){
+            if(brokerPath == null || brokerPort == null || c == null){
                 throw new IllegalStateException("brokerPath, brokerPort, clientId, topic 기본값이 설정 파일에 없습니다.");
             }
             BROKER = brokerPath +":"+brokerPort;
             CLIENT_ID = c;
-            TOPIC = t;
 
             log.debug("url: {}, org: {}, bucket: {}", BROKER, CLIENT_ID, TOPIC);
 
@@ -102,7 +100,6 @@ public class MqttToInfluxDB {
     }
 
     public void run(Map<String, Object> mqttMessageData) throws InterruptedException {
-        if (mqttMessageData != null) {
             try (MqttClient client = new MqttClient(broker, clientId)) {
                 MqttConnectOptions options = new MqttConnectOptions();
                 options.setCleanSession(true);
@@ -171,9 +168,6 @@ public class MqttToInfluxDB {
             } catch (JsonProcessingException e) {
                 log.error("Error processing JSON message", e);
             }
-        } else {
-            throw new MqttMessageNotFoundException("mqttMessageData를 찾을 수 없습니다.");
-        }
     }
 
 

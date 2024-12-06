@@ -73,4 +73,16 @@
     </dependency>
 
   </dependencies>
+
+  <build>
+    <resources>
+      <resource>
+        <directory>src/main/resources/config</directory>
+        <includes>
+          <include>application.properties</include>
+        </includes>
+      </resource>
+    </resources>
+  </build>
+
 </project>
