@@ -1,0 +1,17 @@
+mqtt:
+  broker: "tcp://192.168.70.203:1883"
+  clientId: "dongdong"
+  topics:
+    - "dongdong/#"
+    - "data/#"
+
+influxdb:
+  url: "http://192.168.71.213:8086"
+  token: "G8_uOapcNgd_0pxthosV4EDTwWnHsei46raAFy8poPwwGMZI79YU7LNdBruAdOC6WqVGiYTiSV-dWb_xauKm0A=="
+  org: "dong's company"
+  bucket: "nhnacademy_data_1"
+
+modbus:
+  host: "192.168.70.203"
+  port: 502
+  slaveId: 1
