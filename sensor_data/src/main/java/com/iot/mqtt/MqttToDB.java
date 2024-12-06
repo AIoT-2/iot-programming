@@ -3,6 +3,7 @@ package com.iot.mqtt;
 import com.influxdb.client.InfluxDBClient;
 import com.influxdb.client.InfluxDBClientFactory;
 import com.influxdb.client.write.Point;
+import com.influxdb.exceptions.InfluxException;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -27,8 +28,14 @@ public class MqttToDB {
             influxDBClient.getWriteApiBlocking().writePoint(point);
             logger.info("Data written to InfluxDB: {}", point);
 
+        } catch (InfluxException e) {
+            if (e.getMessage().contains("bucket not found")) {
+                logger.error("BUCKET not found: {}", BUCKET);
+            } else {
+                logger.error("ERROR writing data to InfluxDB", e);
+            }
         } catch (Exception e) {
-            logger.error("ERROR writing data to InfluxDB", e);
+            logger.error("Unexpected error while writing to InfluxDB", e);
         }
     }
 

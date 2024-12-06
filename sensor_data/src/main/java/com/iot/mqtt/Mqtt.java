@@ -20,9 +20,9 @@ import com.influxdb.client.domain.WritePrecision;
 public class Mqtt extends MqttTransform implements Runnable {
     static final Logger logger = LoggerFactory.getLogger(Mqtt.class);
 
-    private static final String BROKER = "tcp://192.168.70.203:1883";
+    private static final String BROKER = "tcp://localhost:1883";
     private static final String CLIENT_ID = "kim";
-    private static final String TOPIC = "007/data";
+    private static final String TOPIC = "songs/#";
     private static MqttToDB mqttToDB = new MqttToDB();
 
     @Override
@@ -48,9 +48,7 @@ public class Mqtt extends MqttTransform implements Runnable {
 
                     String payload = new String(message.getPayload());
                     ObjectMapper objectMapper = new ObjectMapper();
-                    String measurement = extractPlace(topic);
-                    logger.debug("ppppppppppppppppp: ", payload);
-                    logger.debug("MMMMMMMMMMMMMMMM: ", measurement);
+                    String measurement = extractName(topic);
 
                     if (measurement == null) {
                         logger.debug("Measurement is null, using default measurement");
@@ -75,15 +73,14 @@ public class Mqtt extends MqttTransform implements Runnable {
                         }
 
                         Point pointBuilder = Point.measurement(measurement)
-                                .addTag("spot", extractName(topic))
-                                .addTag("value", extractElement(topic))
+                                .addTag("spot", extractPlace(topic))
                                 .addField("payload", valueNode.asDouble())
                                 .time(Instant.now(), WritePrecision.NS);
 
-                        // mqttToDB.writeToDB(pointBuilder);
+                        mqttToDB.writeToDB(pointBuilder);
 
-                        logger.debug("Field: {}", extractName(topic));
-                        logger.debug("Measurement: {}", extractPlace(topic));
+                        logger.debug("Measurement: {}", extractName(topic));
+                        logger.debug("Field: {}", extractPlace(topic));
                         logger.debug("Value: {}", extractElement(topic));
                         logger.debug("Topic: {}", topic);
                         logger.debug("msg: {}", valueNode.asDouble());
@@ -117,13 +114,13 @@ public class Mqtt extends MqttTransform implements Runnable {
                 client.subscribe(TOPIC);
 
                 while (client.isConnected()) {
-                    Thread.sleep(1000);
+                    Thread.sleep(5000);
                 }
 
             } catch (MqttException | InterruptedException e) {
                 logger.error("Error in MQTT client: {}", e.getMessage());
                 try {
-                    Thread.sleep(5000);
+                    Thread.sleep(10000);
                 } catch (InterruptedException e1) {
                     e1.printStackTrace();
                 } // 연결 실패 시 재시도 간격
@@ -139,8 +136,8 @@ public class Mqtt extends MqttTransform implements Runnable {
         }
     }
 
-    public static void main(String[] args) {
-        Thread mqttThread = new Thread(new Mqtt());
-        mqttThread.start();
-    }
+    // public static void main(String[] args) {
+    // Thread mqttThread = new Thread(new Mqtt());
+    // mqttThread.start();
+    // }
 }

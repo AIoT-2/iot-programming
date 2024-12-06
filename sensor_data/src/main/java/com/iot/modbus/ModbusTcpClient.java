@@ -40,8 +40,8 @@ public class ModbusTcpClient extends ModbusTransform implements Runnable {
             .toAbsolutePath().toString();
 
     // MQTT Configuration
-    String broker = "tcp://192.168.70.203:1883"; // MQTT 브로커 주소
-    String clientId = "song";
+    String broker = "tcp://localhost:1883"; // MQTT 브로커 주소
+    String clientId = "songs";
     String topic = "007/data"; // 전송할 MQTT 주제
 
     public void run() {
@@ -54,7 +54,6 @@ public class ModbusTcpClient extends ModbusTransform implements Runnable {
 
             List<Map<String, Object>> locationList = loadJsonData(locationFilePath);
             List<Map<String, Object>> channelList = loadJsonData(channelFilePath);
-            List<Map<String, Object>> addmapList = loadJsonData(addmapFilePath);
 
             IpParameters ipParameters = new IpParameters();
             ipParameters.setHost(setHost);
@@ -63,133 +62,79 @@ public class ModbusTcpClient extends ModbusTransform implements Runnable {
             ModbusFactory modbusFactory = new ModbusFactory();
             ModbusMaster master = modbusFactory.createTcpMaster(ipParameters, true);
 
-            try {
-                master.init();
-                System.out.println("Connected to Modbus server");
+            while (true) {
+                try {
+                    master.init();
+                    System.out.println("Connected to Modbus server");
 
-                for (Map<String, Object> location : locationList) {
-                    int channel = (int) location.get("Channel");
-                    String locationName = (String) location.get("위치");
+                    for (Map<String, Object> location : locationList) {
+                        int channel = (int) location.get("Channel");
+                        String locationName = (String) location.get("위치");
 
-                    int baseAddress = channel * 100;
+                        int baseAddress = channel * 100;
 
-                    for (Map<String, Object> channelData : channelList) {
-                        int offset = (int) channelData.get("offset");
-                        String type = (String) channelData.get("type");
-                        int size = (int) channelData.get("size");
-                        Object scaleObj = channelData.get("scale");
-                        int scale = (scaleObj != null) ? (int) scaleObj : 1;
+                        for (Map<String, Object> channelData : channelList) {
+                            int offset = (int) channelData.get("offset");
+                            String type = (String) channelData.get("type");
+                            String name = (String) channelData.get("name");
+                            int size = (int) channelData.get("size");
+                            Object scaleObj = channelData.get("scale");
+                            int scale = (scaleObj != null) ? (int) scaleObj : 1;
 
-                        int registerAddress = baseAddress + offset;
+                            int registerAddress = baseAddress + offset;
 
-                        ReadHoldingRegistersRequest request = new ReadHoldingRegistersRequest(slaveId, registerAddress,
-                                size);
-                        ReadHoldingRegistersResponse response = (ReadHoldingRegistersResponse) master.send(request);
+                            ReadHoldingRegistersRequest request = new ReadHoldingRegistersRequest(slaveId,
+                                    registerAddress,
+                                    size);
+                            ReadHoldingRegistersResponse response = (ReadHoldingRegistersResponse) master.send(request);
 
-                        if (response.isException()) {
-                            System.out.println("Modbus Error (Address " + registerAddress + "): "
-                                    + response.getExceptionMessage());
-                        } else {
-                            short[] values = response.getShortData();
-                            for (int i = 0; i < values.length; i++) {
-                                double scaledValue = (double) values[i] / scale;
+                            if (response.isException()) {
+                                System.out.println("Modbus Error (Address " + registerAddress + "): "
+                                        + response.getExceptionMessage());
+                            } else {
+                                short[] values = response.getShortData();
+                                for (int i = 0; i < values.length; i++) {
+                                    double scaledValue = (double) values[i] / scale;
 
-                                if (scaledValue == 0) {
-                                    continue;
+                                    if (scaledValue == 0) {
+                                        continue;
+                                    }
+                                    if (scaledValue < 0) {
+                                        scaledValue *= -1;
+                                    }
+
+                                    if (type.contains("32")) {
+                                        registerAddress += 1;
+                                    }
+
+                                    String topic = clientId + "/n/" + name + "/p/" + locationName + "/e/" + scaledValue;
+                                    // Create Message with time and value
+                                    ObjectMapper objectMapper = new ObjectMapper();
+                                    Map<String, Object> messagePayload = new HashMap<>();
+                                    messagePayload.put("time", Instant.now().toEpochMilli());
+                                    messagePayload.put("value", scaledValue);
+
+                                    String message = objectMapper.writeValueAsString(messagePayload);
+
+                                    MqttMessage mqttMessage = new MqttMessage(message.getBytes());
+                                    mqttMessage.setQos(1);
+
+                                    mqttClient.publish(topic, mqttMessage);
+                                    logger.debug("Published: " + message);
+                                    logger.debug("topic: " + topic);
                                 }
-                                if (scaledValue < 0) {
-                                    scaledValue *= -1;
-                                }
-
-                                if (type.contains("32")) {
-                                    registerAddress += 1;
-                                }
-
-                                String topic = clientId + "/" + locationName + "/e/" + scaledValue;
-                                // Create Message with time and value
-                                ObjectMapper objectMapper = new ObjectMapper();
-                                Map<String, Object> messagePayload = new HashMap<>();
-                                messagePayload.put("time", Instant.now().toEpochMilli());
-                                messagePayload.put("value", scaledValue);
-
-                                String message = objectMapper.writeValueAsString(messagePayload);
-
-                                MqttMessage mqttMessage = new MqttMessage(message.getBytes());
-                                mqttMessage.setQos(2);
-
-                                mqttClient.publish(topic, mqttMessage);
-                                // logger.debug("Published: " + message);
-                                // logger.debug("topic: " + topic);
                             }
                         }
                     }
+                } catch (ModbusInitException e) {
+                    System.err.println("Failed to initialize Modbus Master: " + e.getMessage());
+                } catch (NullPointerException e) {
+                    System.err.println("Not found File path: " + e.getMessage());
+                } catch (ModbusTransportException e) {
+                    System.err.println("ModbusTransportExceptio Error" + e.getMessage());
+                } catch (JsonProcessingException e) {
+                    e.printStackTrace();
                 }
-
-                for (Map<String, Object> commonData : addmapList) {
-                    String locationName = (String) commonData.get("name");
-                    int offset = (int) commonData.get("address");
-                    String type = (String) commonData.get("type");
-                    int size = (int) commonData.get("size");
-                    Object scaleObj = commonData.get("scale");
-                    int scale = (scaleObj != null) ? (int) scaleObj : 1;
-
-                    int registerAddress = offset;
-
-                    ReadHoldingRegistersRequest request = new ReadHoldingRegistersRequest(slaveId, registerAddress,
-                            size);
-                    ReadHoldingRegistersResponse response = (ReadHoldingRegistersResponse) master.send(request);
-
-                    if (response.isException()) {
-                        logger.debug(
-                                "Modbus Error (Address " + registerAddress + "): " +
-                                        response.getExceptionMessage());
-                    } else {
-                        short[] values = response.getShortData();
-                        for (int i = 0; i < values.length; i++) {
-                            double scaledValue = (double) values[i] / scale;
-
-                            if (scaledValue == 0) {
-                                continue;
-                            }
-                            if (scaledValue < 0) {
-                                scaledValue *= -1;
-                            }
-
-                            if (type.contains("32")) {
-                                registerAddress += 1;
-                            }
-
-                            // Create Topic: clientId/locationName/e/scaledValue
-                            String topic = clientId + "/" + locationName + "/e/" + scaledValue;
-
-                            // Create Message with time and value
-                            ObjectMapper objectMapper = new ObjectMapper();
-                            Map<String, Object> messagePayload = new HashMap<>();
-                            messagePayload.put("time", Instant.now().toEpochMilli());
-                            messagePayload.put("value", scaledValue);
-
-                            String message = objectMapper.writeValueAsString(messagePayload);
-
-                            MqttMessage mqttMessage = new MqttMessage(message.getBytes());
-                            mqttMessage.setQos(2);
-
-                            mqttClient.publish(topic, mqttMessage);
-                            // logger.debug("Published message: " + message);
-                            // logger.debug("topic: " + topic);
-                        }
-                    }
-                }
-            } catch (ModbusInitException e) {
-                System.err.println("Failed to initialize Modbus Master: " + e.getMessage());
-            } catch (NullPointerException e) {
-                System.err.println("Not found File path: " + e.getMessage());
-            } catch (ModbusTransportException e) {
-                System.err.println("ModbusTransportExceptio Error" + e.getMessage());
-            } catch (JsonProcessingException e) {
-                e.printStackTrace();
-            } finally {
-                master.destroy();
-                System.out.println("Disconnected from Modbus server.");
             }
 
         } catch (MqttException e) {
@@ -197,11 +142,14 @@ public class ModbusTcpClient extends ModbusTransform implements Runnable {
             System.exit(0);
         } catch (StreamReadException e1) {
             e1.printStackTrace();
+        } finally {
+            // master.destroy();
+            System.out.println("Disconnected from Modbus server.");
         }
     }
 
-    public static void main(String[] args) {
-        Thread modbusThread = new Thread(new ModbusTcpClient());
-        modbusThread.start();
-    }
+    // public static void main(String[] args) {
+    // Thread modbusThread = new Thread(new ModbusTcpClient());
+    // modbusThread.start();
+    // }
 }
