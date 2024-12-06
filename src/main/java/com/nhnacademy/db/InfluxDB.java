@@ -15,49 +15,66 @@ import java.util.Map;
 
 @Slf4j
 public class InfluxDB implements Runnable {
-    private static final String MQTT_BROKER = "tcp://127.0.0.1:1883"; // MQTT 브로커 주소
-    private static final String MQTT_TOPIC = "sensor/data";         // 구독할 MQTT 주제
-    private static final String INFLUXDB_URL = "http://192.168.71.209:8086"; // InfluxDB 주소
-    private static final String INFLUXDB_DATABASE = "sensor_data";      // 데이터베이스 이름
-    private static final String INFLUXDB_MEASUREMENT = "sensor_metrics"; // 측정값 이름
-    private static final String TOKENS = "LAJkxUibftEm_UsmYpBhXpjlUs63VcuGdyEgCTUO85dINuFtMCalOm4gMwNfAMBRRHmyQNTq546IqxheEQmUkA==";
+    private static final String DEFAULT_MQTT_BROKER = "tcp://127.0.0.1:1883"; // MQTT 브로커 주소
+    private static final String DEFAULT_MQTT_TOPIC = "sensor/data";         // 구독할 MQTT 주제
+    private static final String DEFAULT_INFLUXDB_URL = "http://192.168.71.209:8086"; // InfluxDB 주소// 데이터베이스 이름
+    private static final String DEFAULT_INFLUXDB_MEASUREMENT = "sensor_metrics"; // 측정값 이름
+    private static final String DEFAULT_TOKENS = "LAJkxUibftEm_UsmYpBhXpjlUs63VcuGdyEgCTUO85dINuFtMCalOm4gMwNfAMBRRHmyQNTq546IqxheEQmUkA==";
 
-    private static final String influxDBOrg = "nhnacademy"; // Organization 이름
-    private static final String influxDBBucket = "test"; // 사용할 Bucket 이름
+    private static final String DEFAULT_INFLUXDB_ORG = "nhnacademy"; // Organization 이름
+    private static final String DEFAULT_INFLUXDB_BUCKET = "test"; // 사용할 Bucket 이름
 
+    private final String MQTT_BROKER;
+    private final String MQTT_TOPIC;
+    private final String INFLUXDB_URL;
+    private final String INFLUXDB_MEASUREMENT;
+    private final String TOKENS;
+    private final String influxDBOrg;
+    private final String influxDBBucket;
     private InfluxDBClient influxDB;
 
-    /**
-     * InfluxDB에 연결
-     */
+    public InfluxDB() {
+        this(DEFAULT_MQTT_BROKER, DEFAULT_MQTT_TOPIC, DEFAULT_INFLUXDB_URL, DEFAULT_INFLUXDB_MEASUREMENT, DEFAULT_TOKENS, DEFAULT_INFLUXDB_ORG, DEFAULT_INFLUXDB_BUCKET);
+    }
+
+    public InfluxDB(String mqttBroker, String mqttTopic, String influxdbUrl, String influxdbMeasurement, String tokens, String influxdbOrg, String influxdbBucket) {
+        this.MQTT_BROKER = mqttBroker;
+        this.MQTT_TOPIC = mqttTopic;
+        this.INFLUXDB_URL = influxdbUrl;
+        this.INFLUXDB_MEASUREMENT = influxdbMeasurement;
+        this.TOKENS = tokens;
+        this.influxDBOrg = influxdbOrg;
+        this.influxDBBucket = influxdbBucket;
+    }
+
+    //InfluxDB에 연결
     private void connectToInfluxDB() {
         try {
-            influxDB = InfluxDBClientFactory.create(INFLUXDB_URL,TOKENS.toCharArray(),influxDBOrg,influxDBBucket);
+            influxDB = InfluxDBClientFactory.create(INFLUXDB_URL, TOKENS.toCharArray(), influxDBOrg, influxDBBucket);
             log.info("Connected to InfluxDB.");
         } catch (Exception e) {
             log.info("Failed to connect to InfluxDB:{} ", e.getMessage());
         }
     }
 
-    /**
-     * MQTT 브로커에 연결 및 구독
-     */
+
+    // MQTT 브로커에 연결 및 구독
     private void subscribeToMqtt() {
-        try {
-            MqttClient mqttClient = new MqttClient(MQTT_BROKER, MqttClient.generateClientId());
+        try
+            (MqttClient mqttClient = new MqttClient(MQTT_BROKER, MqttClient.generateClientId())){
             MqttConnectOptions options = new MqttConnectOptions();
             options.setCleanSession(true);
 
             mqttClient.setCallback(new MqttCallback() {
                 @Override
                 public void connectionLost(Throwable cause) {
-                   log.info("Connection to MQTT broker lost: {}" , cause.getMessage());
+                    log.info("Connection to MQTT broker lost: {}", cause.getMessage());
                 }
 
                 @Override
                 public void messageArrived(String topic, MqttMessage message) {
                     String payload = new String(message.getPayload());
-                    log.info("Received message: {}" , payload);
+                    log.info("Received message: {}", payload);
                     handleIncomingData(payload);
                 }
 
@@ -69,16 +86,14 @@ public class InfluxDB implements Runnable {
 
             mqttClient.connect(options);
             mqttClient.subscribe(MQTT_TOPIC);
-            log.info("Subscribed to topic: {}" , MQTT_TOPIC);
+            log.info("Subscribed to topic: {}", MQTT_TOPIC);
 
         } catch (Exception e) {
-            log.info("Failed to subscribe to MQTT: {} " ,e.getMessage());
+            log.info("Failed to subscribe to MQTT: {} ", e.getMessage());
         }
     }
 
-    /**
-     * MQTT 메시지 처리 및 InfluxDB에 데이터 저장
-     */
+    //MQTT 메시지 처리 및 InfluxDB에 데이터 저장
     private void handleIncomingData(String payload) {
         try {
             ObjectMapper objectMapper = new ObjectMapper();
@@ -105,22 +120,19 @@ public class InfluxDB implements Runnable {
 
 
                 if (valueNode.isNumber()) {
-                    // 숫자 값을 Double로 변환하여 필드에 추가
                     point.addField(key, valueNode.asDouble());
                 } else if (valueNode.isBoolean()) {
-                    // Boolean 값을 필드에 추가
                     point.addField(key, valueNode.asBoolean());
                 } else if (valueNode.isTextual()) {
-                    // String 값을 필드에 추가
                     point.addField(key, valueNode.asText());
                 } else {
-                    System.err.println("Unsupported field type for key: " + key + ", value: " + valueNode);
+                    log.error("Unsupported field type for key:{} , value {}", key, valueNode);
                 }
             }
 
             // InfluxDB에 데이터 쓰기
             influxDB.getWriteApiBlocking().writePoint(point);
-            log.info("Data written to InfluxDB:{} ",  point);
+            log.info("Data written to InfluxDB:{} ", point);
 
         } catch (Exception e) {
             log.info("Failed to process message:{} ", e.getMessage());
