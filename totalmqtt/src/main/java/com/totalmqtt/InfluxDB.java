@@ -25,7 +25,7 @@ public class InfluxDB implements Runnable{
     private String control;
     private final Mqtt5Client client;
     private String influxDBIp;
-    private String influxDBPort;
+    private int influxDBPort;
     // org Name (초기 설정에서 지정한 Organization Name)
     private static String ORG = "nhnacademy";
     // bucket name
@@ -38,7 +38,7 @@ public class InfluxDB implements Runnable{
         mqttIp = "192.168.71.205";
         mqttPort = 1883;
         influxDBIp = "192.168.71.205";
-        influxDBPort = "8086";
+        influxDBPort = 8086;
         control = "controlcenter-1234";
         username = "";
         password = "";
@@ -58,7 +58,7 @@ public class InfluxDB implements Runnable{
         this.mqttPort = port;
     }
 
-    public void influxDBInformation(String ip, String port){
+    public void influxDBInformation(String ip, int port){
         this.influxDBIp = ip;
         this.influxDBPort = port;
     }
