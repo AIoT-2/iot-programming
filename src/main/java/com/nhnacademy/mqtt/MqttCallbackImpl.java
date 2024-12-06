@@ -1,32 +1,36 @@
 package com.nhnacademy.mqtt;
 
+import java.util.Objects;
+
 import org.eclipse.paho.client.mqttv3.IMqttDeliveryToken;
 import org.eclipse.paho.client.mqttv3.MqttCallback;
 import org.eclipse.paho.client.mqttv3.MqttClient;
 import org.eclipse.paho.client.mqttv3.MqttException;
 import org.eclipse.paho.client.mqttv3.MqttMessage;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 public class MqttCallbackImpl implements MqttCallback{
-
-    private static Logger logger = LoggerFactory.getLogger(MqttCallbackImpl.class);
     private final MessageHandler messageHandler;
     private final MqttClient client;
 
     public MqttCallbackImpl(MqttClient client, MessageHandler messageHandler){
+        if(Objects.isNull(client)){
+            throw new IllegalArgumentException("client is null");
+        }
         this.client = client;
         this.messageHandler = messageHandler;   
     }
 
     @Override
     public void connectionLost(Throwable cause) {
-        logger.warn("Connection lost: {}", cause.getMessage());
+        log.warn("Connection lost: {}", cause.getMessage());
         try {
             client.reconnect();
-            logger.info("Reconnected to broker");
+            log.debug("Reconnected to broker");
         } catch (MqttException e) {
-            logger.error("Error during connection", e);
+            log.error("Error during connection", e);
         }
     }
 
@@ -37,12 +41,12 @@ public class MqttCallbackImpl implements MqttCallback{
         if(messageHandler != null){
             messageHandler.processMessage(topic, messagePayload);
         } else {
-            logger.info("Received message from topic '{}': {}", topic, messagePayload);
+            log.debug("Received message from topic '{}': {}", topic, messagePayload);
         }
     }
     
     @Override
     public void deliveryComplete(IMqttDeliveryToken token) {
-        logger.info("Message deliver complete: {}", token.getMessageId());
+        log.debug("Message deliver complete: {}", token.getMessageId());
     }
 }

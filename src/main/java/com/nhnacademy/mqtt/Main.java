@@ -13,10 +13,9 @@ public class Main {
         MqttSubscriber subscribe;
         MqttPublisher publish = new MqttPublisher("tcp://192.168.71.222:1883", "JavaClientExample");
 
-        MessageHandler messageHandler = (topic, message) -> {
+        MessageHandler messageArrived = (topic, message) -> {
             try {
-                JsonNode rootNode;
-                rootNode = mapper.readTree(message);
+                JsonNode rootNode = mapper.readTree(message);
                 JsonNode objectNode = rootNode.path("object");
                 if(!objectNode.isMissingNode()){
                     String devEui = rootNode.path("deviceInfo").get("devEui").asText();
@@ -55,7 +54,7 @@ public class Main {
             }
         };
         
-        subscribe = new MqttSubscriber("tcp://192.168.70.203:1883", "JavaClientExample", messageHandler);
+        subscribe = new MqttSubscriber("tcp://192.168.70.203:1883", "JavaClientExample", messageArrived);
         subscribe.getMessage("application/#");
 
         try {
