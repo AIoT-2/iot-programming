@@ -108,7 +108,7 @@ public final class Property {
      *
      * @param serviceName 서비스 이름
      * @return Port 번호
-     * @throws RuntimeException {@code /resources/config.json}에 존재하지 않는 서비스 데이터를 호출한 경우
+     * @throws NoSuchElementException {@code /resources/config.json}에 존재하지 않는 서비스 데이터를 호출한 경우
      */
     public static String getServicePort(String serviceName) {
         if (!PORT_MAP.containsKey(serviceName)) {

@@ -22,5 +22,10 @@
   "MQTT_CONFIG": {
     "CLIENT_ID": "ATGN02-019",
     "TOPIC": "application/#"
+  },
+
+  "MODBUS_CONFIG": {
+    "SERVER_IP": "192.168.70.203",
+    "SERVER_PORT": 502
   }
 }

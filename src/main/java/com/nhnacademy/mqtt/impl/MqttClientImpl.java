@@ -31,19 +31,19 @@ public class MqttClientImpl implements Runnable {
 
     public MqttClientImpl(String broker, String clientId, String topic, String timeFormat) {
         if (Objects.isNull(broker)) {
-            log.error("broker is Null!");
+            log.warn("broker is Null!");
             throw new RuntimeException("broker is Null!");
         }
         if (Objects.isNull(clientId)) {
-            log.error("clientId is Null!");
+            log.warn("clientId is Null!");
             throw new RuntimeException("clientId is Null!");
         }
         if (Objects.isNull(topic)) {
-            log.error("topic is Null!");
+            log.warn("topic is Null!");
             throw new RuntimeException("topic is Null!");
         }
         if (Objects.isNull(timeFormat)) {
-            log.error("timeFormat is Null!");
+            log.warn("timeFormat is Null!");
             throw new RuntimeException("timeFormat is Null!");
         }
         this.broker = broker;
