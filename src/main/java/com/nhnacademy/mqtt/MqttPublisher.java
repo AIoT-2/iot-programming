@@ -18,17 +18,17 @@ import java.util.concurrent.TimeUnit;
 @Slf4j
 public class MqttPublisher implements Runnable {
 
-    static final String DEFAULT_PUBLISH_HOST = "tcp://localhost:1883";
-    static final String DEFAULT_PUBLISH_USERNAME = "";
-    static final String DEFAULT_PUBLISH_PASSWORD = "";
-    static final String DEFAULT_PUBLISH_TOPIC = "sensor/data";
+    private static final String DEFAULT_PUBLISH_HOST = "tcp://localhost:1883";
+    private static final String DEFAULT_PUBLISH_USERNAME = "";
+    private static final String DEFAULT_PUBLISH_PASSWORD = "";
+    private static final String DEFAULT_PUBLISH_TOPIC = "sensor/data";
 
-    final String publishHost;  // 송신 브로커 IP
-    final String publishUsername; // 수신 브로커 사용자 이름
-    final String publishPassword;
-    final String publishTopic;
-    final Mqtt5Client publisher;
-    final String message;
+    private final String publishHost;  // 송신 브로커 IP
+    private final String publishUsername; // 수신 브로커 사용자 이름
+    private final String publishPassword;
+    private final String publishTopic;
+    private final Mqtt5Client publisher;
+    private final String message;
 
     public MqttPublisher(String message) {
         this(DEFAULT_PUBLISH_HOST, DEFAULT_PUBLISH_USERNAME, DEFAULT_PUBLISH_PASSWORD, DEFAULT_PUBLISH_TOPIC, message);
