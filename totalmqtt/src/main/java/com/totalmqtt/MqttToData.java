@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 @Slf4j
-public class MqttToData {
+public class MqttToData implements Producer {
     private String ip;
     private int port;
     private String username;
@@ -40,7 +40,7 @@ public class MqttToData {
                 .build();
     }
 
-    public void settingInformation(String ip, int port){
+    public void settingInformation(String ip, int port) {
         this.ip = ip;
         this.port = port;
     }
@@ -56,7 +56,32 @@ public class MqttToData {
                 .send();
     }
 
-    public void messageSend() {
+    private Map<String, Object> getData(JsonNode data) {
+        Map<String, Object> totalData = new HashMap<>();
+        for (Iterator<Map.Entry<String, JsonNode>> it = data.fields(); it.hasNext();) {
+            Map.Entry<String, JsonNode> field = it.next();
+            String fieldName = field.getKey();
+            JsonNode fieldValue = field.getValue();
+            totalData.put(fieldName, fieldValue);
+        }
+        return totalData;
+    }
+
+    private void handleDisconnect(MqttClientDisconnectedContext context) {
+        Throwable cause = context.getCause();
+        if (cause != null) {
+            log.debug("Disconnected! Reason: " + cause.getMessage()); // 연결끊김의 원인을 파악함
+        } else {
+            log.debug("Disconnected gracefully.");
+        }
+
+        context.getReconnector() // 재연결 작업을 처리
+                .reconnect(true) // 자동 재연결 활성화
+                .delay(5, TimeUnit.SECONDS); // 재연결 전에 5초 지연
+    }
+
+    @Override
+    public void execute(int offset) {
         client.toAsync().subscribeWith() // toAsync : 비동기설정 // subscribeWith : 데이터를 가공하여 가져오기 위한 설정
                 .topicFilter("application/#") // 모든 topic을 받아오겠다는 의미
                 .callback(publish -> { // 메시지가 수신될 때 호출되는 콜백함수 정의
@@ -83,7 +108,7 @@ public class MqttToData {
                         totalData.putAll(getData(tags));
                         totalData.putAll(getData(object));
                         totalData.remove("tags");
-                        
+
                         log.debug("TotalData : ");
                         log.debug(totalData.toString());
 
@@ -103,29 +128,5 @@ public class MqttToData {
                         log.debug("Subscribed successfully!");
                     }
                 });
-    }
-
-    private Map<String, Object> getData(JsonNode data) {
-        Map<String, Object> totalData = new HashMap<>();
-        for (Iterator<Map.Entry<String, JsonNode>> it = data.fields(); it.hasNext();) {
-            Map.Entry<String, JsonNode> field = it.next();
-            String fieldName = field.getKey();
-            JsonNode fieldValue = field.getValue();
-            totalData.put(fieldName, fieldValue);
-        }
-        return totalData;
-    }
-
-    private void handleDisconnect(MqttClientDisconnectedContext context) {
-        Throwable cause = context.getCause();
-        if (cause != null) {
-            log.debug("Disconnected! Reason: " + cause.getMessage()); // 연결끊김의 원인을 파악함
-        } else {
-            log.debug("Disconnected gracefully.");
-        }
-
-        context.getReconnector() // 재연결 작업을 처리
-                .reconnect(true) // 자동 재연결 활성화
-                .delay(5, TimeUnit.SECONDS); // 재연결 전에 5초 지연
     }
 }

@@ -1,7 +1,6 @@
 package com.totalmqtt;
 
-public class Producer { //modbus, mqtt
-    public Producer(){
-
-    }
+public interface Producer extends Node{ //modbus, mqtt
+    public void connect();
+    public void execute(int offset);
 }

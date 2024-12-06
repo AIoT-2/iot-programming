@@ -31,7 +31,7 @@ import org.json.simple.parser.JSONParser;
 // Testing해보기
 
 @Slf4j
-public class Modbus2 implements Runnable {
+public class Modbus2 implements Runnable, Producer {
     // private int[] transBit =
     // {2,4,6,8,16,18,20,22,24,32,34,36,38,40,48,70,52,54,56};
 
@@ -56,46 +56,14 @@ public class Modbus2 implements Runnable {
         start = end = step = 1;
         ip = "192.168.70.203";
         port = Modbus.TCP_PORT;
+        
+        // Modbus 슬레이브 장치의 ID / 시작 주소 / 읽을 레지스터 수 지정
+        slaveId = 1;
+        offset = 100;
+        quantity = 32;
 
         settingChannelName();
         settingModbusData();
-
-        Modbus.log().addHandler(new Handler() {
-            @Override
-            public void publish(LogRecord record) {
-                System.out.println(record.getLevel().getName() + ": " + record.getMessage());
-            }
-
-            @Override
-            public void flush() {
-                // do nothing
-            }
-
-            @Override
-            public void close() throws SecurityException {
-                // do nothing
-            }
-        });
-        Modbus.setLogLevel(Modbus.LogLevel.LEVEL_DEBUG);
-
-        try {
-            tcpParameters = new TcpParameters();
-            tcpParameters.setHost(InetAddress.getByName(ip)); // 주소설정
-            tcpParameters.setKeepAlive(true); // 연결유지설정
-            tcpParameters.setPort(port); // 포트설정
-
-            m = ModbusMasterFactory.createModbusMasterTCP(tcpParameters); // TCP를 사용하는 Modbus를 생성
-            Modbus.setAutoIncrementTransactionId(true); // 각 요청에 대해 Transaction 자동 증가
-
-            // Modbus 슬레이브 장치의 ID / 시작 주소 / 읽을 레지스터 수 지정
-            slaveId = 1;
-            offset = 100;
-            quantity = 32;
-        } catch (RuntimeException e) {
-            throw e;
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
     }
 
     public void settingInformation(String ip, int port) {
@@ -107,39 +75,6 @@ public class Modbus2 implements Runnable {
         this.start = start;
         this.end = end;
         this.step = step;
-    }
-
-    public void load(int offset) {
-        try {
-            this.offset = offset; // 위치 설정
-            if (!m.isConnected()) {
-                m.connect();
-            }
-
-            int[] registerValues = m.readHoldingRegisters(slaveId, offset, quantity); // 32
-
-            request = new ReadHoldingRegistersRequest(); // 마스터가 슬래이브에게 Read Holding Registers를 요청함
-            request.setServerAddress(slaveId); // ID 1번의 창치로 전달
-            request.setStartAddress(offset); // 지정한 주소부터 시작
-            request.setQuantity(quantity);
-            request.setTransactionId(1);
-            response = (ReadHoldingRegistersResponse) m.processRequest(request);
-
-            getData(); // 데이터를 비트변환 및 구분
-
-        } catch (ModbusProtocolException e) {
-            e.printStackTrace();
-        } catch (ModbusNumberException e) {
-            e.printStackTrace();
-        } catch (ModbusIOException e) {
-            e.printStackTrace();
-        } finally {
-            try {
-                m.disconnect();
-            } catch (ModbusIOException e) {
-                e.printStackTrace();
-            }
-        }
     }
 
     private void settingChannelName() {
@@ -164,8 +99,10 @@ public class Modbus2 implements Runnable {
             for (Object object : jsonArray) {
                 JSONObject jsonObject = (JSONObject) object;
                 modbusDataName.put(((Long) jsonObject.get("offset")).intValue(), (String) jsonObject.get("name"));
-                modbusDataType.put(((Long) jsonObject.get("offset")).intValue(), ((Long) jsonObject.get("type")).intValue());
-                modbusDataScale.put(((Long) jsonObject.get("offset")).intValue(), ((Long) jsonObject.get("scale")).intValue());
+                modbusDataType.put(((Long) jsonObject.get("offset")).intValue(),
+                        ((Long) jsonObject.get("type")).intValue());
+                modbusDataScale.put(((Long) jsonObject.get("offset")).intValue(),
+                        ((Long) jsonObject.get("scale")).intValue());
             }
         } catch (Exception e) {
             System.err.println(e.getMessage());
@@ -197,13 +134,12 @@ public class Modbus2 implements Runnable {
                 }
                 Integer scaleValue = null;
                 String name = null;
-                if (!check){
+                if (!check) {
                     scaleValue = modbusDataScale.get(i);
                     name = JsonName(i);
-                }
-                else{
+                } else {
                     scaleValue = modbusDataScale.get(i - 1);
-                    name = JsonName(i-1);
+                    name = JsonName(i - 1);
                 }
 
                 value = value / scaleValue.intValue(); // 스케일을 해야하는 값이 있는지 확인
@@ -228,7 +164,7 @@ public class Modbus2 implements Runnable {
         while (!Thread.currentThread().interrupted()) {
             try {
                 for (int i = start; i <= end; i += step) {
-                    load(i);
+                    execute(i);
                 }
                 Thread.sleep(5000);
             } catch (InterruptedException e) {
@@ -236,5 +172,75 @@ public class Modbus2 implements Runnable {
             }
         }
 
+    }
+
+    @Override
+    public void connect() {
+        Modbus.log().addHandler(new Handler() {
+            @Override
+            public void publish(LogRecord record) {
+                System.out.println(record.getLevel().getName() + ": " + record.getMessage());
+            }
+
+            @Override
+            public void flush() {
+                // do nothing
+            }
+
+            @Override
+            public void close() throws SecurityException {
+                // do nothing
+            }
+        });
+        Modbus.setLogLevel(Modbus.LogLevel.LEVEL_DEBUG);
+
+        try {
+            tcpParameters = new TcpParameters();
+            tcpParameters.setHost(InetAddress.getByName(ip)); // 주소설정
+            tcpParameters.setKeepAlive(true); // 연결유지설정
+            tcpParameters.setPort(port); // 포트설정
+
+            m = ModbusMasterFactory.createModbusMasterTCP(tcpParameters); // TCP를 사용하는 Modbus를 생성
+            Modbus.setAutoIncrementTransactionId(true); // 각 요청에 대해 Transaction 자동 증가
+
+        } catch (RuntimeException e) {
+            throw e;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    public void execute(int offset) {
+        try {
+            this.offset = offset; // 위치 설정
+            if (!m.isConnected()) {
+                m.connect();
+            }
+
+            int[] registerValues = m.readHoldingRegisters(slaveId, offset, quantity); // 32
+
+            request = new ReadHoldingRegistersRequest(); // 마스터가 슬래이브에게 Read Holding Registers를 요청함
+            request.setServerAddress(slaveId); // ID 1번의 창치로 전달
+            request.setStartAddress(offset); // 지정한 주소부터 시작
+            request.setQuantity(quantity);
+            request.setTransactionId(1);
+            response = (ReadHoldingRegistersResponse) m.processRequest(request);
+
+            getData(); // 데이터를 비트변환 및 구분
+
+        } catch (ModbusProtocolException e) {
+            e.printStackTrace();
+        } catch (ModbusNumberException e) {
+            e.printStackTrace();
+        } catch (ModbusIOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                m.disconnect();
+            } catch (ModbusIOException e) {
+                e.printStackTrace();
+            }
+        }
     }
 }

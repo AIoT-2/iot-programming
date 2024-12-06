@@ -1,7 +1,6 @@
 package com.totalmqtt;
 
-public class Consumer { // influxDB
-    public Consumer(){
-
-    }
+public interface Consumer extends Node { // influxDB
+    public void connect();
+    public void execute(String jsonData);
 }

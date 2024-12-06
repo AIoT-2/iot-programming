@@ -15,7 +15,7 @@ import lombok.extern.slf4j.Slf4j;
 
 // 이름 바꾸기
 @Slf4j
-public class ToBroker  {
+public class ToBroker {
     // 클라이언트 ID
     private static final String CLIENT_ID = "";
 
