@@ -1,0 +1,218 @@
+[
+  {
+    "offset": 0,
+    "name": "type",
+    "type": "UINT16",
+    "unit": "",
+    "size": 1,
+    "scale": 1,
+    "description": "0:not used, 1:1P_R, 2:1P_S, 3:1P_T, 4:3P3W_2CT, 5:3P4W, 6:ZCT, 7:3P3W_3CT, 8:1P3W, 9:ZCT_A, 10:ZCT_B, 11:ZCT_C"
+  },
+  {
+    "offset": 1,
+    "name": "a leakage current",
+    "type": "UINT16",
+    "unit": "mA",
+    "size": 1,
+    "scale": null,
+    "description": "ext zct module value"
+  },
+  {
+    "offset": 2,
+    "name": "current",
+    "type": "UINT32",
+    "unit": "A",
+    "size": 2,
+    "scale": 100,
+    "description": "ex) 123 → 1.23A, if ZCT used 123→1.23mA"
+  },
+  {
+    "offset": 4,
+    "name": "W",
+    "type": "INT32",
+    "unit": "W",
+    "size": 2,
+    "scale": 1,
+    "description": "ex) 123 → 123W"
+  },
+  {
+    "offset": 6,
+    "name": "VAR",
+    "type": "INT32",
+    "unit": "VAR",
+    "size": 2,
+    "scale": 1,
+    "description": null
+  },
+  {
+    "offset": 8,
+    "name": "VA",
+    "type": "UINT32",
+    "unit": "VA",
+    "size": 2,
+    "scale": 1,
+    "description": null
+  },
+  {
+    "offset": 10,
+    "name": "PF average",
+    "type": "INT16",
+    "unit": "%",
+    "size": 1,
+    "scale": 100,
+    "description": "ex)987 → 98.7%"
+  },
+  {
+    "offset": 11,
+    "name": "reserved",
+    "type": null,
+    "unit": null,
+    "size": 1,
+    "scale": null,
+    "description": null
+  },
+  {
+    "offset": 12,
+    "name": "current unbalance",
+    "type": "UINT16",
+    "unit": "%",
+    "size": 1,
+    "scale": 100,
+    "description": "ex)012 → 0.12%"
+  },
+  {
+    "offset": 13,
+    "name": "I THD average",
+    "type": "UINT16",
+    "unit": "%",
+    "size": 1,
+    "scale": 100,
+    "description": "ex)012 → 0.12%"
+  },
+  {
+    "offset": 14,
+    "name": "IGR",
+    "type": "UINT16",
+    "unit": "A",
+    "size": 1,
+    "scale": 10,
+    "description": "only 3512 used. ex) 12 → 1.2mA"
+  },
+  {
+    "offset": 15,
+    "name": "IGC",
+    "type": "UINT16",
+    "unit": "A",
+    "size": 1,
+    "scale": 10,
+    "description": "only 3512 used. ex) 12 → 1.2mA"
+  },
+  {
+    "offset": 16,
+    "name": "V1",
+    "type": "UINT32",
+    "unit": "V",
+    "size": 2,
+    "scale": 100,
+    "description": "ex) 21412 → 214.12V"
+  },
+  {
+    "offset": 18,
+    "name": "I1",
+    "type": "UINT32",
+    "unit": "A",
+    "size": 2,
+    "scale": 100,
+    "description": "ex) 123 → 1.23A"
+  },
+  {
+    "offset": 20,
+    "name": "W",
+    "type": "INT32",
+    "unit": "W",
+    "size": 2,
+    "scale": 1,
+    "description": "ex) 123 → 123W"
+  },
+  {
+    "offset": 22,
+    "name": "VAR",
+    "type": "INT32",
+    "unit": "VAR",
+    "size": 2,
+    "scale": 1,
+    "description": null
+  },
+  {
+    "offset": 24,
+    "name": "VA",
+    "type": "UINT32",
+    "unit": "VA",
+    "size": 2,
+    "scale": 1,
+    "description": null
+  },
+  {
+    "offset": 26,
+    "name": "volt unbalance",
+    "type": "UINT16",
+    "unit": "%",
+    "size": 1,
+    "scale": 100,
+    "description": "ex)012 → 0.12%"
+  },
+  {
+    "offset": 27,
+    "name": "current unbalance",
+    "type": "UINT16",
+    "unit": "%",
+    "size": 1,
+    "scale": 100,
+    "description": "ex)012 → 0.12%"
+  },
+  {
+    "offset": 28,
+    "name": "phase",
+    "type": "UINT16",
+    "unit": "°",
+    "size": 1,
+    "scale": 100,
+    "description": "ex)012 → 0.12°"
+  },
+  {
+    "offset": 29,
+    "name": "power factor",
+    "type": "INT16",
+    "unit": "%",
+    "size": 1,
+    "scale": 100,
+    "description": "ex)987 → 98.7%"
+  },
+  {
+    "offset": 30,
+    "name": "I1 THD",
+    "type": "UINT16",
+    "unit": "%",
+    "size": 1,
+    "scale": 100,
+    "description": "ex)123 → 1.23%"
+  },
+  {
+    "offset": 31,
+    "name": "reserved",
+    "type": "UINT16",
+    "unit": null,
+    "size": 1,
+    "scale": 1,
+    "description": null
+  },
+  {
+    "offset": 32,
+    "name": "V2",
+    "type": "UINT32",
+    "unit": "V",
+    "size": 2,
+    "scale": 100,
+    "description": null
+  }
+]

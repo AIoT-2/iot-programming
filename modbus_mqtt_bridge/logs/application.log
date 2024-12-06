@@ -1,0 +1,1848 @@
+2024-12-06 16:09:47 DEBUG com.example.SimpleMasterTCP - INFO: Frame sent: 000100000006010400640020
+2024-12-06 16:09:47 DEBUG com.example.SimpleMasterTCP - INFO: Frame recv: 00010000004301044000050000000009910000116DFFFFF9A90000152E2024000010A01588000000000000564900000357000006B0FFFFFDFC0000076B001301D887F923350DCF0000
+2024-12-06 16:12:35 DEBUG com.example.SimpleMasterTCP - INFO: Frame sent: 000100000006010400640020
+2024-12-06 16:12:35 DEBUG com.example.SimpleMasterTCP - INFO: Frame recv: 000100000043010440000500000000099000001171FFFFF9A30000150F2059000010A414C3000000000000561B0000035C000006AAFFFFFDFA00000763000D021E8824233E0D820000
+2024-12-06 16:12:35 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:12:35 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:12:35 DEBUG com.example.SimpleMasterTCP - INFO: Frame sent: 000200000006010400C80020
+2024-12-06 16:12:35 DEBUG com.example.SimpleMasterTCP - INFO: Frame recv: 000200000043010440000300000000032B000005E8FFFFFE79000006F221360000000014F700000000000055A60000032B000005E8FFFFFE79000006F200000000889A213614F70000
+2024-12-06 16:12:35 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:12:35 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:12:35 DEBUG com.example.SimpleMasterTCP - INFO: Frame sent: 0003000000060104012C0020
+2024-12-06 16:12:35 DEBUG com.example.SimpleMasterTCP - INFO: Frame recv: 0003000000430104400001000000000277000004F8FFFFFEC40000057223A2000000000E00000000000000561000000277000004F8FFFFFEC4000005720000000088AB23A20E000000
+2024-12-06 16:12:35 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:12:35 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:12:35 DEBUG com.example.SimpleMasterTCP - INFO: Frame sent: 000400000006010401900020
+2024-12-06 16:12:35 DEBUG com.example.SimpleMasterTCP - INFO: Frame recv: 00040000004301044000020000000000000000000000000000000000000000000000000000000000000000563000000000000000000000000000000000000000000000000000000000
+2024-12-06 16:12:35 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:12:35 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:12:35 DEBUG com.example.SimpleMasterTCP - INFO: Frame sent: 000500000006010401F40020
+2024-12-06 16:12:35 DEBUG com.example.SimpleMasterTCP - INFO: Frame recv: 000500000043010440000300000000000700000004FFFFFFF2000000100B2900000000128800000000000055940000000700000004FFFFFFF200000010000000006F310B2912880000
+2024-12-06 16:12:35 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:12:35 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:12:35 DEBUG com.example.SimpleMasterTCP - INFO: Frame sent: 000600000006010402580020
+2024-12-06 16:12:35 DEBUG com.example.SimpleMasterTCP - INFO: Frame recv: 00060000004301044000010000000000CF00000148FFFFFF00000001C31C77000000000FF9000000000000560C000000CF00000148FFFFFF00000001C3000000007BD11C770FF90000
+2024-12-06 16:12:35 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:12:35 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:12:35 DEBUG com.example.SimpleMasterTCP - INFO: Frame sent: 000700000006010402BC0020
+2024-12-06 16:12:35 DEBUG com.example.SimpleMasterTCP - INFO: Frame recv: 00070000004301044000020000000000C000000133FFFFFF09000001A11CBC000000000E180000000000005627000000C000000133FFFFFF09000001A1000000007A6E1CBC0E180000
+2024-12-06 16:12:35 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:12:35 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:12:35 DEBUG com.example.SimpleMasterTCP - INFO: Frame sent: 000800000006010403200020
+2024-12-06 16:12:35 DEBUG com.example.SimpleMasterTCP - INFO: Frame recv: 000800000043010440000300000000002D00000015FFFFFFA800000064085E0000000014B5000000000000559C0000002D00000015FFFFFFA800000064000000006E7D085E14B50000
+2024-12-06 16:12:35 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:12:35 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:12:35 DEBUG com.example.SimpleMasterTCP - INFO: Frame sent: 000900000006010403840020
+2024-12-06 16:12:35 DEBUG com.example.SimpleMasterTCP - INFO: Frame recv: 000900000043010440000100000000001A00000007FFFFFFC70000003C04B0000000000AE100000000000056190000001A00000007FFFFFFC70000003C000000006C5004B00AE10000
+2024-12-06 16:12:35 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:12:35 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:12:35 DEBUG com.example.SimpleMasterTCP - INFO: Frame sent: 000A00000006010403E80020
+2024-12-06 16:12:35 DEBUG com.example.SimpleMasterTCP - INFO: Frame recv: 000A0000004301044000020000000000280000002BFFFFFFE40000005813000000000036330000000000005632000000280000002BFFFFFFE40000005800000000795E130036330000
+2024-12-06 16:12:35 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:12:35 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:12:35 DEBUG com.example.SimpleMasterTCP - INFO: Frame sent: 000B000000060104044C0020
+2024-12-06 16:12:35 DEBUG com.example.SimpleMasterTCP - INFO: Frame recv: 000B0000004301044000030000000000D800000195FFFFFF8D000001D421DA00000000126B00000000000055AA000000D800000195FFFFFF8D000001D400000000865C21DA126B0000
+2024-12-06 16:12:35 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:12:35 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:12:35 DEBUG com.example.SimpleMasterTCP - INFO: Frame sent: 000C00000006010404B00020
+2024-12-06 16:12:35 DEBUG com.example.SimpleMasterTCP - INFO: Frame recv: 000C0000004301044000010000000000000000000000000000000000000000000000000000000000000000562600000000000000000000000000000000000000000000000000000000
+2024-12-06 16:12:35 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:12:35 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:12:35 DEBUG com.example.SimpleMasterTCP - INFO: Frame sent: 000D00000006010405140020
+2024-12-06 16:12:35 DEBUG com.example.SimpleMasterTCP - INFO: Frame recv: 000D00000043010440000200000000000E0000000EFFFFFFF90000001F120700000000360900000000000056540000000E0000000EFFFFFFF90000001F0000000080D2120736090000
+2024-12-06 16:12:35 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:12:35 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:12:35 DEBUG com.example.SimpleMasterTCP - INFO: Frame sent: 000E00000006010405780020
+2024-12-06 16:12:35 DEBUG com.example.SimpleMasterTCP - INFO: Frame recv: 000E00000043010440000300000000004700000043FFFFFFC90000009C10D3000000003A2C00000000000055CD0000004700000043FFFFFFC90000009C0000000077FC10D33A2C0000
+2024-12-06 16:12:35 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:12:35 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:12:35 DEBUG com.example.SimpleMasterTCP - INFO: Frame sent: 000F00000006010405DC0020
+2024-12-06 16:12:35 DEBUG com.example.SimpleMasterTCP - INFO: Frame recv: 000F00000043010440000300000000001D00000007FFFFFFC20000003E048100000000000000000000000055CE0000001D00000007FFFFFFC20000003E000000006D2B048100000000
+2024-12-06 16:12:35 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:12:35 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:12:35 DEBUG com.example.SimpleMasterTCP - INFO: Frame sent: 001000000006010406400020
+2024-12-06 16:12:35 DEBUG com.example.SimpleMasterTCP - INFO: Frame recv: 001000000043010440000100000000000700000007000000000000001010BD000000005259000000000000566B000000070000000700000000000000100000000011EF10BD52590000
+2024-12-06 16:12:35 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:12:35 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:12:35 DEBUG com.example.SimpleMasterTCP - INFO: Frame sent: 001100000006010406A40020
+2024-12-06 16:12:35 DEBUG com.example.SimpleMasterTCP - INFO: Frame recv: 001100000043010440000200000000000500000002FFFFFFF90000000C07D0000000002587000000000000566F0000000500000002FFFFFFF90000000C0000000071B807D025870000
+2024-12-06 16:12:35 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:12:35 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:12:35 DEBUG com.example.SimpleMasterTCP - INFO: Frame sent: 001200000006010407080020
+2024-12-06 16:12:35 DEBUG com.example.SimpleMasterTCP - INFO: Frame recv: 00120000004301044000030000000000000000000000000000000000000000000000000000000000000000561200000000000000000000000000000000000000000000000000000000
+2024-12-06 16:12:35 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:12:35 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:12:35 DEBUG com.example.SimpleMasterTCP - INFO: Frame sent: 0013000000060104076C0020
+2024-12-06 16:12:35 DEBUG com.example.SimpleMasterTCP - INFO: Frame recv: 00130000004301044000010000000000460000005D0000007A0000009917CD000000000000000000000000567E000000460000005D0000007A000000990000000014ED17CD00000000
+2024-12-06 16:12:35 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:12:35 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:12:35 DEBUG com.example.SimpleMasterTCP - INFO: Frame sent: 001400000006010407D00020
+2024-12-06 16:12:35 DEBUG com.example.SimpleMasterTCP - INFO: Frame recv: 001400000043010440000200000000005600000075FFFFFFD3000000BD183A000000002BD700000000000056740000005600000075FFFFFFD3000000BD000000008441183A2BD70000
+2024-12-06 16:12:35 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:12:35 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:12:35 DEBUG com.example.SimpleMasterTCP - INFO: Frame sent: 001500000006010408340020
+2024-12-06 16:12:35 DEBUG com.example.SimpleMasterTCP - INFO: Frame recv: 00150000004301044000030000000000000000000000000000000000000000000000000000000000000000561900000000000000000000000000000000000000000000000000000000
+2024-12-06 16:12:35 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:12:35 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:12:35 DEBUG com.example.SimpleMasterTCP - INFO: Frame sent: 001600000006010408980020
+2024-12-06 16:12:35 DEBUG com.example.SimpleMasterTCP - INFO: Frame recv: 00160000004301044000010000000000000000000000000000000000000000000000000000000000000000567F00000000000000000000000000000000000000000000000000000000
+2024-12-06 16:12:35 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:12:35 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:12:35 DEBUG com.example.SimpleMasterTCP - INFO: Frame sent: 001700000006010408FC0020
+2024-12-06 16:12:35 DEBUG com.example.SimpleMasterTCP - INFO: Frame recv: 00170000004301044000020000000000D2000000E8FFFFFFE6000001D1138800000000425C000000000000567C000000D2000000E8FFFFFFE6000001D10000000088D51388425C0000
+2024-12-06 16:12:35 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:12:35 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:12:35 DEBUG com.example.SimpleMasterTCP - INFO: Frame sent: 001800000006010409600020
+2024-12-06 16:12:35 DEBUG com.example.SimpleMasterTCP - INFO: Frame recv: 00180000004301044000030000000000110000000CFFFFFFE6000000240D050000000022EF0000000000005617000000110000000CFFFFFFE6000000240000000071780D0522EF0000
+2024-12-06 16:12:35 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:12:35 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - INFO: Frame sent: 000100000006010400640020
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - INFO: Frame recv: 00010000004301044000050000000009990000119CFFFFF99E0000152A2081000010DA146E000000000000565700000367000006DAFFFFFDEC0000079000120283883D23620D110000
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 100, Value : 5
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 1280
+2024-12-06 16:17:26 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 102, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 24
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 103, Value : 2457
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 161021952
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 104, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 4508
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 105, Value : 4508
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 295501823
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 106, Value : 65535
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 167771
+2024-12-06 16:17:26 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 108, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 54
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 109, Value : 5418
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 13871
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 10
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 110, Value : 8321
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 213017
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 10
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 111, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 431
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 112, Value : 4314
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 2827275
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 113, Value : 5230
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 3427532
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 114, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 115, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 116, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 22103
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 117, Value : 22103
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 56583
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 118, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 8
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 119, Value : 871
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 2229
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 120, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 17
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 121, Value : 1754
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 4587
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 122, Value : 65535
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 16777196
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 123, Value : 65004
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: -348651
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - INFO: Frame sent: 000200000006010400C80020
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - INFO: Frame recv: 0002000000430104400003000000000327000005E7FFFFFE7C000006EF214100000000150300000000000055E800000327000005E7FFFFFE7C000006EF00000000889A214115030000
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 200, Value : 3
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 768
+2024-12-06 16:17:26 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 202, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 8
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 203, Value : 807
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 52887552
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 204, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 1511
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 205, Value : 1511
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 99090431
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 206, Value : 65535
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 167770
+2024-12-06 16:17:26 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 208, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 17
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 209, Value : 1775
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 4544
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 10
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 210, Value : 8513
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 217932
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 10
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 211, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 212, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 53
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 213, Value : 5379
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 3525181
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 214, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 215, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 216, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 21992
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 217, Value : 21992
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 56299
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 218, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 8
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 219, Value : 807
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 2065
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 220, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 15
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 221, Value : 1511
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 3932
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 222, Value : 65535
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 16777084
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 223, Value : 65148
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: -254279
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - INFO: Frame sent: 0003000000060104012C0020
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - INFO: Frame recv: 0003000000430104400001000000000274000004FAFFFFFEC40000056F23C3000000000D9F000000000000565C00000274000004FAFFFFFEC40000056F0000000088B423C30D9F0000
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 300, Value : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 256
+2024-12-06 16:17:26 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 302, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 6
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 303, Value : 628
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 41156608
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 304, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 1274
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 305, Value : 1274
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 83558399
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 306, Value : 65535
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 167771
+2024-12-06 16:17:26 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 308, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 13
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 309, Value : 1391
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 3562
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 10
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 310, Value : 9155
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 234368
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 10
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 311, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 312, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 34
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 313, Value : 3487
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 2285240
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 314, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 315, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 316, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 22108
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 317, Value : 22108
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 56596
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 318, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 6
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 319, Value : 628
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 1607
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 320, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 12
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 321, Value : 1274
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 3276
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 322, Value : 65535
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 16777156
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 323, Value : 65220
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: -207093
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - INFO: Frame sent: 000400000006010401900020
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - INFO: Frame recv: 00040000004301044000020000000000000000000000000000000000000000000000000000000000000000565B00000000000000000000000000000000000000000000000000000000
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 400, Value : 2
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 512
+2024-12-06 16:17:26 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 402, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 403, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 404, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 405, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 406, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 408, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 409, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 10
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 410, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 10
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 411, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 412, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 413, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 414, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 415, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 416, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 22107
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 417, Value : 22107
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 56593
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 418, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 419, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 420, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 421, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 422, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 423, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - INFO: Frame sent: 000500000006010401F40020
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - INFO: Frame recv: 000500000043010440000300000000000700000004FFFFFFF2000000100B2800000000128700000000000055FC0000000700000004FFFFFFF2000000100000000071C30B2812870000
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 500, Value : 3
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 768
+2024-12-06 16:17:26 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 502, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 503, Value : 7
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 458752
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 504, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 4
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 505, Value : 4
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 327679
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 506, Value : 65535
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 167772
+2024-12-06 16:17:26 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 508, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 509, Value : 16
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 69
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 10
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 510, Value : 2856
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 73113
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 10
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 511, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 512, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 47
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 513, Value : 4743
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 3108372
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 514, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 515, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 516, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 22012
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 517, Value : 22012
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 56350
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 518, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 519, Value : 7
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 17
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 520, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 521, Value : 4
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 655
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 522, Value : 65535
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 16777202
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 523, Value : 65522
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: -9175
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - INFO: Frame sent: 000600000006010402580020
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - INFO: Frame recv: 00060000004301044000010000000000DF00000178FFFFFEF4000001F31D7C00000000101E0000000000005662000000DF00000178FFFFFEF4000001F3000000007DE41D7C101E0000
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 600, Value : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 256
+2024-12-06 16:17:26 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 602, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 2
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 603, Value : 223
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 14614528
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 604, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 376
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 605, Value : 376
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 24707071
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 606, Value : 65535
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 167772
+2024-12-06 16:17:26 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 608, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 4
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 609, Value : 499
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 1309
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 10
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 610, Value : 7548
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 193228
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 10
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 611, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 612, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 41
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 613, Value : 4126
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 2704015
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 614, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 615, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 616, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 22114
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 617, Value : 22114
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 56611
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 618, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 2
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 619, Value : 223
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 570
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 620, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 3
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 621, Value : 376
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 1310
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 622, Value : 65535
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 16777204
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 623, Value : 65268
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: -175636
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - INFO: Frame sent: 000700000006010402BC0020
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - INFO: Frame recv: 00070000004301044000020000000000BB0000012EFFFFFF090000019F1C73000000000E8E0000000000005656000000BB0000012EFFFFFF090000019F000000007A901C730E8E0000
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 700, Value : 2
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 512
+2024-12-06 16:17:26 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 702, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 703, Value : 187
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 12255232
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 704, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 302
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 705, Value : 302
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 19857407
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 706, Value : 65535
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 167769
+2024-12-06 16:17:26 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 708, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 4
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 709, Value : 415
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 1063
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 10
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 710, Value : 7283
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 186444
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 10
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 711, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 712, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 37
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 713, Value : 3726
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 2441871
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 714, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 715, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 716, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 22102
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 717, Value : 22102
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 56581
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 718, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 719, Value : 187
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 478
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 720, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 3
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 721, Value : 302
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 1310
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 722, Value : 65535
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 16776969
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 723, Value : 65289
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: -161873
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - INFO: Frame sent: 000800000006010403200020
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - INFO: Frame recv: 000800000043010440000300000000002D00000017FFFFFFAA00000064094C0000000014B500000000000055EF0000002D00000017FFFFFFAA00000064000000006EF0094C14B50000
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 800, Value : 3
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 768
+2024-12-06 16:17:26 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 802, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 803, Value : 45
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 2949120
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 804, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 23
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 805, Value : 23
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 1572863
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 806, Value : 65535
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 167771
+2024-12-06 16:17:26 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 808, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 809, Value : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 279
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 10
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 810, Value : 2380
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 60928
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 10
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 811, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 812, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 53
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 813, Value : 5301
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 3474063
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 814, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 815, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 816, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 21999
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 817, Value : 21999
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 56317
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 818, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 819, Value : 45
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 115
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 820, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 821, Value : 23
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 655
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 822, Value : 65535
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 16777130
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 823, Value : 65450
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: -56360
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - INFO: Frame sent: 000900000006010403840020
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - INFO: Frame recv: 000900000043010440000100000000001A00000007FFFFFFC90000003904E2000000000000000000000000565F0000001A00000007FFFFFFC900000039000000006B5804E200000000
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 900, Value : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 256
+2024-12-06 16:17:26 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 902, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 903, Value : 26
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 1703936
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 904, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 7
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 905, Value : 7
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 524287
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 906, Value : 65535
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 167771
+2024-12-06 16:17:26 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 908, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 909, Value : 57
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 158
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 10
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 910, Value : 1250
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 32000
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 10
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 911, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 912, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 913, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 914, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 915, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 916, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 22111
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 917, Value : 22111
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 56604
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 918, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 919, Value : 26
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 66
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 920, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 921, Value : 7
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 655
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 922, Value : 65535
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 16777161
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 923, Value : 65481
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: -36044
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - INFO: Frame sent: 000A00000006010403E80020
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - INFO: Frame recv: 000A0000004301044000020000000000270000002BFFFFFFE40000005613880000000033F5000000000000564E000000270000002BFFFFFFE40000005600000000792F138833F50000
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1000, Value : 2
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 512
+2024-12-06 16:17:26 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1002, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1003, Value : 39
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 2555904
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1004, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 43
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1005, Value : 43
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 2883583
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1006, Value : 65535
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 167771
+2024-12-06 16:17:26 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1008, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1009, Value : 86
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 224
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 10
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1010, Value : 5000
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 128000
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 10
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1011, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1012, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 133
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1013, Value : 13301
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 8716943
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1014, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1015, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1016, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 22094
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1017, Value : 22094
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 56560
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1018, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1019, Value : 39
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 99
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1020, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1021, Value : 43
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 655
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1022, Value : 65535
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 16777188
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1023, Value : 65508
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: -18350
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - INFO: Frame sent: 000B000000060104044C0020
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - INFO: Frame recv: 000B0000004301044000030000000000D400000197FFFFFF90000001D621E10000000012EE00000000000055EC000000D400000197FFFFFF90000001D60000000086B121E112EE0000
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1100, Value : 3
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 768
+2024-12-06 16:17:26 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1102, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 2
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1103, Value : 212
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 13893632
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1104, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 407
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1105, Value : 407
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 26738687
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1106, Value : 65535
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 167771
+2024-12-06 16:17:26 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1108, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 4
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1109, Value : 470
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 1289
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 10
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1110, Value : 8673
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 222028
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 10
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1111, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1112, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 48
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1113, Value : 4846
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 3175874
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1114, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1115, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1116, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 21996
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1117, Value : 21996
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 56309
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1118, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 2
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1119, Value : 212
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 542
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1120, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 4
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1121, Value : 407
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 1310
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1122, Value : 65535
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 16777104
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1123, Value : 65424
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: -73400
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - INFO: Frame sent: 000C00000006010404B00020
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - INFO: Frame recv: 000C0000004301044000010000000000000000000000000000000000000000000000000000000000000000565A00000000000000000000000000000000000000000000000000000000
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1200, Value : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 256
+2024-12-06 16:17:26 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1202, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1203, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1204, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1205, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1206, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1208, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1209, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 10
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1210, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 10
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1211, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1212, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1213, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1214, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1215, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1216, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 22106
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1217, Value : 22106
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 56591
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1218, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1219, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1220, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1221, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1222, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1223, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - INFO: Frame sent: 000D00000006010405140020
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - INFO: Frame recv: 000D00000043010440000200000000000E0000000EFFFFFFFC0000001F12070000000039CA00000000000056580000000E0000000EFFFFFFFC0000001F000000007E42120739CA0000
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1300, Value : 2
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 512
+2024-12-06 16:17:26 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1302, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1303, Value : 14
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 917504
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1304, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 14
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1305, Value : 14
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 983039
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1306, Value : 65535
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 167772
+2024-12-06 16:17:26 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1308, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1309, Value : 31
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 79
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 10
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1310, Value : 4615
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 118144
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 10
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1311, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1312, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 147
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1313, Value : 14794
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 9695395
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1314, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1315, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1316, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 22104
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1317, Value : 22104
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 56586
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1318, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1319, Value : 14
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 35
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1320, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1321, Value : 14
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 655
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1322, Value : 65535
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 16777212
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1323, Value : 65532
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: -2621
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - INFO: Frame sent: 000E00000006010405780020
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - INFO: Frame recv: 000E00000043010440000300000000004700000043FFFFFFC70000009B10D3000000003A2C00000000000055F40000004700000043FFFFFFC70000009B00000000775710D33A2C0000
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1400, Value : 3
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 768
+2024-12-06 16:17:26 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1402, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1403, Value : 71
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 4653056
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1404, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 67
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1405, Value : 67
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 4456447
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1406, Value : 65535
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 167771
+2024-12-06 16:17:26 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1408, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1409, Value : 155
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 398
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 10
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1410, Value : 4307
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 110259
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 10
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1411, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1412, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 148
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1413, Value : 14892
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 9759621
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1414, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1415, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1416, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 22004
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1417, Value : 22004
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 56330
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1418, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1419, Value : 71
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 181
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1420, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1421, Value : 67
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 655
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1422, Value : 65535
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 16777159
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1423, Value : 65479
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: -37355
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - INFO: Frame sent: 000F00000006010405DC0020
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - INFO: Frame recv: 000F00000043010440000300000000001D00000007FFFFFFC5000000400457000000000F1E00000000000055ED0000001D00000007FFFFFFC500000040000000006BC604570F1E0000
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1500, Value : 3
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 768
+2024-12-06 16:17:26 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1502, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1503, Value : 29
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 1900544
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1504, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 7
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1505, Value : 7
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 524287
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1506, Value : 65535
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 167771
+2024-12-06 16:17:26 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1508, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1509, Value : 64
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 174
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 10
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1510, Value : 1111
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 28441
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 10
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1511, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1512, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 38
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1513, Value : 3870
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 2536243
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1514, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1515, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1516, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 21997
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1517, Value : 21997
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 56312
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1518, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1519, Value : 29
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 74
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1520, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1521, Value : 7
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 655
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1522, Value : 65535
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 16777157
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1523, Value : 65477
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: -38666
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - INFO: Frame sent: 001000000006010406400020
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - INFO: Frame recv: 001000000043010440000100000000000600000007000000000000000E1388000000002BAC00000000000056560000000600000007000000000000000E00000000070413882BAC0000
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1600, Value : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 256
+2024-12-06 16:17:26 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1602, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1603, Value : 6
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 393216
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1604, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 7
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1605, Value : 7
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 458752
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1606, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1608, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1609, Value : 14
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 80
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 10
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1610, Value : 5000
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 128000
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 10
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1611, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1612, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 111
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1613, Value : 11180
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 7326924
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1614, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1615, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1616, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 22102
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1617, Value : 22102
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 56581
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1618, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1619, Value : 6
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 15
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1620, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1621, Value : 7
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 17
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1622, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1623, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - INFO: Frame sent: 001100000006010406A40020
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - INFO: Frame recv: 001100000043010440000200000000000500000002FFFFFFF90000000E06820000000033F500000000000056550000000500000002FFFFFFF90000000E0000000073BF068233F50000
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1700, Value : 2
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 512
+2024-12-06 16:17:26 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1702, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1703, Value : 5
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 327680
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1704, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 2
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1705, Value : 2
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 196607
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1706, Value : 65535
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 167772
+2024-12-06 16:17:26 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1708, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1709, Value : 14
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 37
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 10
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1710, Value : 1666
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 42649
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 10
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1711, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1712, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 133
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1713, Value : 13301
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 8716943
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1714, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1715, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1716, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 22101
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1717, Value : 22101
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 56578
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1718, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1719, Value : 5
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 12
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1720, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1721, Value : 2
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 655
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1722, Value : 65535
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 16777209
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1723, Value : 65529
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: -4587
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - INFO: Frame sent: 001200000006010407080020
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - INFO: Frame recv: 0012000000430104400003000000000000000000000000000000000000000000000000000000000000000055F600000000000000000000000000000000000000000000000000000000
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1800, Value : 3
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 768
+2024-12-06 16:17:26 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1802, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1803, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1804, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1805, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1806, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1808, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1809, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 10
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1810, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 10
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1811, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1812, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1813, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1814, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1815, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1816, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 22006
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1817, Value : 22006
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 56335
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1818, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1819, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1820, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1821, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1822, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1823, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - INFO: Frame sent: 0013000000060104076C0020
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - INFO: Frame recv: 00130000004301044000010000000000460000005F0000007A0000009B18090000000000140000000000005666000000460000005F0000007A0000009B0000000015D9180900140000
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1900, Value : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 256
+2024-12-06 16:17:26 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1902, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1903, Value : 70
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 4587520
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1904, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 95
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1905, Value : 95
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 6225920
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1906, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 1
+2024-12-06 16:17:26 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1908, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1909, Value : 155
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 396
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 10
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1910, Value : 6153
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 157516
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 10
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1911, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1912, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1913, Value : 20
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 13107
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1914, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1915, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1916, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 22118
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1917, Value : 22118
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 56622
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1918, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1919, Value : 70
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 179
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1920, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1921, Value : 95
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 243
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1922, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 122
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 1923, Value : 122
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 79953
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - INFO: Frame sent: 001400000006010407D00020
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - INFO: Frame recv: 001400000043010440000200000000005500000075FFFFFFD3000000BD183A000000002AF700000000000056540000005500000075FFFFFFD3000000BD00000000850B183A2AF70000
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2000, Value : 2
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 512
+2024-12-06 16:17:26 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2002, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2003, Value : 85
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 5570560
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2004, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 117
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2005, Value : 117
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 7733247
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2006, Value : 65535
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 167771
+2024-12-06 16:17:26 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2008, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2009, Value : 189
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 484
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 10
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2010, Value : 6202
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 158771
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 10
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2011, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2012, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 109
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2013, Value : 10999
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 7208304
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2014, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2015, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2016, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 22100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2017, Value : 22100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 56576
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2018, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2019, Value : 85
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 217
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2020, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2021, Value : 117
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 655
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2022, Value : 65535
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 16777171
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2023, Value : 65491
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: -29491
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - INFO: Frame sent: 001500000006010408340020
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - INFO: Frame recv: 0015000000430104400003000000000000000000000000000000000000000000000000000000000000000055FC00000000000000000000000000000000000000000000000000000000
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2100, Value : 3
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 768
+2024-12-06 16:17:26 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2102, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2103, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2104, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2105, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2106, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2108, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2109, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 10
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2110, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 10
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2111, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2112, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2113, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2114, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2115, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2116, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 22012
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2117, Value : 22012
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 56350
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2118, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2119, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2120, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2121, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2122, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2123, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - INFO: Frame sent: 001600000006010408980020
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - INFO: Frame recv: 00160000004301044000010000000000000000000000000000000000000000000000000000000000000000566B00000000000000000000000000000000000000000000000000000000
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2200, Value : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 256
+2024-12-06 16:17:26 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2202, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2203, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2204, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2205, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2206, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2208, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2209, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 10
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2210, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 10
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2211, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2212, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2213, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2214, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2215, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2216, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 22123
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2217, Value : 22123
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 56634
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2218, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2219, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2220, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2221, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2222, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2223, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - INFO: Frame sent: 001700000006010408FC0020
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - INFO: Frame recv: 00170000004301044000020000000000D0000000E8FFFFFFE9000001CC13BC000000004184000000000000565C000000D0000000E8FFFFFFE9000001CC00000000892113BC41840000
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2300, Value : 2
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 512
+2024-12-06 16:17:26 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2302, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 2
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2303, Value : 208
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 13631488
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2304, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 232
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2305, Value : 232
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 15269887
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2306, Value : 65535
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 167771
+2024-12-06 16:17:26 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2308, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 4
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2309, Value : 460
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 1228
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 10
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2310, Value : 5052
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 129331
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 10
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2311, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2312, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 167
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2313, Value : 16772
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 10991697
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2314, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2315, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2316, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 22108
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2317, Value : 22108
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 56596
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2318, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 2
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2319, Value : 208
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 532
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2320, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 2
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2321, Value : 232
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 655
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2322, Value : 65535
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 16777193
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2323, Value : 65513
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: -15073
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - INFO: Frame sent: 001800000006010409600020
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - INFO: Frame recv: 00180000004301044000030000000000100000000BFFFFFFE6000000230D050000000019B500000000000055FA000000100000000BFFFFFFE6000000230000000071880D0519B50000
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2400, Value : 3
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 768
+2024-12-06 16:17:26 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2402, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2403, Value : 16
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 1048576
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2404, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 11
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2405, Value : 11
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 786431
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2406, Value : 65535
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 167771
+2024-12-06 16:17:26 INFO  com.example.SimpleMasterTCP - Value is null
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2408, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2409, Value : 35
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 120
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 10
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2410, Value : 3333
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 85324
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 10
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2411, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2412, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 65
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2413, Value : 6581
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 4312924
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2414, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2415, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2416, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: 22010
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2417, Value : 22010
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 56345
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2418, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2419, Value : 16
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 40
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2420, Value : 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 0
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2421, Value : 11
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 655
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 1
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2422, Value : 65535
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 16-bit Value: 16777190
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - scale : 100
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - Address: 2423, Value : 65510
+2024-12-06 16:17:26 DEBUG com.example.SimpleMasterTCP - 32-bit Value: -17039
+2024-12-06 17:17:35 DEBUG com.example.MqttReceiver - MQTT 수신 브로커에 연결되고 구독을 시작했습니다.
+2024-12-06 17:17:36 DEBUG com.example.MqttPublisher - 발행: sensor/temperature -> {"temperature":20.3,"timestamp":1733473055,"tag":"EM500-CO2-152919(사무실)"}
+2024-12-06 17:17:36 DEBUG com.example.MqttReceiver - 발행된 메시지: sensor/temperature : {"temperature":20.3,"timestamp":1733473055,"tag":"EM500-CO2-152919(사무실)"}
+2024-12-06 17:17:40 DEBUG com.example.MqttPublisher - 발행: sensor/temperature -> {"temperature":19.4,"timestamp":1733473059,"tag":"EM320-TH-384491(사무실)"}
+2024-12-06 17:17:40 DEBUG com.example.MqttReceiver - 발행된 메시지: sensor/temperature : {"temperature":19.4,"timestamp":1733473059,"tag":"EM320-TH-384491(사무실)"}
+2024-12-06 17:17:43 DEBUG com.example.MqttPublisher - 발행: sensor/temperature -> {"temperature":24.3,"timestamp":1733473061,"tag":"EM300-TH-151368(서버실)"}
+2024-12-06 17:17:43 DEBUG com.example.MqttReceiver - 발행된 메시지: sensor/temperature : {"temperature":24.3,"timestamp":1733473061,"tag":"EM300-TH-151368(서버실)"}
+2024-12-06 17:17:43 DEBUG com.example.MqttPublisher - 발행: sensor/temperature -> {"temperature":20.8,"timestamp":1733473063,"tag":"AM103-081175(하이브)"}
+2024-12-06 17:17:43 DEBUG com.example.MqttReceiver - 발행된 메시지: sensor/temperature : {"temperature":20.8,"timestamp":1733473063,"tag":"AM103-081175(하이브)"}
+2024-12-06 17:17:55 DEBUG com.example.MqttReceiver - MQTT 연결이 끊어졌습니다. MqttException
+2024-12-06 17:20:50 DEBUG com.example.MqttReceiver - MQTT 수신 브로커에 연결되고 구독을 시작했습니다.
+2024-12-06 17:21:01 DEBUG com.example.MqttPublisher - 발행: sensor/temperature -> {"temperature":21.2,"timestamp":1733473261,"tag":"EM500-PT100(스마트팜)"}
+2024-12-06 17:21:01 DEBUG com.example.MqttReceiver - 발행된 메시지: sensor/temperature : {"temperature":21.2,"timestamp":1733473261,"tag":"EM500-PT100(스마트팜)"}
+2024-12-06 17:21:10 DEBUG com.example.MqttReceiver - 수신된 메시지에 'temperature' 데이터가 없습니다.
+2024-12-06 17:21:10 DEBUG com.example.MqttReceiver - MQTT 연결이 끊어졌습니다. MqttException
+2024-12-06 17:23:01 DEBUG com.example.MqttReceiver - MQTT 수신 브로커에 연결되고 구독을 시작했습니다.
+2024-12-06 17:23:02 DEBUG com.example.MqttPublisher - 발행: sensor/temperature -> {"temperature":21.2,"timestamp":1733473382,"tag":"EM500-PT100(스마트팜)"}
+2024-12-06 17:23:02 DEBUG com.example.MqttReceiver - 발행된 메시지: sensor/temperature : {"temperature":21.2,"timestamp":1733473382,"tag":"EM500-PT100(스마트팜)"}
+2024-12-06 17:23:18 DEBUG com.example.MqttPublisher - 발행: sensor/temperature -> {"temperature":22.5,"timestamp":1733473398,"tag":"AM107-067999(강의실A)"}
+2024-12-06 17:23:18 DEBUG com.example.MqttReceiver - 발행된 메시지: sensor/temperature : {"temperature":22.5,"timestamp":1733473398,"tag":"AM107-067999(강의실A)"}
+2024-12-06 17:23:18 DEBUG com.example.MqttPublisher - 발행: sensor/temperature -> {"temperature":22.5,"timestamp":1733473398,"tag":"AM107-067999(강의실A)"}
+2024-12-06 17:23:18 DEBUG com.example.MqttReceiver - 발행된 메시지: sensor/temperature : {"temperature":22.5,"timestamp":1733473398,"tag":"AM107-067999(강의실A)"}
+2024-12-06 17:23:18 DEBUG com.example.MqttReceiver - 수신된 메시지에 'temperature' 데이터가 없습니다.
+2024-12-06 17:23:18 DEBUG com.example.MqttReceiver - 수신된 메시지에 'temperature' 데이터가 없습니다.
+2024-12-06 17:23:20 DEBUG com.example.MqttReceiver - 수신된 메시지에 'temperature' 데이터가 없습니다.
+2024-12-06 17:23:21 DEBUG com.example.MqttPublisher - 발행: sensor/temperature -> {"temperature":20.6,"timestamp":1733473400,"tag":"EM320-TH-389010(하이브)"}
+2024-12-06 17:23:21 DEBUG com.example.MqttReceiver - 발행된 메시지: sensor/temperature : {"temperature":20.6,"timestamp":1733473400,"tag":"EM320-TH-389010(하이브)"}
+2024-12-06 17:23:22 DEBUG com.example.MqttReceiver - 수신된 메시지에 'temperature' 데이터가 없습니다.
+2024-12-06 17:23:27 DEBUG com.example.MqttReceiver - 수신된 메시지에 'temperature' 데이터가 없습니다.
+2024-12-06 17:23:27 DEBUG com.example.MqttReceiver - 수신된 메시지에 'temperature' 데이터가 없습니다.
+2024-12-06 17:23:33 DEBUG com.example.MqttPublisher - 발행: sensor/temperature -> {"temperature":18.4,"timestamp":1733473412,"tag":"EM300-151547(창고)"}
+2024-12-06 17:23:33 DEBUG com.example.MqttReceiver - 발행된 메시지: sensor/temperature : {"temperature":18.4,"timestamp":1733473412,"tag":"EM300-151547(창고)"}
+2024-12-06 17:23:33 DEBUG com.example.MqttPublisher - 발행: sensor/temperature -> {"temperature":18.4,"timestamp":1733473413,"tag":"EM300-151547(창고)"}
+2024-12-06 17:23:33 DEBUG com.example.MqttReceiver - 발행된 메시지: sensor/temperature : {"temperature":18.4,"timestamp":1733473413,"tag":"EM300-151547(창고)"}
+2024-12-06 17:23:36 DEBUG com.example.MqttReceiver - 수신된 메시지에 'temperature' 데이터가 없습니다.
+2024-12-06 17:23:39 DEBUG com.example.MqttReceiver - MQTT 연결이 끊어졌습니다. MqttException
+2024-12-06 17:27:48 DEBUG com.example.MqttReceiver - MQTT 수신 브로커에 연결되고 구독을 시작했습니다.
+2024-12-06 17:27:56 DEBUG com.example.MqttReceiver - 수신된 메시지에 'temperature' 데이터가 없습니다.
+2024-12-06 17:28:06 DEBUG com.example.MqttPublisher - 발행: sensor/temperature -> {"temperature":21.2,"timestamp":1733473685,"tag":"EM500-PT100(스마트팜)"}
+2024-12-06 17:28:06 DEBUG com.example.MqttReceiver - 발행된 메시지: sensor/temperature : {"temperature":21.2,"timestamp":1733473685,"tag":"EM500-PT100(스마트팜)"}
+2024-12-06 17:28:12 DEBUG com.example.MqttPublisher - 발행: sensor/temperature -> {"temperature":21.1,"timestamp":1733473692,"tag":"EM500-CO2-152969(강의실A)"}
+2024-12-06 17:28:12 DEBUG com.example.MqttReceiver - 발행된 메시지: sensor/temperature : {"temperature":21.1,"timestamp":1733473692,"tag":"EM500-CO2-152969(강의실A)"}
+2024-12-06 17:28:18 DEBUG com.example.MqttPublisher - 발행: sensor/temperature -> {"temperature":22.5,"timestamp":1733473697,"tag":"AM107-067999(강의실A)"}
+2024-12-06 17:28:18 DEBUG com.example.MqttReceiver - 발행된 메시지: sensor/temperature : {"temperature":22.5,"timestamp":1733473697,"tag":"AM107-067999(강의실A)"}
+2024-12-06 17:28:21 DEBUG com.example.MqttPublisher - 발행: sensor/temperature -> {"temperature":20.6,"timestamp":1733473700,"tag":"EM320-TH-389010(하이브)"}
+2024-12-06 17:28:21 DEBUG com.example.MqttReceiver - 발행된 메시지: sensor/temperature : {"temperature":20.6,"timestamp":1733473700,"tag":"EM320-TH-389010(하이브)"}
+2024-12-06 17:28:21 DEBUG com.example.MqttPublisher - 발행: sensor/temperature -> {"temperature":24.2,"timestamp":1733473701,"tag":"EM300-151836(회의실)"}
+2024-12-06 17:28:21 DEBUG com.example.MqttReceiver - 발행된 메시지: sensor/temperature : {"temperature":24.2,"timestamp":1733473701,"tag":"EM300-151836(회의실)"}
+2024-12-06 17:28:26 DEBUG com.example.MqttReceiver - 수신된 메시지에 'temperature' 데이터가 없습니다.
+2024-12-06 17:28:33 DEBUG com.example.MqttPublisher - 발행: sensor/temperature -> {"temperature":18.5,"timestamp":1733473712,"tag":"EM300-151547(창고)"}
+2024-12-06 17:28:33 DEBUG com.example.MqttReceiver - 발행된 메시지: sensor/temperature : {"temperature":18.5,"timestamp":1733473712,"tag":"EM300-151547(창고)"}
+2024-12-06 17:28:41 DEBUG com.example.MqttPublisher - 발행: sensor/temperature -> {"temperature":19.4,"timestamp":1733473719,"tag":"EM320-TH-384491(사무실)"}
+2024-12-06 17:28:41 DEBUG com.example.MqttReceiver - 발행된 메시지: sensor/temperature : {"temperature":19.4,"timestamp":1733473719,"tag":"EM320-TH-384491(사무실)"}
+2024-12-06 17:28:41 DEBUG com.example.MqttPublisher - 발행: sensor/temperature -> {"temperature":23.5,"timestamp":1733473721,"tag":"EM300-TH-151368(서버실)"}
+2024-12-06 17:28:41 DEBUG com.example.MqttReceiver - 발행된 메시지: sensor/temperature : {"temperature":23.5,"timestamp":1733473721,"tag":"EM300-TH-151368(서버실)"}
+2024-12-06 17:28:45 DEBUG com.example.MqttReceiver - 수신된 메시지에 'temperature' 데이터가 없습니다.
+2024-12-06 17:28:46 DEBUG com.example.MqttPublisher - 발행: sensor/temperature -> {"temperature":20.8,"timestamp":1733473726,"tag":"AM103-081175(하이브)"}
+2024-12-06 17:28:46 DEBUG com.example.MqttReceiver - 발행된 메시지: sensor/temperature : {"temperature":20.8,"timestamp":1733473726,"tag":"AM103-081175(하이브)"}
+2024-12-06 17:29:02 DEBUG com.example.MqttReceiver - 수신된 메시지에 'temperature' 데이터가 없습니다.
+2024-12-06 17:29:06 DEBUG com.example.MqttPublisher - 발행: sensor/temperature -> {"temperature":21.2,"timestamp":1733473746,"tag":"EM500-PT100(스마트팜)"}
+2024-12-06 17:29:06 DEBUG com.example.MqttReceiver - 발행된 메시지: sensor/temperature : {"temperature":21.2,"timestamp":1733473746,"tag":"EM500-PT100(스마트팜)"}
+2024-12-06 17:29:18 DEBUG com.example.MqttPublisher - 발행: sensor/temperature -> {"temperature":22.5,"timestamp":1733473757,"tag":"AM107-067999(강의실A)"}
+2024-12-06 17:29:18 DEBUG com.example.MqttReceiver - 발행된 메시지: sensor/temperature : {"temperature":22.5,"timestamp":1733473757,"tag":"AM107-067999(강의실A)"}
+2024-12-06 17:29:21 DEBUG com.example.MqttPublisher - 발행: sensor/temperature -> {"temperature":20.6,"timestamp":1733473760,"tag":"EM320-TH-389010(하이브)"}
+2024-12-06 17:29:21 DEBUG com.example.MqttReceiver - 발행된 메시지: sensor/temperature : {"temperature":20.6,"timestamp":1733473760,"tag":"EM320-TH-389010(하이브)"}
+2024-12-06 17:29:27 DEBUG com.example.MqttReceiver - 수신된 메시지에 'temperature' 데이터가 없습니다.
+2024-12-06 17:29:28 DEBUG com.example.MqttReceiver - Disconnected!
+2024-12-06 17:36:02 DEBUG com.example.MqttReceiver - MQTT 수신 브로커에 연결되고 구독을 시작했습니다.
+2024-12-06 17:36:11 DEBUG com.example.MqttPublisher - 발행: sensor/temperature -> {"temperature":21.2,"timestamp":1733474171,"tag":"EM500-PT100(스마트팜)"}
+2024-12-06 17:36:11 DEBUG com.example.MqttReceiver - 발행된 메시지: sensor/temperature : {"temperature":21.2,"timestamp":1733474171,"tag":"EM500-PT100(스마트팜)"}

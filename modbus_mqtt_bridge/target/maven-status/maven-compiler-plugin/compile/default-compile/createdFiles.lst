@@ -1,0 +1,10 @@
+com/example/MqttPublisher.class
+com/example/TemperatureToDB.class
+com/example/MqttReceiver$1.class
+com/example/InfluxDBHandler.class
+com/example/MqttReceiver.class
+com/example/SimpleMasterTCP$1.class
+com/example/SimpleMasterTCP.class
+com/example/ProcessedMessage.class
+com/example/Main.class
+com/example/TemperatureToDB$1.class
