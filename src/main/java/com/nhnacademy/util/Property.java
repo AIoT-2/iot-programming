@@ -78,16 +78,16 @@ public final class Property {
 
     public static void createPortMap(JsonNode portNodeList) {
         portNodeList.elements()
-                .forEachRemaining(portNode -> {
-                        String serviceName = portNode
-                                                .get(PropertyKey.SERVICE_NAME.getKey())
-                                                .asText();
-                        String portNumber = portNode
-                                                .get(PropertyKey.PORT_NUMBER.getKey())
-                                                .asText();
-                        PORT_MAP.put(serviceName, portNumber);
-                    }
-                );
+                    .forEachRemaining(portNode -> {
+                            String serviceName = portNode
+                                                    .get(PropertyKey.SERVICE_NAME.getKey())
+                                                    .asText();
+                            String portNumber = portNode
+                                                    .get(PropertyKey.PORT_NUMBER.getKey())
+                                                    .asText();
+                            PORT_MAP.put(serviceName, portNumber);
+                        }
+                    );
     }
 
     // =================================================================================================================
