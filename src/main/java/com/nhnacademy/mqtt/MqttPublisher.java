@@ -18,10 +18,10 @@ import java.util.concurrent.TimeUnit;
 @Slf4j
 public class MqttPublisher implements Runnable {
 
-    static final String DEFAULT_PUBLISH_HOST = "192.168.70.203";
+    static final String DEFAULT_PUBLISH_HOST = "tcp://localhost:1883";
     static final String DEFAULT_PUBLISH_USERNAME = "";
     static final String DEFAULT_PUBLISH_PASSWORD = "";
-    static final String DEFAULT_PUBLISH_TOPIC = "application/#";
+    static final String DEFAULT_PUBLISH_TOPIC = "sensor/data";
 
     final String publishHost;  // 송신 브로커 IP
     final String publishUsername; // 수신 브로커 사용자 이름
@@ -30,9 +30,10 @@ public class MqttPublisher implements Runnable {
     final Mqtt5Client publisher;
     final String message;
 
-    public MqttPublisher(String message){
-        this(DEFAULT_PUBLISH_HOST,DEFAULT_PUBLISH_USERNAME,DEFAULT_PUBLISH_PASSWORD,DEFAULT_PUBLISH_TOPIC,message);
+    public MqttPublisher(String message) {
+        this(DEFAULT_PUBLISH_HOST, DEFAULT_PUBLISH_USERNAME, DEFAULT_PUBLISH_PASSWORD, DEFAULT_PUBLISH_TOPIC, message);
     }
+
     public MqttPublisher(String publishHost, String publishUsername, String publishPassword, String publishTopic, String message) {
         this.publishHost = publishHost;
         this.publishUsername = publishUsername;
@@ -62,6 +63,7 @@ public class MqttPublisher implements Runnable {
                 .send();
     }
 
+    // 받은 Message 가공 후 전송
     public JSONObject transformer() {
         JSONObject mqttMessage;
         try {
@@ -73,7 +75,7 @@ public class MqttPublisher implements Runnable {
             String spotName = rootNode.path("deviceInfo").path("tags").path("place").asText();
             JsonNode objectNode = rootNode.path("object");
             if (!objectNode.isMissingNode()) {
-                log.info("Object Data: {}" , objectNode);
+                log.info("Object Data: {}", objectNode);
             }
 
             // 'tags' 추가
