@@ -20,7 +20,6 @@ public class InfluxDB implements Runnable {
     private static final String DEFAULT_INFLUXDB_URL = "http://192.168.71.209:8086"; // InfluxDB 주소// 데이터베이스 이름
     private static final String DEFAULT_INFLUXDB_MEASUREMENT = "sensor_metrics"; // 측정값 이름
     private static final String DEFAULT_TOKENS = "LAJkxUibftEm_UsmYpBhXpjlUs63VcuGdyEgCTUO85dINuFtMCalOm4gMwNfAMBRRHmyQNTq546IqxheEQmUkA==";
-
     private static final String DEFAULT_INFLUXDB_ORG = "nhnacademy"; // Organization 이름
     private static final String DEFAULT_INFLUXDB_BUCKET = "test"; // 사용할 Bucket 이름
 
