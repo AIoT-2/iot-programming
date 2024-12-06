@@ -2,7 +2,6 @@ package com.nhnacademy.mqtt.impl;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.node.ObjectNode;
 import lombok.extern.slf4j.Slf4j;
 import org.eclipse.paho.client.mqttv3.IMqttDeliveryToken;
 import org.eclipse.paho.client.mqttv3.MqttCallback;
@@ -17,7 +16,7 @@ public class MqttCallbackImpl implements MqttCallback {
                 cause.getMessage());
     }
 
-    // MQTT 응답을 받는 곳
+    // TODO: jsonNode 데이터를 분석할 멀티스레딩을 구현할 것
     @Override
     public void messageArrived(String topic, MqttMessage message) throws Exception {
         log.debug("Received message from topic '{}': {}",
