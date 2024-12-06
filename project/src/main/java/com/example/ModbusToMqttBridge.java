@@ -148,52 +148,109 @@ public class ModbusToMqttBridge {
         return (reg1 << 16) | (reg2 & 0xFFFF);
     }
 
-    public void processChannel(int channelNumber) throws Exception {
-        String location = channelLocations.get(channelNumber);
-        if (location == null) {
-            logger.warning("Unknown channel number: " + channelNumber);
-            return;
-        }
+private String determineCategory(String location) {
+    if (location.contains("사무실")) return "office";
+    if (location.contains("서버")) return "server";
+    if (location.contains("강의실")) return "classroom";
+    if (location.contains("전등")) return "lighting";
+    if (location.contains("프로젝터")) return "projector";
+    if (location.contains("하이브")) return "hive";
+    if (location.contains("바텐")) return "cafe";
+    return "others";
+}
 
-        logger.info("Processing channel " + channelNumber + " (" + location + ")");
-
-        try {
-            if (!master.isConnected()) {
-                master.connect();
-            }
-
-            int slaveId = 1;
-            int offset = channelNumber * 100;
-            int quantity = 32;
-
-            // Modbus 데이터 읽기
-            int[] registerValues = master.readInputRegisters(slaveId, offset, quantity);
-
-            // JSON 변환
-            String jsonData = convertToJson(registerValues, location);
-
-            // MQTT로 발행
-            mqttPublisher.publish(location, jsonData);
-
-            // 콘솔에 출력
-            System.out.println("Channel " + channelNumber + " JSON data:");
-            System.out.println(jsonData);
-
-        } catch (Exception e) {
-            logger.warning("Error reading channel " + channelNumber + ": " + e.getMessage());
-            throw e;
-        }
+public void processChannel(int channelNumber) throws Exception {
+    String location = channelLocations.get(channelNumber);
+    if (location == null) {
+        logger.warning("Unknown channel number: " + channelNumber);
+        return;
     }
 
-    public void processAllChannels() {
+    logger.info("Processing channel " + channelNumber + " (" + location + ")");
+
+    try {
+        if (!master.isConnected()) {
+            master.connect();
+        }
+
+        int slaveId = 1;
+        int offset = channelNumber * 100;
+        int quantity = 32;
+
+        // Modbus 데이터 읽기
+        int[] registerValues = master.readInputRegisters(slaveId, offset, quantity);
+
+        // JSON 변환
+        String jsonData = convertToJson(registerValues, location);
+
+        // 카테고리 결정
+        String category = determineCategory(location);
+        
+        // 새로운 토픽 구조로 발행
+        mqttPublisher.publish("devices/" + category + "/" + location, jsonData);
+
+        // 콘솔에 출력
+        logger.info("Channel " + channelNumber + " (" + category + "/" + location + ") JSON data:");
+        logger.info(jsonData);
+
+    } catch (Exception e) {
+        logger.warning("Error reading channel " + channelNumber + ": " + e.getMessage());
+        throw e;
+    }
+}
+
+public void processAllChannels() {
+    try {
+        Map<String, Map<String, Object>> groupedData = new HashMap<>();
+
+        // 모든 채널의 데이터 수집 및 그룹화
         for (int channelNumber : channelLocations.keySet()) {
             try {
-                processChannel(channelNumber);
+                String location = channelLocations.get(channelNumber);
+                String category = determineCategory(location);
+
+                if (!master.isConnected()) {
+                    master.connect();
+                }
+
+                int[] registerValues = master.readInputRegisters(1, channelNumber * 100, 32);
+                Map<String, Object> deviceData = new HashMap<>();
+
+                // 데이터 변환
+                deviceData.put("deviceType", getDeviceType(registerValues[0]));
+                deviceData.put("current", combineRegisters(registerValues[2], registerValues[3]) / 100.0);
+                deviceData.put("powerW", combineRegistersToInt(registerValues[4], registerValues[5]));
+                deviceData.put("powerVAR", combineRegistersToInt(registerValues[6], registerValues[7]));
+                deviceData.put("powerVA", combineRegisters(registerValues[8], registerValues[9]));
+                deviceData.put("powerFactor", registerValues[10] / 100.0);
+                deviceData.put("currentUnbalance", registerValues[12] / 10000.0);
+                deviceData.put("currentTHD", registerValues[13] / 10000.0);
+                deviceData.put("voltage", combineRegisters(registerValues[16], registerValues[17]) / 100.0);
+                deviceData.put("timestamp", System.currentTimeMillis());
+                
+                // 그룹화된 데이터 저장
+                if (!groupedData.containsKey(category)) {
+                    groupedData.put(category, new HashMap<>());
+                }
+                groupedData.get(category).put(location, deviceData);
+
             } catch (Exception e) {
                 logger.warning("Error processing channel " + channelNumber + ": " + e.getMessage());
             }
         }
+
+        // 그룹화된 데이터 발행
+        for (Map.Entry<String, Map<String, Object>> group : groupedData.entrySet()) {
+            String category = group.getKey();
+            String jsonData = gson.toJson(group.getValue());
+            mqttPublisher.publish("devices/" + category, jsonData);
+            logger.info("Published grouped data for category: " + category);
+        }
+
+    } catch (Exception e) {
+        logger.warning("Error in processing all channels: " + e.getMessage());
     }
+}
 
     public void close() throws Exception {
         if (master != null && master.isConnected()) {
