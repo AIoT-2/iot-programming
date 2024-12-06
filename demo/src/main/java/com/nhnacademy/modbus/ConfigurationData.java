@@ -15,11 +15,11 @@ public class ConfigurationData {
         map.put(2, new String[] { "frequency", "100", "16" });
         map.put(3, new String[] { "program version", "1", "16" });
         map.put(4, new String[] { "present CO2 use(month)", "10", "16" });
-        map.put(6, new String[] { "operation Heartbit", "1", "16" });
+        map.put(6, new String[] { "operation Heartbit 1", "1", "16" }); // 중복시 사라짐 해결
         map.put(7, new String[] { "temperature 1", "10", "16" });
-        map.put(8, new String[] { "frequency", "100", "16" });
-        map.put(9, new String[] { "program version", "1", "16" });
-        map.put(10, new String[] { "present CO2 use(month)", "10", "16" });
+        map.put(8, new String[] { "frequency 1", "100", "16" }); // 중복시 사라짐 해결
+        map.put(9, new String[] { "program version 1", "1", "16" }); // 중복시 사라짐 해결
+        map.put(10, new String[] { "present CO2 use(month) 1", "10", "16" }); // 중복시 사라짐 해결
         map.put(12, new String[] { "V123(LN) average", "100", "32" });
         map.put(13, new String[] { "V123(LL) average", "100", "32" });
         map.put(14, new String[] { "V123(LN) unbalance", "100", "16" });
@@ -39,7 +39,6 @@ public class ConfigurationData {
         map.put(28, new String[] { "V1 THD", "100", "16" });
         map.put(29, new String[] { "V2 THD", "100", "16" });
         map.put(30, new String[] { "V3 THD", "100", "16" });
-        map.put(50, new String[] { "" });
 
         return map;
     }

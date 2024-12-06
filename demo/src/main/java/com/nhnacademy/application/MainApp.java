@@ -24,7 +24,7 @@ public class MainApp {
             MqttPub mqttPub = new MqttPub(influxDBClient, DemoSetting.BROKER);
 
             // MQTT 브로커 사용 여부 설정
-            boolean useMqttBrokers = true; // true -> MQTT 메시지 수신, false -> Modbus TCP 처리
+            boolean useMqttBrokers = false; // true -> MQTT 메시지 수신, false -> Modbus TCP 처리
 
             if (useMqttBrokers) {
                 // MQTT 브로커로부터 메시지 수신
@@ -41,14 +41,14 @@ public class MainApp {
                     Map<Integer, String> topicMap = ConfigurationData.topicMapName();
                     String topic = topicMap.get(offset);
 
-                    // // JSON으로 변환 후 MQTT로 발행
+                    // JSON으로 변환 후 MQTT로 발행
                     String jsonPayload = new ObjectMapper().writeValueAsString(modbusData);
                     mqttPub.publishJsonMessage(topic, jsonPayload);
 
                     // InfluxDB에 기록
-                    // JsonNode object = new ObjectMapper().readTree(jsonPayload);
-                    // JsonNode deviceInfo = object.get("deviceInfo"); // 예시로 deviceInfo 정보 추출
-                    // mqttPub.writeModbusToInfluxDB(object, deviceInfo);
+                    JsonNode object = new ObjectMapper().readTree(jsonPayload);
+                    JsonNode measurements = object.get("measurements");
+                    mqttPub.writeModbusToInfluxDB(object, measurements);
 
                     offset += 100;
                 }

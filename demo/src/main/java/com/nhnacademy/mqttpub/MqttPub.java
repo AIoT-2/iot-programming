@@ -19,6 +19,8 @@ import lombok.extern.slf4j.Slf4j;
 public class MqttPub {
     private MqttClient mqttClient;
     private InfluxDBClient influxDBClient;
+    private String valueDouble = "double";
+    private String valueInt = "int";
 
     // 생성자
     public MqttPub(InfluxDBClient influxDBClient, String brokerUrl) {
@@ -70,9 +72,6 @@ public class MqttPub {
                     .addTag("name", deviceInfo.get("tags").get("name").asText())
                     .time(Instant.now(), WritePrecision.MS);
 
-            String valueDouble = "double";
-            String valueInt = "int";
-
             // 필드가 있을 경우, InfluxDB에 추가
             addFieldPresent(object, "humidity", point, "humidity", valueDouble);
             addFieldPresent(object, "battery", point, "battery", valueInt);
@@ -89,35 +88,63 @@ public class MqttPub {
             influxDBClient.getWriteApiBlocking().writePoint(point);
             log.info("Data written to InfluxDB: " + point);
         } catch (Exception e) {
-            e.printStackTrace();
+            log.error("writeToInfluxDB error: {}", e.getMessage());
         }
     }
 
-    public void writeModbusToInfluxDB(JsonNode object, JsonNode deviceInfo) {
+    public void writeModbusToInfluxDB(JsonNode object, JsonNode measurements) {
         try {
-            Point point = Point.measurement("modbus_data")
-                    .addTag("placeName", null) // 추가 작업 필요
-                    .time(Instant.now(), WritePrecision.MS);
+            Point point = Point.measurement("modbus_data") // 측정 이름 설정
+                    .addTag("name", measurements.get("name").asText()) // 태그 추가
+                    .time(Instant.now(), WritePrecision.MS); // 시간 태그 추가
 
-            addFieldPresent(object, null, point, null, null); // 추가작업필요
+            addFieldPresent(object, "operation Heartbit", point, "operation Heartbit", valueInt);
+            addFieldPresent(object, "temperature", point, "temperature", valueInt);
+            addFieldPresent(object, "frequency", point, "frequency", valueInt);
+            addFieldPresent(object, "program version", point, "program version", valueInt);
+            addFieldPresent(object, "present CO2 use(month)", point, "present CO2 use(month)", valueInt);
+            addFieldPresent(object, "operation Heartbit 1", point, "operation Heartbit 1", valueInt);
+            addFieldPresent(object, "frequency 1", point, "frequency 1", valueInt);
+            addFieldPresent(object, "program version 1", point, "program version 1", valueInt);
+            addFieldPresent(object, "present CO2 use(month) 1", point, "present CO2 use(month) 1", valueInt);
+            addFieldPresent(object, "V123(LN) average", point, "V123(LN) average", valueInt);
+            addFieldPresent(object, "V123(LL) average", point, "V123(LL) average", valueInt);
+            addFieldPresent(object, "V1", point, "V1", valueInt);
+            addFieldPresent(object, "V12", point, "V12", valueInt);
+            addFieldPresent(object, "V1 unbalance", point, "V1 unbalance", valueInt);
+            addFieldPresent(object, "V12 unbalance", point, "V12 unbalance", valueInt);
+            addFieldPresent(object, "V2", point, "V2", valueInt);
+            addFieldPresent(object, "V23", point, "V23", valueInt);
+            addFieldPresent(object, "V2 unbalance", point, "V2 unbalance", valueInt);
+            addFieldPresent(object, "V23 unbalance", point, "V23 unbalance", valueInt);
+            addFieldPresent(object, "V3", point, "V3", valueInt);
+            addFieldPresent(object, "V31", point, "V31", valueInt);
+            addFieldPresent(object, "V3 unbalance", point, "V3 unbalance", valueInt);
+            addFieldPresent(object, "V31 unbalance", point, "V31 unbalance", valueInt);
+            addFieldPresent(object, "V1 THD", point, "V1 THD", valueInt);
+            addFieldPresent(object, "V2 THD", point, "V2 THD", valueInt);
+            addFieldPresent(object, "V3 THD", point, "V3 THD", valueInt);
+
+            influxDBClient.getWriteApiBlocking().writePoint(point);
+            log.info("Data written to InfluxDB: " + point);
         } catch (Exception e) {
-            e.printStackTrace();
+            log.error("writeModbusToInfluxDB error: {}", e.getMessage());
         }
     }
 
-    // 필드가 존재하면 InfluxDB에 추가
+    // 필드가 존재하면 InfluxDB에 추가, 파일이름 변경가능 버전
     private void addFieldPresent(JsonNode object, String fieldName, Point point, String fieldKey, String valueType) {
         if (object != null && object.has(fieldName)) {
             JsonNode fieldNode = object.get(fieldName);
-            if (valueType.equals("double") && fieldNode.isNumber()) {
-                point.addField(fieldKey, fieldNode.asDouble());
-                log.debug("{}: {}", fieldKey, fieldNode.asDouble());
-            } else if (valueType.equals("int") && fieldNode.isNumber()) {
-                point.addField(fieldKey, fieldNode.asInt());
-                log.debug("{}: {}", fieldKey, fieldNode.asInt());
+            if (fieldNode.isNumber()) {
+                if (valueType.equals("double")) {
+                    point.addField(fieldKey, fieldNode.asDouble());
+                    log.debug("{}: {}", fieldKey, fieldNode.asDouble());
+                } else if (valueType.equals("int")) {
+                    point.addField(fieldKey, fieldNode.asInt());
+                    log.debug("{}: {}", fieldKey, fieldNode.asInt());
+                }
             }
-        } else {
-            log.warn("Field '{}' is missing in the data", fieldName);
         }
     }
 
