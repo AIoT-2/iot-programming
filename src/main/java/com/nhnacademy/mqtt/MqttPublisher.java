@@ -17,6 +17,12 @@ import java.util.concurrent.TimeUnit;
 
 @Slf4j
 public class MqttPublisher implements Runnable {
+
+    static final String DEFAULT_PUBLISH_HOST = "192.168.70.203";
+    static final String DEFAULT_PUBLISH_USERNAME = "";
+    static final String DEFAULT_PUBLISH_PASSWORD = "";
+    static final String DEFAULT_PUBLISH_TOPIC = "application/#";
+
     final String publishHost;  // 송신 브로커 IP
     final String publishUsername; // 수신 브로커 사용자 이름
     final String publishPassword;
@@ -24,6 +30,9 @@ public class MqttPublisher implements Runnable {
     final Mqtt5Client publisher;
     final String message;
 
+    public MqttPublisher(String message){
+        this(DEFAULT_PUBLISH_HOST,DEFAULT_PUBLISH_USERNAME,DEFAULT_PUBLISH_PASSWORD,DEFAULT_PUBLISH_TOPIC,message);
+    }
     public MqttPublisher(String publishHost, String publishUsername, String publishPassword, String publishTopic, String message) {
         this.publishHost = publishHost;
         this.publishUsername = publishUsername;
@@ -54,30 +63,27 @@ public class MqttPublisher implements Runnable {
     }
 
     public JSONObject transformer() {
-        JSONObject mqttMessage = new JSONObject();
+        JSONObject mqttMessage;
         try {
             ObjectMapper objectMapper = new ObjectMapper();
             JsonNode rootNode = objectMapper.readTree(message);
 
-            // deviceName과 spotName 추출 (예제)
+
             String deviceName = rootNode.path("deviceInfo").path("deviceName").asText();
             String spotName = rootNode.path("deviceInfo").path("tags").path("place").asText();
             JsonNode objectNode = rootNode.path("object");
             if (!objectNode.isMissingNode()) {
-                System.out.println("Object Data: " + objectNode.toString());
+                log.info("Object Data: {}" , objectNode);
             }
 
-
-            System.out.println("deviceName: " + deviceName);
-            System.out.println("spotName: " + spotName);
-
+            // 'tags' 추가
             mqttMessage = new JSONObject();
             JSONObject mqttTags = new JSONObject();
             mqttTags.put("deviceId", deviceName);
             mqttTags.put("location", spotName);
             mqttMessage.put("tags", mqttTags);
 
-            // `object` 필드 추가
+            // `data` 필드 추가
             mqttMessage.put("data", new JSONObject(objectNode.toString()));
         } catch (JsonProcessingException e) {
             throw new RuntimeException(e);
