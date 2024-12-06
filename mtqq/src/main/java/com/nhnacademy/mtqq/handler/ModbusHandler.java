@@ -13,13 +13,14 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.net.InetAddress;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 public class ModbusHandler implements TransForMqtt {
-    private static final Logger log = LoggerFactory.getLogger(Re.class);
+    private static final Logger log = LoggerFactory.getLogger(ModbusHandler.class);
 
     private String host;
     private int port;
@@ -76,6 +77,9 @@ public class ModbusHandler implements TransForMqtt {
 
     // JSON 파일을 로드하는 메서드
     private Map<String, List<Map<String, Object>>> loadJsonFile(String filePath) throws Exception {
+        if(filePath.isEmpty()){
+            throw new FileNotFoundException("file 경로를 찾을 수 없습니다.");
+        }
         ClassLoader classLoader = getClass().getClassLoader();
         File file = new File(classLoader.getResource(filePath).toURI());
         ObjectMapper mapper = new ObjectMapper();
@@ -125,6 +129,7 @@ public class ModbusHandler implements TransForMqtt {
                         .findFirst().orElse(null);
 
                 if (channelInfo != null) {
+                    @SuppressWarnings("unchecked")
                     List<Integer> offsetIds = (List<Integer>) channelInfo.get("offsetIds");
 
                     // 각 offsetId에 대해 처리
@@ -154,8 +159,7 @@ public class ModbusHandler implements TransForMqtt {
 
                                 // Location별 Map에 저장
                                 locationData.get(location).put(offset, formattedValue);
-
-                                //System.out.printf("Location: %s, Offset: %d, Value: %.2f %s%n", location, offset, formattedValue, unit);
+                                
                             } catch (ModbusProtocolException | ModbusNumberException | ModbusIOException e) {
                                 log.error("Failed to read offset " + offset + " for address " + address, e);
                             }
@@ -184,8 +188,6 @@ public class ModbusHandler implements TransForMqtt {
     public void startDataLoop() {
         while (true) {
             Map<String, Map<Integer, Double>> locationData = readData();
-            // 여기서 locationData를 활용할 수 있습니다.
-            // 예: locationData 출력
             System.out.println(locationData);
 
             try {
@@ -200,6 +202,9 @@ public class ModbusHandler implements TransForMqtt {
 
     @Override
     public Map<String, Object> transFromMqttMessage(Map<String, Map<Integer, Double>> locationData) {
+        if(locationData.isEmpty()){
+            throw new IllegalArgumentException("locationData값이 없습니다.");
+        }
         Map<String, Object> data = new HashMap<>();
 
         for (Map.Entry<String, Map<Integer, Double>> entry : locationData.entrySet()) {

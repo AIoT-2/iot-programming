@@ -1,82 +1,94 @@
 package com.nhnacademy.mtqq.handler;
 
-import java.io.*;
-import java.net.Socket;
-
 import com.nhnacademy.mtqq.Interface.TransForMqtt;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.net.Socket;
+import java.util.HashMap;
+import java.util.Map;
+
 public class TCPHandler implements TransForMqtt {
-
     private static final Logger log = LoggerFactory.getLogger(TCPHandler.class);
-    private final String HOST = "192.168.70.203"; // TCP 서버 IP
-    private final int PORT = 5000; // TCP 포트
 
-    String host;
-    int port;
+    private String host;
+    private int port;
 
-    public TCPHandler(String host, int port){
-        if(host != null && port <= 0 ){
-            this.host = host;
-            this.port = port;
-        } else {
-            throw new IllegalArgumentException("host와 port값을 제대로 입력하세요.");
+    // 생성자
+    public TCPHandler(String host, int port) {
+        if (host == null || host.isEmpty()) {
+            throw new IllegalArgumentException("host 값을 입력하세요.");
         }
+        if (port <= 0) {
+            throw new IllegalArgumentException("port 값은 양수여야 합니다.");
+        }
+        this.host = host;
+        this.port = port;
     }
 
-    public TCPHandler(){
-        this.host = HOST;
-        this.port = PORT;
+    // 기본 생성자 (기본 TCP 서버 정보 설정)
+    public TCPHandler() {
+        this.host = "127.0.0.1"; // 기본 호스트
+        this.port = 5000; // 기본 포트
+    }
+
+    // TCP 소켓을 통해 데이터를 읽는 메서드
+    public Map<String, String> readData() {
+        Map<String, String> dataMap = new HashMap<>();
+        try (Socket socket = new Socket(host, port);
+             PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
+             BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()))) {
+
+            // 서버로 요청 보내기
+            out.println("REQUEST_DATA");
+            log.info("Sent request to server: REQUEST_DATA");
+
+            // 서버로부터 데이터 읽기
+            String responseLine;
+            while ((responseLine = in.readLine()) != null) {
+                log.info("Received data: {}", responseLine);
+
+                // 데이터를 key-value 형식으로 파싱 (예: "key:value" 형식 가정)
+                String[] keyValue = responseLine.split(":");
+                if (keyValue.length == 2) {
+                    dataMap.put(keyValue[0].trim(), keyValue[1].trim());
+                }
+            }
+        } catch (Exception e) {
+            log.error("Error during TCP data reading", e);
+        }
+        return dataMap;
     }
 
     @Override
-    public String transformMqttMessage() {
-        Socket socket = null;
-        BufferedReader reader = null;
-        PrintWriter writer = null;
-        String mqttMessage = "";
-
-        try {
-            // TCP 소켓 연결
-            socket = new Socket(host, port);
-            reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-            writer = new PrintWriter(socket.getOutputStream(), true);
-
-            // 데이터 전송
-            writer.println("Hello, Server!");
-
-            // 서버로부터 데이터 읽기
-            String line;
-            StringBuilder messageBuilder = new StringBuilder();
-            messageBuilder.append("{\"deviceName\":\"tcp_device\", \"data\":[");
-
-            while ((line = reader.readLine()) != null) {
-                messageBuilder.append("{\"value\":\"").append(line).append("\"},");
-            }
-
-            // 마지막 콤마 제거 및 JSON 형식 닫기
-            if (messageBuilder.charAt(messageBuilder.length() - 1) == ',') {
-                messageBuilder.deleteCharAt(messageBuilder.length() - 1);
-            }
-            messageBuilder.append("]}");
-
-            mqttMessage = messageBuilder.toString();
-            log.debug("Generated MQTT Message: {}", mqttMessage);
-
-        } catch (IOException e) {
-            log.error("Error during TCP communication: {}", e.getMessage());
-        } finally {
-            // 자원 해제
-            try {
-                if (reader != null) reader.close();
-                if (writer != null) writer.close();
-                if (socket != null) socket.close();
-            } catch (IOException e) {
-                log.error("Error closing TCP resources: {}", e.getMessage());
-            }
+    public Map<String, Object> transFromMqttMessage(Map<String, Map<Integer, Double>> locationData) {
+        if (locationData.isEmpty()) {
+            throw new IllegalArgumentException("locationData 값이 없습니다.");
         }
 
-        return mqttMessage;
+        Map<String, Object> mqttMessageData = new HashMap<>();
+
+        // locationData 순회
+        for (Map.Entry<String, Map<Integer, Double>> entry : locationData.entrySet()) {
+            String key = entry.getKey(); // key는 String
+            Map<Integer, Double> value = entry.getValue(); // value는 Map<Integer, Double>
+
+            // value 내부 데이터를 가공
+            Map<String, Double> processedData = new HashMap<>();
+            for (Map.Entry<Integer, Double> innerEntry : value.entrySet()) {
+                // Integer 키를 문자열로 변환하여 Map<String, Double>에 저장
+                processedData.put(String.valueOf(innerEntry.getKey()), innerEntry.getValue());
+            }
+
+            // 처리된 데이터를 MQTT 메시지 형식으로 추가
+            mqttMessageData.put(key, processedData);
+        }
+
+        // 디바이스 이름 추가
+        mqttMessageData.put("deviceName", "TCPDevice");
+        return mqttMessageData;
     }
 }
