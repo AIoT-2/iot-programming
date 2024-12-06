@@ -8,16 +8,16 @@ import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 @Slf4j
 public class MqttSubscriber implements Runnable{
-    static final String DEFAULT_RECEIVE_HOST = "192.168.70.203";
-    static final String DEFAULT_RECEIVE_USERNAME = "";
-    static final String DEFAULT_RECEIVE_PASSWORD = "";
-    static final String DEFAULT_RECEIVE_TOPIC = "application/#";
+    private static final String DEFAULT_RECEIVE_HOST = "192.168.70.203";
+    private static final String DEFAULT_RECEIVE_USERNAME = "";
+    private static final String DEFAULT_RECEIVE_PASSWORD = "";
+    private static final String DEFAULT_RECEIVE_TOPIC = "application/#";
 
-    final String receiveHost;  // 수신 브로커 IP
-    final String receiveUsername; // 수신 브로커 사용자 이름
-    final String receivePassword;
-    final String receiveTopic;
-    final Mqtt5Client subscriber;
+    private final String receiveHost;  // 수신 브로커 IP
+    private final String receiveUsername; // 수신 브로커 사용자 이름
+    private final String receivePassword;
+    private final String receiveTopic;
+    private final Mqtt5Client subscriber;
 
 
     public MqttSubscriber(String receiveHost, String receiveUsername, String receivePassword, String receiveTopic) {
