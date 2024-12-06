@@ -1,6 +1,11 @@
 package com.sensor_data_parsing.interfaces;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public interface ProtocolToMqtt extends Runnable {
+    static final Logger logger = LoggerFactory.getLogger(ProtocolToMqtt.class);
+
     /**
      * 프로토콜로부터 데이터를 읽어오는 메서드.
      * 프로토콜별로 데이터를 어떻게 가져오는지 구현할 수 있는 추상 메서드입니다.
@@ -30,9 +35,17 @@ public interface ProtocolToMqtt extends Runnable {
     @Override
     default void run() {
         while (!Thread.currentThread().isInterrupted()) {
-            String data = fetchDataFromProtocol();
-            String[] convertData = convertToMqttFormat(data);
-            sendMessageToMqtt(convertData);
+            try {
+                String data = fetchDataFromProtocol();
+                String[] convertData = convertToMqttFormat(data);
+                sendMessageToMqtt(convertData);
+            } catch (IllegalArgumentException e) {
+                // 예외 발생 시 로그 기록
+                logger.error("Invalid argument encountered: ", e);
+            } catch (Exception e) {
+                // 예외 발생 시 일반적인 예외를 잡아서 로그 기록
+                logger.error("Unexpected error occurred: ", e);
+            }
         }
     }
 }
