@@ -1,0 +1,29 @@
+{
+    "channelData": [
+      { "channel": 1, "address": 100, "location": "캠퍼스" },
+      { "channel": 2, "address": 200, "location": "캠퍼스1" },
+      { "channel": 3, "address": 300, "location": "전등1" },
+      { "channel": 4, "address": 400, "location": "전등2" },
+      { "channel": 5, "address": 500, "location": "전등3" },
+      { "channel": 6, "address": 600, "location": "강의실b_바닥" },
+      { "channel": 7, "address": 700, "location": "강의실a_바닥1" },
+      { "channel": 8, "address": 800, "location": "강의실a_바닥2" },
+      { "channel": 9, "address": 900, "location": "프로젝터1" },
+      { "channel": 10, "address": 1000, "location": "프로젝터2" },
+      { "channel": 11, "address": 1100, "location": "회의실" },
+      { "channel": 12, "address": 1200, "location": "서버실" },
+      { "channel": 13, "address": 1300, "location": "간판" },
+      { "channel": 14, "address": 1400, "location": "페어룸" },
+      { "channel": 15, "address": 1500, "location": "사무실_전열1" },
+      { "channel": 16, "address": 1600, "location": "사무실_전열2" },
+      { "channel": 17, "address": 1700, "location": "사무실_복사기" },
+      { "channel": 18, "address": 1800, "location": "빌트인_전열" },
+      { "channel": 19, "address": 1900, "location": "사무실_전열3" },
+      { "channel": 20, "address": 2000, "location": "정수기" },
+      { "channel": 21, "address": 2100, "location": "하이브_전열" },
+      { "channel": 22, "address": 2200, "location": "바텐_전열" },
+      { "channel": 23, "address": 2300, "location": "S_P" },
+      { "channel": 24, "address": 2400, "location": "공조기" },
+      { "channel": 25, "address": 2500, "location": "AC" }
+    ]
+  }
