@@ -9,6 +9,7 @@ import org.slf4j.LoggerFactory;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.io.IOException;
+import java.math.BigInteger;
 
 import com.intelligt.modbus.jlibmodbus.Modbus;
 import com.intelligt.modbus.jlibmodbus.exception.ModbusIOException;
@@ -108,7 +109,6 @@ public class SimpleMasterTCP {
                 ModbusMaster m = ModbusMasterFactory.createModbusMasterTCP(tcpParameters);
                 Modbus.setAutoIncrementTransactionId(true);
         
-                int slaveId = 1;
         
                 try {
                     if (!m.isConnected()) {
@@ -119,22 +119,48 @@ public class SimpleMasterTCP {
                     // offset 값이 100, 200, ..., 24000으로 증가
                     for (int i = 0; i < channelAddressArray.length(); i++) {
                         JSONObject channelAddressObject = channelAddressArray.getJSONObject(i);
+                        
                         int baseOffset = channelAddressObject.getInt("address"); // JSON에서 "address" 값을 가져옴
                         int quantity = 32; // 한 번에 32개의 레지스터 읽기
+                        
 
                         try {
-                            // 레지스터 읽기
-                            int[] registerValues = m.readInputRegisters(slaveId, baseOffset, quantity);
+                            // 요청 객체 생성
+                            ReadInputRegistersRequest request = new ReadInputRegistersRequest();
+                            request.setServerAddress(1); // slaveId
+                            request.setStartAddress(baseOffset); // 시작 주소
+                            request.setQuantity(quantity); // 읽을 레지스터 수
+
+                            // 요청 실행
+                            ReadInputRegistersResponse response = (ReadInputRegistersResponse) m.processRequest(request);
 
                             // 가져온 레지스터 출력
-                            for (int k = 0; k < registerValues.length; k++) {
-                                System.out.println("Address: " + (baseOffset + k) + ", Value: " + registerValues[k]);
+                            int loopLimit = Math.min(response.getHoldingRegisters().getQuantity(), channelInfoArray.length());
+                            // 중복되는 채널 정보는 제거하고 출력
+                            for (int k = 0; k < loopLimit; k++) {
+                                JSONObject channelInfoObject = channelInfoArray.getJSONObject(k);
+                                int size = channelInfoObject.getInt("size");
+                                BigInteger scale = channelInfoObject.get("scale");
+                                if(scale == null){
+                                    System.out.println("Value is null");
+                                    continue;
+                                }
+                                System.out.println("Address: " + (baseOffset + k) + ", Value: " + response.getHoldingRegisters().get(k));
+                                if (size == 1 && (k + 1) < response.getHoldingRegisters().getQuantity()) {
+                                    int value = (response.getHoldingRegisters().get(k) << 8) | response.getHoldingRegisters().get(k + 1);
+
+                                    System.out.println("16-bit Value: " + value / scale);
+                                } else if (size == 2 && (k + 1) < response.getHoldingRegisters().getQuantity()) {
+                                    int value = (response.getHoldingRegisters().get(k) << 16) | response.getHoldingRegisters().get(k + 1);
+                                    System.out.println("32-bit Value: " + value / scale);
+                                }
                             }
+
+
                         } catch (ModbusProtocolException | ModbusNumberException | ModbusIOException e) {
                             e.printStackTrace();
                         }
                     }
-
 
                 } 
                 finally {
