@@ -1,0 +1,128 @@
+[
+    {
+      "channel": 1,
+      "address": 100,
+      "spot": "캠퍼스"
+    },
+    {
+      "channel": 2,
+      "address": 200,
+      "spot": "캠퍼스1"
+    },
+    {
+      "channel": 3,
+      "address": 300,
+      "spot": "전등1"
+    },
+    {
+      "channel": 4,
+      "address": 400,
+      "spot": "전등2"
+    },
+    {
+      "channel": 5,
+      "address": 500,
+      "spot": "전등3"
+    },
+    {
+      "channel": 6,
+      "address": 600,
+      "spot": "강의실b_바닥"
+    },
+    {
+      "channel": 7,
+      "address": 700,
+      "spot": "강의실a_바닥1"
+    },
+    {
+      "channel": 8,
+      "address": 800,
+      "spot": "강의실a_바닥2"
+    },
+    {
+      "channel": 9,
+      "address": 900,
+      "spot": "프로젝터1"
+    },
+    {
+      "channel": 10,
+      "address": 1000,
+      "spot": "프로젝터2"
+    },
+    {
+      "channel": 11,
+      "address": 1100,
+      "spot": "회의실"
+    },
+    {
+      "channel": 12,
+      "address": 1200,
+      "spot": "서버실"
+    },
+    {
+      "channel": 13,
+      "address": 1300,
+      "spot": "간판"
+    },
+    {
+      "channel": 14,
+      "address": 1400,
+      "spot": "페어룸"
+    },
+    {
+      "channel": 15,
+      "address": 1500,
+      "spot": "사무실_전열1"
+    },
+    {
+      "channel": 16,
+      "address": 1600,
+      "spot": "사무실_전열2"
+    },
+    {
+      "channel": 17,
+      "address": 1700,
+      "spot": "사무실_복사기"
+    },
+    {
+      "channel": 18,
+      "address": 1800,
+      "spot": "빌트인_전열"
+    },
+    {
+      "channel": 19,
+      "address": 1900,
+      "spot": "사무실_전열3"
+    },
+    {
+      "channel": 20,
+      "address": 2000,
+      "spot": "정수기"
+    },
+    {
+      "channel": 21,
+      "address": 2100,
+      "spot": "하이브_전열"
+    },
+    {
+      "channel": 22,
+      "address": 2200,
+      "spot": "바텐_전열"
+    },
+    {
+      "channel": 23,
+      "address": 2300,
+      "spot": "S_P"
+    },
+    {
+      "channel": 24,
+      "address": 2400,
+      "spot": "공조기"
+    },
+    {
+      "channel": 25,
+      "address": 2500,
+      "spot": "AC"
+    }
+  ]
+  

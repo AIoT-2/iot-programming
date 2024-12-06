@@ -1,0 +1,318 @@
+[
+    {
+      "offset": 0,
+      "name": "type",
+      "type": "UINT16",
+      "size": 1,
+      "scale": 1
+    },
+    {
+      "offset": 1,
+      "name": "a leakage current",
+      "type": "UINT16",
+      "size": 1,
+      "scale": 1
+    },
+    {
+      "offset": 2,
+      "name": "current",
+      "type": "UINT32",
+      "size": 2,
+      "scale": 100
+    },
+    {
+      "offset": 4,
+      "name": "w",
+      "type": "INT32",
+      "size": 2,
+      "scale": 1
+    },
+    {
+      "offset": 6,
+      "name": "var",
+      "type": "INT32",
+      "size": 2,
+      "scale": 1
+    },
+    {
+      "offset": 8,
+      "name": "va",
+      "type": "UINT32",
+      "size": 2,
+      "scale": 1
+    },
+    {
+      "offset": 10,
+      "name": "pf average",
+      "type": "INT16",
+      "size": 1,
+      "scale": 100
+    },
+    {
+      "offset": 11,
+      "name": "reserved",
+      "type": "UINT16",
+      "size": 1,
+      "scale": 1
+    },
+    {
+      "offset": 12,
+      "name": "current unbalance",
+      "type": "UINT16",
+      "size": 1,
+      "scale": 100
+    },
+    {
+      "offset": 13,
+      "name": "i thd average",
+      "type": "UINT16",
+      "size": 1,
+      "scale": 100
+    },
+    {
+      "offset": 14,
+      "name": "igr",
+      "type": "UINT16",
+      "size": 1,
+      "scale": 10
+    },
+    {
+      "offset": 15,
+      "name": "igc",
+      "type": "UINT16",
+      "size": 1,
+      "scale": 10
+    },
+    {
+      "offset": 16,
+      "name": "v1",
+      "type": "UINT32",
+      "size": 2,
+      "scale": 100
+    },
+    {
+      "offset": 18,
+      "name": "i1",
+      "type": "UINT32",
+      "size": 2,
+      "scale": 100
+    },
+    {
+      "offset": 20,
+      "name": "w",
+      "type": "INT32",
+      "size": 2,
+      "scale": 1
+    },
+    {
+      "offset": 22,
+      "name": "var",
+      "type": "INT32",
+      "size": 2,
+      "scale": 1
+    },
+    {
+      "offset": 24,
+      "name": "va",
+      "type": "UINT32",
+      "size": 2,
+      "scale": 1
+    },
+    {
+      "offset": 26,
+      "name": "volt unbalance",
+      "type": "UINT16",
+      "size": 1,
+      "scale": 100
+    },
+    {
+      "offset": 27,
+      "name": "current unbalance",
+      "type": "UINT16",
+      "size": 1,
+      "scale": 100
+    },
+    {
+      "offset": 28,
+      "name": "phase",
+      "type": "UINT16",
+      "size": 1,
+      "scale": 100
+    },
+    {
+      "offset": 29,
+      "name": "power factor",
+      "type": "INT16",
+      "size": 1,
+      "scale": 100
+    },
+    {
+      "offset": 30,
+      "name": "i1 thd",
+      "type": "UINT16",
+      "size": 1,
+      "scale": 100
+    },
+    {
+      "offset": 31,
+      "name": "reserved",
+      "type": "UINT16",
+      "size": 1,
+      "scale": 1
+    },
+    {
+      "offset": 32,
+      "name": "v2",
+      "type": "UINT32",
+      "size": 2,
+      "scale": 100
+    },
+    {
+      "offset": 34,
+      "name": "i2",
+      "type": "UINT32",
+      "size": 2,
+      "scale": 100
+    },
+    {
+      "offset": 36,
+      "name": "w",
+      "type": "INT32",
+      "size": 2,
+      "scale": 1
+    },
+    {
+      "offset": 38,
+      "name": "var",
+      "type": "INT32",
+      "size": 2,
+      "scale": 1
+    },
+    {
+      "offset": 40,
+      "name": "va",
+      "type": "UINT32",
+      "size": 2,
+      "scale": 1
+    },
+    {
+      "offset": 42,
+      "name": "volt unbalance",
+      "type": "UINT16",
+      "size": 1,
+      "scale": 100
+    },
+    {
+      "offset": 43,
+      "name": "current unbalance",
+      "type": "UINT16",
+      "size": 1,
+      "scale": 100
+    },
+    {
+      "offset": 44,
+      "name": "phase",
+      "type": "UINT16",
+      "size": 1,
+      "scale": 100
+    },
+    {
+      "offset": 45,
+      "name": "power factor",
+      "type": "INT16",
+      "size": 1,
+      "scale": 100
+    },
+    {
+      "offset": 46,
+      "name": "i2 thd",
+      "type": "UINT16",
+      "size": 1,
+      "scale": 100
+    },
+    {
+      "offset": 47,
+      "name": "reserved",
+      "type": "UINT16",
+      "size": 1,
+      "scale": 1
+    },
+    {
+      "offset": 48,
+      "name": "v3",
+      "type": "UINT32",
+      "size": 2,
+      "scale": 100
+    },
+    {
+      "offset": 70,
+      "name": "i3",
+      "type": "UINT32",
+      "size": 2,
+      "scale": 100
+    },
+    {
+      "offset": 52,
+      "name": "w",
+      "type": "INT32",
+      "size": 2,
+      "scale": 1
+    },
+    {
+      "offset": 54,
+      "name": "var",
+      "type": "INT32",
+      "size": 2,
+      "scale": 1
+    },
+    {
+      "offset": 56,
+      "name": "va",
+      "type": "UINT32",
+      "size": 2,
+      "scale": 1
+    },
+    {
+      "offset": 58,
+      "name": "volt unbalance",
+      "type": "UINT16",
+      "size": 1,
+      "scale": 100
+    },
+    {
+      "offset": 59,
+      "name": "current unbalance",
+      "type": "UINT16",
+      "size": 1,
+      "scale": 100
+    },
+    {
+      "offset": 60,
+      "name": "phase",
+      "type": "UINT16",
+      "size": 1,
+      "scale": 100
+    },
+    {
+      "offset": 61,
+      "name": "power factor",
+      "type": "INT16",
+      "size": 1,
+      "scale": 100
+    },
+    {
+      "offset": 62,
+      "name": "i3 thd",
+      "type": "UINT16",
+      "size": 1,
+      "scale": 100
+    },
+    {
+      "offset": 63,
+      "name": "reserved",
+      "type": "UINT16",
+      "size": 1,
+      "scale": 1
+    }
+  ]
+  
