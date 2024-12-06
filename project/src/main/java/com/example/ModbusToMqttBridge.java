@@ -215,7 +215,7 @@ public class ModbusToMqttBridge {
 
             while (true) {
                 try {
-                    bridge.processChannel(1);
+                    bridge.processAllChannels();
                     Thread.sleep(10000); // 10초 대기
                 } catch (Exception e) {
                     logger.warning("Error in processing cycle: " + e.getMessage());

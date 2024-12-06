@@ -11,8 +11,9 @@ public class MQTTSubscriber {
     // 브로커 설정
     private static final String SOURCE_BROKER = "tcp://192.168.70.203:1883";
     private static final String DEST_BROKER = "tcp://localhost:1883";
-    private static final String SOURCE_CLIENT_ID = "SourceSubscriber";
-    private static final String DEST_CLIENT_ID = "DestPublisher";
+    private static final String SOURCE_CLIENT_ID = "inho_source";
+    private static final String DEST_CLIENT_ID = "inho_dest";
+
     private static final String SOURCE_TOPIC = "application/#";
     private static final String DEST_TOPIC_PREFIX = "sensor";
 
