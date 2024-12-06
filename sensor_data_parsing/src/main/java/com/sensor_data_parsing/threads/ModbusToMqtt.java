@@ -20,7 +20,10 @@ import com.sensor_data_parsing.MqttClient;
 import com.sensor_data_parsing.ValueMapper;
 import com.sensor_data_parsing.interfaces.ProtocolToMqtt;
 
-//Modbus로 데이터를 받고 포매팅을 한 후 MQTT로 보내는 역할을 수행하는 클래스.
+/*
+ * ModbusToMqtt 클래스는 Modbus 메시지를 받고, 해당 메시지를 처리한 후 새로운 형식으로 발행하는 작업을 수행합니다.
+ * Runnable 인터페이스를 구현하여 별도의 스레드에서 실행됩니다.
+ */
 public class ModbusToMqtt implements ProtocolToMqtt {
     private static final int DEFAULT_SLAVE_ID = 1; // 기본 Modbus 슬레이브 ID
     private static final int DEFAULT_START_ADDRESS = 100; // Modbus 통신에서의 기본 주소

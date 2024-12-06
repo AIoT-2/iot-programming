@@ -2,7 +2,6 @@ package com.sensor_data_parsing.threads;
 
 import java.io.IOException;
 import java.util.Map;
-import java.util.concurrent.CountDownLatch;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -20,6 +19,12 @@ public class MqttToMqtt implements ProtocolToMqtt {
     private final MqttClient subscriber;
     private final MqttClient publisher;
 
+    private final Object lock = new Object(); // 동기화를 위한 lock 객체
+    // 구독이 이미 되어있으면 스레드 생성을 막기 위한 플래그.
+    private boolean isSubscribed = false;
+    // 메시지를 수신하는데 사용되는 변수. 수신된 메시지를 저장합니다.
+    private String receivedMessage;
+
     /**
      * MqttToMqtt 생성자는 구독자와 발행자 MqttClient를 초기화합니다.
      * 
@@ -31,27 +36,32 @@ public class MqttToMqtt implements ProtocolToMqtt {
         this.publisher = publisher;
     }
 
-    // 구독한 MQTT 토픽에서 메시지를 수신하고, 처리한 후 새로운 형식으로 메시지를 발행합니다.
     @Override
     public String fetchDataFromProtocol() {
-        final String[] receivedMessage = new String[1];
-        final CountDownLatch latch = new CountDownLatch(1); // 동기화를 위한 카운트다운 래치
-
-        // 메시지를 비동기적으로 수신
-        subscriber.subscribeMessage("application/#", (String message) -> {
-            receivedMessage[0] = message;
-            latch.countDown(); // 메시지가 수신되면 카운트다운
-        });
-
-        // 메시지가 수신될 때까지 기다림
-        try {
-            latch.await(); // 메시지가 수신될 때까지 대기
-        } catch (InterruptedException e) {
-            Thread.currentThread().interrupt(); // InterruptedException 처리
-            System.err.println("메시지 수신 대기 중 인터럽트 발생");
+        receivedMessage = null;
+        // 구독을 한 번만 설정하도록 함
+        if (!isSubscribed) {
+            subscriber.subscribeMessage("application/#", (String message) -> {
+                synchronized (lock) {
+                    receivedMessage = message;
+                    lock.notify(); // 메시지가 수신되면 대기 중인 스레드를 깨웁니다.
+                }
+            });
+            isSubscribed = true; // 한 번만 구독하도록 플래그 설정
         }
 
-        return receivedMessage[0]; // 수신된 메시지 반환
+        synchronized (lock) {
+            // 수신된 메시지가 있을 때까지 대기
+            while (receivedMessage == null) {
+                try {
+                    lock.wait(); // 메시지가 수신될 때까지 대기
+                } catch (InterruptedException e) {
+                    Thread.currentThread().interrupt();
+                }
+            }
+        }
+
+        return receivedMessage; // 수신된 메시지 반환
     }
 
     @Override
@@ -59,7 +69,6 @@ public class MqttToMqtt implements ProtocolToMqtt {
         String[] messageArray = new String[2];
         // 수신한 메시지를 처리하는 부분
         try {
-            System.out.println(message);
             JsonNode rootNode = objectMapper.readTree(message);
             JsonNode objectNode = rootNode.path("object");
 

@@ -29,8 +29,10 @@ public interface ProtocolToMqtt extends Runnable {
 
     @Override
     default void run() {
-        String data = fetchDataFromProtocol();
-        String[] convertData = convertToMqttFormat(data);
-        sendMessageToMqtt(convertData);
+        while (!Thread.currentThread().isInterrupted()) {
+            String data = fetchDataFromProtocol();
+            String[] convertData = convertToMqttFormat(data);
+            sendMessageToMqtt(convertData);
+        }
     }
 }
