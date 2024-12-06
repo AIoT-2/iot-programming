@@ -54,9 +54,7 @@ public class MqttClientImpl implements Runnable {
 
     @Override
     public void run() {
-        String clientIdAndTime = createDynamicId();
-
-        try (MqttClient mqttClient = new MqttClient(broker, clientIdAndTime)) {
+        try (MqttClient mqttClient = new MqttClient(broker, createDynamicId())) {
             MqttConnectOptions options = new MqttConnectOptions();
             options.setCleanSession(true);
 

@@ -97,6 +97,27 @@ public final class Property {
         return TIME_FORMAT;
     }
 
+    public static String getIpAddress() {
+        return IP_ADDRESS;
+    }
+
+    /**
+     * <h5>Info</h5>
+     * 특정 서비스의 Port 번호를 반환합니다.
+     * <hr>
+     *
+     * @param serviceName 서비스 이름
+     * @return Port 번호
+     * @throws RuntimeException {@code /resources/config.json}에 존재하지 않는 서비스 데이터를 호출한 경우
+     */
+    public static String getServicePort(String serviceName) {
+        if (!PORT_MAP.containsKey(serviceName)) {
+            log.warn("Check your port data");
+            nodeIsNotExist(serviceName);
+        }
+        return PORT_MAP.get(serviceName);
+    }
+
     /**
      * <h5>Endpoint란?</h5>
      * 네트워크에서 연결 가능한 서비스의 접속 지점을 의미합니다. <br>
@@ -111,24 +132,7 @@ public final class Property {
      * @return Endpoint
      */
     public static String getEndpoint(String serviceName) {
-        return IP_ADDRESS + ":" + getServicePort(serviceName);
-    }
-
-    /**
-     * <h5>Info</h5>
-     * 특정 서비스의 Port 번호를 반환합니다.
-     * <hr>
-     *
-     * @param serviceName 서비스 이름
-     * @return Port 번호
-     * @throws RuntimeException {@code /resources/config.json}에 존재하지 않는 서비스 데이터를 호출한 경우
-     */
-    private static String getServicePort(String serviceName) {
-        if (!PORT_MAP.containsKey(serviceName)) {
-            log.warn("Check your port data");
-            nodeIsNotExist(serviceName);
-        }
-        return PORT_MAP.get(serviceName);
+        return getIpAddress() + ":" + getServicePort(serviceName);
     }
 
     /**
