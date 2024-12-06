@@ -1,13 +1,19 @@
 package com.nhnacademy.modbus;
 
+import com.nhnacademy.util.Property;
+
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.net.Socket;
 
 public class ModbusTcpClient {
+
     public static void main(String[] args) {
-        String serverIp = "192.168.70.203"; // 서버 IP
-        int serverPort = 502; // 서버 포트
+        // String serverIp = "192.168.70.203"; // 서버 IP
+        // int serverPort = 502; // 서버 포트
+
+        String serverIp = Property.getIpAddress();
+        int serverPort = Integer.parseInt(Property.getServicePort("mqtt"));
 
         try (Socket socket = new Socket(serverIp, serverPort)) {
             DataOutputStream out = new DataOutputStream(socket.getOutputStream());
