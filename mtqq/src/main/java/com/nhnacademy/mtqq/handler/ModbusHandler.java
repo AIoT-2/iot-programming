@@ -183,23 +183,7 @@ public class ModbusHandler implements TransForMqtt {
         // 결과 Map 반환
         return locationData;
     }
-
-    // 5초마다 데이터를 받아오는 메서드
-    public void startDataLoop() {
-        while (true) {
-            Map<String, Map<Integer, Double>> locationData = readData();
-            System.out.println(locationData);
-
-            try {
-                // 5초 대기
-                Thread.sleep(10000);
-            } catch (InterruptedException e) {
-                log.error("Error in sleep: ", e);
-                break;
-            }
-        }
-    }
-
+    
     @Override
     public Map<String, Object> transFromMqttMessage(Map<String, Map<Integer, Double>> locationData) {
         if(locationData.isEmpty()){
