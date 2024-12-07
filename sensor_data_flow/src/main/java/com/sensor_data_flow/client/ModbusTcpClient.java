@@ -24,7 +24,7 @@ import com.sensor_data_flow.ValueMapper;
  * 읽은 데이터를 특정 포맷으로 변환하여 반환합니다.
  */
 public class ModbusTcpClient {
-    static final Logger logger = LoggerFactory.getLogger(ModbusTcpClient.class);
+    private static final Logger logger = LoggerFactory.getLogger(ModbusTcpClient.class);
 
     private static final ReadInputRegistersRequest request = new ReadInputRegistersRequest(); // Modbus 요청 객체
 
@@ -151,8 +151,6 @@ public class ModbusTcpClient {
         while (offset < response.getHoldingRegisters().getQuantity()) {
             int registerValue;
             try {
-                int address = getStartAddress() + offset;
-
                 String addressName = addressMap.get(offset).getName();
                 double scale = addressMap.get(offset).getScale();
 
@@ -169,7 +167,6 @@ public class ModbusTcpClient {
 
                 double registerValueDouble = registerValue / scale;
 
-                System.out.println("Address: " + address + ", Value: " + registerValue);
                 // registerValueDouble이 정수와 같으면 int로 변환
                 dataMap.put(addressName,
                         checkDoubleType(registerValueDouble) ? (int) registerValueDouble

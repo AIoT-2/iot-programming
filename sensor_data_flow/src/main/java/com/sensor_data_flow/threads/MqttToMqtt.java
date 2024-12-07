@@ -78,8 +78,8 @@ public class MqttToMqtt implements ProtocolToMqtt {
                 String spotName = rootNode.path("deviceInfo").path("tags")
                         .path("name").asText();
 
-                System.out.println("deviceName: " + deviceName);
-                System.out.println("spotName: " + spotName);
+                logger.info("deviceName: {}", deviceName);
+                logger.info("spotName: {}", spotName);
 
                 // "object" 필드를 Map으로 변환
                 @SuppressWarnings("unchecked")
@@ -99,7 +99,7 @@ public class MqttToMqtt implements ProtocolToMqtt {
             }
 
         } catch (IOException e) {
-            System.err.println("JSON 파싱 중 오류가 발생: " + e.getMessage());
+            logger.error("JSON 파싱 중 오류가 발생: {}", e.getMessage());
         }
 
         return messageArray;

@@ -105,7 +105,7 @@ public class ModbusToMqtt implements ProtocolToMqtt {
             TimeUnit.SECONDS.sleep(seconds);
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
-            System.err.println("스레드 대기 중 인터럽트 발생: " + e.getMessage());
+            logger.error("스레드 대기 중 인터럽트 발생: {}", e.getMessage());
         }
     }
 
@@ -120,7 +120,7 @@ public class ModbusToMqtt implements ProtocolToMqtt {
             return objectMapper.writeValueAsString(dataMessage);
         } catch (JsonProcessingException e) {
             logger.error("메시지 JSON 변환 오류: {}", e.getMessage());
-            return null; // 변환 실패 시 null 반환
+            return "{}"; // 변환 실패 시 빈 JSON 객체 반환
         }
     }
 }

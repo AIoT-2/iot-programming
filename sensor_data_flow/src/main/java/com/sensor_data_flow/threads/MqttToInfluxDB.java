@@ -64,8 +64,8 @@ public class MqttToInfluxDB implements Runnable {
                 String spotName = rootNode.path("spotName").asText();
                 JsonNode spotNode = rootNode.path("spotName");
 
-                System.out.println("deviceName: " + deviceName);
-                System.out.println("spotName: " + spotName);
+                logger.info("deviceName: {}", deviceName);
+                logger.info("spotName: {}", spotName);
 
                 JsonNode dataNode = rootNode.path("data");
 
@@ -75,10 +75,8 @@ public class MqttToInfluxDB implements Runnable {
                         .readValue(dataNode.toString(), Map.class);
 
                 // 데이터 출력
-                System.out.println("----------data----------");
                 for (Map.Entry<String, Object> entry : dataMap.entrySet()) {
-                    System.out.println(entry.getKey() + ": "
-                            + entry.getValue());
+                    logger.info("{} : {}", entry.getKey(), entry.getValue());
                 }
 
                 // InfluxDB에 데이터를 저장
@@ -91,10 +89,10 @@ public class MqttToInfluxDB implements Runnable {
                         WritePrecision.MS); // 타임스탬프 설정
                 influxDBClient.getWriteApiBlocking().writePoint(point); // 데이터 삽입
 
-                System.out.println("데이터가 InfluxDB에 성공적으로 저장되었습니다!\n");
+                logger.info("데이터가 InfluxDB에 저장됨");
 
             } catch (IOException e) {
-                System.err.println("JSON 파싱 중 오류가 발생: " + e.getMessage());
+                logger.error("JSON 파싱 중 오류가 발생: {}", e.getMessage());
             }
         });
     }

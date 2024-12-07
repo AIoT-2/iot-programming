@@ -3,11 +3,15 @@ package com.sensor_data_flow;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.intelligt.modbus.jlibmodbus.Modbus;
 import com.intelligt.modbus.jlibmodbus.tcp.TcpParameters;
 
 // TCP 연결을 설정하는 클래스.
 public class TcpConnect {
+    private static final Logger logger = LoggerFactory.getLogger(TcpConnect.class);
     private static final String DEFAULT_IP_ADDRESS = "192.168.70.203"; // 기본 IP 주소
     private static final int DEFAULT_PORT = Modbus.TCP_PORT; // 기본 포트
     private static final boolean DEFAULT_SET_KEEP_ALIVE = true; // 기본 keepAlive 설정
@@ -30,7 +34,7 @@ public class TcpConnect {
             // 연결할 서버의 IP 주소 설정
             tcpParameters.setHost(InetAddress.getByName(ipAddress));
         } catch (UnknownHostException e) {
-            System.err.println("유효하지 않은 IP 주소입니다." + e.getMessage());
+            logger.error("유효하지 않은 IP 주소입니다. {}", e.getMessage());
         }
 
         // 포트와 keepAlive 설정
