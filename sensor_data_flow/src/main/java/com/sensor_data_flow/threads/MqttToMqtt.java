@@ -5,7 +5,7 @@ import java.util.Map;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.sensor_data_flow.MqttClient;
+import com.sensor_data_flow.client.MqttClient;
 import com.sensor_data_flow.interfaces.ProtocolToMqtt;
 
 /**

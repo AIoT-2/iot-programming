@@ -3,16 +3,20 @@ package com.sensor_data_flow.threads;
 import java.io.IOException;
 import java.util.Map;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.influxdb.client.InfluxDBClient;
 import com.influxdb.client.InfluxDBClientFactory;
 import com.influxdb.client.domain.WritePrecision;
 import com.influxdb.client.write.Point;
-import com.sensor_data_flow.MqttClient;
+import com.sensor_data_flow.client.MqttClient;
 
 // MQTT로부터 데이터를 받아 InfluxDB에 저장하는 작업을 수행하는 클래스.
 public class MqttToInfluxDB implements Runnable {
+    private static final Logger logger = LoggerFactory.getLogger(MqttToInfluxDB.class);
     private static final ObjectMapper objectMapper = new ObjectMapper(); // JSON 처리에 사용할 ObjectMapper 객체
 
     private static final String DEFAULT_INFLUXDB_URL = "http://192.168.71.210:8086"; // 기본 InfluxDB 서버 URL
@@ -52,6 +56,7 @@ public class MqttToInfluxDB implements Runnable {
         // MQTT 토픽 구독 및 메시지 수신
         subscriber.subscribeMessage("application/#", (String message) -> {
             try {
+                logger.info(message);
                 JsonNode rootNode = objectMapper.readTree(message);
 
                 // deviceName과 spotName 추출

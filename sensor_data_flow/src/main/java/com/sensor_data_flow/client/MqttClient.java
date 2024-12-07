@@ -1,4 +1,4 @@
-package com.sensor_data_flow;
+package com.sensor_data_flow.client;
 
 import java.nio.charset.StandardCharsets;
 import java.util.concurrent.TimeUnit;
