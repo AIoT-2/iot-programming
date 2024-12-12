@@ -61,5 +61,13 @@
         <artifactId>logback-classic</artifactId>
         <version>1.5.12</version>
     </dependency>
+
+    <!-- Lombok 의존성 -->
+    <dependency>
+        <groupId>org.projectlombok</groupId>
+        <artifactId>lombok</artifactId>
+        <version>1.18.24</version> <!-- 최신 버전 사용 -->
+        <scope>provided</scope>
+    </dependency>
   </dependencies>
 </project>

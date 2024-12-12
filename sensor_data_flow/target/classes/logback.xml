@@ -1,27 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
 
-    <!-- 콘솔 로그 출력 설정 -->
-    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
-        <encoder>
-            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%t] %-5level %logger{36} - %msg%n</pattern>
-        </encoder>
-    </appender>
-    
-    <!-- ERROR 레벨 로그 파일 설정 -->
-    <appender name="errorFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>./sensor_data_flow/logs/error.log</file>
+    <!-- 로그 파일 설정 -->
+    <appender name="ffile" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>./logs/info.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>./sensor_data_flow/logs/error-%d{yyyy-MM-dd}.log</fileNamePattern>
-            <maxHistory>30</maxHistory> <!-- 최대 보존일수 (30일) -->
+            <fileNamePattern>./logs/info-%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>30</maxHistory>
         </rollingPolicy>
         <encoder>
             <pattern>%d{yyyy-MM-dd HH:mm:ss} [%t] %-5level %logger{36} - %msg%n</pattern>
         </encoder>
     </appender>
 
-    <logger name="com.sensor_data_flow.error" level="ERROR">
-        <appender-ref ref="errorFile" />
-    </logger>
+    <!-- 루트 로그 설정: 콘솔로 로그 출력 -->
+    <root level="DEBUG">
+        <appender-ref ref="file"/>
+    </root>
 
 </configuration>
