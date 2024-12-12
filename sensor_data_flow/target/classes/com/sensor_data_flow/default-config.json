@@ -1,0 +1,36 @@
+{
+    "MqttSub": {
+        "DEFAULT_MQTT_IDENTIFIER" : "sub",
+        "DEFAULT_MQTT_HOST" : "192.168.70.203",
+        "DEFAULT_MQTT_PORT" : 1883,
+        "DEFAULT_MQTT_USER_NAME" : "", 
+        "DEFAULT_MQTT_PASSWORD" : ""
+    },
+    "MqttPub": {
+        "DEFAULT_MQTT_IDENTIFIER" : "pub",
+        "DEFAULT_MQTT_HOST" : "localhost",
+        "DEFAULT_MQTT_PORT" : 8888,
+        "DEFAULT_MQTT_USER_NAME" : "", 
+        "DEFAULT_MQTT_PASSWORD" : ""
+    },
+    "ModbusMaster": {
+        "DEFAULT_IP_ADDRESS" : "192.168.70.203",
+        "DEFAULT_MODBUS_PORT" : 502,
+        "DEFAULT_SLAVE_ID" : 1,
+        "DEFAULT_START_ADDRESS" : 100,
+        "DEFAULT_END_ADDRESS" : 2400,
+        "DEFAULT_QUANTITY" : 32,
+        "DEFAULT_TRANSACTION_ID" : 1
+    },
+    "InfluxDBPub": {
+        "DEFAULT_URL" : "http://192.168.71.210:8086",
+        "DEFAULT_TOKENS" : "YKnMLcHEQ3wsyg778dUXYzvGijjmR4ImSVOYU2Nlr5BugSyFGjNsTyRb6c-5eozXGLTObSxNWqGW5yaUQxRaWw==",
+        "DEFAULT_ORGANIZATION" : "nhnacademy",
+        "DEFAULT_BUCKET" : "test" 
+    },
+    "MysqlPub": {
+        "DEFAULT_URL" : "jdbc:mysql://localhost:3306/test_db",
+        "DEFAULT_USER" : "root",
+        "DEFAULT_PASSWORD" : "password"
+    }
+}

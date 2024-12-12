@@ -7,19 +7,7 @@
             <pattern>%d{yyyy-MM-dd HH:mm:ss} [%t] %-5level %logger{36} - %msg%n</pattern>
         </encoder>
     </appender>
-
-    <!-- INFO 레벨 로그 파일 설정 -->
-    <appender name="infoFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>./sensor_data_flow/logs/info.log</file>
-        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>./sensor_data_flow/logs/info-%d{yyyy-MM-dd}.log</fileNamePattern>
-            <maxHistory>30</maxHistory> <!-- 최대 보존일수 (30일) -->
-        </rollingPolicy>
-        <encoder>
-            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%t] %-5level %logger{36} - %msg%n</pattern>
-        </encoder>
-    </appender>
-
+    
     <!-- ERROR 레벨 로그 파일 설정 -->
     <appender name="errorFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <file>./sensor_data_flow/logs/error.log</file>
@@ -32,18 +20,8 @@
         </encoder>
     </appender>
 
-    <!-- 로그 레벨에 따라 appender-ref 연결 -->
-    <logger name="com.sensor_data_flow.info" level="INFO">
-        <appender-ref ref="infoFile" />
-    </logger>
-
     <logger name="com.sensor_data_flow.error" level="ERROR">
         <appender-ref ref="errorFile" />
     </logger>
-
-    <!-- 기본 root 로그 설정 -->
-    <root level="INFO">
-        <appender-ref ref="console"/>
-    </root>
 
 </configuration>

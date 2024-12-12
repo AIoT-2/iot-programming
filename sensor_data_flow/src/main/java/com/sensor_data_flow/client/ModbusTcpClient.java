@@ -175,6 +175,7 @@ public class ModbusTcpClient {
                 logger.error("주소 처리 오류: {}", e.getMessage());
             }
         }
+        System.out.println(dataMap);
 
         return dataMap;
     }

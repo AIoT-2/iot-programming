@@ -3,7 +3,6 @@ package com.sensor_data_flow;
 import com.sensor_data_flow.client.ModbusTcpClient;
 import com.sensor_data_flow.client.MqttClient;
 import com.sensor_data_flow.threads.ModbusToMqtt;
-import com.sensor_data_flow.threads.MqttToMqtt;
 
 public class Main {
     public static void main(String[] args) {
@@ -20,6 +19,6 @@ public class Main {
         new Thread(new ModbusToMqtt(subAndPub, client)).start();
 
         // Mqtt로 받은 데이터를 Mqtt브로커에 전달
-        new Thread(new MqttToMqtt(sub, subAndPub)).start();
+        // new Thread(new MqttToMqtt(sub, subAndPub)).start();
     }
 }
