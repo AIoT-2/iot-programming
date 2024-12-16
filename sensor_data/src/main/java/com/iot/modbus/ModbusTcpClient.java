@@ -38,9 +38,8 @@ public class ModbusTcpClient extends ModbusTransform implements Runnable {
             .toAbsolutePath().toString();
 
     // MQTT Configuration
-    String broker = "tcp://localhost:1883"; // MQTT 브로커 주소
+    String broker = "tcp://192.168.70.203:1883"; // MQTT 브로커 주소
     String clientId = "songs";
-    String topic = "007/data"; // 전송할 MQTT 주제
 
     public void run() {
 

@@ -1,48 +1,81 @@
 package com.iot.mqtt;
 
-import com.influxdb.client.InfluxDBClient;
-import com.influxdb.client.InfluxDBClientFactory;
-import com.influxdb.client.write.Point;
-import com.influxdb.exceptions.InfluxException;
-
+import org.eclipse.paho.client.mqttv3.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.sql.*;
 
 public class MqttToDB {
 
     static final Logger logger = LoggerFactory.getLogger(MqttToDB.class);
 
-    private static final String URL = "http://192.168.71.207:8086";
-    private static final String TOKEN = "aCden7eIjcqbw504Yp7gzHJsdozMJS9E-HqOlm6dKPCoQyp60OWVohL-ctZgFlkgMDiGWAaRLma5oQahCkIPiA=="; // token
-    private static final String ORG = "123123";
-    private static final String BUCKET = "test123123";
+    private static final String MQTT_BROKER = "tcp://localhost:1883";
+    private static final String MQTT_CLIENT_ID = "songs";
 
-    private InfluxDBClient influxDBClient;
+    private static final String MYSQL_URL = "jdbc:mysql://localhost:3306/test1";
+    private static final String MYSQL_USER = "root";
+    private static final String MYSQL_PASSWORD = "P@ssw0rd";
+
+    private MqttClient mqttClient;
+    private Connection mysqlConnection;
 
     public MqttToDB() {
-        this.influxDBClient = InfluxDBClientFactory.create(URL, TOKEN.toCharArray(), ORG, BUCKET);
+        try {
+            // Initialize MQTT client
+            mqttClient = new MqttClient(MQTT_BROKER, MQTT_CLIENT_ID);
+            mqttClient.setCallback(new MqttCallback() {
+                @Override
+                public void connectionLost(Throwable cause) {
+                    logger.error("MQTT connection lost", cause);
+                }
+
+                @Override
+                public void messageArrived(String topic, MqttMessage message) throws Exception {
+                    String payload = new String(message.getPayload());
+                    logger.info("Received message: topic={}, payload={}", topic, payload);
+                    insertIntoMySQL(topic, payload);
+                }
+
+                @Override
+                public void deliveryComplete(IMqttDeliveryToken token) {
+                }
+            });
+
+            // Initialize MySQL connection
+            mysqlConnection = DriverManager.getConnection(MYSQL_URL, MYSQL_USER, MYSQL_PASSWORD);
+            logger.info("Connected to MySQL database");
+
+        } catch (MqttException | SQLException e) {
+            logger.error("Error initializing MqttToDB", e);
+        }
     }
 
-    public void writeToDB(Point point) {
-        try {
-            influxDBClient.getWriteApiBlocking().writePoint(point);
-            logger.info("Data written to InfluxDB: {}", point);
-
-        } catch (InfluxException e) {
-            if (e.getMessage().contains("bucket not found")) {
-                logger.error("BUCKET not found: {}", BUCKET);
-            } else {
-                logger.error("ERROR writing data to InfluxDB", e);
-            }
-        } catch (Exception e) {
-            logger.error("Unexpected error while writing to InfluxDB", e);
+    void insertIntoMySQL(String topic, String payload) {
+        String sql = "INSERT INTO test1 (topic, payload, timestamp) VALUES (?, ?, ?)";
+        try (PreparedStatement pstmt = mysqlConnection.prepareStatement(sql)) {
+            pstmt.setString(1, topic);
+            pstmt.setString(2, payload);
+            pstmt.setTimestamp(3, new Timestamp(System.currentTimeMillis()));
+            pstmt.executeUpdate();
+            logger.info("Data inserted into MySQL: topic={}, payload={}", topic, payload);
+        } catch (SQLException e) {
+            logger.error("Error inserting data into MySQL", e);
         }
     }
 
     public void close() {
-        if (influxDBClient != null) {
-            influxDBClient.close();
-            logger.info("InfluxDB connection closed.");
+        try {
+            if (mqttClient != null && mqttClient.isConnected()) {
+                mqttClient.disconnect();
+                mqttClient.close();
+            }
+            if (mysqlConnection != null && !mysqlConnection.isClosed()) {
+                mysqlConnection.close();
+            }
+            logger.info("MQTT and MySQL connections closed.");
+        } catch (MqttException | SQLException e) {
+            logger.error("Error closing connections", e);
         }
     }
 }

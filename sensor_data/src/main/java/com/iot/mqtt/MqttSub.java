@@ -1,7 +1,5 @@
 package com.iot.mqtt;
 
-import java.time.Instant;
-
 import org.eclipse.paho.client.mqttv3.IMqttDeliveryToken;
 import org.eclipse.paho.client.mqttv3.MqttClient;
 import org.eclipse.paho.client.mqttv3.MqttConnectOptions;
@@ -14,16 +12,14 @@ import org.slf4j.LoggerFactory;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.influxdb.client.domain.WritePrecision;
-import com.influxdb.client.write.Point;
 
 public class MqttSub extends MqttTransform implements Runnable {
     static final Logger logger = LoggerFactory.getLogger(MqttSub.class);
 
-    private static final String BROKER = "tcp://192.168.71.207:1883";
-    private static final String CLIENT_ID = "kim";
+    private static final String BROKER = "tcp://192.168.70.203:1883";
+    private static final String CLIENT_ID = "songs";
     private static final String TOPIC = "songs/#";
-    private static final String TOPIC2 = "data/#";
+    // private static final String TOPIC2 = "data/#";
     private static MqttToDB mqttToDB = new MqttToDB();
 
     @Override
@@ -32,6 +28,8 @@ public class MqttSub extends MqttTransform implements Runnable {
         try (MqttClient client = new MqttClient(BROKER, CLIENT_ID)) {
 
             MqttConnectOptions options = new MqttConnectOptions();
+            options.setKeepAliveInterval(60); // Seconds
+            options.setAutomaticReconnect(true);
             options.setCleanSession(true);
 
             // 메시지 수신 콜백 설정
@@ -43,13 +41,11 @@ public class MqttSub extends MqttTransform implements Runnable {
 
                 @Override
                 public void messageArrived(String topic, MqttMessage message) throws Exception {
-
                     System.out.println("Received message from topic '"
                             + topic + "': " + new String(message.getPayload()));
 
                     String payload = new String(message.getPayload());
                     ObjectMapper objectMapper = new ObjectMapper();
-                    String measurement = "power";
 
                     try {
                         JsonNode jsonNode = objectMapper.readTree(payload);
@@ -58,21 +54,14 @@ public class MqttSub extends MqttTransform implements Runnable {
                         // valueNode가 null인 경우에 대비하여 안전한 처리
                         if (valueNode == null || valueNode.isNull()) {
                             logger.warn("valueNode is null or missing in the payload");
-                            return; // valueNode가 없으면 메시지 처리를 중지
+                            return;
                         }
 
-                        Point pointBuilder = Point.measurement(measurement)
-                                .addTag("spot", extractPlace(topic))
-                                .addField("payload", valueNode.asDouble())
-                                .time(Instant.now(), WritePrecision.NS);
+                        // MySQL에 데이터 삽입
+                        mqttToDB.insertIntoMySQL(topic, payload);
 
-                        mqttToDB.writeToDB(pointBuilder);
-
-                        logger.debug("Measurement: {}", "power");
-                        logger.debug("Field: {}", extractPlace(topic));
-                        logger.debug("Value: {}", extractElement(topic));
                         logger.debug("Topic: {}", topic);
-                        logger.debug("msg: {}", valueNode.asDouble());
+                        logger.debug("Payload: {}", payload);
                         System.out.println();
 
                     } catch (Exception e) {
@@ -82,9 +71,8 @@ public class MqttSub extends MqttTransform implements Runnable {
 
                 @Override
                 public void deliveryComplete(IMqttDeliveryToken token) {
-                    System.out.println("Message delivery complete: "
-                            + token.getMessageId());
                 }
+
             });
 
             try {
@@ -94,19 +82,15 @@ public class MqttSub extends MqttTransform implements Runnable {
 
                 if (client.isConnected()) {
                     client.subscribe(TOPIC);
-                    client.subscribe(TOPIC2);
+                    // client.subscribe(TOPIC2);
                     logger.info("Successfully subscribed to topic: " + TOPIC);
-                    logger.info("Successfully subscribed to topic2: " + TOPIC2);
+                    // logger.info("Successfully subscribed to topic2: " + TOPIC2);
                 } else {
                     logger.error("MQTT client failed to connect to broker");
                 }
 
-                logger.info("Subscribing to topic: {}", TOPIC);
-                logger.info("Subscribing to topic2: {}", TOPIC2);
-                client.subscribe(TOPIC);
-                client.subscribe(TOPIC2);
-
                 while (client.isConnected()) {
+                    run();
                     Thread.sleep(5000);
                 }
 
@@ -129,8 +113,8 @@ public class MqttSub extends MqttTransform implements Runnable {
         }
     }
 
-    // public static void main(String[] args) {
-    // Thread mqttSubThread = new Thread(new MqttSub());
-    // mqttSubThread.start();
-    // }
+    public static void main(String[] args) {
+        Thread mqttSubThread = new Thread(new MqttSub());
+        mqttSubThread.start();
+    }
 }
