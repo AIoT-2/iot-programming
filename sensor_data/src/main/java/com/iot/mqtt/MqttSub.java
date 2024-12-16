@@ -14,13 +14,13 @@ import org.slf4j.LoggerFactory;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.influxdb.client.write.Point;
 import com.influxdb.client.domain.WritePrecision;
+import com.influxdb.client.write.Point;
 
-public class Mqtt extends MqttTransform implements Runnable {
-    static final Logger logger = LoggerFactory.getLogger(Mqtt.class);
+public class MqttSub extends MqttTransform implements Runnable {
+    static final Logger logger = LoggerFactory.getLogger(MqttSub.class);
 
-    private static final String BROKER = "tcp://localhost:1883";
+    private static final String BROKER = "tcp://192.168.71.207:1883";
     private static final String CLIENT_ID = "kim";
     private static final String TOPIC = "songs/#";
     private static MqttToDB mqttToDB = new MqttToDB();
@@ -58,13 +58,6 @@ public class Mqtt extends MqttTransform implements Runnable {
                     try {
                         JsonNode jsonNode = objectMapper.readTree(payload);
                         JsonNode valueNode = jsonNode.get("value");
-
-                        // String element = extractElement(topic);
-
-                        // if (element.equals("lora") || element.equals("power-meter")
-                        // || element.equals("di")) {
-                        // return;
-                        // }
 
                         // valueNode가 null인 경우에 대비하여 안전한 처리
                         if (valueNode == null || valueNode.isNull()) {

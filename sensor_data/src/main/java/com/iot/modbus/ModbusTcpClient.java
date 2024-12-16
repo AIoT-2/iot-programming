@@ -32,11 +32,11 @@ public class ModbusTcpClient extends ModbusTransform implements Runnable {
     int setPort = 502;
     int slaveId = 1;
 
-    String locationFilePath = FileSystems.getDefault().getPath("src/main/java/com/iot/modbus/location.json")
+    String locationFilePath = FileSystems.getDefault().getPath("resources/location.json")
             .toAbsolutePath().toString();
-    String channelFilePath = FileSystems.getDefault().getPath("src/main/java/com/iot/modbus/channel.json")
+    String channelFilePath = FileSystems.getDefault().getPath("resources/channel.json")
             .toAbsolutePath().toString();
-    String addmapFilePath = FileSystems.getDefault().getPath("src/main/java/com/iot/modbus/addmap.json")
+    String addmapFilePath = FileSystems.getDefault().getPath("resources/addmap.json")
             .toAbsolutePath().toString();
 
     // MQTT Configuration
