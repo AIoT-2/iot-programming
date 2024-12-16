@@ -15,7 +15,7 @@ public class MqttToDB {
     private static final String URL = "http://192.168.71.207:8086";
     private static final String TOKEN = "aCden7eIjcqbw504Yp7gzHJsdozMJS9E-HqOlm6dKPCoQyp60OWVohL-ctZgFlkgMDiGWAaRLma5oQahCkIPiA=="; // token
     private static final String ORG = "123123";
-    private static final String BUCKET = "test";
+    private static final String BUCKET = "test123123";
 
     private InfluxDBClient influxDBClient;
 

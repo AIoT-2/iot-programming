@@ -23,6 +23,7 @@ public class MqttSub extends MqttTransform implements Runnable {
     private static final String BROKER = "tcp://192.168.71.207:1883";
     private static final String CLIENT_ID = "kim";
     private static final String TOPIC = "songs/#";
+    private static final String TOPIC2 = "data/#";
     private static MqttToDB mqttToDB = new MqttToDB();
 
     @Override
@@ -48,12 +49,7 @@ public class MqttSub extends MqttTransform implements Runnable {
 
                     String payload = new String(message.getPayload());
                     ObjectMapper objectMapper = new ObjectMapper();
-                    String measurement = extractName(topic);
-
-                    if (measurement == null) {
-                        logger.debug("Measurement is null, using default measurement");
-                        measurement = "default_measurement";
-                    }
+                    String measurement = "power";
 
                     try {
                         JsonNode jsonNode = objectMapper.readTree(payload);
@@ -72,7 +68,7 @@ public class MqttSub extends MqttTransform implements Runnable {
 
                         mqttToDB.writeToDB(pointBuilder);
 
-                        logger.debug("Measurement: {}", extractName(topic));
+                        logger.debug("Measurement: {}", "power");
                         logger.debug("Field: {}", extractPlace(topic));
                         logger.debug("Value: {}", extractElement(topic));
                         logger.debug("Topic: {}", topic);
@@ -98,13 +94,17 @@ public class MqttSub extends MqttTransform implements Runnable {
 
                 if (client.isConnected()) {
                     client.subscribe(TOPIC);
+                    client.subscribe(TOPIC2);
                     logger.info("Successfully subscribed to topic: " + TOPIC);
+                    logger.info("Successfully subscribed to topic2: " + TOPIC2);
                 } else {
                     logger.error("MQTT client failed to connect to broker");
                 }
 
                 logger.info("Subscribing to topic: {}", TOPIC);
+                logger.info("Subscribing to topic2: {}", TOPIC2);
                 client.subscribe(TOPIC);
+                client.subscribe(TOPIC2);
 
                 while (client.isConnected()) {
                     Thread.sleep(5000);
@@ -130,7 +130,7 @@ public class MqttSub extends MqttTransform implements Runnable {
     }
 
     // public static void main(String[] args) {
-    // Thread mqttThread = new Thread(new Mqtt());
-    // mqttThread.start();
+    // Thread mqttSubThread = new Thread(new MqttSub());
+    // mqttSubThread.start();
     // }
 }

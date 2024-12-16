@@ -36,8 +36,6 @@ public class ModbusTcpClient extends ModbusTransform implements Runnable {
             .toAbsolutePath().toString();
     String channelFilePath = FileSystems.getDefault().getPath("resources/channel.json")
             .toAbsolutePath().toString();
-    String addmapFilePath = FileSystems.getDefault().getPath("resources/addmap.json")
-            .toAbsolutePath().toString();
 
     // MQTT Configuration
     String broker = "tcp://localhost:1883"; // MQTT 브로커 주소
@@ -107,7 +105,10 @@ public class ModbusTcpClient extends ModbusTransform implements Runnable {
                                         registerAddress += 1;
                                     }
 
-                                    String topic = clientId + "/n/" + name + "/p/" + locationName + "/e/" + scaledValue;
+                                    convertAndScale(values, type, scaledValue);
+
+                                    String topic = clientId + "/place/" + locationName + "/valueName/" + name
+                                            + "/value/" + scaledValue;
                                     // Create Message with time and value
                                     ObjectMapper objectMapper = new ObjectMapper();
                                     Map<String, Object> messagePayload = new HashMap<>();
@@ -148,8 +149,28 @@ public class ModbusTcpClient extends ModbusTransform implements Runnable {
         }
     }
 
-    // public static void main(String[] args) {
-    // Thread modbusThread = new Thread(new ModbusTcpClient());
-    // modbusThread.start();
-    // }
+    private static double convertAndScale(short[] values, String type, double scale) {
+        long rawValue = 0;
+        for (short value : values) {
+            rawValue = (rawValue << 16) | (value & 0xFFFF);
+        }
+        switch (type.toUpperCase()) {
+            case "UINT16":
+                return (values.length == 1 ? (values[0] & 0xFFFF) : rawValue) / scale;
+            case "UINT32":
+                return rawValue / scale;
+            case "INT16":
+                return values.length == 1 ? values[0] / scale : rawValue / scale;
+            case "INT32":
+                return (rawValue > 0x7FFFFFFF ? rawValue - 0x100000000L : rawValue) / scale;
+            default:
+                System.err.println("알 수 없는 데이터 타입: " + type);
+                return 0;
+        }
+    }
+
+    public static void main(String[] args) {
+        Thread modbusThread = new Thread(new ModbusTcpClient());
+        modbusThread.start();
+    }
 }
