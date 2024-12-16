@@ -111,6 +111,7 @@ public class ModbusTcpClient extends ModbusTransform implements Runnable {
                                     // Create Message with time and value
                                     ObjectMapper objectMapper = new ObjectMapper();
                                     Map<String, Object> messagePayload = new HashMap<>();
+                                    messagePayload.put("payload", name);
                                     messagePayload.put("time", Instant.now().toEpochMilli());
                                     messagePayload.put("value", scaledValue);
 

@@ -1,81 +1,71 @@
 package com.iot.mqtt;
 
-import org.eclipse.paho.client.mqttv3.*;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import org.eclipse.paho.client.mqttv3.IMqttDeliveryToken;
+import org.eclipse.paho.client.mqttv3.MqttCallback;
+import org.eclipse.paho.client.mqttv3.MqttClient;
+import org.eclipse.paho.client.mqttv3.MqttMessage;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
-import java.sql.*;
-
-public class MqttToDB {
-
-    static final Logger logger = LoggerFactory.getLogger(MqttToDB.class);
-
-    private static final String MQTT_BROKER = "tcp://localhost:1883";
-    private static final String MQTT_CLIENT_ID = "songs";
-
-    private static final String MYSQL_URL = "jdbc:mysql://localhost:3306/test1";
-    private static final String MYSQL_USER = "root";
-    private static final String MYSQL_PASSWORD = "P@ssw0rd";
-
-    private MqttClient mqttClient;
-    private Connection mysqlConnection;
-
-    public MqttToDB() {
+public class MqttToDB implements Runnable {
+    public void run() {
         try {
-            // Initialize MQTT client
-            mqttClient = new MqttClient(MQTT_BROKER, MQTT_CLIENT_ID);
-            mqttClient.setCallback(new MqttCallback() {
-                @Override
-                public void connectionLost(Throwable cause) {
-                    logger.error("MQTT connection lost", cause);
-                }
+            try (MqttClient client = new MqttClient("tcp://192.168.70.203:1883", "songsong")) {
+                client.connect();
 
-                @Override
-                public void messageArrived(String topic, MqttMessage message) throws Exception {
-                    String payload = new String(message.getPayload());
-                    logger.info("Received message: topic={}, payload={}", topic, payload);
-                    insertIntoMySQL(topic, payload);
-                }
+                client.setCallback(new MqttCallback() {
+                    @Override
+                    public void connectionLost(Throwable cause) {
+                        System.out.println(cause.toString());
+                    }
 
-                @Override
-                public void deliveryComplete(IMqttDeliveryToken token) {
-                }
-            });
+                    @Override
+                    public void messageArrived(String topic, MqttMessage message) throws Exception {
 
-            // Initialize MySQL connection
-            mysqlConnection = DriverManager.getConnection(MYSQL_URL, MYSQL_USER, MYSQL_PASSWORD);
-            logger.info("Connected to MySQL database");
+                        if (topic.contains("lora") || topic.contains("power_meter")) {
+                            return;
+                        }
+                        Connection conn = null;
 
-        } catch (MqttException | SQLException e) {
-            logger.error("Error initializing MqttToDB", e);
-        }
-    }
+                        try {
+                            // MQTT 메시지 페이로드를 JSON으로 파싱
+                            String payload = new String(message.getPayload());
+                            JsonNode jsonNode = new ObjectMapper().readTree(payload);
 
-    void insertIntoMySQL(String topic, String payload) {
-        String sql = "INSERT INTO test1 (topic, payload, timestamp) VALUES (?, ?, ?)";
-        try (PreparedStatement pstmt = mysqlConnection.prepareStatement(sql)) {
-            pstmt.setString(1, topic);
-            pstmt.setString(2, payload);
-            pstmt.setTimestamp(3, new Timestamp(System.currentTimeMillis()));
-            pstmt.executeUpdate();
-            logger.info("Data inserted into MySQL: topic={}, payload={}", topic, payload);
-        } catch (SQLException e) {
-            logger.error("Error inserting data into MySQL", e);
-        }
-    }
+                            // time과 value 값을 추출
+                            String name = jsonNode.get("payload").asText();
+                            String timeMillis = jsonNode.get("time").asText();
+                            double value = jsonNode.get("value").asDouble();
 
-    public void close() {
-        try {
-            if (mqttClient != null && mqttClient.isConnected()) {
-                mqttClient.disconnect();
-                mqttClient.close();
+                            Class.forName("com.mysql.cj.jdbc.Driver");
+                            String url = "jdbc:mysql://localhost:3306/TEST";
+                            String sql = "insert into new_table values(?, ?, ?)";
+                            conn = DriverManager.getConnection(url, "root", "P@ssw0rd");
+                            PreparedStatement pstmt = conn.prepareStatement(sql);
+                            pstmt.setString(1, name);
+                            pstmt.setDouble(2, value);
+                            pstmt.setString(3, timeMillis);
+                            pstmt.executeUpdate();
+
+                        } catch (Exception e) {
+                            System.out.println(e.getMessage());
+                        }
+                    }
+
+                    @Override
+                    public void deliveryComplete(IMqttDeliveryToken token) {
+
+                    }
+                });
+
+                client.subscribe("songs/#");
             }
-            if (mysqlConnection != null && !mysqlConnection.isClosed()) {
-                mysqlConnection.close();
-            }
-            logger.info("MQTT and MySQL connections closed.");
-        } catch (MqttException | SQLException e) {
-            logger.error("Error closing connections", e);
+
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
         }
     }
 }

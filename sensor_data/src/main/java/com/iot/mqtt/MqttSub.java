@@ -20,7 +20,6 @@ public class MqttSub extends MqttTransform implements Runnable {
     private static final String CLIENT_ID = "songs";
     private static final String TOPIC = "songs/#";
     // private static final String TOPIC2 = "data/#";
-    private static MqttToDB mqttToDB = new MqttToDB();
 
     @Override
     public void run() {
@@ -56,9 +55,6 @@ public class MqttSub extends MqttTransform implements Runnable {
                             logger.warn("valueNode is null or missing in the payload");
                             return;
                         }
-
-                        // MySQL에 데이터 삽입
-                        mqttToDB.insertIntoMySQL(topic, payload);
 
                         logger.debug("Topic: {}", topic);
                         logger.debug("Payload: {}", payload);
