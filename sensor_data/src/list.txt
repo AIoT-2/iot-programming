@@ -1,0 +1,4 @@
+temperature와 humidity (온도와 습도)
+co2와 tvoc (공기질 관련)
+co2와 occupancy (재실 여부와 이산화탄소)
+illumination과 infrared (조도 관련)

@@ -13,6 +13,7 @@ import org.slf4j.LoggerFactory;
 
 import java.nio.file.FileSystems;
 import java.time.Instant;
+import java.util.concurrent.TimeUnit;
 
 import com.serotonin.modbus4j.ModbusFactory;
 import com.serotonin.modbus4j.ModbusMaster;
@@ -21,8 +22,6 @@ import com.serotonin.modbus4j.exception.ModbusTransportException;
 import com.serotonin.modbus4j.ip.IpParameters;
 import com.serotonin.modbus4j.msg.ReadHoldingRegistersRequest;
 import com.serotonin.modbus4j.msg.ReadHoldingRegistersResponse;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.core.exc.StreamReadException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class ModbusTcpClient extends ModbusTransform implements Runnable {
@@ -38,36 +37,37 @@ public class ModbusTcpClient extends ModbusTransform implements Runnable {
             .toAbsolutePath().toString();
 
     // MQTT Configuration
-    String broker = "tcp://192.168.70.203:1883"; // MQTT 브로커 주소
+    String broker = "tcp://192.168.70.203:1883";
     String clientId = "songs";
 
     public void run() {
+        MqttClient mqttClient = null;
 
-        try (MqttClient mqttClient = new MqttClient(broker, clientId)) {
-            MqttConnectOptions connOpts = new MqttConnectOptions();
-            connOpts.setCleanSession(true);
-            mqttClient.connect(connOpts);
-            System.out.println("Connected to MQTT broker: " + broker);
+        while (true) { // 무한 재시도 루프
+            try {
+                // MQTT 연결
+                if (mqttClient == null || !mqttClient.isConnected()) {
+                    mqttClient = connectToMQTT();
+                }
 
-            List<Map<String, Object>> locationList = loadJsonData(locationFilePath);
-            List<Map<String, Object>> channelList = loadJsonData(channelFilePath);
+                // Modbus Master 설정
+                IpParameters ipParameters = new IpParameters();
+                ipParameters.setHost(setHost);
+                ipParameters.setPort(setPort);
 
-            IpParameters ipParameters = new IpParameters();
-            ipParameters.setHost(setHost);
-            ipParameters.setPort(setPort);
+                ModbusFactory modbusFactory = new ModbusFactory();
+                ModbusMaster master = modbusFactory.createTcpMaster(ipParameters, true);
 
-            ModbusFactory modbusFactory = new ModbusFactory();
-            ModbusMaster master = modbusFactory.createTcpMaster(ipParameters, true);
-
-            while (true) {
                 try {
                     master.init();
                     System.out.println("Connected to Modbus server");
 
+                    List<Map<String, Object>> locationList = loadJsonData(locationFilePath);
+                    List<Map<String, Object>> channelList = loadJsonData(channelFilePath);
+
                     for (Map<String, Object> location : locationList) {
                         int channel = (int) location.get("Channel");
                         String locationName = (String) location.get("위치");
-
                         int baseAddress = channel * 100;
 
                         for (Map<String, Object> channelData : channelList) {
@@ -81,8 +81,7 @@ public class ModbusTcpClient extends ModbusTransform implements Runnable {
                             int registerAddress = baseAddress + offset;
 
                             ReadHoldingRegistersRequest request = new ReadHoldingRegistersRequest(slaveId,
-                                    registerAddress,
-                                    size);
+                                    registerAddress, size);
                             ReadHoldingRegistersResponse response = (ReadHoldingRegistersResponse) master.send(request);
 
                             if (response.isException()) {
@@ -93,9 +92,8 @@ public class ModbusTcpClient extends ModbusTransform implements Runnable {
                                 for (int i = 0; i < values.length; i++) {
                                     double scaledValue = (double) values[i] / scale;
 
-                                    if (scaledValue == 0) {
+                                    if (scaledValue == 0)
                                         continue;
-                                    }
                                     if (scaledValue < 0) {
                                         scaledValue *= -1;
                                     }
@@ -108,44 +106,39 @@ public class ModbusTcpClient extends ModbusTransform implements Runnable {
 
                                     String topic = clientId + "/place/" + locationName + "/valueName/" + name
                                             + "/value/" + scaledValue;
-                                    // Create Message with time and value
-                                    ObjectMapper objectMapper = new ObjectMapper();
                                     Map<String, Object> messagePayload = new HashMap<>();
                                     messagePayload.put("payload", name);
                                     messagePayload.put("time", Instant.now().toEpochMilli());
                                     messagePayload.put("value", scaledValue);
 
-                                    String message = objectMapper.writeValueAsString(messagePayload);
+                                    String message = new ObjectMapper().writeValueAsString(messagePayload);
 
                                     MqttMessage mqttMessage = new MqttMessage(message.getBytes());
                                     mqttMessage.setQos(1);
-
                                     mqttClient.publish(topic, mqttMessage);
-                                    logger.debug("Published: " + message);
-                                    logger.debug("topic: " + topic);
+
+                                    // logger.debug("Published: " + message);
+                                    // logger.debug("topic: " + topic);
+
                                 }
                             }
                         }
+                        Thread.sleep(5000);
                     }
-                } catch (ModbusInitException e) {
-                    System.err.println("Failed to initialize Modbus Master: " + e.getMessage());
-                } catch (NullPointerException e) {
-                    System.err.println("Not found File path: " + e.getMessage());
-                } catch (ModbusTransportException e) {
-                    System.err.println("ModbusTransportExceptio Error" + e.getMessage());
-                } catch (JsonProcessingException e) {
-                    e.printStackTrace();
+                } catch (ModbusInitException | ModbusTransportException e) {
+                    System.err.println("Modbus Error: " + e.getMessage());
+                    TimeUnit.SECONDS.sleep(10); // 10초 대기 후 재시도
+                } finally {
+                    master.destroy();
+                }
+            } catch (Exception e) {
+                System.err.println("General Error: " + e.getMessage());
+                try {
+                    TimeUnit.SECONDS.sleep(10); // 10초 대기 후 재시도
+                } catch (InterruptedException ie) {
+                    Thread.currentThread().interrupt();
                 }
             }
-
-        } catch (MqttException e) {
-            System.err.println("Error in MQTT communication: " + e.getMessage());
-            System.exit(0);
-        } catch (StreamReadException e1) {
-            e1.printStackTrace();
-        } finally {
-            // master.destroy();
-            System.out.println("Disconnected from Modbus server.");
         }
     }
 
@@ -167,6 +160,15 @@ public class ModbusTcpClient extends ModbusTransform implements Runnable {
                 System.err.println("알 수 없는 데이터 타입: " + type);
                 return 0;
         }
+    }
+
+    private MqttClient connectToMQTT() throws MqttException {
+        MqttClient mqttClient = new MqttClient(broker, clientId);
+        MqttConnectOptions connOpts = new MqttConnectOptions();
+        connOpts.setCleanSession(true);
+        mqttClient.connect(connOpts);
+        System.out.println("Reconnected to MQTT broker: " + broker);
+        return mqttClient;
     }
 
     public static void main(String[] args) {

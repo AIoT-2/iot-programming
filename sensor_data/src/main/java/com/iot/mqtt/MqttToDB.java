@@ -3,17 +3,28 @@ package com.iot.mqtt;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import org.eclipse.paho.client.mqttv3.IMqttDeliveryToken;
 import org.eclipse.paho.client.mqttv3.MqttCallback;
 import org.eclipse.paho.client.mqttv3.MqttClient;
 import org.eclipse.paho.client.mqttv3.MqttMessage;
+
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class MqttToDB implements Runnable {
+
+    // 타임스탬프를 읽기 좋은 형식으로 변환하는 메서드
+    private String convertTimestamp(long timestampMs) {
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        return sdf.format(new Date(timestampMs));
+    }
+
     public void run() {
         try {
-            try (MqttClient client = new MqttClient("tcp://192.168.70.203:1883", "songsong")) {
+            try (MqttClient client = new MqttClient("tcp://localhost:1883", "songsong")) {
                 client.connect();
 
                 client.setCallback(new MqttCallback() {
@@ -37,27 +48,38 @@ public class MqttToDB implements Runnable {
 
                             // time과 value 값을 추출
                             String name = jsonNode.get("payload").asText();
-                            String timeMillis = jsonNode.get("time").asText();
+                            Long timeMillis = jsonNode.get("time").asLong();
+                            String time = convertTimestamp(timeMillis);
                             double value = jsonNode.get("value").asDouble();
 
                             Class.forName("com.mysql.cj.jdbc.Driver");
-                            String url = "jdbc:mysql://localhost:3306/TEST";
-                            String sql = "insert into new_table values(?, ?, ?)";
+                            String url = "jdbc:mysql://localhost:3306/IOT";
                             conn = DriverManager.getConnection(url, "root", "P@ssw0rd");
-                            PreparedStatement pstmt = conn.prepareStatement(sql);
-                            pstmt.setString(1, name);
-                            pstmt.setDouble(2, value);
-                            pstmt.setString(3, timeMillis);
-                            pstmt.executeUpdate();
+
+                            String insertSQL = "INSERT INTO modbus_test (name, value, timestamp) VALUES (?, ?, ?)";
+                            PreparedStatement pstmt_modbus = conn.prepareStatement(insertSQL);
+                            pstmt_modbus.setString(1, name);
+                            pstmt_modbus.setDouble(2, value);
+                            pstmt_modbus.setString(3, time);
+                            pstmt_modbus.executeUpdate();
+
+                            System.out.println("insert success");
 
                         } catch (Exception e) {
                             System.out.println(e.getMessage());
+                        } finally {
+                            if (conn != null) {
+                                try {
+                                    conn.close();
+                                } catch (Exception ex) {
+                                    System.out.println("Database connection close error: " + ex.getMessage());
+                                }
+                            }
                         }
                     }
 
                     @Override
                     public void deliveryComplete(IMqttDeliveryToken token) {
-
                     }
                 });
 

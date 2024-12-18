@@ -13,5 +13,14 @@ public class mainPoint {
         modbusThread.start();
         // mqttSubThread.start();
         mqttToDB.start();
+
+        new Thread(() -> {
+            try {
+                Thread.sleep(20); // 20초 대기
+                System.out.println("20초 지났습니다. 하지만 스레드는 계속 실행됩니다.");
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }).start();
     }
 }
