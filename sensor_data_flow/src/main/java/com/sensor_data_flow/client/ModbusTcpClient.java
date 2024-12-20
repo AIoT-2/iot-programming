@@ -151,6 +151,7 @@ public class ModbusTcpClient {
         while (offset < response.getHoldingRegisters().getQuantity()) {
             int registerValue;
             try {
+                System.out.println("while: " + response.getHoldingRegisters().get(offset));
                 String addressName = addressMap.get(offset).getName();
                 double scale = addressMap.get(offset).getScale();
 
@@ -174,8 +175,22 @@ public class ModbusTcpClient {
             } catch (IllegalDataAddressException e) {
                 logger.error("주소 처리 오류: {}", e.getMessage());
             }
+
+            try {
+                int[] registerValues = m.readHoldingRegisters(1, 0,
+                        response.getHoldingRegisters().getQuantity());
+                for (int n : registerValues) {
+                    System.out.println("registerValues: " + n);
+                }
+            } catch (ModbusProtocolException e) {
+                e.printStackTrace();
+            } catch (ModbusNumberException e) {
+                e.printStackTrace();
+            } catch (ModbusIOException e) {
+                e.printStackTrace();
+            }
+
         }
-        System.out.println(dataMap);
 
         return dataMap;
     }

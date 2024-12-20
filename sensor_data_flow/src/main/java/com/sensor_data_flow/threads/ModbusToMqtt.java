@@ -36,7 +36,6 @@ public class ModbusToMqtt implements ProtocolToMqtt {
     public ModbusToMqtt(MqttClient publisher, ModbusTcpClient subscriber) {
         this.publisher = publisher;
         this.subscriber = subscriber;
-        System.out.println();
     }
 
     @Override

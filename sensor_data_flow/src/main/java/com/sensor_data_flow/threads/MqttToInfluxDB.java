@@ -90,7 +90,6 @@ public class MqttToInfluxDB implements Runnable {
                 influxDBClient.getWriteApiBlocking().writePoint(point); // 데이터 삽입
 
                 logger.info("데이터가 InfluxDB에 저장됨");
-
             } catch (IOException e) {
                 logger.error("JSON 파싱 중 오류가 발생: {}", e.getMessage());
             }
